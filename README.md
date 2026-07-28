@@ -26,13 +26,18 @@ mid-clinic. Offline fallback: `File → Save Page As…` gives you a local copy
 2. Just start typing — the search box is always live: `uti`, `knee`, `pap`, `cold`…
    Lay terms and abbreviations work too ("pink eye", "strep", "BP").
 3. Press **Enter** — the top match is copied.
-4. Switch to PSS and paste. Everything in `<<double angle brackets>>` is a PSS
-   field — use the PSS hotkey to jump through them: **type** to fill in a blank,
-   or **delete** an option you're not using. Alternatives (like drug choices) are
-   separate self-contained fields, so one delete removes the whole option cleanly.
+4. Switch to PSS and paste. Everything in brackets (guillemets `« »` by default —
+   PSS's native field markers) is a fill-in field — press **Tab** in PSS to jump
+   through them: **type** to fill in a blank, or **delete** an option you're not
+   using. Alternatives (like drug choices) are separate self-contained fields, so
+   one delete removes the whole option cleanly.
 
 Keyboard: type anywhere to search · `↑`/`↓` select · `Enter` copy · `Esc` clear.
 Templates you use most float to the top of the list.
+
+Top-right buttons: **bracket style** (guillemets `« »` default, or `<< >>`,
+`[ ]`, `( )`, or any custom pair — match whatever your PSS actually accepts) and
+a **light/dark theme** toggle. Both choices are remembered per browser.
 
 ## Customizing
 
