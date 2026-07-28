@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SOAP Quick Paste — Family Medicine Templates</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1a2330;
+    --muted: #64748b;
+    --border: #dde3ea;
+    --accent: #2563eb;
+    --accent-soft: #e8eefc;
+    --chip: #eef2f7;
+    --hover: #f1f5fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151c;
+      --panel: #171e28;
+      --text: #e6ebf2;
+      --muted: #8b98a9;
+      --border: #2a3442;
+      --accent: #5b8def;
+      --accent-soft: #1d2b45;
+      --chip: #212b38;
+      --hover: #1d2634;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px 0;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand h1 { font-size: 18px; margin: 0; letter-spacing: .2px; }
+  .brand span { color: var(--muted); font-size: 13px; }
+  .actions { display: flex; gap: 8px; }
+  button {
+    font: inherit;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    cursor: pointer;
+  }
+  button:hover { background: var(--hover); }
+  button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  button.primary:hover { filter: brightness(1.08); background: var(--accent); }
+  button.danger { color: #c0392b; }
+  .searchwrap { padding: 12px 18px; }
+  #search {
+    width: 100%;
+    font: inherit;
+    font-size: 17px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    outline: none;
+  }
+  #search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(260px, 360px) 1fr;
+    gap: 14px;
+    padding: 0 18px 8px;
+    min-height: 0;
+  }
+  #list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel);
+  }
+  #list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  #list li:last-child { border-bottom: none; }
+  #list li:hover { background: var(--hover); }
+  #list li.sel { background: var(--accent-soft); }
+  #list li .t { font-size: 14px; }
+  #list li .meta { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .chip {
+    font-size: 10.5px;
+    color: var(--muted);
+    background: var(--chip);
+    border-radius: 20px;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+  .rowcopy {
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+  #empty {
+    padding: 24px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+  }
+  #preview {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel);
+    padding: 16px 18px;
+    overflow-y: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #preview .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  #preview h2 { margin: 0; font-size: 16px; }
+  #preview .btns { display: flex; gap: 8px; }
+  #preview pre {
+    margin: 10px 0 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  #preview pre .fld {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  footer {
+    padding: 8px 18px 14px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  footer .keys { margin-bottom: 2px; }
+  kbd {
+    font-family: inherit;
+    background: var(--chip);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 11px;
+  }
+  #toast {
+    position: fixed;
+    left: 50%;
+    bottom: 26px;
+    transform: translateX(-50%) translateY(8px);
+    background: var(--text);
+    color: var(--bg);
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s, transform .15s;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  #overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #overlay.hidden { display: none; }
+  #modal {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    width: min(680px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 18px 20px;
+  }
+  #modal h3 { margin: 0 0 12px; font-size: 16px; }
+  #modal label { display: block; font-size: 12.5px; color: var(--muted); margin: 10px 0 4px; }
+  #modal input, #modal textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+  }
+  #modal textarea {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 240px;
+    resize: vertical;
+  }
+  #modal .modalbtns {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  #modal .modalbtns .right { display: flex; gap: 8px; }
+  @media (max-width: 760px) {
+    main { grid-template-columns: 1fr; grid-template-rows: 40vh 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>SOAP Quick Paste</h1>
+    <span id="count"></span>
+  </div>
+  <div class="actions">
+    <button id="addBtn">+ New template</button>
+    <button id="exportBtn" title="Download your templates as a JSON backup">Export</button>
+    <button id="importBtn" title="Restore templates from a JSON backup">Import</button>
+    <input type="file" id="importFile" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<div class="searchwrap">
+  <input id="search" type="text" autocomplete="off" spellcheck="false"
+         placeholder='Search — try "uti", "knee", "pap", "cold"…  Enter copies the top match'>
+</div>
+
+<main>
+  <ul id="list"></ul>
+  <section id="preview"></section>
+</main>
+
+<footer>
+  <div class="keys">
+    <kbd>type anywhere</kbd> search &nbsp; <kbd>↑</kbd><kbd>↓</kbd> select &nbsp; <kbd>Enter</kbd> copy &nbsp; <kbd>Esc</kbd> clear
+  </div>
+  <div>
+    Notes use PSS field syntax — after pasting, use the PSS hotkey to jump through each
+    &lt;&lt;field&gt;&gt;: type to fill it in, or delete the options you're not using. Alternatives
+    (e.g. drug choices) are separate fields, so one delete removes the whole option.
+  </div>
+  <div>
+    100% local: this page makes no network requests and stores no patient data. Your edits live only in this
+    browser (use Export to back them up). Templates are starting points — verify all clinical content, doses,
+    and follow-ups yourself. Never type patient identifiers into templates.
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<div id="overlay" class="hidden">
+  <div id="modal">
+    <h3 id="modalTitle">Edit template</h3>
+    <label for="fTitle">Title</label>
+    <input id="fTitle" type="text">
+    <label for="fCat">Category</label>
+    <input id="fCat" type="text" list="cats">
+    <datalist id="cats"></datalist>
+    <label for="fAliases">Search keywords (space-separated — abbreviations, lay terms)</label>
+    <input id="fAliases" type="text">
+    <label for="fBody">Note body (copied verbatim — wrap PSS-tabbable blanks and options in &lt;&lt; &gt;&gt;)</label>
+    <textarea id="fBody"></textarea>
+    <div class="modalbtns">
+      <button id="deleteBtn" class="danger">Delete</button>
+      <div class="right">
+        <button id="cancelBtn">Cancel</button>
+        <button id="saveBtn" class="primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ================= Default templates =================
+   <<field>> is a PSS-tabbable element: after pasting, the PSS
+   hotkey jumps between fields — type to fill one in, or delete it.
+   Conventions:
+   - Fields hold what varies PER PATIENT (blanks, either/or options).
+   - Alternatives are separate self-contained fields (own punctuation),
+     first-line choice first — delete the ones not used.
+   - What varies PER DOCTOR (your standard drug, your usual F/U) is
+     plain text: edit the template once instead of tabbing past it
+     forever. Edits save in this browser; Export makes a backup. */
+
+const DEFAULTS = [
+
+// ---------- ENT / Respiratory ----------
+{ id:"urti", cat:"ENT/Resp", title:"Viral URTI (common cold)",
+  aliases:"cold flu congestion runny nose rhinorrhea virus upper respiratory",
+  body:
+`S: <<#>> days of nasal congestion, rhinorrhea, sore throat, mild cough. No dyspnea or chest pain. <<No fever.>> <<Low-grade fever at home.>> Eating and drinking well.
+O: Afebrile, vitals stable. TMs clear bilaterally. Oropharynx mildly injected, no exudate. No cervical lymphadenopathy. Chest clear.
+A: Viral URTI.
+P: Supportive care — fluids, rest, saline rinses, analgesia PRN. Antibiotics not indicated; rationale discussed. Return if fever >5 days, worsening dyspnea, or not improving by 10 days.` },
+
+{ id:"pharyngitis", cat:"ENT/Resp", title:"Pharyngitis / sore throat",
+  aliases:"strep throat tonsillitis odynophagia centor swab",
+  body:
+`S: Sore throat x <<#>> days with odynophagia. <<Fever present.>> <<No cough.>> No drooling, stridor, trismus, or neck stiffness.
+O: Temp <<temp>>. Oropharynx erythematous. <<Tonsillar exudate present.>> <<Tender anterior cervical nodes.>> No peritonsillar swelling, uvula midline. Chest clear.
+A: Pharyngitis — Centor <<#>>/4.
+P: <<Supportive care only — swab not indicated.>> <<Throat swab sent; amoxicillin 500 mg PO TID x 10 days if positive.>> Analgesia and fluids PRN. Return if unable to swallow, drooling, or worsening.` },
+
+{ id:"aom", cat:"ENT/Resp", title:"Acute otitis media",
+  aliases:"ear infection earache otalgia tympanic peds child AOM",
+  body:
+`S: <<R/L>> ear pain x <<#>> days on background of recent URTI. <<Fever present.>> No otorrhea. Hearing subjectively muffled.
+O: Temp <<temp>>. <<R/L>> TM erythematous and bulging with reduced mobility; contralateral TM normal. No mastoid tenderness or protrusion. Throat and chest unremarkable.
+A: Acute otitis media, <<R/L>>.
+P: <<Watchful waiting 48 h with analgesia; antibiotics if not settling.>> <<Amoxicillin 90 mg/kg/day divided BID x 5–10 days.>> <<Amoxicillin 500 mg PO TID x 5–7 days.>> Analgesia PRN. Return if persistent fever >48 h on antibiotics, otorrhea, or worsening.` },
+
+{ id:"otitis-externa", cat:"ENT/Resp", title:"Otitis externa",
+  aliases:"swimmers ear canal discharge tragal drops",
+  body:
+`S: <<R/L>> ear pain and itch x <<#>> days after <<swimming/water exposure/Q-tip use>>. <<Discharge present.>> Hearing muffled.
+O: Afebrile. <<R/L>> canal edematous and erythematous with debris; pain on tragal pressure. <<TM visualized and intact.>> <<TM obscured by debris.>> No cellulitis of the pinna.
+A: Otitis externa, <<R/L>>.
+P: Ciprofloxacin-dexamethasone drops 4 gtts BID x 7 days. Keep ear dry. Analgesia PRN. Return if fever, spreading redness, or no improvement in 48–72 h.` },
+
+{ id:"sinusitis", cat:"ENT/Resp", title:"Acute sinusitis",
+  aliases:"sinus facial pressure rhinosinusitis purulent",
+  body:
+`S: Facial pressure and congestion x <<#>> days with purulent rhinorrhea. <<Maxillary tooth pain.>> <<Worsening after initial improvement.>> No visual change or severe headache.
+O: Afebrile. Tenderness over <<maxillary/frontal>> sinuses. Nasal mucosa edematous with purulent discharge. No periorbital swelling or erythema. Neuro grossly normal.
+A: <<Acute viral rhinosinusitis.>> <<Acute bacterial rhinosinusitis — over 10 days, severe, or biphasic course.>>
+P: Saline rinses, intranasal corticosteroid, analgesia PRN. <<Amoxicillin-clavulanate 875 mg PO BID x 5–7 days.>> Return urgently if periorbital swelling, severe headache, or visual change.` },
+
+{ id:"bronchitis", cat:"ENT/Resp", title:"Acute bronchitis / cough",
+  aliases:"cough chest cold sputum post viral",
+  body:
+`S: Cough x <<#>> days following URTI. <<Productive of sputum.>> No hemoptysis, significant dyspnea, or pleuritic pain. <<Non-smoker.>> <<Smoker, # pack-years.>>
+O: Afebrile, RR <<RR>>, SpO2 <<%>> RA. Chest: <<clear.>> <<Scattered coarse crackles clearing with cough.>> No focal consolidation, no respiratory distress.
+A: Acute bronchitis, viral.
+P: Supportive — fluids, honey/antitussive PRN. Antibiotics not indicated; discussed (cough may last 3–4 weeks). Return if fever, worsening dyspnea, hemoptysis, or cough beyond 6 weeks.` },
+
+{ id:"allergic-rhinitis", cat:"ENT/Resp", title:"Allergic rhinitis",
+  aliases:"hay fever allergies seasonal sneezing itchy eyes antihistamine",
+  body:
+`S: Sneezing, itchy/watery eyes, clear rhinorrhea, and congestion — <<seasonal/perennial>>. Suspected triggers: <<triggers>>. No fever or purulent discharge.
+O: Pale, boggy turbinates with clear discharge. Posterior pharyngeal cobblestoning. Conjunctivae mildly injected, no purulence. Chest clear.
+A: Allergic rhinitis.
+P: Intranasal corticosteroid daily (technique reviewed) + non-sedating antihistamine PRN. Allergen avoidance discussed. F/U if poor control — consider allergy testing.` },
+
+{ id:"asthma", cat:"ENT/Resp", title:"Asthma follow-up",
+  aliases:"wheeze inhaler puffer ventolin controller SABA ICS",
+  body:
+`S: Asthma review. Daytime symptoms <<#>>/week, night waking <<#>>/month, reliever use <<#>>/week. No exacerbations, ED visits, or oral steroids since last visit. Triggers: <<triggers>>. Inhaler technique reviewed — good.
+O: RR <<RR>>, SpO2 <<%>> RA. Chest clear with good air entry, no wheeze.
+A: Asthma — <<well/partly/un>>controlled.
+P: <<Continue current regimen.>> <<Stepped up: new regimen.>> Written action plan reviewed. Influenza vaccine advised. F/U <<3–6>> months, sooner if worsening.` },
+
+{ id:"copd", cat:"ENT/Resp", title:"COPD follow-up",
+  aliases:"emphysema chronic bronchitis smoker dyspnea LAMA LABA",
+  body:
+`S: COPD review. Baseline dyspnea mMRC <<#>>. <<#>> exacerbations in past year. Cough and sputum stable. <<Current smoker, # pack-years.>> <<Ex-smoker.>>
+O: SpO2 <<%>> RA. Chest: reduced air entry, no wheeze. No peripheral edema or cyanosis.
+A: COPD — stable.
+P: Continue <<current inhalers>>. <<Smoking cessation discussed — plan: detail.>> Vaccinations up to date — influenza, pneumococcal. Pulmonary rehab and action plan reviewed. F/U <<#>> months.` },
+
+{ id:"conjunctivitis", cat:"ENT/Resp", title:"Conjunctivitis",
+  aliases:"pink eye red eye discharge itchy",
+  body:
+`S: <<R/L/bilateral>> red eye x <<#>> days with <<watery/purulent>> discharge and gritty sensation. No significant pain, photophobia, or vision change. No contact lens use.
+O: Conjunctival injection <<R/L>> with <<watery/purulent>> discharge. Cornea clear, PERL, visual acuity grossly normal. No ciliary flush.
+A: <<Viral conjunctivitis.>> <<Bacterial conjunctivitis.>> <<Allergic conjunctivitis.>>
+P: <<Lubricants and lid hygiene.>> <<Topical antibiotic drops QID x 5 days.>> <<Antihistamine drops BID.>> Hand hygiene; discard eye makeup. Urgent reassessment if pain, photophobia, or reduced vision.` },
+
+// ---------- Cardio / Metabolic ----------
+{ id:"htn", cat:"Cardio/Metab", title:"Hypertension follow-up",
+  aliases:"blood pressure BP high hypertensive",
+  body:
+`S: BP review. Home readings average <<BP>>. Adherent to medications, no side effects. No chest pain, dyspnea, headache, or neuro symptoms. Lifestyle reviewed — salt, activity, alcohol.
+O: BP <<BP>> (repeat <<BP>>), HR <<HR>>. Cardiorespiratory exam unremarkable. No edema.
+A: Hypertension — <<at/above>> target.
+P: <<Continue current antihypertensives.>> <<Titrated: change.>> Annual labs (electrolytes, Cr, A1c, lipids, urine ACR): <<up to date/ordered>>. Lifestyle counselling. F/U <<3–6>> months with home readings.` },
+
+{ id:"t2dm", cat:"Cardio/Metab", title:"Type 2 diabetes follow-up",
+  aliases:"diabetes sugar A1c metformin glucose DM",
+  body:
+`S: Diabetes review. Adherent to medications, no hypoglycemia. Home glucose <<range>>. Diet and activity: <<detail>>. No polyuria or polydipsia, no foot concerns. Last eye exam <<date>>.
+O: BP <<BP>>, weight <<wt>> (<<change>>). Foot exam: pulses palpable, monofilament sensation intact, no ulcers or deformity.
+A: Type 2 diabetes — A1c <<%>>, <<at/above>> target 7.0%.
+P: <<Continue current regimen.>> <<Adjusted: change.>> A1c q3–6 months; annual ACR, Cr, lipids <<up to date/ordered>>. Retinal screening <<up to date/booked>>. Vascular protection (statin/ACEi) reviewed. F/U <<3–6>> months.` },
+
+{ id:"lipids", cat:"Cardio/Metab", title:"Dyslipidemia review",
+  aliases:"cholesterol LDL statin lipids framingham",
+  body:
+`S: Lipid review — <<primary/secondary>> prevention. No statin side effects. Diet and exercise reviewed.
+O: BP <<BP>>, BMI <<BMI>>. CV exam normal.
+A: Dyslipidemia — LDL <<LDL>> (target <<target>>); Framingham risk <<%>>.
+P: <<Continue current statin.>> <<Started: statin and dose.>> Lifestyle counselling. Repeat lipids in <<interval>>. F/U annually or with results.` },
+
+{ id:"hypothyroid", cat:"Cardio/Metab", title:"Hypothyroidism follow-up",
+  aliases:"thyroid TSH levothyroxine synthroid",
+  body:
+`S: Hypothyroid review on levothyroxine <<dose>> mcg daily, taken on empty stomach. No fatigue, weight change, cold intolerance, palpitations, or tremor.
+O: HR <<HR>>, regular. No tremor. Thyroid: no goiter or nodules.
+A: Hypothyroidism — TSH <<TSH>>, in range.
+P: Continue levothyroxine <<dose>> mcg daily. <<Repeat TSH in 12 months.>> <<Repeat TSH 6 weeks after dose change.>> F/U PRN.` },
+
+{ id:"chest-pain", cat:"Cardio/Metab", title:"Chest pain — low risk",
+  aliases:"chest wall musculoskeletal costochondritis atypical ACS",
+  body:
+`S: Chest pain x <<duration>> — <<sharp/pleuritic/positional>>, episodes lasting <<duration>>. Not exertional; no diaphoresis, nausea, syncope, or dyspnea. CV risk factors: <<risk factors>>. No immobilization or VTE risk factors.
+O: Vitals stable, SpO2 <<%>>. Chest wall tenderness reproducing the pain. Heart sounds normal, no murmur. Chest clear. No leg swelling.
+A: Chest pain — most consistent with musculoskeletal; low risk for ACS/PE.
+P: <<ECG done — normal.>> <<ECG ordered.>> NSAIDs PRN. Red flags reviewed — ED immediately if exertional pain, dyspnea, syncope, or diaphoresis. F/U <<1–2>> weeks or sooner PRN.` },
+
+{ id:"palpitations", cat:"Cardio/Metab", title:"Palpitations",
+  aliases:"heart racing skipped beats fluttering holter ectopy",
+  body:
+`S: Intermittent palpitations x <<duration>> — <<description>>, lasting <<duration>>. No syncope, chest pain, or exertional symptoms. Caffeine/alcohol/stimulants: <<intake>>. No family history of sudden cardiac death.
+O: HR <<HR>>, regular. BP <<BP>>. Heart sounds normal, no murmur. Thyroid normal.
+A: Palpitations — likely benign ectopy; no high-risk features.
+P: <<ECG done — normal.>> <<ECG ordered.>> <<Holter ordered.>> Labs: CBC, TSH, electrolytes. Reduce caffeine and alcohol. Return promptly if syncope, chest pain, or sustained episodes.` },
+
+// ---------- GI ----------
+{ id:"gerd", cat:"GI", title:"GERD",
+  aliases:"reflux heartburn acid PPI indigestion",
+  body:
+`S: Retrosternal burning x <<duration>>, worse after meals and lying flat. <<Regurgitation present.>> No dysphagia, odynophagia, weight loss, GI bleeding, or anemia — no alarm features.
+O: Vitals normal. Abdomen soft, non-tender, no masses.
+A: GERD without alarm features.
+P: PPI trial — <<agent and dose>> daily x 4–8 weeks, then reassess and step down. Lifestyle: weight, late meals, alcohol, caffeine. Refer for endoscopy if alarm features or refractory.` },
+
+{ id:"gastro", cat:"GI", title:"Gastroenteritis",
+  aliases:"vomiting diarrhea stomach flu food poisoning dehydration",
+  body:
+`S: <<Vomiting>> <<and diarrhea>> x <<#>> days, up to <<#>> episodes/day. No blood in stool. <<Cramps.>> <<Low-grade fever.>> Tolerating sips; urine output maintained. <<Sick contact.>> <<Suspect food source.>>
+O: T <<temp>>, HR <<HR>>, BP <<BP>>. Mucous membranes moist, cap refill normal. Abdomen soft with mild diffuse tenderness, no peritonism.
+A: Acute viral gastroenteritis, no dehydration.
+P: Oral rehydration — small frequent sips, advance diet as tolerated. <<Ondansetron PRN.>> Hand hygiene. Return if blood in stool, persistent fever, unable to keep fluids down, or decreased urine output.` },
+
+{ id:"constipation", cat:"GI", title:"Constipation",
+  aliases:"hard stool infrequent straining PEG laxative",
+  body:
+`S: Hard, infrequent stools (<<#>>/week) x <<duration>> with straining. No blood, weight loss, or nocturnal symptoms. Fibre and fluid intake low. Meds reviewed — no opioids or iron.
+O: Abdomen soft, no masses. <<DRE: normal tone, no impaction or mass.>>
+A: Functional constipation, no red flags.
+P: Increase fibre and fluids; PEG 3350 17 g daily, titrate to effect. Toileting routine discussed. Return if bleeding, weight loss, or refractory — will investigate.` },
+
+{ id:"ibs", cat:"GI", title:"IBS follow-up",
+  aliases:"irritable bowel bloating cramps FODMAP",
+  body:
+`S: Recurrent abdominal pain <<#>>x/week related to defecation, with <<diarrhea/constipation/mixed>> pattern and bloating. No nocturnal diarrhea, blood, or weight loss. Stressors: <<stressors>>.
+O: Vitals normal. Abdomen soft, mild diffuse tenderness, no masses or organomegaly.
+A: IBS-<<D/C/M>> (Rome IV), no alarm features.
+P: <<Celiac screen, CBC, CRP ordered.>> Dietary review — soluble fibre, low-FODMAP trial. <<Antispasmodic PRN.>> Reassurance re: benign course. F/U <<4–6>> weeks; return if red flags.` },
+
+// ---------- GU / Repro ----------
+{ id:"uti", cat:"GU/Repro", title:"Uncomplicated UTI (cystitis)",
+  aliases:"bladder infection dysuria burning pee urine frequency",
+  body:
+`S: Dysuria, frequency, and urgency x <<#>> days. No fever, flank pain, or vaginal discharge/irritation. Not pregnant — LMP <<date>>.
+O: Afebrile. Abdomen soft; mild suprapubic tenderness. No CVA tenderness.
+A: Uncomplicated cystitis.
+P: <<Nitrofurantoin 100 mg PO BID x 5 days.>> <<TMP-SMX DS PO BID x 3 days.>> Urine dip: <<result>>. <<Culture sent.>> Fluids. Return if fever, flank pain, or no improvement in 48 h.` },
+
+{ id:"vaginitis", cat:"GU/Repro", title:"Vaginitis (yeast / BV)",
+  aliases:"yeast candida discharge itch BV bacterial vaginosis",
+  body:
+`S: Vaginal <<itch/discharge/odour>> x <<duration>>. Discharge <<thick and white>> <<thin and grey with fishy odour>>. No abdominal pain, fever, or abnormal bleeding. LMP <<date>>.
+O: External genitalia: mild erythema. Speculum: discharge as described, cervix normal, no cervical motion tenderness.
+A: <<Vulvovaginal candidiasis.>> <<Bacterial vaginosis.>>
+P: <<Fluconazole 150 mg PO x 1.>> <<Metronidazole 500 mg PO BID x 7 days.>> <<Swabs sent.>> Return if persistent or recurrent symptoms.` },
+
+{ id:"contraception", cat:"GU/Repro", title:"Contraception visit",
+  aliases:"birth control OCP pill IUD depo ring patch",
+  body:
+`S: Requesting contraception. Options discussed — OCP, patch, ring, IUD, injection. No migraine with aura, VTE history, smoking over 35 y, or other contraindications. LMP <<date>> — reasonably certain not pregnant.
+O: BP <<BP>>, weight <<wt>>.
+A: Contraception counselling.
+P: Started <<method>>. Reviewed missed-dose rules, common side effects, and VTE warning signs (ACHES). Condoms advised for STI protection. F/U 3 months for BP check, sooner PRN.` },
+
+{ id:"menopause", cat:"GU/Repro", title:"Menopause symptoms",
+  aliases:"hot flashes flushes night sweats HRT MHT perimenopause",
+  body:
+`S: Vasomotor symptoms — hot flashes and night sweats x <<duration>>, affecting sleep and quality of life. LMP <<date>>. No abnormal bleeding. <<Genitourinary symptoms present.>> No contraindications to hormone therapy — no breast cancer, VTE, CAD, or undiagnosed bleeding.
+O: BP <<BP>>, BMI <<BMI>>.
+A: Menopausal vasomotor symptoms.
+P: Options discussed — lifestyle, menopausal hormone therapy, non-hormonal. <<Started: therapy.>> <<Considering — information provided.>> Mammogram and cervical screening up to date. F/U 3 months.` },
+
+{ id:"pap", cat:"GU/Repro", title:"Cervical screening (Pap)",
+  aliases:"pap smear cervix HPV screening cytology",
+  body:
+`S: Here for routine cervical screening. No abnormal bleeding, discharge, or post-coital bleeding. LMP <<date>>. Last screen <<date>> — normal.
+O: Speculum exam: cervix appears normal. Sample collected without difficulty.
+A: Routine cervical cancer screening.
+P: Results in 2–4 weeks — will contact if abnormal. Recall per guideline.` },
+
+{ id:"sti", cat:"GU/Repro", title:"STI screening",
+  aliases:"STD gonorrhea chlamydia HIV syphilis testing sexual health",
+  body:
+`S: Requesting STI screening — <<new partner/routine>>. Asymptomatic: no discharge, dysuria, lesions, or pelvic pain. Practices and partners: <<detail>>. Last screen <<date>>.
+O: <<Deferred — asymptomatic.>> <<External genital exam normal.>>
+A: Asymptomatic STI screening.
+P: Sent: GC/chlamydia NAAT <<urine/swab>>, HIV, syphilis serology. <<Hep B and C added per risk.>> Safer-sex counselling provided. Will contact with results; partner treatment if positive.` },
+
+{ id:"ed", cat:"GU/Repro", title:"Erectile dysfunction",
+  aliases:"impotence viagra sildenafil cialis erection",
+  body:
+`S: Erectile difficulties x <<duration>>, gradual onset. <<Morning erections preserved.>> Libido normal. PMHx: <<DM/HTN/smoking>>. Medications reviewed. Mood normal; no relationship stressors.
+O: BP <<BP>>. Genital exam normal. Peripheral pulses normal.
+A: Erectile dysfunction — likely vasculogenic; treat as CV risk marker.
+P: Labs: A1c, lipids. <<Morning testosterone added.>> CV risk assessment. Rx: <<sildenafil 50 mg PRN.>> <<tadalafil 10 mg PRN.>> Counselled — contraindicated with nitrates. Lifestyle: exercise, smoking, alcohol. F/U <<4–8>> weeks.` },
+
+{ id:"bph", cat:"GU/Repro", title:"BPH / LUTS",
+  aliases:"prostate urinary nocturia weak stream tamsulosin PSA",
+  body:
+`S: Lower urinary tract symptoms x <<duration>> — weak stream, hesitancy, nocturia <<#>>x/night. No dysuria, hematuria, or retention. IPSS <<score>>.
+O: Abdomen: no palpable bladder. DRE: prostate smoothly enlarged, no nodules or asymmetry.
+A: BPH with <<mild/moderate>> LUTS.
+P: Cr and urinalysis ordered. PSA discussed — <<decision>>. <<Watchful waiting.>> <<Tamsulosin 0.4 mg qHS — counselled re: dizziness.>> Limit evening fluids and caffeine. Return if retention, hematuria, or worsening.` },
+
+{ id:"prenatal", cat:"GU/Repro", title:"Routine prenatal visit",
+  aliases:"pregnancy pregnant OB antenatal GA fetal",
+  body:
+`S: Routine prenatal visit at <<#>> weeks. Feeling well. <<Fetal movements present.>> No bleeding, cramping, fluid loss, headache, or visual changes.
+O: BP <<BP>>, weight <<wt>>. SFH <<#>> cm. FHR <<#>> bpm. Urine dip: <<result>>.
+A: Intrauterine pregnancy at <<#>> weeks — progressing normally.
+P: Bloodwork and ultrasound per schedule: <<detail>>. Vaccines reviewed — Tdap, influenza, RSV timing. Warning signs reviewed. Next visit in <<#>> weeks.` },
+
+// ---------- MSK ----------
+{ id:"lbp", cat:"MSK", title:"Mechanical low back pain",
+  aliases:"back pain lumbar sciatica strain lifting",
+  body:
+`S: Low back pain x <<duration>> after <<lifting/no clear trigger>>. <<No radiation below the knee.>> <<Radicular symptoms to: side and level.>> No saddle anesthesia, bowel or bladder dysfunction, fever, weight loss, or significant trauma — no red flags.
+O: Ambulating with mild antalgia. Lumbar paraspinal tenderness, ROM reduced in flexion. SLR negative bilaterally. Lower limb power, sensation, and reflexes normal.
+A: Mechanical low back pain, no red flags.
+P: Stay active, avoid bed rest — discussed. Heat; naproxen 500 mg PO BID PRN with food. <<Physio referral.>> Imaging not indicated — rationale discussed. Return if red flags or not improving by 4–6 weeks.` },
+
+{ id:"neck-pain", cat:"MSK", title:"Mechanical neck pain",
+  aliases:"cervical stiff neck whiplash posture",
+  body:
+`S: Neck pain x <<duration>> — <<postural/after strain>>. No radicular arm symptoms, weakness, or numbness. No trauma, fever, weight loss, or night pain — no red flags.
+O: Cervical paraspinal tenderness; ROM reduced in rotation. Upper limb power, sensation, and reflexes normal. Spurling negative.
+A: Mechanical neck pain.
+P: Heat, posture and ergonomic review, ROM exercises. NSAIDs PRN. <<Physio referral.>> Return if neurological symptoms or not improving by 4 weeks.` },
+
+{ id:"knee-oa", cat:"MSK", title:"Knee osteoarthritis",
+  aliases:"knee pain arthritis OA degenerative stairs",
+  body:
+`S: <<R/L>> knee pain x <<duration>>, worse with stairs and activity; morning stiffness under 30 min. No locking, instability, or trauma.
+O: <<R/L>> knee: no effusion, crepitus present, <<medial/lateral>> joint-line tenderness, ROM full, ligaments stable.
+A: Knee osteoarthritis, <<R/L>>.
+P: Exercise and quadriceps strengthening. <<Physio referral.>> Weight management discussed. <<Topical NSAID PRN.>> <<Oral NSAID PRN.>> <<Acetaminophen PRN.>> <<X-ray ordered.>> F/U PRN; discuss injection if refractory.` },
+
+{ id:"shoulder", cat:"MSK", title:"Rotator cuff / shoulder pain",
+  aliases:"shoulder impingement rotator cuff overhead tendinopathy",
+  body:
+`S: <<R/L>> shoulder pain x <<duration>>, worse with overhead activity and lying on the affected side. No trauma, no neck symptoms or radicular features.
+O: <<R/L>> shoulder: painful arc 60–120°, positive <<Hawkins/empty-can>>. Full passive ROM. Power otherwise intact. No deformity or wasting.
+A: Rotator cuff tendinopathy / subacromial impingement, <<R/L>>.
+P: Relative rest from aggravating activity; physio-directed strengthening. NSAIDs PRN. Consider subacromial injection if no improvement at 6 weeks. F/U 6 weeks.` },
+
+{ id:"ankle-sprain", cat:"MSK", title:"Ankle sprain",
+  aliases:"twisted ankle inversion ottawa ligament ATFL",
+  body:
+`S: <<R/L>> ankle inversion injury on <<date>>. Able to weight-bear <<immediately/with difficulty>>. No numbness or other injuries.
+O: Swelling and tenderness over the ATFL. No bony tenderness at posterior malleoli, navicular, or base of 5th metatarsal; able to weight-bear 4 steps — Ottawa criteria negative. Neurovascularly intact.
+A: Lateral ankle sprain, grade <<I/II>>, <<R/L>>. X-ray not indicated per Ottawa rules.
+P: Relative rest, ice, compression, elevation; early mobilization and ankle rehab exercises. NSAIDs PRN. Return if unable to weight-bear or not improving in 1–2 weeks.` },
+
+{ id:"plantar", cat:"MSK", title:"Plantar fasciitis",
+  aliases:"heel pain foot first steps morning orthotics",
+  body:
+`S: <<R/L>> heel pain x <<duration>>, worst with first steps in the morning and after prolonged standing. No trauma or night pain.
+O: Tenderness at the medial calcaneal tubercle. No swelling or erythema. Ankle ROM normal; tight gastrocnemius.
+A: Plantar fasciitis, <<R/L>>.
+P: Calf and plantar fascia stretching, supportive footwear, ice. <<OTC orthotics.>> NSAIDs PRN. F/U 6–8 weeks; consider physio or injection if refractory.` },
+
+{ id:"gout", cat:"MSK", title:"Gout flare",
+  aliases:"podagra big toe uric acid crystal arthritis allopurinol",
+  body:
+`S: Acute onset <<R/L>> <<1st MTP/joint>> pain, redness, and swelling since <<onset>>. <<First episode.>> <<Prior episodes: #.>> Triggers: <<alcohol/red meat/diuretic>>. No fever or trauma.
+O: Afebrile. <<R/L>> <<1st MTP>>: erythema, warmth, swelling, exquisitely tender. No tracking cellulitis; overlying skin intact.
+A: Acute gout flare, <<R/L>> <<1st MTP>>. Low suspicion for septic joint.
+P: <<Naproxen 500 mg PO BID x 5 days with food.>> <<Colchicine 1.2 mg PO, then 0.6 mg 1 h later.>> <<Prednisone 30 mg PO daily x 5 days.>> Hydration; limit alcohol and purines. Discuss urate-lowering therapy once settled if recurrent. Return if fever or spreading redness.` },
+
+// ---------- Mental health ----------
+{ id:"depression", cat:"Mental health", title:"Depression follow-up",
+  aliases:"mood MDD PHQ9 antidepressant SSRI low",
+  body:
+`S: Mood review. PHQ-9 <<score>> (previous <<score>>). Sleep <<detail>>, appetite <<detail>>, energy <<detail>>, concentration <<detail>>. Denies suicidal or homicidal ideation — no plan or intent. Medication adherence good, no side effects.
+O: Alert, good eye contact, <<reactive/flat>> affect. No psychomotor changes.
+A: Major depressive disorder — <<improving/stable>> on <<medication>>.
+P: <<Continue current dose.>> <<Titrated: change.>> Counselling/CBT <<referred/ongoing>>. Safety plan reviewed; crisis resources provided. F/U 4 weeks.` },
+
+{ id:"anxiety", cat:"Mental health", title:"Anxiety (GAD)",
+  aliases:"worry panic GAD7 anxious stress",
+  body:
+`S: Anxiety review. GAD-7 <<score>>. Worry, restlessness, sleep disturbance: <<detail>>. Functioning at work/school: <<detail>>. <<No panic attacks.>> <<Panic attacks # per week.>> Denies suicidal ideation. Caffeine intake <<detail>>.
+O: Appears <<calm/anxious>>. Mental status otherwise unremarkable.
+A: Generalized anxiety disorder — <<improving/stable>>.
+P: <<Continue current SSRI.>> <<Started: medication.>> CBT resources and referral discussed. Sleep hygiene and caffeine reduction. F/U 4–6 weeks, sooner if worsening.` },
+
+{ id:"insomnia", cat:"Mental health", title:"Insomnia",
+  aliases:"sleep can't sleep sleeping pills CBTI tired",
+  body:
+`S: Difficulty <<initiating/maintaining>> sleep x <<duration>>; about <<#>> h/night. Evening screens and caffeine: <<detail>>. No snoring or witnessed apneas. Mood screened — normal. Daytime impairment: <<detail>>.
+O: BP <<BP>>, BMI <<BMI>>. Exam unremarkable.
+A: Chronic insomnia.
+P: Sleep hygiene and stimulus control reviewed; CBT-I resources provided (first-line). Sedatives avoided — risks discussed. <<STOP-BANG done; sleep study ordered.>> F/U 4 weeks.` },
+
+{ id:"adhd", cat:"Mental health", title:"ADHD follow-up",
+  aliases:"focus stimulant concentration vyvanse methylphenidate",
+  body:
+`S: ADHD review on <<medication>>. Focus and function at <<school/work>>: <<improved/stable>>. Appetite <<detail>>, sleep <<detail>>, mood <<detail>>. No chest pain or palpitations. Taking as prescribed; no diversion concerns.
+O: BP <<BP>>, HR <<HR>>, weight <<wt>> (<<change>>).
+A: ADHD — <<good/partial>> response on current dose.
+P: <<Continue current dose.>> <<Titrated: change.>> Monitoring BP, HR, weight. F/U 3 months.` },
+
+// ---------- Neuro ----------
+{ id:"migraine", cat:"Neuro", title:"Migraine",
+  aliases:"headache HA aura triptan photophobia",
+  body:
+`S: Recurrent unilateral throbbing headaches lasting <<4–72>> h with nausea and photophobia. <<No aura.>> <<Aura precedes headache.>> Frequency <<#>>/month. No thunderclap onset, fever, neuro deficits, or waking from sleep — no red flags. Triggers: <<triggers>>.
+O: Vitals normal. Neuro exam normal — cranial nerves, power, reflexes, gait. Fundi normal.
+A: Migraine <<without/with>> aura, no red flags.
+P: Acute: <<NSAID at onset.>> <<Triptan at onset.>> Limit acute treatment to under 10 days/month — medication-overuse headache discussed. Headache diary; trigger management. <<Prophylaxis discussed given frequency.>> F/U 6–8 weeks.` },
+
+{ id:"bppv", cat:"Neuro", title:"BPPV / vertigo",
+  aliases:"dizzy dizziness spinning room epley dix hallpike",
+  body:
+`S: Brief spinning episodes with position changes (rolling over, looking up), lasting under 1 min. No hearing loss, tinnitus, headache, or focal neuro symptoms.
+O: Vitals normal. Neuro exam normal; gait steady. Dix-Hallpike positive <<R/L>> — geotropic torsional nystagmus.
+A: BPPV, <<R/L>> posterior canal.
+P: <<Epley maneuver performed in office.>> <<Epley maneuver taught for home use.>> Home repositioning exercises reviewed. Avoid driving during acute vertigo. Return if persistent beyond 2 weeks, hearing change, or neuro symptoms.` },
+
+// ---------- Skin ----------
+{ id:"eczema", cat:"Skin", title:"Eczema / atopic dermatitis",
+  aliases:"rash itchy dry skin dermatitis steroid cream",
+  body:
+`S: Itchy, dry rash at <<flexures/hands>> x <<duration>>, chronic-relapsing pattern. Triggers: <<soaps/winter>>. <<Scratching disturbing sleep.>>
+O: Erythematous, dry, lichenified plaques with excoriations at <<site>>. No weeping, crusting, or pustules — no secondary infection.
+A: Atopic dermatitis — <<mild/moderate>> flare.
+P: Emollients liberally BID + soap substitute. <<Hydrocortisone 1% BID x 1–2 weeks (face/folds).>> <<Betamethasone valerate 0.1% BID x 1–2 weeks (body).>> Trigger avoidance. Return if infected or not settling.` },
+
+{ id:"acne", cat:"Skin", title:"Acne",
+  aliases:"pimples zits comedones retinoid doxycycline",
+  body:
+`S: Facial acne x <<duration>> — <<comedonal/inflammatory>>. <<Chest and back involved.>> Prior treatments: <<treatments>>. Impact on mood: <<detail>>.
+O: Face: open and closed comedones, inflammatory papules and pustules. No nodules or scarring.
+A: Acne vulgaris — <<mild/moderate>>.
+P: Started <<adapalene qHS.>> <<adapalene + benzoyl peroxide qHS.>> Counselled — irritation, photosensitivity, 8–12 weeks to effect. <<Added doxycycline 100 mg daily.>> F/U 3 months.` },
+
+{ id:"cellulitis", cat:"Skin", title:"Cellulitis",
+  aliases:"skin infection red leg spreading erythema keflex",
+  body:
+`S: <<R/L>> <<site>> redness, warmth, and pain x <<#>> days, gradually spreading. Portal of entry: <<bite/wound/tinea pedis>>. No fever or chills. No diabetes or immunosuppression.
+O: T <<temp>>, HR <<HR>>. <<Site>>: confluent erythema, warmth, tenderness — margins marked. No abscess, fluctuance, crepitus, or lymphangitic streaking.
+A: Cellulitis, <<R/L>> <<site>> — suitable for oral therapy.
+P: Cephalexin 500 mg PO QID x <<5–7>> days. Elevate limb. Margins marked to monitor spread. Return or ED if fever, rapid spread beyond margins, or systemic symptoms. F/U 48 h.` },
+
+{ id:"skin-lesion", cat:"Skin", title:"Skin lesion assessment",
+  aliases:"mole nevus spot melanoma biopsy ABCDE derm",
+  body:
+`S: <<New/changing>> lesion on <<site>>, first noticed <<date>>. <<Change in size, colour, or border.>> <<Bleeding or itch.>> No personal or family history of skin cancer. Sun exposure history: <<detail>>.
+O: <<Site>>: <<#>> mm <<macule/papule/plaque>>, <<colour>>, border <<regular/irregular>>, <<symmetric/asymmetric>>. ABCDE: <<detail>>.
+A: <<Benign-appearing lesion.>> <<Suspicious lesion NYD.>>
+P: <<Reassurance; photo documented — return if changing.>> <<Biopsy arranged.>> <<Dermatology referral.>> Sun protection counselled.` },
+
+// ---------- General / Preventive ----------
+{ id:"fatigue", cat:"General", title:"Fatigue workup",
+  aliases:"tired low energy exhausted TATT",
+  body:
+`S: Fatigue x <<duration>>, gradual onset. Sleep <<#>> h/night; no snoring. Mood screened — PHQ-2 negative. No weight loss, fevers, or night sweats. Medications and alcohol reviewed.
+O: Vitals normal. No pallor or lymphadenopathy. Thyroid normal. Cardiorespiratory and abdominal exams unremarkable.
+A: Fatigue NYD — no red flags on history or exam.
+P: Labs: CBC, TSH, ferritin, A1c, electrolytes, Cr. <<B12 and celiac screen added.>> Sleep hygiene reviewed. F/U 2–3 weeks with results.` },
+
+{ id:"phe", cat:"General", title:"Adult periodic health exam",
+  aliases:"checkup physical annual exam screening preventive",
+  body:
+`S: Routine health review; no current concerns. PMHx and medications reviewed. Lifestyle: smoking <<status>>, alcohol <<intake>>, activity <<detail>>, diet <<detail>>. Family history reviewed. Mood screened — fine.
+O: BP <<BP>>, HR <<HR>>, BMI <<BMI>>. Focused exam unremarkable.
+A: Periodic health exam — well.
+P: Screening per age and sex: <<lipids, A1c, FIT, cervical screening, mammogram, PSA discussion, bone density>>. Immunizations reviewed and up to date. Lifestyle counselling. Recall <<1–3>> years.` },
+
+{ id:"well-child", cat:"General", title:"Well child visit",
+  aliases:"baby peds pediatric immunization milestones growth",
+  body:
+`S: Well child visit at <<age>>. Feeding <<detail>>, sleep <<detail>>. Development age-appropriate — gross motor, fine motor, language, social. Parental concerns: none.
+O: Weight <<wt>> (<<%ile>>), height <<ht>> (<<%ile>>). <<HC # cm (%ile).>> Exam normal — heart, lungs, abdomen, skin, genitalia. <<Fontanelle, red reflex, and hips normal.>>
+A: Healthy child; growth and development on track.
+P: Immunizations per schedule: <<given today>>. Anticipatory guidance — safety, sleep, nutrition, screen time. Next visit at <<age>>.` },
+
+{ id:"med-renewal", cat:"General", title:"Medication renewal visit",
+  aliases:"refill prescription renew script rx repeat",
+  body:
+`S: Medication renewal: <<medications>>. Conditions stable; no new symptoms or side effects. Adherent to regimen.
+O: BP <<BP>>, HR <<HR>>. Focused exam unremarkable.
+A: Stable <<conditions>> — routine renewal.
+P: Renewed <<medications and duration>>. Monitoring labs <<up to date/ordered>>. F/U <<#>> months or sooner PRN.` },
+
+];
+
+/* ================= App ================= */
+
+const LS = {
+  get(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  },
+  set(key, val) {
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+  }
+};
+
+let overrides = LS.get("sqp_overrides", {});
+let extras    = LS.get("sqp_extras", []);
+let hidden    = LS.get("sqp_hidden", []);
+let usage     = LS.get("sqp_usage", {});
+let seq       = LS.get("sqp_seq", 1);
+
+let query = "";
+let selId = null;
+let editingId = null;   // id being edited, or null when adding new
+
+const $ = id => document.getElementById(id);
+const searchEl = $("search"), listEl = $("list"), previewEl = $("preview");
+
+function allTemplates() {
+  const base = DEFAULTS
+    .filter(d => !hidden.includes(d.id))
+    .map(d => overrides[d.id] ? Object.assign({}, d, overrides[d.id], { edited: true }) : d);
+  return base.concat(extras.map(e => Object.assign({}, e, { custom: true })));
+}
+
+function matchScore(t, tokens) {
+  const title = t.title.toLowerCase();
+  const aliases = (t.aliases || "").toLowerCase();
+  const cat = (t.cat || "").toLowerCase();
+  const body = t.body.toLowerCase();
+  let score = 0;
+  for (const tok of tokens) {
+    let s = 0;
+    if (title.startsWith(tok)) s = 8;
+    else if (title.includes(tok)) s = 6;
+    else if (aliases.includes(tok)) s = 4;
+    else if (cat.includes(tok)) s = 3;
+    else if (body.includes(tok)) s = 1;
+    if (s === 0) return -1;   // every word must match somewhere
+    score += s;
+  }
+  return score;
+}
+
+function results() {
+  const items = allTemplates();
+  const tokens = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!tokens.length) {
+    return items.slice().sort((a, b) =>
+      (usage[b.id] || 0) - (usage[a.id] || 0) ||
+      items.indexOf(a) - items.indexOf(b));
+  }
+  return items
+    .map(t => ({ t, s: matchScore(t, tokens) }))
+    .filter(x => x.s >= 0)
+    .sort((a, b) => b.s - a.s || (usage[b.t.id] || 0) - (usage[a.t.id] || 0))
+    .map(x => x.t);
+}
+
+function render() {
+  const res = results();
+  if (!res.some(t => t.id === selId)) selId = res.length ? res[0].id : null;
+
+  listEl.textContent = "";
+  if (!res.length) {
+    const li = document.createElement("li");
+    li.id = "empty";
+    li.textContent = "No matches — try fewer letters, or add it as a new template.";
+    li.style.cursor = "default";
+    listEl.appendChild(li);
+  }
+  for (const t of res) {
+    const li = document.createElement("li");
+    if (t.id === selId) li.classList.add("sel");
+    const title = document.createElement("span");
+    title.className = "t";
+    title.textContent = t.title;
+    const meta = document.createElement("span");
+    meta.className = "meta";
+    const chip = document.createElement("span");
+    chip.className = "chip";
+    chip.textContent = t.cat || "custom";
+    const btn = document.createElement("button");
+    btn.className = "rowcopy";
+    btn.textContent = "copy";
+    btn.title = "Copy this note";
+    btn.addEventListener("click", e => { e.stopPropagation(); copyTemplate(t); });
+    meta.appendChild(chip);
+    meta.appendChild(btn);
+    li.appendChild(title);
+    li.appendChild(meta);
+    li.addEventListener("click", () => { selId = t.id; render(); });
+    listEl.appendChild(li);
+  }
+
+  renderPreview();
+  $("count").textContent = allTemplates().length + " templates";
+}
+
+function renderPreview() {
+  previewEl.textContent = "";
+  const t = allTemplates().find(x => x.id === selId);
+  if (!t) {
+    const p = document.createElement("p");
+    p.style.color = "var(--muted)";
+    p.textContent = "Select a template to preview it here.";
+    previewEl.appendChild(p);
+    return;
+  }
+  const head = document.createElement("div");
+  head.className = "head";
+  const h2 = document.createElement("h2");
+  h2.textContent = t.title + (t.edited ? " (edited)" : "") + (t.custom ? " (custom)" : "");
+  const btns = document.createElement("div");
+  btns.className = "btns";
+
+  const copyBtn = document.createElement("button");
+  copyBtn.className = "primary";
+  copyBtn.textContent = "Copy (Enter)";
+  copyBtn.addEventListener("click", () => copyTemplate(t));
+
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "Edit";
+  editBtn.addEventListener("click", () => openModal(t.id));
+
+  btns.appendChild(copyBtn);
+  btns.appendChild(editBtn);
+
+  if (t.edited) {
+    const resetBtn = document.createElement("button");
+    resetBtn.textContent = "Reset to default";
+    resetBtn.addEventListener("click", () => {
+      if (!confirm("Discard your edits and restore the built-in version of this template?")) return;
+      delete overrides[t.id];
+      LS.set("sqp_overrides", overrides);
+      render();
+    });
+    btns.appendChild(resetBtn);
+  }
+
+  head.appendChild(h2);
+  head.appendChild(btns);
+  const pre = document.createElement("pre");
+  for (const part of t.body.split(/(<<.*?>>)/g)) {
+    if (part.startsWith("<<") && part.endsWith(">>")) {
+      const sp = document.createElement("span");
+      sp.className = "fld";
+      sp.textContent = part;
+      pre.appendChild(sp);
+    } else if (part) {
+      pre.appendChild(document.createTextNode(part));
+    }
+  }
+  previewEl.appendChild(head);
+  previewEl.appendChild(pre);
+}
+
+/* ---------- copy ---------- */
+
+function legacyCopy(text) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch (e) {}
+  document.body.removeChild(ta);
+  return ok;
+}
+
+function copyTemplate(t) {
+  const done = () => {
+    usage[t.id] = (usage[t.id] || 0) + 1;
+    LS.set("sqp_usage", usage);
+    toast("Copied — paste into PSS, then tab through the <<fields>>");
+  };
+  const fail = () => {
+    if (legacyCopy(t.body)) done();
+    else toast("Copy failed — select the text and copy manually");
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t.body).then(done, fail);
+  } else {
+    fail();
+  }
+}
+
+let toastTimer = null;
+function toast(msg) {
+  const el = $("toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 1500);
+}
+
+/* ---------- keyboard ---------- */
+
+searchEl.addEventListener("input", () => {
+  query = searchEl.value;
+  selId = null;           // re-select top result for the new query
+  render();
+});
+
+searchEl.addEventListener("keydown", e => {
+  const res = results();
+  const idx = res.findIndex(t => t.id === selId);
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    if (res.length) { selId = res[Math.min(idx + 1, res.length - 1)].id; render(); }
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    if (res.length) { selId = res[Math.max(idx - 1, 0)].id; render(); }
+  } else if (e.key === "Enter") {
+    e.preventDefault();
+    const t = res.find(x => x.id === selId) || res[0];
+    if (t) copyTemplate(t);
+  } else if (e.key === "Escape") {
+    searchEl.value = ""; query = ""; selId = null; render();
+  }
+});
+
+window.addEventListener("keydown", e => {
+  if (!$("overlay").classList.contains("hidden")) {
+    if (e.key === "Escape") closeModal();
+    return;
+  }
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "input" || tag === "textarea") return;
+  if (e.key === "/" ) { e.preventDefault(); searchEl.focus(); return; }
+  // any printable character focuses search so he can just start typing
+  if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) searchEl.focus();
+});
+
+/* ---------- edit / add ---------- */
+
+function openModal(id) {
+  editingId = id;
+  const t = id ? allTemplates().find(x => x.id === id) : null;
+  $("modalTitle").textContent = t ? "Edit template" : "New template";
+  $("fTitle").value = t ? t.title : "";
+  $("fCat").value = t ? (t.cat || "") : "";
+  $("fAliases").value = t ? (t.aliases || "") : "";
+  $("fBody").value = t ? t.body : "S: \nO: \nA: \nP: ";
+  $("deleteBtn").style.display = t ? "" : "none";
+  const cats = [...new Set(allTemplates().map(x => x.cat).filter(Boolean))];
+  $("cats").textContent = "";
+  for (const c of cats) {
+    const o = document.createElement("option");
+    o.value = c;
+    $("cats").appendChild(o);
+  }
+  $("overlay").classList.remove("hidden");
+  $("fTitle").focus();
+}
+
+function closeModal() {
+  $("overlay").classList.add("hidden");
+  editingId = null;
+  searchEl.focus();
+}
+
+$("saveBtn").addEventListener("click", () => {
+  const data = {
+    title: $("fTitle").value.trim() || "Untitled",
+    cat: $("fCat").value.trim(),
+    aliases: $("fAliases").value.trim(),
+    body: $("fBody").value.replace(/\s+$/, "")
+  };
+  if (editingId) {
+    const isDefault = DEFAULTS.some(d => d.id === editingId);
+    if (isDefault) {
+      overrides[editingId] = data;
+      LS.set("sqp_overrides", overrides);
+    } else {
+      const i = extras.findIndex(x => x.id === editingId);
+      if (i >= 0) { extras[i] = Object.assign({ id: editingId }, data); LS.set("sqp_extras", extras); }
+    }
+    selId = editingId;
+  } else {
+    const id = "c" + seq++;
+    LS.set("sqp_seq", seq);
+    extras.push(Object.assign({ id: id }, data));
+    LS.set("sqp_extras", extras);
+    selId = id;
+  }
+  closeModal();
+  render();
+  toast("Saved (this browser only — Export to back up)");
+});
+
+$("deleteBtn").addEventListener("click", () => {
+  if (!editingId) return;
+  if (!confirm("Delete this template?")) return;
+  if (DEFAULTS.some(d => d.id === editingId)) {
+    hidden.push(editingId);
+    LS.set("sqp_hidden", hidden);
+    delete overrides[editingId];
+    LS.set("sqp_overrides", overrides);
+  } else {
+    extras = extras.filter(x => x.id !== editingId);
+    LS.set("sqp_extras", extras);
+  }
+  if (selId === editingId) selId = null;
+  closeModal();
+  render();
+});
+
+$("cancelBtn").addEventListener("click", closeModal);
+$("overlay").addEventListener("click", e => { if (e.target === $("overlay")) closeModal(); });
+$("addBtn").addEventListener("click", () => openModal(null));
+
+/* ---------- export / import ---------- */
+
+$("exportBtn").addEventListener("click", () => {
+  const payload = { app: "soap-quick-paste", version: 1, overrides, extras, hidden };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "soap-templates-backup.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast("Backup downloaded");
+});
+
+$("importBtn").addEventListener("click", () => $("importFile").click());
+
+$("importFile").addEventListener("change", e => {
+  const file = e.target.files[0];
+  e.target.value = "";
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!data || typeof data !== "object" || data.app !== "soap-quick-paste")
+        throw new Error("Not a SOAP Quick Paste backup");
+      if (!confirm("Replace your current customizations with this backup?")) return;
+      overrides = (data.overrides && typeof data.overrides === "object") ? data.overrides : {};
+      extras = Array.isArray(data.extras) ? data.extras.filter(x => x && x.id && x.body) : [];
+      hidden = Array.isArray(data.hidden) ? data.hidden : [];
+      LS.set("sqp_overrides", overrides);
+      LS.set("sqp_extras", extras);
+      LS.set("sqp_hidden", hidden);
+      render();
+      toast("Backup restored");
+    } catch (err) {
+      alert("Could not import this file: " + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+
+/* ---------- init ---------- */
+render();
+searchEl.focus();
+</script>
+</body>
+</html>
