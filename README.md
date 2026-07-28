@@ -4,7 +4,7 @@ A single-file template picker for family medicine charting. 50 common presentati
 as brief SOAP notes — type a couple of letters, press Enter, and the note is on your
 clipboard, ready to paste into PSS with tabbable `<<fields>>` for the blanks.
 
-**Use it here: https://wu-jeffrey.github.io/soap/**
+**Use it here: https://wu-jeffrey.github.io**
 
 ## Setup (once, ~1 minute per room)
 
