@@ -36,20 +36,13 @@ Templates you use most float to the top of the list.
 
 ## Customizing
 
-- **Fields are for what changes per patient.** If something is your *standard*
-  (your go-to drug, your usual follow-up interval), don't tab past it forever —
-  **Edit** the template once and make it plain text. Make the wording yours; the
-  doses and follow-ups in the defaults are generic starting points, not
-  recommendations.
-- When editing, wrap anything you want tabbable in `<<...>>`. Give either/or
-  options their own `<<field>>` each, with punctuation inside, so deleting one
-  leaves a clean sentence.
-- **+ New template** adds your own. Add good search keywords so it's findable.
-- Edits are saved **only in that browser** (localStorage). Use **Export** to
-  download a JSON backup, and **Import** to restore it on another computer or
-  after a browser cleanup. Export after any big editing session.
-- If a template ever shows old `[square bracket]` blanks after an update, click
-  **Reset to default** on it — you're seeing a saved edit from an older version.
+Templates live in [index.html](index.html) — one deployed source of truth, so a
+change shows up in every exam room within minutes of a push. To reword a
+template, add one, or turn a tabbable field into your standard plain text
+(your go-to drug, your usual follow-up), tell the maintainer what you want and
+it gets baked in for everyone. Conventions: wrap anything tabbable in
+`<<...>>`; give either/or options their own self-contained `<<field>>` (with
+punctuation inside) so deleting one leaves a clean sentence.
 
 ## Privacy
 

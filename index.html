@@ -51,7 +51,6 @@
   .brand { display: flex; align-items: baseline; gap: 10px; }
   .brand h1 { font-size: 18px; margin: 0; letter-spacing: .2px; }
   .brand span { color: var(--muted); font-size: 13px; }
-  .actions { display: flex; gap: 8px; }
   button {
     font: inherit;
     font-size: 13px;
@@ -69,7 +68,6 @@
     color: #fff;
   }
   button.primary:hover { filter: brightness(1.08); background: var(--accent); }
-  button.danger { color: #c0392b; }
   .searchwrap { padding: 12px 18px; }
   #search {
     width: 100%;
@@ -202,51 +200,6 @@
     transition: opacity .15s, transform .15s;
   }
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  #overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  #overlay.hidden { display: none; }
-  #modal {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    width: min(680px, 100%);
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 18px 20px;
-  }
-  #modal h3 { margin: 0 0 12px; font-size: 16px; }
-  #modal label { display: block; font-size: 12.5px; color: var(--muted); margin: 10px 0 4px; }
-  #modal input, #modal textarea {
-    width: 100%;
-    font: inherit;
-    font-size: 14px;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
-  }
-  #modal textarea {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 13px;
-    line-height: 1.5;
-    min-height: 240px;
-    resize: vertical;
-  }
-  #modal .modalbtns {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    margin-top: 14px;
-  }
-  #modal .modalbtns .right { display: flex; gap: 8px; }
   @media (max-width: 760px) {
     main { grid-template-columns: 1fr; grid-template-rows: 40vh 1fr; }
   }
@@ -257,12 +210,6 @@
   <div class="brand">
     <h1>SOAP Quick Paste</h1>
     <span id="count"></span>
-  </div>
-  <div class="actions">
-    <button id="addBtn">+ New template</button>
-    <button id="exportBtn" title="Download your templates as a JSON backup">Export</button>
-    <button id="importBtn" title="Restore templates from a JSON backup">Import</button>
-    <input type="file" id="importFile" accept=".json,application/json" hidden>
   </div>
 </header>
 
@@ -286,35 +233,13 @@
     (e.g. drug choices) are separate fields, so one delete removes the whole option.
   </div>
   <div>
-    100% local: this page makes no network requests and stores no patient data. Your edits live only in this
-    browser (use Export to back them up). Templates are starting points — verify all clinical content, doses,
-    and follow-ups yourself. Never type patient identifiers into templates.
+    100% local: this page makes no network requests and stores no patient data. Templates are starting
+    points — verify all clinical content, doses, and follow-ups yourself. Never type patient identifiers
+    into templates.
   </div>
 </footer>
 
 <div id="toast"></div>
-
-<div id="overlay" class="hidden">
-  <div id="modal">
-    <h3 id="modalTitle">Edit template</h3>
-    <label for="fTitle">Title</label>
-    <input id="fTitle" type="text">
-    <label for="fCat">Category</label>
-    <input id="fCat" type="text" list="cats">
-    <datalist id="cats"></datalist>
-    <label for="fAliases">Search keywords (space-separated — abbreviations, lay terms)</label>
-    <input id="fAliases" type="text">
-    <label for="fBody">Note body (copied verbatim — wrap PSS-tabbable blanks and options in &lt;&lt; &gt;&gt;)</label>
-    <textarea id="fBody"></textarea>
-    <div class="modalbtns">
-      <button id="deleteBtn" class="danger">Delete</button>
-      <div class="right">
-        <button id="cancelBtn">Cancel</button>
-        <button id="saveBtn" class="primary">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script>
 "use strict";
@@ -327,8 +252,7 @@
    - Alternatives are separate self-contained fields (own punctuation),
      first-line choice first — delete the ones not used.
    - What varies PER DOCTOR (your standard drug, your usual F/U) is
-     plain text: edit the template once instead of tabbing past it
-     forever. Edits save in this browser; Export makes a backup. */
+     plain text — edit this file to change it everywhere. */
 
 const DEFAULTS = [
 
@@ -1278,24 +1202,16 @@ const LS = {
   }
 };
 
-let overrides = LS.get("sqp_overrides", {});
-let extras    = LS.get("sqp_extras", []);
-let hidden    = LS.get("sqp_hidden", []);
-let usage     = LS.get("sqp_usage", {});
-let seq       = LS.get("sqp_seq", 1);
+let usage = LS.get("sqp_usage", {});
 
 let query = "";
 let selId = null;
-let editingId = null;   // id being edited, or null when adding new
 
 const $ = id => document.getElementById(id);
 const searchEl = $("search"), listEl = $("list"), previewEl = $("preview");
 
 function allTemplates() {
-  const base = DEFAULTS
-    .filter(d => !hidden.includes(d.id))
-    .map(d => overrides[d.id] ? Object.assign({}, d, overrides[d.id], { edited: true }) : d);
-  return base.concat(extras.map(e => Object.assign({}, e, { custom: true })));
+  return DEFAULTS;
 }
 
 function matchScore(t, tokens) {
@@ -1354,7 +1270,7 @@ function render() {
     meta.className = "meta";
     const chip = document.createElement("span");
     chip.className = "chip";
-    chip.textContent = t.cat || "custom";
+    chip.textContent = t.cat;
     const btn = document.createElement("button");
     btn.className = "rowcopy";
     btn.textContent = "copy";
@@ -1385,7 +1301,7 @@ function renderPreview() {
   const head = document.createElement("div");
   head.className = "head";
   const h2 = document.createElement("h2");
-  h2.textContent = t.title + (t.edited ? " (edited)" : "") + (t.custom ? " (custom)" : "");
+  h2.textContent = t.title;
   const btns = document.createElement("div");
   btns.className = "btns";
 
@@ -1394,24 +1310,7 @@ function renderPreview() {
   copyBtn.textContent = "Copy (Enter)";
   copyBtn.addEventListener("click", () => copyTemplate(t));
 
-  const editBtn = document.createElement("button");
-  editBtn.textContent = "Edit";
-  editBtn.addEventListener("click", () => openModal(t.id));
-
   btns.appendChild(copyBtn);
-  btns.appendChild(editBtn);
-
-  if (t.edited) {
-    const resetBtn = document.createElement("button");
-    resetBtn.textContent = "Reset to default";
-    resetBtn.addEventListener("click", () => {
-      if (!confirm("Discard your edits and restore the built-in version of this template?")) return;
-      delete overrides[t.id];
-      LS.set("sqp_overrides", overrides);
-      render();
-    });
-    btns.appendChild(resetBtn);
-  }
 
   head.appendChild(h2);
   head.appendChild(btns);
@@ -1498,134 +1397,11 @@ searchEl.addEventListener("keydown", e => {
 });
 
 window.addEventListener("keydown", e => {
-  if (!$("overlay").classList.contains("hidden")) {
-    if (e.key === "Escape") closeModal();
-    return;
-  }
   const tag = (e.target.tagName || "").toLowerCase();
   if (tag === "input" || tag === "textarea") return;
   if (e.key === "/" ) { e.preventDefault(); searchEl.focus(); return; }
   // any printable character focuses search so he can just start typing
   if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) searchEl.focus();
-});
-
-/* ---------- edit / add ---------- */
-
-function openModal(id) {
-  editingId = id;
-  const t = id ? allTemplates().find(x => x.id === id) : null;
-  $("modalTitle").textContent = t ? "Edit template" : "New template";
-  $("fTitle").value = t ? t.title : "";
-  $("fCat").value = t ? (t.cat || "") : "";
-  $("fAliases").value = t ? (t.aliases || "") : "";
-  $("fBody").value = t ? t.body : "S: \nO: \nA: \nP: ";
-  $("deleteBtn").style.display = t ? "" : "none";
-  const cats = [...new Set(allTemplates().map(x => x.cat).filter(Boolean))];
-  $("cats").textContent = "";
-  for (const c of cats) {
-    const o = document.createElement("option");
-    o.value = c;
-    $("cats").appendChild(o);
-  }
-  $("overlay").classList.remove("hidden");
-  $("fTitle").focus();
-}
-
-function closeModal() {
-  $("overlay").classList.add("hidden");
-  editingId = null;
-  searchEl.focus();
-}
-
-$("saveBtn").addEventListener("click", () => {
-  const data = {
-    title: $("fTitle").value.trim() || "Untitled",
-    cat: $("fCat").value.trim(),
-    aliases: $("fAliases").value.trim(),
-    body: $("fBody").value.replace(/\s+$/, "")
-  };
-  if (editingId) {
-    const isDefault = DEFAULTS.some(d => d.id === editingId);
-    if (isDefault) {
-      overrides[editingId] = data;
-      LS.set("sqp_overrides", overrides);
-    } else {
-      const i = extras.findIndex(x => x.id === editingId);
-      if (i >= 0) { extras[i] = Object.assign({ id: editingId }, data); LS.set("sqp_extras", extras); }
-    }
-    selId = editingId;
-  } else {
-    const id = "c" + seq++;
-    LS.set("sqp_seq", seq);
-    extras.push(Object.assign({ id: id }, data));
-    LS.set("sqp_extras", extras);
-    selId = id;
-  }
-  closeModal();
-  render();
-  toast("Saved (this browser only — Export to back up)");
-});
-
-$("deleteBtn").addEventListener("click", () => {
-  if (!editingId) return;
-  if (!confirm("Delete this template?")) return;
-  if (DEFAULTS.some(d => d.id === editingId)) {
-    hidden.push(editingId);
-    LS.set("sqp_hidden", hidden);
-    delete overrides[editingId];
-    LS.set("sqp_overrides", overrides);
-  } else {
-    extras = extras.filter(x => x.id !== editingId);
-    LS.set("sqp_extras", extras);
-  }
-  if (selId === editingId) selId = null;
-  closeModal();
-  render();
-});
-
-$("cancelBtn").addEventListener("click", closeModal);
-$("overlay").addEventListener("click", e => { if (e.target === $("overlay")) closeModal(); });
-$("addBtn").addEventListener("click", () => openModal(null));
-
-/* ---------- export / import ---------- */
-
-$("exportBtn").addEventListener("click", () => {
-  const payload = { app: "soap-quick-paste", version: 1, overrides, extras, hidden };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "soap-templates-backup.json";
-  a.click();
-  URL.revokeObjectURL(a.href);
-  toast("Backup downloaded");
-});
-
-$("importBtn").addEventListener("click", () => $("importFile").click());
-
-$("importFile").addEventListener("change", e => {
-  const file = e.target.files[0];
-  e.target.value = "";
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const data = JSON.parse(reader.result);
-      if (!data || typeof data !== "object" || data.app !== "soap-quick-paste")
-        throw new Error("Not a SOAP Quick Paste backup");
-      if (!confirm("Replace your current customizations with this backup?")) return;
-      overrides = (data.overrides && typeof data.overrides === "object") ? data.overrides : {};
-      extras = Array.isArray(data.extras) ? data.extras.filter(x => x && x.id && x.body) : [];
-      hidden = Array.isArray(data.hidden) ? data.hidden : [];
-      LS.set("sqp_overrides", overrides);
-      LS.set("sqp_extras", extras);
-      LS.set("sqp_hidden", hidden);
-      render();
-      toast("Backup restored");
-    } catch (err) {
-      alert("Could not import this file: " + err.message);
-    }
-  };
-  reader.readAsText(file);
 });
 
 /* ---------- init ---------- */
