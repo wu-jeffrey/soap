@@ -1,6 +1,6 @@
 # SOAP Quick Paste
 
-A single-file template picker for family medicine charting. 50 common presentations
+A single-file template picker for family medicine charting. 114 common presentations
 as brief SOAP notes — type a couple of letters, press Enter, and the note is on your
 clipboard, ready to paste into PSS with tabbable `<<fields>>` for the blanks.
 
