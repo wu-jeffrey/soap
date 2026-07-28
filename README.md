@@ -4,13 +4,17 @@ A single-file template picker for family medicine charting. 50 common presentati
 as brief SOAP notes — type a couple of letters, press Enter, and the note is on your
 clipboard, ready to paste into PSS with tabbable `<<fields>>` for the blanks.
 
-## Setup (once, ~1 minute)
+**Use it here: https://wu-jeffrey.github.io/soap/**
 
-1. Save `soap-quick-paste.html` anywhere on your computer (Desktop or Documents is fine).
-2. Double-click it — it opens in your browser as a normal page.
-3. Bookmark it and/or pin the tab so it sits next to your EMR tab all day.
+## Setup (once, ~1 minute per room)
 
-That's it. No install, no account, no server.
+1. Open the link above on each exam-room computer.
+2. Bookmark it (or set it as a pinned tab) so it sits next to the EMR tab all day.
+
+No install, no account, no login. The page is static — after it loads it makes
+no further network requests, so it keeps working even if the connection drops
+mid-clinic. Offline fallback: `File → Save Page As…` gives you a local copy
+([index.html](index.html)) that works with no internet at all.
 
 ## Daily use
 
