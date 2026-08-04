@@ -410,939 +410,2475 @@
      plain text — edit this file to change it everywhere. */
 
 const DEFAULTS = [
-
-// ---------- ENT / Respiratory ----------
+// ---------- ENT / Resp ----------
 { id:"urti", cat:"ENT/Resp", title:"Viral URTI (common cold)",
   aliases:"cold flu congestion runny nose rhinorrhea virus upper respiratory",
   body:
-`S: <<#>> days of nasal congestion, rhinorrhea, sore throat, mild cough. No dyspnea or chest pain. <<No fever.>> <<Low-grade fever at home.>> Eating and drinking well.
-O: Afebrile, vitals stable. TMs clear bilaterally. Oropharynx mildly injected, no exudate. No cervical lymphadenopathy. Chest clear.
-A: Viral URTI.
-P: Supportive care — fluids, rest, saline rinses, analgesia PRN. Antibiotics not indicated; rationale discussed. Return if fever >5 days, worsening dyspnea, or not improving by 10 days.` },
+`S: Nasal congestion, rhinorrhea, sore throat, mild cough x <<#>> days. Denies SOB, chest pain, hemoptysis. <<No fever.>><<Low-grade fever at home.>> Fluids well.
+O:
+T: •  HR: •  SpO2: •
+Gen: well, NAD
+CVS: NS1/2, no ehs/murmur
+Resp: Normal RR, normal WOB, GAEB, no wheeze/crackles
+HEENT: Oropharynx mildly injected, no exudate. TMs normal x2. Neck supple, no cervical LN
+A: Viral URTI, day <<#>> of symptoms
+P:
+- Discussed symptoms may take 10-14 days to fully resolve
+- Supportive care: hydration, rest, tylenol/advil, saline nasal spray, humidifier
+- Antibiotics not indicated - rationale discussed
+- RTC/RTED instructions reviewed, including no improvement or worsening symptoms, decreased oral intake or urine output, SOB, resp distress, new fever or fever beyond 5 days` },
 
-{ id:"pharyngitis", cat:"ENT/Resp", title:"Pharyngitis / sore throat",
-  aliases:"strep throat tonsillitis odynophagia centor swab",
+{ id:"pharyngitis", cat:"ENT/Resp", title:"Pharyngitis / strep throat",
+  aliases:"strep throat tonsillitis odynophagia centor swab sore",
   body:
-`S: Sore throat x <<#>> days with odynophagia. <<Fever present.>> <<No cough.>> No drooling, stridor, trismus, or neck stiffness.
-O: Temp <<temp>>. Oropharynx erythematous. <<Tonsillar exudate present.>> <<Tender anterior cervical nodes.>> No peritonsillar swelling, uvula midline. Chest clear.
-A: Pharyngitis — Centor <<#>>/4.
-P: <<Supportive care only — swab not indicated.>> <<Throat swab sent; amoxicillin 500 mg PO TID x 10 days if positive.>> Analgesia and fluids PRN. Return if unable to swallow, drooling, or worsening.` },
+`S: Sore throat x <<#>> days with odynophagia. Denies drooling, stridor, trismus, neck stiffness.
+Centor: Temp over 38 <<yes (1)>><<no (0)>>; absent cough <<yes (1)>><<no (0)>>; tender anterior LN <<yes (1)>><<no (0)>>; tonsillar swelling/exudate <<yes (1)>><<no (0)>>; age 3-14 (+1), 15-44 (0), 45+ (-1)
+Score: • (0-1 no swab/abx; 2-3 swab, treat if positive; 4+ swab, consider empiric)
+O:
+T: •  HR: •
+Gen: well, NAD
+HEENT: Oropharynx erythematous<<, tonsillar exudate>>. <<Tender anterior cervical LN.>> No peritonsillar swelling, uvula midline. Neck supple
+Resp: Normal WOB, GAEB
+A: <<Viral pharyngitis>><<Suspected strep pharyngitis - swab sent>>
+P:
+- Supportive care: salt water gargles, analgesia PRN, hydration
+- <<If swab positive: penicillin V 300 mg TID x 10 days.>><<Amoxicillin 500 mg BID x 10 days.>>
+- RTC/RTED instructions reviewed, including unable to swallow, drooling, worsening despite treatment` },
 
 { id:"aom", cat:"ENT/Resp", title:"Acute otitis media",
   aliases:"ear infection earache otalgia tympanic peds child AOM",
   body:
-`S: <<R/L>> ear pain x <<#>> days on background of recent URTI. <<Fever present.>> No otorrhea. Hearing subjectively muffled.
-O: Temp <<temp>>. <<R/L>> TM erythematous and bulging with reduced mobility; contralateral TM normal. No mastoid tenderness or protrusion. Throat and chest unremarkable.
-A: Acute otitis media, <<R/L>>.
-P: <<Watchful waiting 48 h with analgesia; antibiotics if not settling.>> <<Amoxicillin 90 mg/kg/day divided BID x 5–10 days.>> <<Amoxicillin 500 mg PO TID x 5–7 days.>> Analgesia PRN. Return if persistent fever >48 h on antibiotics, otorrhea, or worsening.` },
+`S: <<R>><<L>> ear pain x <<#>> days, post-URTI. <<Fever.>> Denies otorrhea, hearing loss, vertigo. Immunizations UTD.
+O:
+T: •
+Gen: well, NAD
+HEENT: <<R>><<L>> TM erythematous and bulging, reduced mobility; contralateral TM normal. No mastoid tenderness. Oropharynx normal, neck supple
+Resp: GAEB, no wheeze/crackles
+A: Acute otitis media, <<R>><<L>>
+P:
+- <<Watchful waiting 48 h with analgesia; abx if not settling.>><<Amoxicillin 90 mg/kg/day divided BID x 5-10 days (peds).>><<Amoxicillin 500 mg TID x 5-7 days (adult).>>
+- Analgesia PRN - tylenol/advil
+- RTC/RTED instructions reviewed, including persistent fever beyond 48 h on abx, otorrhea, mastoid pain, worsening` },
 
 { id:"otitis-externa", cat:"ENT/Resp", title:"Otitis externa",
   aliases:"swimmers ear canal discharge tragal drops",
   body:
-`S: <<R/L>> ear pain and itch x <<#>> days after <<swimming/water exposure/Q-tip use>>. <<Discharge present.>> Hearing muffled.
-O: Afebrile. <<R/L>> canal edematous and erythematous with debris; pain on tragal pressure. <<TM visualized and intact.>> <<TM obscured by debris.>> No cellulitis of the pinna.
-A: Otitis externa, <<R/L>>.
-P: Ciprofloxacin-dexamethasone drops 4 gtts BID x 7 days. Keep ear dry. Analgesia PRN. Return if fever, spreading redness, or no improvement in 48–72 h.` },
+`S: <<R>><<L>> ear pain and itch x <<#>> days after <<swimming/water exposure>><<Q-tip use>>. <<Discharge.>> Denies fever, hearing loss, vertigo.
+O:
+Gen: well, NAD, afebrile
+HEENT: <<R>><<L>> canal edematous, erythematous with debris; pain on tragal pressure. TM <<visualized, intact>><<obscured by debris>>. No cellulitis of pinna, no mastoid tenderness
+A: Otitis externa, <<R>><<L>>
+P:
+- Ciprodex 4 gtts BID x 7 days
+- Keep ear dry; analgesia PRN
+- RTC/RTED instructions reviewed, including fever, spreading redness, no improvement in 48-72 h` },
 
 { id:"sinusitis", cat:"ENT/Resp", title:"Acute sinusitis",
-  aliases:"sinus facial pressure rhinosinusitis purulent",
+  aliases:"sinus facial pressure rhinosinusitis purulent PODS",
   body:
-`S: Facial pressure and congestion x <<#>> days with purulent rhinorrhea. <<Maxillary tooth pain.>> <<Worsening after initial improvement.>> No visual change or severe headache.
-O: Afebrile. Tenderness over <<maxillary/frontal>> sinuses. Nasal mucosa edematous with purulent discharge. No periorbital swelling or erythema. Neuro grossly normal.
-A: <<Acute viral rhinosinusitis.>> <<Acute bacterial rhinosinusitis — over 10 days, severe, or biphasic course.>>
-P: Saline rinses, intranasal corticosteroid, analgesia PRN. <<Amoxicillin-clavulanate 875 mg PO BID x 5–7 days.>> Return urgently if periorbital swelling, severe headache, or visual change.` },
+`S: Facial pressure and congestion x <<#>> days. Denies periorbital swelling, vision changes, severe headache, neck stiffness, altered LOC.
+PODS (symptoms over 7 days or worsening after 5-7): Pain/pressure/fullness <<Y>><<N>>; Obstruction <<Y>><<N>>; Discharge - purulent/discoloured <<Y>><<N>>; Smell disorder <<Y>><<N>>
+<<Worsened after initial improvement.>>
+O:
+T: •  HR: •
+Gen: well, NAD
+HEENT: Tenderness over <<maxillary>><<frontal>> sinuses. Nasal mucosa edematous, <<purulent>> discharge. No periorbital swelling/erythema. Oropharynx normal
+Neuro: grossly normal
+A: <<Viral rhinosinusitis>><<Bacterial sinusitis - meets PODS criteria>>
+P:
+- Supportive care: hydration, rest, tylenol/advil, saline rinses, humidifier
+- <<Amoxicillin 500 mg TID x 10 days Rx sent.>>
+- <<Trial INCS - intranasal corticosteroid Rx sent, side effects discussed.>>
+- RTC/RTED instructions reviewed, including periorbital swelling, vision changes, severe headache, worsening after 5-7 days` },
 
-{ id:"bronchitis", cat:"ENT/Resp", title:"Acute bronchitis / cough",
-  aliases:"cough chest cold sputum post viral",
+{ id:"bronchitis", cat:"ENT/Resp", title:"Cough / acute bronchitis",
+  aliases:"cough chest cold sputum post viral bronchitis",
   body:
-`S: Cough x <<#>> days following URTI. <<Productive of sputum.>> No hemoptysis, significant dyspnea, or pleuritic pain. <<Non-smoker.>> <<Smoker, # pack-years.>>
-O: Afebrile, RR <<RR>>, SpO2 <<%>> RA. Chest: <<clear.>> <<Scattered coarse crackles clearing with cough.>> No focal consolidation, no respiratory distress.
-A: Acute bronchitis, viral.
-P: Supportive — fluids, honey/antitussive PRN. Antibiotics not indicated; discussed (cough may last 3–4 weeks). Return if fever, worsening dyspnea, hemoptysis, or cough beyond 6 weeks.` },
+`S: Cough x <<#>> days<<, post-URTI>>. Denies fever, SOB, hemoptysis, chest pain. <<Non-smoker.>><<Smoker, # pack-years.>>
+O:
+BP: •  HR: •  SpO2: •
+Gen: alert, NAD, full sentences
+CVS: NS1/2, no ehs/murmur
+Resp: Normal RR, normal WOB, GAEB, no wheeze/crackles
+HEENT: Oropharynx normal, no erythema/exudates, uvula midline, no tonsillar hypertrophy
+- Neck supple, no cervical LN
+A: <<Viral URTI with cough>><<Acute bronchitis>>
+P:
+- Reassurance and continue conservative management - recommended rest, frequent hydration, honey, warm humidified air
+- <<Trial bronchodilator for wheeze - SABA/Symbicort Rx sent.>>
+- <<Trial INCS - Omnaris Rx sent.>>
+- RTC/RTED instructions reviewed, including new/worsening fever, SOB, hemoptysis, lethargy` },
 
 { id:"allergic-rhinitis", cat:"ENT/Resp", title:"Allergic rhinitis",
   aliases:"hay fever allergies seasonal sneezing itchy eyes antihistamine",
   body:
-`S: Sneezing, itchy/watery eyes, clear rhinorrhea, and congestion — <<seasonal/perennial>>. Suspected triggers: <<triggers>>. No fever or purulent discharge.
-O: Pale, boggy turbinates with clear discharge. Posterior pharyngeal cobblestoning. Conjunctivae mildly injected, no purulence. Chest clear.
-A: Allergic rhinitis.
-P: Intranasal corticosteroid daily (technique reviewed) + non-sedating antihistamine PRN. Allergen avoidance discussed. F/U if poor control — consider allergy testing.` },
+`S: Sneezing, itchy/watery eyes, clear rhinorrhea, congestion - <<seasonal>><<perennial>>. Triggers: •. Denies fever, purulent discharge.
+O:
+Gen: well, NAD
+HEENT: Pale boggy turbinates, clear discharge. Posterior pharyngeal cobblestoning. Conjunctivae mildly injected, no purulence. Neck supple, no cervical LN
+Resp: GAEB, no wheeze
+A: Allergic rhinitis
+P:
+- INCS daily (technique reviewed) + non-sedating antihistamine PRN
+- Counselled on allergen avoidance
+- f/u if poor control - consider allergy testing
+- RTC/RTED instructions reviewed` },
 
 { id:"asthma", cat:"ENT/Resp", title:"Asthma follow-up",
-  aliases:"wheeze inhaler puffer ventolin controller SABA ICS",
+  aliases:"wheeze inhaler puffer ventolin controller SABA ICS control",
   body:
-`S: Asthma review. Daytime symptoms <<#>>/week, night waking <<#>>/month, reliever use <<#>>/week. No exacerbations, ED visits, or oral steroids since last visit. Triggers: <<triggers>>. Inhaler technique reviewed — good.
-O: RR <<RR>>, SpO2 <<%>> RA. Chest clear with good air entry, no wheeze.
-A: Asthma — <<well/partly/un>>controlled.
-P: <<Continue current regimen.>> <<Stepped up: new regimen.>> Written action plan reviewed. Influenza vaccine advised. F/U <<3–6>> months, sooner if worsening.` },
+`S: Asthma review.
+Daytime symptoms over 2x/week <<yes (1)>><<no (0)>>
+Night symptoms <<yes (1)>><<no (0)>>
+Reliever needed over 2x/week <<yes (1)>><<no (0)>>
+Activity limitation <<yes (1)>><<no (0)>>
+FEV1/peak flow under 80% personal best <<yes (1)>><<no (0)>>
+Score: • (0 = well controlled; 1-2 = partly controlled; 3+ = uncontrolled)
+Aerochamber: <<yes>><<no>>. Smoker in home: <<yes>><<no>>. Triggers: •
+O:
+HR: •  SpO2: •
+Gen: well, NAD, speaking full sentences
+Resp: Normal RR, normal WOB, GAEB, no wheeze/crackles
+A: Asthma - <<well>><<partly>><<un>>controlled
+P:
+- <<Continue current regimen.>><<Stepped up: •.>>
+- Inhaler technique and written action plan reviewed
+- Influenza vaccine advised
+- f/u <<3-6>> months
+- RTC/RTED instructions reviewed, including increased reliever use, night symptoms, SOB` },
 
 { id:"copd", cat:"ENT/Resp", title:"COPD follow-up",
   aliases:"emphysema chronic bronchitis smoker dyspnea LAMA LABA",
   body:
-`S: COPD review. Baseline dyspnea mMRC <<#>>. <<#>> exacerbations in past year. Cough and sputum stable. <<Current smoker, # pack-years.>> <<Ex-smoker.>>
-O: SpO2 <<%>> RA. Chest: reduced air entry, no wheeze. No peripheral edema or cyanosis.
-A: COPD — stable.
-P: Continue <<current inhalers>>. <<Smoking cessation discussed — plan: detail.>> Vaccinations up to date — influenza, pneumococcal. Pulmonary rehab and action plan reviewed. F/U <<#>> months.` },
+`S: COPD review. Baseline dyspnea mMRC •. <<#>> exacerbations past year. Cough/sputum stable. <<Current smoker, # pack-years.>><<Ex-smoker.>>
+O:
+SpO2: •
+Gen: well, NAD
+Resp: Normal WOB at rest, <<reduced air entry>>, no wheeze/crackles
+CVS: NS1/2, no peripheral edema
+A: COPD - stable
+P:
+- Continue <<current inhalers>>
+- <<Smoking cessation discussed - plan: •.>>
+- Vaccinations UTD - influenza, pneumococcal
+- Pulmonary rehab and action plan reviewed
+- f/u <<#>> months
+- RTC/RTED instructions reviewed, including increased dyspnea, sputum change, fever` },
 
 { id:"conjunctivitis", cat:"ENT/Resp", title:"Conjunctivitis",
   aliases:"pink eye red eye discharge itchy",
   body:
-`S: <<R/L/bilateral>> red eye x <<#>> days with <<watery/purulent>> discharge and gritty sensation. No significant pain, photophobia, or vision change. No contact lens use.
-O: Conjunctival injection <<R/L>> with <<watery/purulent>> discharge. Cornea clear, PERL, visual acuity grossly normal. No ciliary flush.
-A: <<Viral conjunctivitis.>> <<Bacterial conjunctivitis.>> <<Allergic conjunctivitis.>>
-P: <<Lubricants and lid hygiene.>> <<Topical antibiotic drops QID x 5 days.>> <<Antihistamine drops BID.>> Hand hygiene; discard eye makeup. Urgent reassessment if pain, photophobia, or reduced vision.` },
+`S: <<R>><<L>><<Bilateral>> red eye x <<#>> days, <<watery>><<purulent>> discharge, gritty sensation. Denies pain, photophobia, vision change. No contact lens use.
+O:
+Gen: well, NAD
+Eyes: Conjunctival injection <<R>><<L>>, <<watery>><<purulent>> discharge. Cornea clear, PERLA, VA grossly normal. No ciliary flush, no periorbital swelling
+A: <<Viral>><<Bacterial>><<Allergic>> conjunctivitis
+P:
+- Warm compress QID, lid hygiene, hand hygiene; discard eye makeup
+- <<Topical antibiotic drops QID x 5-7 days Rx sent.>><<Antihistamine drops BID.>>
+- RTC/RTED instructions reviewed, including pain with eye movement, photophobia, vision change, eyelid swelling, spreading` },
+
+{ id:"croup", cat:"ENT/Resp", title:"Croup (peds)",
+  aliases:"barky cough stridor seal peds child westley",
+  body:
+`S: Barky cough, hoarse voice x <<#>> days, worse at night, post-URTI. <<Stridor with agitation only.>><<No stridor at rest.>> Feeding well. Denies drooling, lethargy.
+O:
+T: •  RR: •  SpO2: •
+Gen: alert, NAD, non-toxic
+Resp: No stridor at rest, no retractions or tracheal tug, GAEB. Barky cough noted
+A: Croup - <<mild>><<moderate>>
+P:
+- <<Dexamethasone 0.6 mg/kg PO x 1.>>
+- Fluids, antipyretics PRN, cool night air
+- RTC/RTED instructions reviewed with parents, including stridor at rest, retractions, cyanosis, drooling` },
+
+{ id:"peds-fever", cat:"ENT/Resp", title:"Pediatric fever (no focus)",
+  aliases:"fever child peds temperature febrile kid",
+  body:
+`S: Fever x <<#>> days, Tmax • at home. Drinking well, urine output normal. Playful between fevers. Denies rash, vomiting, lethargy, irritability. Immunizations UTD.
+O:
+T: •  HR: •  RR: •
+Gen: alert, interactive, NAD. Cap refill under 2 s
+HEENT: TMs normal x2, oropharynx normal, neck supple
+Resp: Normal WOB, GAEB, no wheeze/crackles
+CVS: NS1/2
+Abdo: SNTND
+Derm: no rash, no petechiae
+A: Fever without focus - well child, likely viral
+P:
+- Antipyretics PRN, fluids, monitor at home
+- <<Urine dip and culture sent.>>
+- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress` },
+
+{ id:"ili", cat:"ENT/Resp", title:"Influenza-like illness",
+  aliases:"flu influenza covid myalgia viral aches",
+  body:
+`S: Abrupt fever, myalgias, headache, dry cough x <<#>> days. Denies SOB, chest pain. Fluids adequate. <<Household contacts ill.>> No high-risk conditions.
+O:
+T: •  HR: •  SpO2: •
+Gen: tired but non-toxic, NAD
+HEENT: Throat mildly injected, neck supple
+Resp: Normal WOB, GAEB, no crackles
+A: Influenza-like illness / viral syndrome
+P:
+- Supportive care: rest, fluids, antipyretics
+- <<COVID/influenza swab done.>>
+- <<Antiviral started - high risk, within 48 h.>>
+- Stay home while febrile
+- RTC/RTED instructions reviewed, including SOB, chest pain, confusion, not improving by day 5-7` },
+
+{ id:"cap", cat:"ENT/Resp", title:"Pneumonia (outpatient CAP)",
+  aliases:"pneumonia lung infection crackles consolidation chest xray",
+  body:
+`S: Cough with purulent sputum, fever x <<#>> days. <<Pleuritic chest pain.>> Mild exertional dyspnea, none at rest. Eating and drinking. No immunosuppression.
+O:
+T: •  HR: •  RR: •  BP: •  SpO2: •
+Gen: non-toxic, NAD, full sentences
+Resp: Focal crackles <<R>><<L>> <<zone>>, normal WOB otherwise
+CVS: NS1/2
+A: Community-acquired pneumonia - low severity, suitable for outpatient treatment
+P:
+- <<Amoxicillin 1 g TID x 5-7 days.>><<Doxycycline 100 mg BID x 5-7 days.>>
+- CXR <<done>><<ordered>>
+- Antipyretics, fluids; reassess 48-72 h
+- RTC/RTED instructions reviewed, including worsening SOB, falling sats, confusion, persistent fever` },
+
+{ id:"epistaxis", cat:"ENT/Resp", title:"Epistaxis (nosebleeds)",
+  aliases:"nosebleed nose bleeding littles area cautery",
+  body:
+`S: Recurrent <<R>><<L>> nosebleeds x •, settling with pressure in under <<#>> min. Denies easy bruising, family bleeding history. No anticoagulants. Dry air / nose picking suspected.
+O:
+BP: •
+Gen: well, NAD
+HEENT: Anterior septum - prominent vessels and crusting at Little's area, no active bleeding. No posterior source suspected
+A: Recurrent anterior epistaxis
+P:
+- First aid reviewed - lean forward, pinch soft part x 10-15 min; ER if not stopping after 10 min
+- Saline gel / vaseline BID to septum, humidifier, avoid picking
+- <<Cautery if recurrent - arranged.>>
+- RTC/RTED instructions reviewed, including prolonged or heavy posterior-type bleeding` },
+
+{ id:"cerumen", cat:"ENT/Resp", title:"Cerumen impaction",
+  aliases:"ear wax blocked ear syringing lavage hearing",
+  body:
+`S: <<#>> wk history of ear discomfort. Denies hearing loss, otalgia, tinnitus, otorrhea/bleeding, vertigo, aural fullness. Afebrile and well. No trauma/injury. No foreign body.
+O:
+HEENT:
+- TMs: cerumen <<bilaterally>><<R>><<L>>, unable to visualize TM<<s>>. No erythema of external aud canal, no bleeding/purulence/discharge
+- No mastoid tenderness
+A: <<Bilateral>><<R>><<L>> cerumen impaction
+P:
+- Mineral/olive oil drops to ears BID x 5-7 days
+- f/u 1 wk if not improving for syringing
+- RTC/RTED instructions reviewed - new/worsening fever, otalgia, vertigo, bleeding/otorrhea, hearing loss
+<<Syringing: syringed and curetted ears - post-procedure otoscopy clear>>` },
+
+{ id:"mono", cat:"ENT/Resp", title:"Mononucleosis",
+  aliases:"mono EBV kissing disease glandular fever teen",
+  body:
+`S: Sore throat, marked fatigue, fever x <<#>> days in <<teen>><<young adult>>. Marked tonsillar swelling. Denies breathing difficulty, severe abdominal pain.
+O:
+T: •
+Gen: tired, non-toxic, NAD
+HEENT: Exudative pharyngitis, posterior cervical LN. No airway compromise
+Abdo: SNTND, <<no HSM>><<spleen tip palpable>>
+Derm: no jaundice, no rash
+A: Suspected infectious mononucleosis
+P:
+- Monospot/EBV serology + CBC sent
+- Supportive care: fluids, analgesia
+- No contact sports or heavy lifting x 4 wks minimum - splenic rupture risk discussed
+- Avoid amoxicillin (rash)
+- f/u with results
+- RTC/RTED instructions reviewed, including severe abdominal pain, airway concern` },
+
+{ id:"laryngitis", cat:"ENT/Resp", title:"Hoarseness / laryngitis",
+  aliases:"hoarse voice lost voice laryngitis vocal",
+  body:
+`S: Hoarseness x • after <<URTI>><<voice overuse>>. Denies dysphagia, neck lumps, weight loss, hemoptysis. <<Non-smoker.>><<Smoker - counselled.>>
+O:
+Gen: well, NAD, afebrile. Voice hoarse, no stridor
+HEENT: Oropharynx normal. Neck supple, no LN or masses
+A: Acute laryngitis
+P:
+- Voice rest (avoid whispering), hydration, limit irritants/reflux triggers
+- Usually resolves in 1-2 wks
+- Red flag reviewed: hoarseness beyond 4 wks (esp smokers) - ENT/laryngoscopy referral
+- RTC/RTED instructions reviewed` },
+
+{ id:"osa", cat:"ENT/Resp", title:"Snoring / OSA workup",
+  aliases:"sleep apnea snoring tired epworth stopbang cpap",
+  body:
+`S: Loud snoring with <<witnessed apneas>>, unrefreshing sleep, daytime sleepiness. Epworth •/24. <<Morning headaches.>> No sedatives at night.
+O:
+BP: •  BMI: •
+Neck circumference: • cm
+HEENT: Oropharynx crowded - Mallampati •
+A: Suspected OSA - STOP-BANG •/8
+P:
+- Sleep study <<ordered>><<referral sent>>
+- Counselled on weight management, evening EtOH reduction
+- Drowsy-driving safety discussed
+- f/u with results` },
+
+{ id:"tinnitus", cat:"ENT/Resp", title:"Tinnitus",
+  aliases:"ringing ears buzzing audiogram noise",
+  body:
+`S: <<Bilateral>><<R>><<L>> ringing x •, <<constant>><<intermittent>>, non-pulsatile. Denies hearing loss, vertigo, otalgia, discharge. Noise exposure: •. No ototoxic meds.
+O:
+HEENT: Canals and TMs normal x2. Weber/Rinne grossly normal. No carotid bruit
+A: Subjective non-pulsatile tinnitus - no red flags
+P:
+- Audiology referral for baseline audiogram
+- Reassurance re benign course; sound masking and sleep strategies discussed
+- Hearing protection for noise
+- RTC/RTED instructions reviewed, including unilateral progression, pulsatile quality, vertigo` },
+
+{ id:"stye", cat:"ENT/Resp", title:"Stye / chalazion",
+  aliases:"eyelid lump hordeolum bump eye",
+  body:
+`S: <<R>><<L>> eyelid lump x • - <<painful, red (stye)>><<painless, firm (chalazion)>>. Denies vision change, spreading redness.
+O:
+Eyes: <<R>><<L>> lid - <<tender pustule at lash line>><<firm non-tender nodule within lid>>. Conjunctiva quiet, EOM full, VA normal
+A: <<Hordeolum (stye)>><<Chalazion>>, <<R>><<L>>
+P:
+- Warm compress 10 min QID + lid hygiene
+- Most resolve in 1-2 wks (chalazion may take longer); refer if persistent beyond 6-8 wks
+- RTC/RTED instructions reviewed, including spreading redness, pain with eye movement, vision change` },
+
+{ id:"dry-eye", cat:"ENT/Resp", title:"Dry eyes",
+  aliases:"gritty burning eyes tears screens",
+  body:
+`S: Gritty, burning eyes x •, worse with screens/wind. <<Reflex watering.>> Denies pain, photophobia, vision loss. Screen time • h/day. Contributing meds reviewed.
+O:
+Eyes: Conjunctivae mildly injected x2, no discharge. Cornea clear, VA normal
+A: Dry eye syndrome
+P:
+- Artificial tears QID PRN (preservative-free if frequent), warm compresses
+- Screen breaks - 20-20-20 rule
+- Optometry referral if persistent
+- RTC/RTED instructions reviewed, including pain, vision change` },
 
 // ---------- Cardio / Metabolic ----------
 { id:"htn", cat:"Cardio/Metab", title:"Hypertension follow-up",
   aliases:"blood pressure BP high hypertensive",
   body:
-`S: BP review. Home readings average <<BP>>. Adherent to medications, no side effects. No chest pain, dyspnea, headache, or neuro symptoms. Lifestyle reviewed — salt, activity, alcohol.
-O: BP <<BP>> (repeat <<BP>>), HR <<HR>>. Cardiorespiratory exam unremarkable. No edema.
-A: Hypertension — <<at/above>> target.
-P: <<Continue current antihypertensives.>> <<Titrated: change.>> Annual labs (electrolytes, Cr, A1c, lipids, urine ACR): <<up to date/ordered>>. Lifestyle counselling. F/U <<3–6>> months with home readings.` },
+`S: HTN f/u. Home BP checks: <<none>><<avg •>>. Denies headache, vision changes, chest pain, dyspnea, unilateral weakness, sensory deficits.
+Salt intake: <<good control, targeting under 2 g daily>>. Diet: <<balanced, mainly homemade>>. EtOH: <<occ/rare>>. Smoking: <<non-smoker>><<active smoker>><<quit>>. NSAIDs: <<occ/rare>>. Exercise: <<adequate>>. Stress: <<well-managed>>.
+O:
+BP: •  HR: •
+Gen: well, NAD, non-toxic
+CVS: NS1/2, no ehs/murmur. No peripheral edema
+Resp: Normal WOB, GAEB, no adventitious sounds
+Abdo: SNTND, no masses
+A: HTN - <<well-controlled>><<sub-optimally controlled>>
+P:
+- BW: <<lytes, Cr>><<lipids>><<A1c + fasting glucose>><<ECG>>
+- Lifestyle optimization counselled: <<moderate intensity exercise 150 min/week>><<Mediterranean diet, limited salt>><<limit EtOH>><<stress management>><<weight reduction>><<smoking cessation>>
+- <<Medications reviewed - continue current therapy.>><<Changes made: •.>>
+- RTC in 3 months; sooner if chest pain, severe headache, vomiting, vision changes, weakness/numbness` },
 
 { id:"t2dm", cat:"Cardio/Metab", title:"Type 2 diabetes follow-up",
   aliases:"diabetes sugar A1c metformin glucose DM",
   body:
-`S: Diabetes review. Adherent to medications, no hypoglycemia. Home glucose <<range>>. Diet and activity: <<detail>>. No polyuria or polydipsia, no foot concerns. Last eye exam <<date>>.
-O: BP <<BP>>, weight <<wt>> (<<change>>). Foot exam: pulses palpable, monofilament sensation intact, no ulcers or deformity.
-A: Type 2 diabetes — A1c <<%>>, <<at/above>> target 7.0%.
-P: <<Continue current regimen.>> <<Adjusted: change.>> A1c q3–6 months; annual ACR, Cr, lipids <<up to date/ordered>>. Retinal screening <<up to date/booked>>. Vascular protection (statin/ACEi) reviewed. F/U <<3–6>> months.` },
+`S: DM f/u. Adherent to meds, no hypoglycemia. Home BG: •. Denies polyuria/polydipsia, foot concerns, visual change. Last eye exam: •.
+O:
+BP: •  Wt: •
+Gen: well, NAD
+Foot exam: pulses palpable, monofilament intact, no ulcers/deformity
+A: T2DM - A1c •, <<at>><<above>> target 7.0
+P:
+- <<Continue current regimen.>><<Adjusted: •.>>
+- Counselled on home BG targets: fasting 4-7, 2 h post-meal 5-10
+- BW: A1c q3-6 months; annual ACR, Cr, lipids <<UTD>><<ordered>>
+- Retinal screening <<UTD>><<booked>>; optometry q1-2 yrs
+- Vascular protection (statin/ACEi) reviewed
+- f/u <<3-6>> months
+- RTC/RTED instructions reviewed, including hypoglycemia, foot wounds` },
 
-{ id:"lipids", cat:"Cardio/Metab", title:"Dyslipidemia review",
-  aliases:"cholesterol LDL statin lipids framingham",
+{ id:"lipids", cat:"Cardio/Metab", title:"Dyslipidemia",
+  aliases:"cholesterol LDL statin lipids framingham crestor",
   body:
-`S: Lipid review — <<primary/secondary>> prevention. No statin side effects. Diet and exercise reviewed.
-O: BP <<BP>>, BMI <<BMI>>. CV exam normal.
-A: Dyslipidemia — LDL <<LDL>> (target <<target>>); Framingham risk <<%>>.
-P: <<Continue current statin.>> <<Started: statin and dose.>> Lifestyle counselling. Repeat lipids in <<interval>>. F/U annually or with results.` },
+`S: Lipid review - <<primary>><<secondary>> prevention. <<No statin side effects.>> Diet and exercise reviewed.
+O:
+BP: •  BMI: •
+CVS: NS1/2, no murmur
+A: Dyslipidemia - LDL • (target •); FRS •
+P:
+- <<Continue current statin.>><<Rx rosuvastatin 5 mg x 1 wk, then 10 mg x 1 wk, then 20 mg daily.>>
+- Discussed benefits and common side effects: transaminase elevation, myalgia, myopathy, rarely rhabdomyolysis
+- Continue lifestyle changes - Mediterranean/Portfolio diet, cardio exercise
+- Recheck lipids in 6 months to assess response
+- RTC/RTED instructions reviewed, including muscle pain/weakness` },
 
 { id:"hypothyroid", cat:"Cardio/Metab", title:"Hypothyroidism follow-up",
   aliases:"thyroid TSH levothyroxine synthroid",
   body:
-`S: Hypothyroid review on levothyroxine <<dose>> mcg daily, taken on empty stomach. No fatigue, weight change, cold intolerance, palpitations, or tremor.
-O: HR <<HR>>, regular. No tremor. Thyroid: no goiter or nodules.
-A: Hypothyroidism — TSH <<TSH>>, in range.
-P: Continue levothyroxine <<dose>> mcg daily. <<Repeat TSH in 12 months.>> <<Repeat TSH 6 weeks after dose change.>> F/U PRN.` },
+`S: Hypothyroid review on levothyroxine • mcg daily, on empty stomach. Denies fatigue, weight change, cold intolerance, palpitations, tremor.
+O:
+HR: •, regular
+Neck: no goiter or nodules. No tremor
+A: Hypothyroidism - TSH •, in range
+P:
+- Continue levothyroxine • mcg daily
+- <<Repeat TSH in 12 months.>><<Repeat TSH 6 wks after dose change.>>
+- RTC/RTED instructions reviewed` },
 
-{ id:"chest-pain", cat:"Cardio/Metab", title:"Chest pain — low risk",
-  aliases:"chest wall musculoskeletal costochondritis atypical ACS",
+{ id:"chest-pain", cat:"Cardio/Metab", title:"Chest pain",
+  aliases:"chest wall musculoskeletal costochondritis atypical ACS OPQRST",
   body:
-`S: Chest pain x <<duration>> — <<sharp/pleuritic/positional>>, episodes lasting <<duration>>. Not exertional; no diaphoresis, nausea, syncope, or dyspnea. CV risk factors: <<risk factors>>. No immobilization or VTE risk factors.
-O: Vitals stable, SpO2 <<%>>. Chest wall tenderness reproducing the pain. Heart sounds normal, no murmur. Chest clear. No leg swelling.
-A: Chest pain — most consistent with musculoskeletal; low risk for ACS/PE.
-P: <<ECG done — normal.>> <<ECG ordered.>> NSAIDs PRN. Red flags reviewed — ED immediately if exertional pain, dyspnea, syncope, or diaphoresis. F/U <<1–2>> weeks or sooner PRN.` },
+`S: Chest pain x <<#>> days
+Onset: <<at rest>><<w/ exertion>><<eating>><<stress>>
+Character: <<sharp>><<dull>><<pressure>>; Radiation: •; Severity: •/10
+Aggravated: <<pleuritic>><<exertional>><<eating>><<stress>>; Alleviated: <<rest>><<antacid>><<analgesia>>
+Associated: <<N/V>><<diaphoresis>><<SOB>><<orthopnea>><<PND>><<pedal edema>><<palpitations>><<presyncope>><<syncope>>
+Hx of: <<CAD>><<CVD>><<DLP>><<HTN>><<DM>><<GERD>><<MSK>>. Smoking: • pack-years. FHx: •
+PE risk: <<travel>><<immobility>><<cancer hx>><<recent surgery>><<hx PE/DVT>><<none>>
+O:
+BP: •  HR: •  Wt: •
+Gen: NAD, A+Ox3
+Volume: JVP not elevated, no crackles, no pedal edema
+CVS: NS1/2, no murmurs, no S3/S4
+Resp: GAEB, no adventitious sounds, normal WOB
+Chest wall: <<tenderness reproducing pain>>
+A: Chest pain - ddx: <<MSK>><<GERD>><<low risk for ACS/PE>>
+P:
+- <<BW>><<ECG>><<CXR>><<holter>><<echo>><<stress test>>
+- <<NSAIDs PRN (MSK).>>
+- RTC or ED if worsening pain, SOB, presyncope, syncope, diaphoresis` },
 
 { id:"palpitations", cat:"Cardio/Metab", title:"Palpitations",
   aliases:"heart racing skipped beats fluttering holter ectopy",
   body:
-`S: Intermittent palpitations x <<duration>> — <<description>>, lasting <<duration>>. No syncope, chest pain, or exertional symptoms. Caffeine/alcohol/stimulants: <<intake>>. No family history of sudden cardiac death.
-O: HR <<HR>>, regular. BP <<BP>>. Heart sounds normal, no murmur. Thyroid normal.
-A: Palpitations — likely benign ectopy; no high-risk features.
-P: <<ECG done — normal.>> <<ECG ordered.>> <<Holter ordered.>> Labs: CBC, TSH, electrolytes. Reduce caffeine and alcohol. Return promptly if syncope, chest pain, or sustained episodes.` },
+`S: Intermittent palpitations x • - <<description>>, lasting •. Denies syncope, chest pain, exertional symptoms. Caffeine/EtOH/stimulants: •. No FHx sudden cardiac death.
+O:
+HR: •, regular  BP: •
+CVS: NS1/2, no murmur
+Neck: thyroid normal
+A: Palpitations - likely benign ectopy; no high-risk features
+P:
+- <<ECG done - normal.>><<ECG ordered.>><<Holter ordered.>>
+- BW: CBC, TSH, lytes
+- Counselled to reduce caffeine/EtOH
+- RTC/RTED instructions reviewed, including syncope, chest pain, sustained episodes` },
+
+{ id:"afib", cat:"Cardio/Metab", title:"Atrial fibrillation follow-up",
+  aliases:"afib AF irregular anticoagulation DOAC rate",
+  body:
+`S: AF review. <<Rate-controlled, asymptomatic.>><<Occasional palpitations.>> Denies chest pain, syncope, worsening dyspnea. Adherent to <<anticoagulant>>; no bleeding concerns.
+O:
+HR: •, irregularly irregular  BP: •
+CVS: NS1/2. No signs of failure - chest clear, no edema
+A: Atrial fibrillation - rate-controlled. Stroke risk reviewed (CHADS-65)
+P:
+- Continue <<rate control agent>> and <<anticoagulant - indication reconfirmed>>
+- Annual BW: CBC, Cr
+- f/u <<6-12>> months
+- RTC/RTED instructions reviewed, including syncope, chest pain, bleeding, decompensation` },
+
+{ id:"chf", cat:"Cardio/Metab", title:"Heart failure follow-up",
+  aliases:"CHF heart failure edema orthopnea diuretic weight",
+  body:
+`S: HF review. NYHA <<I>><<II>>. Home weights stable. Denies orthopnea, PND, increasing edema, dizziness. Adherent to meds.
+O:
+BP: •  HR: •  Wt: • (<<change>>)
+Volume: JVP not elevated
+Resp: GAEB, no crackles
+CVS: NS1/2. <<No peripheral edema.>><<Trace ankle edema.>>
+A: Heart failure (<<HFrEF>><<HFpEF>>, EF •) - compensated
+P:
+- Continue <<current HF regimen>>
+- Daily weights - report gain over 2 kg in 3 days
+- BW: lytes, Cr <<due>><<ordered>>
+- Fluid/sodium guidance reviewed
+- f/u <<1-3>> months
+- RTC/RTED instructions reviewed, including weight gain, worsening dyspnea, orthopnea` },
+
+{ id:"anemia", cat:"Cardio/Metab", title:"Iron deficiency anemia",
+  aliases:"anemia low iron ferritin hemoglobin tired pale",
+  body:
+`S: <<Fatigue, exertional dyspnea.>><<Found on screening BW.>> <<Menorrhagia.>> Denies GI bleeding symptoms - stools normal. Diet reviewed. No NSAID overuse.
+O:
+Gen: well, NAD, <<no pallor>>
+CVS: NS1/2
+Abdo: SNTND, no masses
+A: Iron deficiency anemia - Hgb •, ferritin •. Presumed source: <<menstrual>><<dietary>><<under investigation>>
+P:
+- Oral iron once daily with vitamin C - GI effects counselled
+- Recheck CBC/ferritin in 8-12 wks
+- <<Celiac screen sent.>>
+- <<GI source must be excluded - FIT/scope referral arranged.>>
+- f/u with results
+- RTC/RTED instructions reviewed, including melena, worsening fatigue, SOB` },
+
+{ id:"osteoporosis", cat:"Cardio/Metab", title:"Osteoporosis",
+  aliases:"bone density BMD fracture bisphosphonate calcium vitamin D frax",
+  body:
+`S: Osteoporosis review.
+Low trauma fractures: •. Glucocorticoid use: •. Falls past 12 months: •. Menopause/HRT history: •
+Risk factors: <<prior fragility fracture after 40>><<parental hip fracture>><<high falls risk>><<glucocorticoids over 3 months>><<early menopause>><<RA/inflammatory arthritis>><<malabsorption>><<smoker>><<EtOH over 3/day>><<BMI under 20>><<none additional>>
+Current/past osteoporosis meds: •. Vitamin D: •. Calcium: •. Activity: •
+<<Thigh pain on bisphosphonate: no.>>
+O:
+Wt: •  Ht: • (<<change>>)
+Gait/tandem gait: •
+Spine: <<no>> kyphosis progression, no tenderness
+BMD (•): L-spine •, femoral neck •, total hip •
+FRAX 10-yr fracture risk: •
+A: Osteoporosis
+P:
+- <<Labs to r/o secondary causes: Ca corrected, PO4, Cr, ALP, TSH, 25-OH vit D.>>
+- Vitamin D 1000-2000 IU daily; dietary calcium 1200 mg/day
+- Balance/functional training 2+/wk, progressive resistance training 2+/wk, 150 min/wk activity
+- <<No contraindication to bisphosphonates - Rx risedronate DR 35 mg weekly; counselled GI upset, rare ONJ/atypical femur fracture; dairy impairs absorption.>><<Continue current therapy - duration and drug holiday reviewed (3-6 yrs initial).>>
+- Prompt f/u if jaw pain, thigh/hip pain, new GERD symptoms
+- Repeat BMD in 3 yrs (sooner if fracture)` },
+
+{ id:"obesity", cat:"Cardio/Metab", title:"Weight management",
+  aliases:"obesity weight loss BMI diet bariatric",
+  body:
+`S: Weight management visit - patient-initiated goals: •. Diet and activity patterns reviewed. Sleep: •. Mood screened - normal. Prior attempts: •.
+O:
+Wt: • (<<change>>)  BMI: •  BP: •
+Waist: • cm
+A: Obesity class <<I>><<II>><<III>> - <<with>><<without>> metabolic complications
+P:
+- Collaborative plan: <<dietary approach>><<activity target>><<dietitian referral>>
+- BW: A1c, lipids, TSH, ALT <<UTD>><<ordered>>
+- <<Pharmacotherapy options discussed.>>
+- Supportive f/u q<<4-8>> wks` },
+
+{ id:"smoking", cat:"Cardio/Metab", title:"Smoking cessation",
+  aliases:"quit smoking nicotine NRT varenicline champix zyban cigarettes",
+  body:
+`S: Here for smoking cessation. Smoking since •. Current habits: • cig/day, first cigarette •. Pack-years: •
+Reasons to quit: •. Past attempts: •. Confidence: •. Triggers: •
+Edu provided re methods - NRT, varenicline, bupropion; reduce-to-quit vs total cessation
+Rules of 2-3 reviewed: withdrawal onset 2-3 h, peak 2-3 days, improvement 2-3 wks, highest relapse 2-3 months
+O:
+BP: •  HR: •
+Resp: GAEB, no wheeze
+A: Nicotine dependence - <<contemplation>><<preparation>><<action>> stage
+P:
+- Quit date set: •
+- <<NRT: patch 21 mg daily + gum/lozenge PRN.>><<Varenicline: 0.5 mg daily d1-3, 0.5 mg BID d4-7, then 1 mg BID x 11 wks - counselled nausea, vivid dreams, mood changes.>><<Bupropion: 150 mg daily x 3 days then 150 mg BID x 3 months - CI seizure/eating disorder hx.>>
+- Quitline/resources given; relapse framed as part of the process
+- f/u <<1-2>> wks after quit date` },
+
+{ id:"prediabetes", cat:"Cardio/Metab", title:"Prediabetes",
+  aliases:"borderline sugar A1c prevention metformin lifestyle",
+  body:
+`S: Prediabetes review - A1c •. Diet and activity: •. Weight trend: •. FHx diabetes: <<yes>><<no>>.
+O:
+Wt: •  BMI: •  BP: •
+A: Prediabetes (A1c 6.0-6.4)
+P:
+- Lifestyle counselled - decrease refined carbs/sugary drinks, 5-7 percent weight loss target, 150 min/wk activity
+- <<Dietitian / diabetes prevention program referral.>>
+- <<Metformin discussed for high risk.>>
+- Repeat A1c in <<6-12>> months with lipids` },
+
+{ id:"ckd", cat:"Cardio/Metab", title:"CKD follow-up",
+  aliases:"kidney chronic renal eGFR creatinine ACR",
+  body:
+`S: CKD review. Asymptomatic - denies edema, urinary changes. Adherent to meds. NSAIDs avoided - reviewed.
+O:
+BP: •
+Gen: well, NAD. No edema
+A: CKD G• - eGFR • (<<stable>><<declining>>), ACR •
+P:
+- BP target under 130/80 - <<ACEi/ARB continued>>
+- <<SGLT2i continued/discussed.>>
+- BW q<<3-6>> months: Cr/eGFR, lytes, ACR
+- Sick-day med list reviewed; nephrotoxins avoided
+- <<Nephrology referral if eGFR under 30 or rapid decline.>>
+- f/u <<3-6>> months` },
 
 // ---------- GI ----------
-{ id:"gerd", cat:"GI", title:"GERD",
-  aliases:"reflux heartburn acid PPI indigestion",
+{ id:"gerd", cat:"GI", title:"GERD / reflux",
+  aliases:"reflux heartburn acid PPI indigestion dyspepsia",
   body:
-`S: Retrosternal burning x <<duration>>, worse after meals and lying flat. <<Regurgitation present.>> No dysphagia, odynophagia, weight loss, GI bleeding, or anemia — no alarm features.
-O: Vitals normal. Abdomen soft, non-tender, no masses.
-A: GERD without alarm features.
-P: PPI trial — <<agent and dose>> daily x 4–8 weeks, then reassess and step down. Lifestyle: weight, late meals, alcohol, caffeine. Refer for endoscopy if alarm features or refractory.` },
+`S: <<Heartburn.>><<Regurgitation.>><<Epigastric pain/dyspepsia.>><<Bloating.>> Duration: •. <<Trial of meds: •.>>
+Red flags: denies anemia/lightheadedness, vomiting/hematemesis, melena, blood in stool, dysphagia, odynophagia, weight loss, first-degree FHx esophageal/gastric cancer, personal hx PUD.
+Diet/lifestyle reviewed: spicy/fatty foods, carbonation, smoking, EtOH, caffeine.
+O:
+Gen: well, NAD
+Abdo: SNTND, no masses
+A: GERD - no alarm features
+P:
+- Lifestyle: weight loss, identify triggers, smaller meals, avoid lying down post-meal, avoid meals under 3 h before bed, elevate head of bed
+- <<Mild/infrequent (under 2x/wk): famotidine 20 mg PRN or antacids.>><<Over 2x/wk: pantoprazole 40 mg daily x 8 wks, then reassess/step down.>>
+- Refer for endoscopy if alarm features, age over 50 with new symptoms, or refractory
+- RTC/RTED instructions reviewed, including melena, hematemesis, dysphagia, weight loss` },
 
 { id:"gastro", cat:"GI", title:"Gastroenteritis",
   aliases:"vomiting diarrhea stomach flu food poisoning dehydration",
   body:
-`S: <<Vomiting>> <<and diarrhea>> x <<#>> days, up to <<#>> episodes/day. No blood in stool. <<Cramps.>> <<Low-grade fever.>> Tolerating sips; urine output maintained. <<Sick contact.>> <<Suspect food source.>>
-O: T <<temp>>, HR <<HR>>, BP <<BP>>. Mucous membranes moist, cap refill normal. Abdomen soft with mild diffuse tenderness, no peritonism.
-A: Acute viral gastroenteritis, no dehydration.
-P: Oral rehydration — small frequent sips, advance diet as tolerated. <<Ondansetron PRN.>> Hand hygiene. Return if blood in stool, persistent fever, unable to keep fluids down, or decreased urine output.` },
+`S: <<Vomiting>><<and diarrhea>> x <<#>> days. Denies blood in stool, high fever. Tolerating sips; urine output maintained. <<Sick contact.>>
+O:
+T: •  HR: •  BP: •
+Gen: well, alert, NAD
+CVS: NS1/2, no ehs/murmur
+Resp: GAEB, no wheeze/crackles
+Abdo: SNTND
+A: Viral gastroenteritis
+P:
+- Reassurance and continue supportive management
+- Counselled to continue with frequent hydration and gentle diet, gradually advance diet as tolerated - reviewed BRAT diet
+- <<Ondansetron PRN.>>
+- RTC/RTED instructions reviewed, including blood in stool, persistent fever, unable to keep fluids down, decreased urine output` },
 
 { id:"constipation", cat:"GI", title:"Constipation",
-  aliases:"hard stool infrequent straining PEG laxative",
+  aliases:"hard stool infrequent straining PEG laxative restoralax",
   body:
-`S: Hard, infrequent stools (<<#>>/week) x <<duration>> with straining. No blood, weight loss, or nocturnal symptoms. Fibre and fluid intake low. Meds reviewed — no opioids or iron.
-O: Abdomen soft, no masses. <<DRE: normal tone, no impaction or mass.>>
-A: Functional constipation, no red flags.
-P: Increase fibre and fluids; PEG 3350 17 g daily, titrate to effect. Toileting routine discussed. Return if bleeding, weight loss, or refractory — will investigate.` },
+`S: Hard, infrequent stools (<<#>>/wk) x • with straining. Denies blood, weight loss, nocturnal symptoms. Fibre/fluid intake low. Meds reviewed - no opioids/iron.
+O:
+Abdo: SNTND, no masses
+<<DRE: normal tone, no impaction/mass.>>
+A: Functional constipation - no red flags
+P:
+- Restoralax 1 scoop daily with water x 1 month - counselled natural laxative, titrate to effect
+- Counselled to optimize dietary fibre, increase fluid intake, add psyllium husk daily
+- Counselled to target type 4-5 stools
+- RTC/RTED instructions reviewed, including bleeding, weight loss, refractory symptoms - will investigate` },
 
 { id:"ibs", cat:"GI", title:"IBS follow-up",
   aliases:"irritable bowel bloating cramps FODMAP",
   body:
-`S: Recurrent abdominal pain <<#>>x/week related to defecation, with <<diarrhea/constipation/mixed>> pattern and bloating. No nocturnal diarrhea, blood, or weight loss. Stressors: <<stressors>>.
-O: Vitals normal. Abdomen soft, mild diffuse tenderness, no masses or organomegaly.
-A: IBS-<<D/C/M>> (Rome IV), no alarm features.
-P: <<Celiac screen, CBC, CRP ordered.>> Dietary review — soluble fibre, low-FODMAP trial. <<Antispasmodic PRN.>> Reassurance re: benign course. F/U <<4–6>> weeks; return if red flags.` },
+`S: Recurrent abdominal pain <<#>>x/wk related to defecation, <<diarrhea>><<constipation>><<mixed>> pattern, bloating. Denies nocturnal diarrhea, blood, weight loss. Stressors: •.
+O:
+Gen: well, NAD
+Abdo: SNTND, mild diffuse tenderness, no masses/organomegaly
+A: IBS-<<D>><<C>><<M>> (Rome IV) - no alarm features
+P:
+- <<Celiac screen, CBC, CRP ordered.>>
+- Counselled on FODMAP diet trial, soluble fibre
+- <<Antispasmodic PRN - counselled dry mouth, constipation, blurred vision.>><<Peppermint oil capsules.>>
+- Reassurance re benign course
+- f/u <<4-6>> wks
+- RTC/RTED instructions reviewed, including red flags` },
+
+{ id:"hemorrhoids", cat:"GI", title:"Hemorrhoids",
+  aliases:"rectal bleeding piles anal itch blood stool",
+  body:
+`S: Bright red blood <<on paper>><<coating stool>> x •, with <<itch>><<discomfort>>. Denies dark stools, weight loss, change in bowel habit. Straining/constipation hx. Colon screening status: •.
+O:
+Perianal: <<external hemorrhoids>><<skin tags>>. DRE: no mass
+A: Hemorrhoids - bleeding pattern benign
+P:
+- Counselled to optimize dietary fibre, increase fluid intake, and add psyllium husk daily
+- Counselled to target type 5 stools x 4 wks
+- Sitz baths; <<anusol PRN>>
+- BW: CBC, lytes, Fe, B12
+- Will consider scopes if BW abnormalities or persistent despite above
+- RTC/RTED instructions reviewed, including prolapse unable to reduce, dark stools, worsening` },
+
+{ id:"dyspepsia", cat:"GI", title:"Dyspepsia / H. pylori",
+  aliases:"indigestion epigastric stomach hpylori bloating",
+  body:
+`S: Epigastric discomfort, post-meal fullness x •. Denies dysphagia, weight loss, vomiting, GI bleeding. Age under 60. No NSAIDs.
+O:
+Gen: well, NAD
+Abdo: SNTND, mild epigastric tenderness, no masses
+A: Uninvestigated dyspepsia - no alarm features
+P:
+- <<H. pylori test ordered - eradication if positive.>><<PPI trial x 4-8 wks.>>
+- Counselled EtOH/caffeine moderation, smaller meals
+- Scope if alarm features or refractory
+- RTC/RTED instructions reviewed` },
+
+{ id:"fissure", cat:"GI", title:"Anal fissure",
+  aliases:"anal pain tear bleeding defecation",
+  body:
+`S: Sharp anal pain with defecation x •, bright blood on paper, pain lingers after BM. Preceding constipation/hard stools.
+O:
+Perianal: <<posterior midline fissure on gentle traction.>> DRE deferred - pain. No abscess/mass
+A: Anal fissure - <<acute>><<chronic>>
+P:
+- Stool softening: restoralax + fibre + fluids
+- Sitz baths after BMs
+- <<Topical nitroglycerin 0.2 percent BID - headache warned.>><<Topical diltiazem 2 percent BID.>><<Nifedipine cream BID.>>
+- Most acute fissures heal in 4-6 wks; refer if chronic/refractory
+- RTC/RTED instructions reviewed` },
+
+{ id:"abdo-pain", cat:"GI", title:"Abdominal pain NYD (low risk)",
+  aliases:"stomach ache belly pain abdo workup",
+  body:
+`S: Abdominal pain x •, <<location>>, <<character>>. <<Nausea/bloating/bowel change.>> Denies fever, GI bleeding, weight loss, nocturnal waking. Eating adequately.
+O:
+T: •  HR: •  BP: •
+Gen: well, NAD
+Abdo: soft, <<location>> tenderness, no guarding/rebound, no masses/organomegaly. Bowel sounds normal
+A: Abdominal pain NYD - benign exam, no red flags
+P:
+- BW: CBC, lytes, Cr, ALT, lipase; urinalysis
+- <<Imaging pending labs.>>
+- Symptom diary
+- f/u <<1-2>> wks
+- RTC/RTED instructions reviewed, including fever, localizing/worsening pain, vomiting, GI bleeding - urgent review/ED` },
 
 // ---------- GU / Repro ----------
 { id:"uti", cat:"GU/Repro", title:"Uncomplicated UTI (cystitis)",
   aliases:"bladder infection dysuria burning pee urine frequency",
   body:
-`S: Dysuria, frequency, and urgency x <<#>> days. No fever, flank pain, or vaginal discharge/irritation. Not pregnant — LMP <<date>>.
-O: Afebrile. Abdomen soft; mild suprapubic tenderness. No CVA tenderness.
-A: Uncomplicated cystitis.
-P: <<Nitrofurantoin 100 mg PO BID x 5 days.>> <<TMP-SMX DS PO BID x 3 days.>> Urine dip: <<result>>. <<Culture sent.>> Fluids. Return if fever, flank pain, or no improvement in 48 h.` },
+`S: Dysuria, frequency, urgency x <<#>> days. Denies fever, flank pain, vaginal discharge/irritation. Not pregnant - LMP •.
+O:
+T: •
+Gen: well, NAD
+Abdo: SNTND, mild suprapubic tenderness. No CVA tenderness
+A: Uncomplicated cystitis
+P:
+- UA and urine culture sent
+- <<Macrobid 100 mg BID x 5 days - counselled on side effects.>><<TMP-SMX DS BID x 3 days.>>
+- Counselled ++ fluids; tylenol PRN
+- f/u for culture results
+- RTC/RTED instructions reviewed, including fever, flank pain, no improvement in 48 h` },
 
 { id:"vaginitis", cat:"GU/Repro", title:"Vaginitis (yeast / BV)",
   aliases:"yeast candida discharge itch BV bacterial vaginosis",
   body:
-`S: Vaginal <<itch/discharge/odour>> x <<duration>>. Discharge <<thick and white>> <<thin and grey with fishy odour>>. No abdominal pain, fever, or abnormal bleeding. LMP <<date>>.
-O: External genitalia: mild erythema. Speculum: discharge as described, cervix normal, no cervical motion tenderness.
-A: <<Vulvovaginal candidiasis.>> <<Bacterial vaginosis.>>
-P: <<Fluconazole 150 mg PO x 1.>> <<Metronidazole 500 mg PO BID x 7 days.>> <<Swabs sent.>> Return if persistent or recurrent symptoms.` },
+`S: Vaginal <<itch>><<discharge>><<odour>> x •. Discharge <<thick, white>><<thin, grey, fishy odour>>. Denies abdominal pain, fever, abnormal bleeding. LMP •.
+O:
+External genitalia: <<mild erythema>><<normal>>
+Speculum: discharge as described, cervix normal, no CMT
+A: <<Vulvovaginal candidiasis>><<Bacterial vaginosis>>
+P:
+- <<Fluconazole 150 mg PO x 1.>><<Metronidazole 500 mg BID x 7 days.>>
+- <<Swabs sent.>>
+- RTC/RTED instructions reviewed, including persistent or recurrent symptoms` },
 
-{ id:"contraception", cat:"GU/Repro", title:"Contraception visit",
+{ id:"contraception", cat:"GU/Repro", title:"Contraception counselling",
   aliases:"birth control OCP pill IUD depo ring patch",
   body:
-`S: Requesting contraception. Options discussed — OCP, patch, ring, IUD, injection. No migraine with aura, VTE history, smoking over 35 y, or other contraindications. LMP <<date>> — reasonably certain not pregnant.
-O: BP <<BP>>, weight <<wt>>.
-A: Contraception counselling.
-P: Started <<method>>. Reviewed missed-dose rules, common side effects, and VTE warning signs (ACHES). Condoms advised for STI protection. F/U 3 months for BP check, sooner PRN.` },
+`S: Contraception visit.
+Interested in: •. Current method: •. Condom use: •. Previous methods (and reasons d/c): •
+Sexually active with: <<male>><<female>><<both/all>> partners; • partners past year. Hx STIs: •. Last STI screen: •
+LMP: •. Menses: <<regular>><<irregular>>
+- Discussed options: condoms, OCP (combined and progestin-only), Depo-Provera, patch, ring, LARC (hormonal and copper IUD)
+- Reviewed estrogen CIs: no VTE/PE, no coagulopathy, no migraine w/ aura, no smoking over 35 yo, no HTN, no ischemic heart/valvular disease, no breast CA, no DM w/ microvascular complications, not under 6 wks postpartum breastfeeding
+- Reviewed progestin CIs: no liver disease, no breast CA within 5 yrs, no unexplained vaginal bleeding
+- Reviewed IUD CIs: no pregnancy, recent PID, STI within 3 months, distorted cavity
+O:
+BP: •
+A: Contraception counselling
+P:
+- Patient decided to proceed with: •
+- Pregnancy risk assessed: <<acceptably low>><<test performed>>
+- <<Agreeable to>><<declined>> STI screening
+- Counselled on timing, missed doses, backup method, emergency contraception
+- Risks/side effects discussed: typical-use failure rate, hormonal side effects, interactions
+- Condoms advised for STI protection
+- f/u: •` },
 
-{ id:"menopause", cat:"GU/Repro", title:"Menopause symptoms",
+{ id:"menopause", cat:"GU/Repro", title:"Menopause",
   aliases:"hot flashes flushes night sweats HRT MHT perimenopause",
   body:
-`S: Vasomotor symptoms — hot flashes and night sweats x <<duration>>, affecting sleep and quality of life. LMP <<date>>. No abnormal bleeding. <<Genitourinary symptoms present.>> No contraindications to hormone therapy — no breast cancer, VTE, CAD, or undiagnosed bleeding.
-O: BP <<BP>>, BMI <<BMI>>.
-A: Menopausal vasomotor symptoms.
-P: Options discussed — lifestyle, menopausal hormone therapy, non-hormonal. <<Started: therapy.>> <<Considering — information provided.>> Mammogram and cervical screening up to date. F/U 3 months.` },
+`S: Menopause review. LMP: •
+Symptoms: <<period changes>><<hot flashes>><<vaginal dryness/pain/sexual concerns>><<bladder issues/incontinence>><<sleep changes>><<mood changes>>
+Impact on QoL: •
+HRT contraindications screened: no hx breast/endometrial/ovarian cancer, no AUB, no pregnancy, no CAD, no hx VTE, no liver disease, no migraine with aura
+O:
+BP: •  BMI: •
+A: Menopausal <<vasomotor>><<genitourinary>> symptoms
+P:
+- Options discussed: lifestyle, menopausal hormone therapy, non-hormonal
+- <<Started: •.>><<Considering - information provided.>>
+- Mammogram and cervical screening UTD
+- Hormone panels not indicated for diagnosis - discussed
+- f/u 3 months
+- RTC/RTED instructions reviewed, including abnormal bleeding` },
 
-{ id:"pap", cat:"GU/Repro", title:"Cervical screening (Pap)",
+{ id:"pap", cat:"GU/Repro", title:"Pap / cervical screening",
   aliases:"pap smear cervix HPV screening cytology",
   body:
-`S: Here for routine cervical screening. No abnormal bleeding, discharge, or post-coital bleeding. LMP <<date>>. Last screen <<date>> — normal.
-O: Speculum exam: cervix appears normal. Sample collected without difficulty.
-A: Routine cervical cancer screening.
-P: Results in 2–4 weeks — will contact if abnormal. Recall per guideline.` },
+`S: PAP
+<<Last pap •, results •.>><<No history of abn paps.>>
+<<Periods regular, LMP •>><<peri-menopausal>><<post-menopausal>>. <<No abn PV bleeding>><<spotting>><<discharge>><<dyspareunia>>
+<<Sexually active>><<not sexually active>>, <<monogamous>><<multiple partners>>
+<<No hormonal birth control>><<takes OCP>><<has IUS>>
+O: Well appearing, NAD
+Reviewed pap procedure; verbal consent granted for pap <<and swabs>>
+<<Patient declined chaperone.>><<Chaperone present.>>
+Normal external genitalia
+Grossly normal appearing cervix<<, pink, smooth, no visible lesions>>
+Pap <<and swabs>> done without complication
+Pt tolerated procedure well, no concerns voiced
+A: Cervical cancer screening
+P:
+- Offered STI testing - <<pt agreed>><<pt declined>>
+- PAP <<, GC>><<, VC>> swab(s) sent
+- <<Will f/u with abn results only.>><<Will advise of results either way.>>
+- Recall per guideline; RTC as needed` },
 
 { id:"sti", cat:"GU/Repro", title:"STI screening",
   aliases:"STD gonorrhea chlamydia HIV syphilis testing sexual health",
   body:
-`S: Requesting STI screening — <<new partner/routine>>. Asymptomatic: no discharge, dysuria, lesions, or pelvic pain. Practices and partners: <<detail>>. Last screen <<date>>.
-O: <<Deferred — asymptomatic.>> <<External genital exam normal.>>
-A: Asymptomatic STI screening.
-P: Sent: GC/chlamydia NAAT <<urine/swab>>, HIV, syphilis serology. <<Hep B and C added per risk.>> Safer-sex counselling provided. Will contact with results; partner treatment if positive.` },
+`S: STI screening - <<new partner>><<routine>>. Asymptomatic: denies discharge, dysuria, lesions, pelvic pain. Practices/partners: •. Last screen: •.
+O: <<Deferred - asymptomatic.>><<External genital exam normal.>>
+A: Asymptomatic STI screening
+P:
+- Sent: GC/CT NAAT <<urine>><<swab>>, HIV, syphilis serology, Hep B<<, Hep C per risk>>
+- Counselled on the tests being done; safer-sex counselling provided
+- <<If positive: treatment + partner notification; test of cure in 2 wks (GC).>>
+- Counselled to abstain x 7 days if treated
+- Will contact with results` },
 
 { id:"ed", cat:"GU/Repro", title:"Erectile dysfunction",
   aliases:"impotence viagra sildenafil cialis erection",
   body:
-`S: Erectile difficulties x <<duration>>, gradual onset. <<Morning erections preserved.>> Libido normal. PMHx: <<DM/HTN/smoking>>. Medications reviewed. Mood normal; no relationship stressors.
-O: BP <<BP>>. Genital exam normal. Peripheral pulses normal.
-A: Erectile dysfunction — likely vasculogenic; treat as CV risk marker.
-P: Labs: A1c, lipids. <<Morning testosterone added.>> CV risk assessment. Rx: <<sildenafil 50 mg PRN.>> <<tadalafil 10 mg PRN.>> Counselled — contraindicated with nitrates. Lifestyle: exercise, smoking, alcohol. F/U <<4–8>> weeks.` },
+`S: Erectile difficulties x •, gradual onset. <<Morning erections preserved.>> Libido normal. PMHx: <<DM>><<HTN>><<smoking>>. Meds reviewed. Mood normal.
+O:
+BP: •
+Gen: well, NAD. Genital exam normal. Peripheral pulses normal
+A: Erectile dysfunction - likely vasculogenic; treat as CV risk marker
+P:
+- BW: A1c, lipids<<, AM testosterone>>
+- CV risk assessment
+- Rx: <<sildenafil 50 mg PRN.>><<tadalafil 10 mg PRN.>> Counselled - contraindicated with nitrates
+- Counselled on lifestyle: exercise, smoking, EtOH
+- f/u <<4-8>> wks` },
 
 { id:"bph", cat:"GU/Repro", title:"BPH / LUTS",
   aliases:"prostate urinary nocturia weak stream tamsulosin PSA",
   body:
-`S: Lower urinary tract symptoms x <<duration>> — weak stream, hesitancy, nocturia <<#>>x/night. No dysuria, hematuria, or retention. IPSS <<score>>.
-O: Abdomen: no palpable bladder. DRE: prostate smoothly enlarged, no nodules or asymmetry.
-A: BPH with <<mild/moderate>> LUTS.
-P: Cr and urinalysis ordered. PSA discussed — <<decision>>. <<Watchful waiting.>> <<Tamsulosin 0.4 mg qHS — counselled re: dizziness.>> Limit evening fluids and caffeine. Return if retention, hematuria, or worsening.` },
+`S: LUTS x • - weak stream, hesitancy, nocturia <<#>>x/night. Denies dysuria, hematuria, retention. IPSS •.
+O:
+Abdo: no palpable bladder
+DRE: prostate smoothly enlarged, no nodules/asymmetry
+A: BPH with <<mild>><<moderate>> LUTS
+P:
+- BW: Cr; urinalysis
+- PSA discussed - <<pt agrees>><<pt declines>>
+- <<Watchful waiting.>><<Tamsulosin 0.4 mg qHS - counselled dizziness.>>
+- Counselled to limit evening fluids/caffeine
+- RTC/RTED instructions reviewed, including retention, hematuria, worsening` },
 
-{ id:"prenatal", cat:"GU/Repro", title:"Routine prenatal visit",
+{ id:"prenatal", cat:"GU/Repro", title:"Prenatal visit (routine)",
   aliases:"pregnancy pregnant OB antenatal GA fetal",
   body:
-`S: Routine prenatal visit at <<#>> weeks. Feeling well. <<Fetal movements present.>> No bleeding, cramping, fluid loss, headache, or visual changes.
-O: BP <<BP>>, weight <<wt>>. SFH <<#>> cm. FHR <<#>> bpm. Urine dip: <<result>>.
-A: Intrauterine pregnancy at <<#>> weeks — progressing normally.
-P: Bloodwork and ultrasound per schedule: <<detail>>. Vaccines reviewed — Tdap, influenza, RSV timing. Warning signs reviewed. Next visit in <<#>> weeks.` },
+`S:
+- <<no cramping>>, <<no PV bleeding>>, <<fetal movements present>>
+- <<no nausea/vomiting>>
+- <<no other concerns>>
+O: <<appears well>>
+Wt: • kg
+BP: •
+HR: •
+FHR: •
+SFH: •
+Urine dip: •
+A/P: • year old G•P• at •+• wks GA; final EDB •
+Issues addressed today:
+1. •
+- Routine BW/US per schedule reviewed
+- Warning signs reviewed
+- Next visit • wks` },
+
+{ id:"renal-colic", cat:"GU/Repro", title:"Renal colic / kidney stone",
+  aliases:"kidney stone flank pain hematuria colic",
+  body:
+`S: Sudden <<R>><<L>> flank pain radiating to groin, colicky, with nausea. <<Visible hematuria.>> Prior stones: <<yes>><<no>>. Pain currently <<settling>><<controlled>>. Denies fever.
+O:
+T: •  HR: •  BP: •
+Gen: uncomfortable but non-toxic, NAD
+Abdo: soft, no peritonism. <<R>><<L>> CVA tenderness
+A: Suspected renal colic, <<R>><<L>> - no infection signs
+P:
+- NSAID first-line: naproxen 500 mg BID with food
+- Urinalysis: •
+- <<CT KUB>><<US>> ordered
+- Strain urine; fluids
+- f/u with imaging
+- RTC/RTED instructions reviewed, including fever, uncontrolled pain, persistent vomiting, anuria - ED` },
+
+{ id:"recurrent-uti", cat:"GU/Repro", title:"Recurrent UTIs",
+  aliases:"repeated bladder infections prophylaxis cystitis prevention",
+  body:
+`S: <<#>> culture-confirmed UTIs past <<6>><<12>> months; currently asymptomatic - prevention visit. <<Post-coital pattern.>><<Postmenopausal.>> Hydration/voiding habits reviewed.
+O:
+Abdo: SNTND, no CVA tenderness
+A: Recurrent uncomplicated UTIs
+P:
+- Behavioural: hydration, post-coital voiding
+- <<Post-coital single-dose prophylaxis.>><<Continuous low-dose prophylaxis x 3-6 months.>><<Vaginal estrogen (postmenopausal).>><<Self-start standby abx with culture kits.>>
+- Urology if hematuria or atypical features
+- f/u 3 months` },
+
+{ id:"incontinence", cat:"GU/Repro", title:"Urinary incontinence",
+  aliases:"leaking bladder overactive urgency stress kegel pads",
+  body:
+`S: Urinary leakage x • - <<with cough/sneeze/exertion (stress)>><<with urgency (urge)>><<mixed>>. Pads/day: <<#>>. Caffeine/fluids: •. Denies dysuria, hematuria. Impact: •.
+O:
+BMI: •
+Abdo: no palpable bladder
+<<Pelvic: atrophy/prolapse assessed - •.>>
+Urine dip: •
+A: <<Stress>><<Urge>><<Mixed>> urinary incontinence
+P:
+- Pelvic floor exercises - <<pelvic physio referral>>
+- Bladder training, caffeine reduction
+- <<Vaginal estrogen.>><<OAB medication discussed.>>
+- Bladder diary for next visit
+- f/u <<6-8>> wks` },
+
+{ id:"aub", cat:"GU/Repro", title:"Heavy menstrual bleeding",
+  aliases:"heavy periods menorrhagia AUB flooding clots",
+  body:
+`S: Heavy menstrual bleeding x • - soaking <<#>> pads/day, <<clots>><<flooding>>, cycles <<regular>><<irregular>>. Not pregnant - <<LMP •>><<test>>. Denies intermenstrual/post-coital bleeding.
+O:
+BP: •  HR: •
+Gen: well, NAD, no pallor
+Abdo: SNTND
+<<Pelvic: cervix normal, uterus normal size, no adnexal masses.>>
+A: AUB - heavy menstrual bleeding pattern
+P:
+- BW: CBC, ferritin, TSH
+- <<Pelvic US ordered.>>
+- Options: <<tranexamic acid with menses.>><<NSAID with menses.>><<Combined OCP.>><<Hormonal IUD.>>
+- <<Endometrial biopsy arranged - age over 40/risk factors.>>
+- Pap UTD
+- f/u <<4-6>> wks
+- RTC/RTED instructions reviewed, including flooding, symptomatic anemia` },
+
+{ id:"dysmenorrhea", cat:"GU/Repro", title:"Dysmenorrhea",
+  aliases:"period cramps painful periods menstrual pain",
+  body:
+`S: Painful periods since <<menarche>><<recent onset>> - cramping first <<#>> days, <<missing school/work>>. Denies dyspareunia, heavy bleeding, intermenstrual bleeding.
+O:
+Abdo: SNTND
+<<Pelvic exam deferred - young, primary pattern.>><<Pelvic exam normal.>>
+A: <<Primary dysmenorrhea>><<Possible secondary dysmenorrhea - endometriosis features>>
+P:
+- Naproxen 500 mg BID starting day before expected menses
+- Heat, exercise
+- <<Combined OCP or hormonal IUD discussed for suppression.>>
+- <<Pelvic US + gyne referral if secondary features/refractory.>>
+- f/u after 2-3 cycles` },
+
+{ id:"early-pregnancy", cat:"GU/Repro", title:"Pregnancy - first visit",
+  aliases:"pregnant positive test dating folic acid new pregnancy first trimester",
+  body:
+`S: Positive home pregnancy test. LMP • - at • wks • days. <<Pregnancy desired - continuing.>><<Options counselling provided.>> <<Mild nausea.>> Denies bleeding, pain. Folic acid <<started>>.
+O:
+BP: •  Wt: •
+A: Pregnancy - first trimester; EDD •; no acute concerns
+P:
+- Prenatal BW ordered: serum HCG, TSH, CBC, ferritin, UA and urine culture, HepB, VDRL, HIV, blood type and Rh, rubella/varicella status, urine GC/CT - discussed what is ordered and why
+- Dating/viability US ordered
+- Discussed NIPT at 9 wks / eFTS at 11 wks
+- Prenatal vitamin <<+ diclectin>> prescribed
+- Anticipatory guidance re common precautions
+- Ectopic precautions reviewed - bleeding or pain prompts urgent review
+- f/u 1 wk for review of prenatal labs` },
+
+{ id:"breast-lump", cat:"GU/Repro", title:"Breast lump / breast exam",
+  aliases:"breast mass lump mammogram ultrasound",
+  body:
+`S:
+- <<no>> pain, <<no>> nipple discharge/blood, <<no>> skin changes
+- <<Self-detected lump, noticed •.>>
+- <<no>> personal or family hx of breast/ovarian/uterine/colon cancers
+- <<no>> hx of HRT
+- <<LMP: •>><<postmenopausal, age •>>. Last mammogram: •
+O: appears well
+Breasts appear normal in seated and supine position
+<<no>> skin changes, <<no>> nipple inversion, <<no>> visible discharge
+<<no>> palpable lumps
+Lump if present: <<R>><<L>> at •, • cm, <<smooth, mobile>><<firm, irregular>>
+<<no>> axillary or cervical lymphadenopathy
+A: <<Breast mass - requires diagnostic workup>><<Normal breast exam>>
+P:
+- <<Diagnostic mammogram + US ordered (triple assessment); biopsy referral if indicated.>>
+- <<Referral to breast diagnostic clinic.>>
+- Will call with results; timeline explained, concerns acknowledged
+- RTC/RTED instructions reviewed, including new lumps, nipple changes/discharge, skin changes` },
+
+{ id:"epididymitis", cat:"GU/Repro", title:"Testicular pain / epididymitis",
+  aliases:"scrotal pain testicle epididymis torsion",
+  body:
+`S: Gradual <<R>><<L>> testicular pain x <<#>> days. <<Dysuria.>> Denies sudden onset, trauma. Sexually active: •. NOTE: sudden severe pain = ED immediately (torsion).
+O:
+T: •
+GU: <<R>><<L>> epididymis tender, swollen; testicular lie normal, cremasteric reflex present. No hernia
+A: Epididymitis, <<R>><<L>> - torsion features absent
+P:
+- Urine NAAT GC/CT + culture sent
+- <<Ceftriaxone 500 mg IM x 1 + doxycycline 100 mg BID x 10 days (STI risk).>><<TMP-SMX DS BID x 10-14 days (low STI risk).>>
+- Scrotal support, NSAIDs
+- f/u <<3-7>> days
+- RTC/RTED instructions reviewed, including sudden severe pain, systemic illness - ED` },
+
+{ id:"ec", cat:"GU/Repro", title:"Emergency contraception",
+  aliases:"plan b morning after pill unprotected levonorgestrel ulipristal",
+  body:
+`S: Unprotected intercourse <<#>> h ago. LMP •. No contraindications. Ongoing contraception needs discussed.
+O:
+BP: •  Wt: •
+A: Emergency contraception request - within window
+P:
+- <<Levonorgestrel 1.5 mg PO x 1 (within 72 h).>><<Ulipristal 30 mg PO x 1 (within 120 h).>><<Copper IUD discussed - most effective.>>
+- Pregnancy test if no menses within 3 wks
+- STI screening offered
+- Ongoing contraception plan: •` },
+
+{ id:"fertility", cat:"GU/Repro", title:"Fertility workup",
+  aliases:"infertility trying to conceive TTC preconception",
+  body:
+`S:
+- Duration of trying to conceive: •
+- OBHx: •
+- LMP: •
+O: Generally well, NAD
+A: Fertility
+P:
+- BW: PRL, TSH, AMH, day 3 FSH/estradiol
+- Pelvic US
+- Fertility clinic referral
+- Consider semen analysis
+- Preconception counselling - folate/PNV` },
+
+{ id:"pmb", cat:"GU/Repro", title:"Post-menopausal bleeding",
+  aliases:"PMB bleeding menopause spotting endometrial",
+  body:
+`S:
+- Bleeding started •; frequency: •
+- <<no>> history of similar, <<no>> pain
+- <<no>> fever, weight loss, night sweats
+- <<no>> HRT, <<no>> anticoagulants, <<no>> herbal supplements
+- <<history of diabetes.>><<history of high BMI.>>
+- <<no>> family history of breast, colon or endometrial cancer
+- Age at menopause: •. Last pap: •
+O: appears well, non-toxic
+BP: •  HR: •  T: •
+Abdo: SNTND
+Pelvic: <<normal external genitalia>>, <<no>> visible source of bleeding, cervix <<normal>><<abnormal>>
+A: Post-menopausal bleeding, NYD
+P:
+- Transvaginal US req provided
+- Pt to book for endometrial biopsy
+- BW req provided
+- RTC/RTED instructions reviewed, including heavy bleeding` },
+
+{ id:"pcos", cat:"GU/Repro", title:"PCOS",
+  aliases:"polycystic ovary rotterdam hirsutism irregular periods",
+  body:
+`S: Rotterdam criteria (2 of 3 + exclusion of mimics):
+1. Androgen excess: hirsutism <<Y>><<N>>; acne <<Y>><<N>>; androgenic alopecia <<Y>><<N>>; elevated serum androgens <<Y>><<N>>
+2. Ovulatory dysfunction: cycles under 21 days <<Y>><<N>>; over 35 days <<Y>><<N>>; trouble conceiving <<Y>><<N>>
+3. Polycystic ovaries on US: <<Y>><<N>><<pending>>
+O:
+BP: •  BMI: •
+Derm: <<hirsutism>><<acne>><<acanthosis nigricans>><<none>>
+A: <<PCOS>><<Possible PCOS - workup initiated>>
+P:
+- AM labs: total testosterone, DHEAS, LH, FSH, estradiol, TSH, prolactin, 17-OHP, A1c, lipids
+- <<Pelvic US ordered.>>
+- Counselled on diagnosis: metabolic syndrome risk, endometrial protection, fertility
+- <<Diet/exercise, weight loss 5-10 percent.>><<Hormonal therapy for cycle regulation/endometrial protection discussed.>><<Cyclic provera q3 months if no spontaneous menses.>>
+- <<Fertility: earlier referral at 6 months if trying to conceive.>>
+- f/u with results` },
+
+{ id:"medical-abortion", cat:"GU/Repro", title:"Medical abortion",
+  aliases:"abortion mifepristone misoprostol termination pregnancy",
+  body:
+`S: G•T•P•A•L• referred for consideration of pregnancy termination. LMP • <<certain>><<uncertain>>.
+Ectopic risk: hx ectopic <<no>><<yes>>; tubal surgery <<no>><<yes>>; spotting with cramping <<no>><<yes>>
+US: <<required and ordered>><<not required>><<completed - yolk sac confirms IUP>>
+Options reviewed: <<pt wishes to pursue medical abortion; decision autonomous and not coerced.>>
+Medical vs surgical discussed: timeline, bleeding, privacy, completion rates (96-98 percent vs 99 percent)
+Risks reviewed: ~3 percent incomplete, ~3 percent surgical intervention, ~1 percent infection, rare serious infection
+CIs screened: anemia under 95/coagulopathy, porphyria, glucocorticoid-dependent condition, IUD in place, symptoms needing ectopic r/o, allergy
+O:
+BP: •  HR: •
+A: Consented to medical abortion at • wks GA
+P:
+- Day 1: mifepristone 200 mg PO (repeat Rx if vomiting within 1 h)
+- Day 2-3: misoprostol 800 mcg buccal 24-48 h after mife; expect cramping, heavy bleeding, clots, possible fever within 3 h
+- Pain: ibuprofen 400 mg q4h or naproxen 500 mg q8h PRN; <<stronger analgesia Rx provided>>
+- Gravol PRN nausea; Imodium PRN diarrhea; pads only, no tampons
+- Urgent care reviewed: soaking 2 maxi-pads/h x 2 h, clots larger than lemon, uncontrolled pain, fever beyond 24 h post-miso
+- Baseline: Hgb •, Rh • <<RhIg arranged if Rh negative>>, BhCG • on •, G+C screen
+- Completion: <<day 7 BhCG - confirm over 80 percent drop.>><<US if incomplete suspected.>>
+- Contraception plan reviewed - ovulation can resume in 5 days; <<IUD after completion>><<hormonal at miso administration>>
+- f/u booked: •` },
+
+{ id:"prenatal-intake", cat:"GU/Repro", title:"Prenatal intake (consult letter)",
+  aliases:"pregnancy intake first obstetrical consult GPA",
+  body:
+`Dear •,
+Thank you for referring • for prenatal care, seen today for her first appointment.
+Reviewed provision of low-risk obstetrical care, call group model, delivery hospital, and urgent access via maternal triage after 20 wks.
+PMHx: <<none, otherwise healthy>>
+PSHx: <<none>>
+Meds: PNV<<, •>>
+Allergies: <<NKDA>>
+FHx: <<non-contributory>>
+Social: smoking <<non-smoker>>, EtOH <<none during pregnancy>>, substances <<none>>. Supports: •
+OBHx: G•P•. LMP: •. Final EDC based on <<LMP>><<T1 US>>
+Serologies: blood type <<POS>><<NEG>>, HepB <<neg>>, HIV <<neg>>, VDRL <<non-reactive>>, rubella <<immune>>, varicella <<immune>>
+Urine culture: <<negative>>. Urine G/C: <<negative>>
+US - T1: •. Placental location: •. eFTS: •
+O: Appears well, NAD. Wt: •  Ht: •  BP: •  SFH: •
+A/P: • year old G•P• at • wks GA; final EDC •
+Issues addressed today: •
+Routine schedule reviewed: q4 wks to 32 wks, q2 wks to 36 wks, then weekly to delivery; 6 wk postpartum visit.
+Thank you for your referral.` },
+
+{ id:"postpartum", cat:"GU/Repro", title:"Postpartum visit",
+  aliases:"baby blues postpartum depression EPDS newborn mom pp",
+  body:
+`S: PP <<day •>><<week •>>
+Pregnancy hx: <<uncomplicated>><<significant for •>><<GDM diet controlled>><<PIH>>
+Delivery: <<uncomplicated SVD>><<C/S>>
+Perineum: <<intact>><<second degree laceration - healing>>
+Pain: <<no issues>><<tylenol/advil PRN>>
+Feeding: <<sole breastfeeding, no concerns>><<breastfeeding with formula top-up>><<formula only>>. <<No pain, fever, erythema.>>
+Bleeding: <<no issues>><<normal lochia, finished by 6-8 wks>>
+Mood: <<no concerns>><<EPDS •>>. No thoughts of harm to self or baby
+Contraception: discussed BF amenorrhea not sufficient; reviewed options - pill, patch, IUD
+Supports: partner <<at home>><<back to work>>; family <<available>>
+O: Appears well
+BP: •
+A/P: • year old G•P•, postpartum <<day>><<week>> •
+- <<Routine care, reassurance.>><<PP depression screening positive - counselling referral + treatment discussed.>>
+- Contraception plan: •
+- f/u <<PRN>><<2-4 wks>>` },
 
 // ---------- MSK ----------
-{ id:"lbp", cat:"MSK", title:"Mechanical low back pain",
+{ id:"lbp", cat:"MSK", title:"Back pain (mechanical)",
   aliases:"back pain lumbar sciatica strain lifting",
   body:
-`S: Low back pain x <<duration>> after <<lifting/no clear trigger>>. <<No radiation below the knee.>> <<Radicular symptoms to: side and level.>> No saddle anesthesia, bowel or bladder dysfunction, fever, weight loss, or significant trauma — no red flags.
-O: Ambulating with mild antalgia. Lumbar paraspinal tenderness, ROM reduced in flexion. SLR negative bilaterally. Lower limb power, sensation, and reflexes normal.
-A: Mechanical low back pain, no red flags.
-P: Stay active, avoid bed rest — discussed. Heat; naproxen 500 mg PO BID PRN with food. <<Physio referral.>> Imaging not indicated — rationale discussed. Return if red flags or not improving by 4–6 weeks.` },
+`S:
+<<no>> bowel or bladder incontinence or retention
+<<no>> saddle paraesthesia
+<<no>> severe worsening pain (e.g. night pain)
+<<no>> trauma
+<<no>> weight loss, history of cancer, fever
+<<no>> steroid use, <<no>> IV drug use
+<<no>> first episode of severe pain at age 50+
+<<no>> focal neurological deficits
+O:
+Gen: well, NAD, normal gait
+BACK:
+No SEADS, no midline tenderness, no paraspinous tenderness
+Forward flexion, lateral flexion, extension <<full and painless>><<limited>>
+Power 5/5, sensation 2/2, reflexes 2+ bilat lower limbs
+Negative SLR
+A: <<Mechanical back pain>><<with radicular symptoms>><<muscle spasm>>
+P:
+- Education: back pain typically self-resolves
+- Supportive care: alternating hot/cold, activities as tolerated
+- Physical activity and exercise as tolerated; physio referral
+- Pain management: tylenol, NSAIDs, topical voltaren
+- <<Trial short-course NSAID: naproxen 500 mg BID x 2 wks with food.>><<Trial muscle relaxant - drowsiness counselled.>>
+- Imaging not indicated - discussed
+- RTC/RTED instructions reviewed, including red flags above, not improving 4-6 wks` },
 
-{ id:"neck-pain", cat:"MSK", title:"Mechanical neck pain",
+{ id:"neck-pain", cat:"MSK", title:"Neck pain (mechanical)",
   aliases:"cervical stiff neck whiplash posture",
   body:
-`S: Neck pain x <<duration>> — <<postural/after strain>>. No radicular arm symptoms, weakness, or numbness. No trauma, fever, weight loss, or night pain — no red flags.
-O: Cervical paraspinal tenderness; ROM reduced in rotation. Upper limb power, sensation, and reflexes normal. Spurling negative.
-A: Mechanical neck pain.
-P: Heat, posture and ergonomic review, ROM exercises. NSAIDs PRN. <<Physio referral.>> Return if neurological symptoms or not improving by 4 weeks.` },
+`S: Neck pain x • - <<postural>><<after strain>>. Denies radicular arm symptoms, weakness, numbness, trauma, fever, weight loss, night pain.
+O:
+Gen: well, NAD
+Neck: paraspinal tenderness, ROM reduced in <<rotation>>. No midline bony tenderness
+Neuro: upper limb power 5/5, sensation normal, reflexes 2+. Spurling negative
+A: Mechanical neck pain
+P:
+- Heat, posture/ergonomic review, ROM exercises
+- NSAIDs PRN
+- <<Physio referral.>>
+- RTC/RTED instructions reviewed, including neuro symptoms, not improving 4 wks` },
 
 { id:"knee-oa", cat:"MSK", title:"Knee osteoarthritis",
   aliases:"knee pain arthritis OA degenerative stairs",
   body:
-`S: <<R/L>> knee pain x <<duration>>, worse with stairs and activity; morning stiffness under 30 min. No locking, instability, or trauma.
-O: <<R/L>> knee: no effusion, crepitus present, <<medial/lateral>> joint-line tenderness, ROM full, ligaments stable.
-A: Knee osteoarthritis, <<R/L>>.
-P: Exercise and quadriceps strengthening. <<Physio referral.>> Weight management discussed. <<Topical NSAID PRN.>> <<Oral NSAID PRN.>> <<Acetaminophen PRN.>> <<X-ray ordered.>> F/U PRN; discuss injection if refractory.` },
+`S: <<R>><<L>> knee pain x •, worse with stairs/activity; morning stiffness under 30 min. Denies locking, instability, trauma.
+O:
+Gen: well, normal gait
+Knee: no effusion, no SEADS. Crepitus present. <<Medial>><<lateral>> joint-line tenderness. ROM full, ligaments stable
+A: Knee osteoarthritis, <<R>><<L>>
+P:
+- Exercise and quadriceps strengthening; <<physio referral>>
+- Weight management discussed
+- <<Topical NSAID PRN.>><<Oral NSAID PRN.>><<Tylenol PRN.>>
+- <<XR ordered.>>
+- f/u PRN; discuss injection if refractory
+- RTC/RTED instructions reviewed` },
 
-{ id:"shoulder", cat:"MSK", title:"Rotator cuff / shoulder pain",
+{ id:"shoulder", cat:"MSK", title:"Shoulder pain / rotator cuff",
   aliases:"shoulder impingement rotator cuff overhead tendinopathy",
   body:
-`S: <<R/L>> shoulder pain x <<duration>>, worse with overhead activity and lying on the affected side. No trauma, no neck symptoms or radicular features.
-O: <<R/L>> shoulder: painful arc 60–120°, positive <<Hawkins/empty-can>>. Full passive ROM. Power otherwise intact. No deformity or wasting.
-A: Rotator cuff tendinopathy / subacromial impingement, <<R/L>>.
-P: Relative rest from aggravating activity; physio-directed strengthening. NSAIDs PRN. Consider subacromial injection if no improvement at 6 weeks. F/U 6 weeks.` },
+`S: <<R>><<L>> shoulder pain x •, worse with overhead activity, lying on affected side. Denies trauma, neck symptoms, night sweats, weight loss.
+O:
+Gen: well, NAD
+Shoulder: no SEADS, no deformity/wasting. Painful arc 60-120. Positive <<Hawkins>><<empty can>>. Full passive ROM. Power otherwise 5/5
+A: Rotator cuff tendinopathy / subacromial impingement, <<R>><<L>>
+P:
+- Relative rest from aggravating activity; physio-directed strengthening
+- NSAIDs PRN
+- <<Subacromial injection if no improvement at 6 wks.>>
+- f/u 6 wks
+- RTC/RTED instructions reviewed` },
 
-{ id:"ankle-sprain", cat:"MSK", title:"Ankle sprain",
+{ id:"ankle-sprain", cat:"MSK", title:"Ankle sprain (ATFL)",
   aliases:"twisted ankle inversion ottawa ligament ATFL",
   body:
-`S: <<R/L>> ankle inversion injury on <<date>>. Able to weight-bear <<immediately/with difficulty>>. No numbness or other injuries.
-O: Swelling and tenderness over the ATFL. No bony tenderness at posterior malleoli, navicular, or base of 5th metatarsal; able to weight-bear 4 steps — Ottawa criteria negative. Neurovascularly intact.
-A: Lateral ankle sprain, grade <<I/II>>, <<R/L>>. X-ray not indicated per Ottawa rules.
-P: Relative rest, ice, compression, elevation; early mobilization and ankle rehab exercises. NSAIDs PRN. Return if unable to weight-bear or not improving in 1–2 weeks.` },
+`S: <<R>><<L>> ankle inversion injury on •. Able to weight-bear <<immediately>><<with difficulty>>. Denies numbness, other injuries.
+O:
+Gen: well, NAD, <<mild antalgic gait favouring affected leg>>
+Leg: no SEADS, compartments soft, no bruising
+- Focal tenderness maximally at lateral ankle over ATFL region<<, mild tenderness anterior ankle>>
+- No bony tenderness over medial malleolus, 5th metatarsal, navicular
+- Full AROM
+- Neurovascular intact, cap refill under 2 s
+A: Suspected ATFL sprain. Ottawa criteria negative - XR not indicated
+P:
+- Reassurance and conservative management - rest and activity modification, RICE
+- Pain control with OTC analgesia PRN (tylenol, voltaren, short courses of advil)
+- <<Continue with PT.>><<Physio referral.>>
+- <<At pt request, XR to r/o fracture.>>
+- RTC/RTED instructions reviewed, including unable to weight-bear, not improving 1-2 wks` },
 
 { id:"plantar", cat:"MSK", title:"Plantar fasciitis",
   aliases:"heel pain foot first steps morning orthotics",
   body:
-`S: <<R/L>> heel pain x <<duration>>, worst with first steps in the morning and after prolonged standing. No trauma or night pain.
-O: Tenderness at the medial calcaneal tubercle. No swelling or erythema. Ankle ROM normal; tight gastrocnemius.
-A: Plantar fasciitis, <<R/L>>.
-P: Calf and plantar fascia stretching, supportive footwear, ice. <<OTC orthotics.>> NSAIDs PRN. F/U 6–8 weeks; consider physio or injection if refractory.` },
+`S: <<R>><<L>> heel pain x •, worst with first steps in morning and after prolonged standing. Denies trauma, night pain.
+O:
+Foot: tenderness at medial calcaneal tubercle. No SEADS. Ankle ROM normal; tight gastrocnemius
+A: Plantar fasciitis, <<R>><<L>>
+P:
+- Calf and plantar fascia stretching, supportive footwear, ice
+- <<OTC orthotics.>>
+- NSAIDs PRN
+- f/u 6-8 wks; physio/injection if refractory
+- RTC/RTED instructions reviewed` },
 
 { id:"gout", cat:"MSK", title:"Gout flare",
   aliases:"podagra big toe uric acid crystal arthritis allopurinol",
   body:
-`S: Acute onset <<R/L>> <<1st MTP/joint>> pain, redness, and swelling since <<onset>>. <<First episode.>> <<Prior episodes: #.>> Triggers: <<alcohol/red meat/diuretic>>. No fever or trauma.
-O: Afebrile. <<R/L>> <<1st MTP>>: erythema, warmth, swelling, exquisitely tender. No tracking cellulitis; overlying skin intact.
-A: Acute gout flare, <<R/L>> <<1st MTP>>. Low suspicion for septic joint.
-P: <<Naproxen 500 mg PO BID x 5 days with food.>> <<Colchicine 1.2 mg PO, then 0.6 mg 1 h later.>> <<Prednisone 30 mg PO daily x 5 days.>> Hydration; limit alcohol and purines. Discuss urate-lowering therapy once settled if recurrent. Return if fever or spreading redness.` },
+`S: Acute onset <<R>><<L>> <<1st MTP>><<joint>> pain, redness, swelling since •. <<First episode.>><<Prior episodes: #.>> Triggers: <<EtOH>><<red meat>><<diuretic>>. Denies fever, trauma.
+O:
+Gen: well, NAD, afebrile
+Joint: <<R>><<L>> <<1st MTP>> - erythema, warmth, swelling, exquisitely tender. No tracking cellulitis, skin intact
+A: Acute gout flare - low suspicion for septic joint
+P:
+- <<Naproxen 500 mg BID x 5-7 days with food.>><<Colchicine 1.2 mg PO then 0.6 mg 1 h later.>><<Prednisone 30 mg daily x 5 days.>>
+- Counselled on avoidance of EtOH, sugar-sweetened drinks, purine-rich meat/seafood; dairy, vitamin C, coffee protective; weight loss
+- <<Discuss urate-lowering therapy once settled if recurrent.>>
+- RTC/RTED instructions reviewed, including fever, spreading redness` },
+
+{ id:"hip-pain", cat:"MSK", title:"Hip pain (OA / trochanteric)",
+  aliases:"hip groin trochanteric bursitis osteoarthritis",
+  body:
+`S: <<R>><<L>> hip pain x • - <<groin pain, worse weight-bearing (OA)>><<lateral hip pain, worse lying on side (trochanteric)>>. Denies trauma, fever, night pain. Function: •.
+O:
+Gait: <<normal>><<antalgic>>
+Hip: <<groin pain with internal rotation, ROM reduced>><<tenderness over greater trochanter, pain with resisted abduction>>. Neurovascular intact
+A: <<Hip osteoarthritis>><<Greater trochanteric pain syndrome>>, <<R>><<L>>
+P:
+- Activity modification, hip strengthening; <<physio referral>>
+- <<Tylenol>><<NSAID>> PRN
+- <<XR ordered.>>
+- Weight management if relevant
+- f/u <<6-8>> wks; injection if refractory
+- RTC/RTED instructions reviewed` },
+
+{ id:"tennis-elbow", cat:"MSK", title:"Tennis elbow",
+  aliases:"lateral epicondylitis elbow pain gripping",
+  body:
+`S: <<R>><<L>> lateral elbow pain x •, worse with gripping/lifting. Occupation/activity: •. Denies trauma, neck symptoms.
+O:
+Elbow: tenderness at lateral epicondyle; pain with resisted wrist extension. Full ROM. Neuro intact
+A: Lateral epicondylitis, <<R>><<L>>
+P:
+- Relative rest, eccentric strengthening, counterforce brace
+- Topical or short-course oral NSAID PRN
+- Expectation set - often months, excellent prognosis
+- <<Physio referral.>>
+- f/u 6-8 wks` },
+
+{ id:"carpal-tunnel", cat:"MSK", title:"Carpal tunnel syndrome",
+  aliases:"hand numbness tingling wrist median nerve night splint",
+  body:
+`S: <<R>><<L>><<Bilateral>> numbness/tingling thumb to middle fingers x •, worse at night, relieved by shaking. <<Dropping objects.>> Occupation: •.
+O:
+Wrist: <<positive Phalen>><<positive Tinel>>. Altered sensation median distribution. <<No thenar wasting.>><<Thenar wasting present.>> Neck exam normal
+A: Carpal tunnel syndrome, <<R>><<L>><<bilateral>> - <<mild>><<moderate>>
+P:
+- Night wrist splints x 6 wks; activity modification
+- BW: TSH, A1c
+- <<NCS ordered.>>
+- <<Steroid injection discussed.>>
+- Surgical referral if thenar wasting or refractory
+- f/u 6-8 wks` },
+
+{ id:"knee-injury", cat:"MSK", title:"Acute knee injury",
+  aliases:"knee twist meniscus ACL sprain effusion sports",
+  body:
+`S: <<R>><<L>> knee injury on • - mechanism: <<twist/pivot>><<direct blow>>. <<Pop felt.>> <<Immediate swelling.>><<Swelling next day.>> Weight-bearing: •. <<Locking/giving way.>>
+O:
+Knee: <<effusion present>>. Ottawa knee rules <<negative - no XR>><<positive - XR ordered>>
+- <<Lachman stable.>><<McMurray negative.>> Joint-line tenderness: •
+- Neurovascular intact
+A: <<R>><<L>> knee - <<ligament sprain, stable>><<suspected meniscal injury>><<suspected ACL injury>>
+P:
+- Relative rest, ice, compression; early ROM and quad activation
+- NSAIDs PRN
+- <<Physio referral.>>
+- <<MRI/ortho referral if instability, true locking, not settling 4-6 wks.>>
+- f/u 2 wks
+- RTC/RTED instructions reviewed` },
+
+{ id:"fibromyalgia", cat:"MSK", title:"Fibromyalgia",
+  aliases:"widespread pain chronic fatigue fibro tender",
+  body:
+`S: Fibromyalgia f/u. Current symptoms: <<burning pain>><<fatigue>><<sleep disturbance>>. Current meds: •.
+O:
+Gen: well, NAD
+MSK: diffuse soft-tissue tenderness, joints without synovitis
+A: Fibromyalgia
+P:
+- <<Discussed options of further titrating current agent vs adding second agent - pt preference: •.>>
+- <<Trial pregabalin 75 mg nightly x 3-5 days then 75 mg BID - counselled drowsiness/somnolence, dizziness.>>
+- <<Agreeable to wean • once stable.>>
+- Encouraged lifestyle measures: regular exercise, adequate hydration, stress management, PT/RMT
+- f/u instructions reviewed - if not tolerated, or worsening/not improving` },
+
+{ id:"head-trauma", cat:"MSK", title:"Head trauma (minor facial)",
+  aliases:"head injury facial trauma blunt fall hit",
+  body:
+`S: No headache, NV, confusion/aLOC, vision changes/diplopia, focal neuro deficits, epistaxis
+O:
+Gen: well, alert, NAD
+CVS: NS1/2, no ehs/murmur
+Resp: Normal RR, normal WOB, GAEB, no wheeze/crackles
+Neuro: GCS 15, PERLA, CNII-XII grossly normal, moving all limbs spontaneously. No focal deficits
+HEENT: No deformity, lacerations, hematoma
+- Eyes: <<No>><<mild>><<moderate>> periorbital swelling and erythema with <<no>><<mild>> localized tenderness, no crepitus or fluctuance. No ecchymosis
+- Nose: No nasal bleeding/discharge
+- Mouth: No trismus or malocclusion
+- Neck: Full painless ROM. No midline cervical tenderness
+A: Head trauma - minor blunt facial trauma. No red flags of facial/orbital fracture, intracranial bleeding, or c-spine fracture
+- No imaging indicated as per NEXUS/CT head rules
+P:
+- Conservative management and watchful waiting
+- Pain control with OTC analgesia PRN
+- Local wound care - ice packs/cool compress
+- Rest and activity modification
+- RTC/RTED instructions reviewed` },
 
 // ---------- Mental health ----------
 { id:"depression", cat:"Mental health", title:"Depression follow-up",
   aliases:"mood MDD PHQ9 antidepressant SSRI low",
   body:
-`S: Mood review. PHQ-9 <<score>> (previous <<score>>). Sleep <<detail>>, appetite <<detail>>, energy <<detail>>, concentration <<detail>>. Denies suicidal or homicidal ideation — no plan or intent. Medication adherence good, no side effects.
-O: Alert, good eye contact, <<reactive/flat>> affect. No psychomotor changes.
-A: Major depressive disorder — <<improving/stable>> on <<medication>>.
-P: <<Continue current dose.>> <<Titrated: change.>> Counselling/CBT <<referred/ongoing>>. Safety plan reviewed; crisis resources provided. F/U 4 weeks.` },
+`S: Mood review. PHQ-9 • (prev •). Sleep: •. Appetite: •. Energy: •. Concentration: •. Denies SI/HI - no plan or intent. Med adherence good, no side effects.
+O: MSE:
+Appearance: appears stated age, normal grooming, casual attire
+Speech: normal rate, rhythm, volume
+Mood: <<better>><<low>>
+Affect: <<euthymic, full range>><<constricted>>
+Thought process: linear, coherent, future oriented
+Thought content: no hallucinations, delusions, obsessions, phobias
+SI: none  HI: none
+Insight: intact  Judgment: intact
+A: MDD - <<improving>><<stable>> on <<medication>>
+P:
+- <<Continue current dose.>><<Titrated: •.>>
+- Counselling/CBT <<referred>><<ongoing>>
+- Safety plan reviewed; crisis resources provided
+- f/u 4 wks
+- RTC or ER if active SI/HI` },
 
 { id:"anxiety", cat:"Mental health", title:"Anxiety (GAD)",
   aliases:"worry panic GAD7 anxious stress",
   body:
-`S: Anxiety review. GAD-7 <<score>>. Worry, restlessness, sleep disturbance: <<detail>>. Functioning at work/school: <<detail>>. <<No panic attacks.>> <<Panic attacks # per week.>> Denies suicidal ideation. Caffeine intake <<detail>>.
-O: Appears <<calm/anxious>>. Mental status otherwise unremarkable.
-A: Generalized anxiety disorder — <<improving/stable>>.
-P: <<Continue current SSRI.>> <<Started: medication.>> CBT resources and referral discussed. Sleep hygiene and caffeine reduction. F/U 4–6 weeks, sooner if worsening.` },
+`S: Anxiety review. GAD-7 •. Worry, restlessness, sleep disturbance: •. Functioning: •. <<No panic attacks.>><<Panic attacks # per wk.>> Denies SI. Caffeine: •.
+O: MSE:
+Appearance: appears stated age, normal grooming
+Speech: normal rate, rhythm, volume
+Mood: <<anxious>><<better>>
+Affect: <<full range>><<constricted>>
+Thought process: linear, coherent
+SI: none  HI: none
+Insight: intact  Judgment: intact
+A: GAD - <<improving>><<stable>>
+P:
+- <<Continue current SSRI.>><<Started: •.>>
+- CBT resources/referral discussed
+- Sleep hygiene, caffeine reduction
+- f/u 4-6 wks
+- RTC/RTED instructions reviewed, including worsening, SI` },
 
 { id:"insomnia", cat:"Mental health", title:"Insomnia",
-  aliases:"sleep can't sleep sleeping pills CBTI tired",
+  aliases:"sleep can't sleep sleeping pills CBTI tired melatonin",
   body:
-`S: Difficulty <<initiating/maintaining>> sleep x <<duration>>; about <<#>> h/night. Evening screens and caffeine: <<detail>>. No snoring or witnessed apneas. Mood screened — normal. Daytime impairment: <<detail>>.
-O: BP <<BP>>, BMI <<BMI>>. Exam unremarkable.
-A: Chronic insomnia.
-P: Sleep hygiene and stimulus control reviewed; CBT-I resources provided (first-line). Sedatives avoided — risks discussed. <<STOP-BANG done; sleep study ordered.>> F/U 4 weeks.` },
+`S: Difficulty <<initiating>><<maintaining>> sleep x •; about • h/night. Evening screens/caffeine: •. Denies snoring, witnessed apneas. Mood screened - normal. Daytime impairment: •.
+O:
+BP: •  BMI: •
+Gen: well, NAD
+A: Chronic insomnia
+P:
+- Counselled on sleep hygiene: dark room, avoid screens, avoid fluids before bed, avoid clock-checking; stimulus control
+- CBT-I resources provided (first-line)
+- <<Trial melatonin 3-6 mg 1-2 h before sleep.>>
+- Sedatives avoided - habit-forming risks discussed
+- <<STOP-BANG done; sleep study ordered.>>
+- f/u 4 wks` },
 
 { id:"adhd", cat:"Mental health", title:"ADHD follow-up",
   aliases:"focus stimulant concentration vyvanse methylphenidate",
   body:
-`S: ADHD review on <<medication>>. Focus and function at <<school/work>>: <<improved/stable>>. Appetite <<detail>>, sleep <<detail>>, mood <<detail>>. No chest pain or palpitations. Taking as prescribed; no diversion concerns.
-O: BP <<BP>>, HR <<HR>>, weight <<wt>> (<<change>>).
-A: ADHD — <<good/partial>> response on current dose.
-P: <<Continue current dose.>> <<Titrated: change.>> Monitoring BP, HR, weight. F/U 3 months.` },
+`S: ADHD review on <<medication>>. Focus/function at <<school>><<work>>: <<improved>><<stable>>. Appetite: •. Sleep: •. Mood: •. Denies chest pain, palpitations. Taking as prescribed; no diversion concerns.
+O:
+BP: •  HR: •  Wt: • (<<change>>)
+A: ADHD - <<good>><<partial>> response on current dose
+P:
+- <<Continue current dose.>><<Titrated: •.>>
+- Monitoring BP, HR, weight
+- f/u 3 months` },
+
+{ id:"adhd-assessment", cat:"Mental health", title:"ADHD assessment (DSM criteria)",
+  aliases:"ADHD diagnosis inattentive hyperactive DSM criteria assessment",
+  body:
+`S: ADHD assessment. Symptoms persisted <<6+ months in 2+ settings>>: <<work>><<home>><<socially>>. Negative impact on functioning: •. (Under 17: 6+ symptoms; 17+: 5+ symptoms per domain.)
+Inattentive: poor listening <<Y>><<N>>; loses items <<Y>><<N>>; distractible <<Y>><<N>>; forgets daily activities <<Y>><<N>>; short attention span <<Y>><<N>>; fails to finish tasks/instructions <<Y>><<N>>; avoids tasks needing concentration <<Y>><<N>>; careless mistakes <<Y>><<N>>
+Hyperactive/impulsive: fidgets <<Y>><<N>>; marked restlessness <<Y>><<N>>; "driven by a motor" <<Y>><<N>>; cannot do leisure quietly <<Y>><<N>>; cannot stay seated <<Y>><<N>>; overly talkative <<Y>><<N>>; difficulty waiting turn <<Y>><<N>>; interrupts <<Y>><<N>>; blurts answers <<Y>><<N>>
+Additional: symptoms before age 12 <<Y>><<N>>; not better explained by another disorder <<Y>><<N>>; not solely oppositional <<Y>><<N>>
+A: ADHD - <<combined>><<predominantly inattentive>><<predominantly hyperactive/impulsive>> type; <<mild>><<moderate>><<severe>>
+P:
+- Collateral questionnaires: CADDRA/ASRS forms provided
+- <<Treatment options discussed - behavioural + pharmacotherapy.>>
+- f/u to review questionnaires and plan` },
+
+{ id:"panic", cat:"Mental health", title:"Panic disorder",
+  aliases:"panic attacks hyperventilate fear heart racing",
+  body:
+`S: Recurrent abrupt panic attacks - palpitations, dyspnea, fear of dying - peaking under 10 min, <<#>>/wk. <<Avoidance developing.>> Denies substance triggers, SI.
+O:
+HR: •  BP: •
+Gen: well, NAD. <<ECG/TSH normal - reviewed together.>>
+A: Panic disorder <<with>><<without>> agoraphobic avoidance
+P:
+- Panic physiology explained; normal workup reviewed as evidence
+- CBT first-line - <<referral>><<resources>>
+- <<SSRI started - early activation warned.>>
+- Breathing/grounding techniques taught
+- Regular PRN benzodiazepines avoided - discussed
+- f/u 2-4 wks` },
+
+{ id:"grief", cat:"Mental health", title:"Grief / bereavement",
+  aliases:"loss death bereaved mourning sad",
+  body:
+`S: Death of <<relation>> • ago. Waves of sadness, sleep disruption. Maintaining basic function. Supports: •. Denies SI, pervasive worthlessness.
+O: Tearful at times; affect appropriate to loss. Engaged
+A: Grief reaction - within expected range; not currently MDD
+P:
+- Grief course normalized; medication not indicated at this stage
+- <<Grief group/counselling resources given.>>
+- Brief sleep support discussed
+- Open-door f/u <<4-6>> wks
+- RTC/RTED instructions reviewed, including worsening, SI, functional decline` },
+
+{ id:"adjustment", cat:"Mental health", title:"Stress / burnout",
+  aliases:"overwhelmed work stress adjustment burnout coping",
+  body:
+`S: Overwhelmed by <<stressor>> x • - poor sleep, irritability, tension. PHQ-9 •, GAD-7 • - subthreshold. EtOH screened: •. Denies SI.
+O: Appears stressed; MSE otherwise unremarkable
+A: Adjustment reaction / burnout - subthreshold for MDD/GAD
+P:
+- Problem-solving discussion; stressor-specific supports: <<EAP>><<counselling options>>
+- Sleep and exercise plan
+- <<Work accommodation/note provided.>>
+- f/u <<3-4>> wks to repeat screens` },
+
+{ id:"cognitive", cat:"Mental health", title:"Geriatric / cognitive assessment",
+  aliases:"dementia memory loss MOCA forgetful alzheimer geriatric ADL",
+  body:
+`S: <<Patient>><<family>> concerned re memory x •.
+ADLs: dressing <<Y>><<N>>, eating <<Y>><<N>>, ambulation <<Y>><<N>>, toileting <<Y>><<N>>, hygiene <<Y>><<N>>
+IADLs: shopping <<Y>><<N>>, housework <<Y>><<N>>, accounting <<Y>><<N>>, food prep <<Y>><<N>>, telephone/tools/transportation <<Y>><<N>>
+Living situation: •. Family supports: •. POA/SDM: •
+Risk factors: <<HTN>><<DM>><<hyperlipidemia>><<head injury with LOC>><<TIA/stroke>><<sleep apnea>><<smoking>><<EtOH • drinks/wk>><<sedentary>><<FHx (age of onset)>>
+Driving: <<Y>><<N>>. Collisions: <<Y>><<N>>. Close calls: <<Y>><<N>>. Getting lost: <<Y>><<N>>. Family concerns: <<Y>><<N>>
+Safety: fire <<Y>><<N>>; wandering <<Y>><<N>>; abuse <<Y>><<N>>
+Falls (2+ in 6 months): <<Y>><<N>>
+Meds: one pharmacy <<Y>><<N>>; compliance aid <<no>><<blisterpack>><<dossette>>; anticholinergics/psychoactives <<Y>><<N>>
+O:
+Wt: •  BP: •  HR: •
+MoCA: •/30, with •/5 delayed recall
+Gait: <<normal>><<abnormal - •>>
+A: <<Subjective concern only>><<MCI>><<probable early dementia>> - workup initiated
+P:
+- BW: CBC, TSH, B12, lytes, Cr, A1c
+- <<CT head ordered.>>
+- Collateral history arranged with consent
+- Driving safety addressed per findings
+- <<Memory clinic/geriatrics referral.>>
+- f/u <<4-6>> wks with results` },
+
+{ id:"alcohol", cat:"Mental health", title:"Alcohol use review",
+  aliases:"drinking alcohol AUDIT naltrexone cut down",
+  body:
+`S: Alcohol review.
+Frequency: •. Quantity: •. Type: •. Timing of increased intake: •. Triggers: •
+Previous quit attempts: •. Symptoms with abstinence: •
+Effects on: relationships •, job •, driving •
+Mood: •. Other substances: •. Smoking: •. FHx alcohol use: •
+AUDIT-C: •
+O:
+BP: •
+Gen: well, NAD. No stigmata of liver disease
+A: Alcohol use above low-risk guidelines - <<at-risk use>><<mild AUD>><<moderate AUD>>
+P:
+- Brief intervention - guideline feedback; patient-set goal: •
+- <<Naltrexone discussed/started.>><<Acamprosate discussed.>>
+- BW: ALT/GGT, CBC
+- Community supports offered
+- Heavy daily drinkers cautioned not to stop abruptly - taper plan
+- f/u <<2-4>> wks` },
+
+{ id:"sertraline-start", cat:"Mental health", title:"Sertraline start",
+  aliases:"zoloft SSRI start antidepressant initiation",
+  body:
+`Patient initiated on sertraline (Zoloft).
+Dose: 25 mg PO OD x 1 wk, then 50 mg PO OD
+Counselled on adverse effects: nausea, diarrhea, dry mouth, dizziness, drowsiness, fatigue, insomnia; transient activation. Full effect takes 4-6 wks.
+Counselled not to discontinue abruptly after 3+ wks of use - taper over 2-4 wks with provider.
+- f/u 2 wks to check adverse effects and symptoms; titrate to target dose based on response (usual 50-150 mg, max 200 mg)
+- RTC or ER if active SI/HI` },
+
+{ id:"benzo-policy", cat:"Mental health", title:"Benzodiazepine discussion",
+  aliases:"benzo ativan lorazepam taper dependence sedative",
+  body:
+`Current benzodiazepine: •  Dose: •  Frequency: •  Indication: •
+Reviewed complications of chronic benzodiazepine use: falls, sedation, depression, dependence, cognitive decline (esp older adults). Not standard of care for chronic insomnia or anxiety.
+Discussed that this medication is not prescribed here for long-term use and will not be renewed ongoing.
+<<Patient using intermittently - discussed that any reliance is not a healthy coping strategy long-term.>>
+<<Taper needed - will review with pharmacist for schedule.>>
+<<Alternatives discussed: •.>>
+- f/u to reassess` },
+
+{ id:"stimulants-contract", cat:"Mental health", title:"Stimulant prescribing agreement",
+  aliases:"vyvanse adderall contract controlled substance agreement",
+  body:
+`Reviewed safe prescribing re: <<stimulant>>. Pt reviewed and agrees to the following:
+- Stimulants are a controlled substance; stored safely, for their use only
+- Prescribing physician is the only prescriber of this medication
+- Medications from one regular pharmacy
+- No early refills or replacement of lost doses, other than case-by-case discussion
+Violation of the above may result in cessation of prescribing and transfer of care.
+Patient understood and agreed.` },
+
+{ id:"eating-disorder", cat:"Mental health", title:"Eating disorder assessment",
+  aliases:"anorexia bulimia ED disordered eating weight restriction",
+  body:
+`S: Focused ED history:
+Highest weight - age: •. Lowest weight - age: •. Total loss/timeframe: •
+Body image concerns: •. Body/weight checking: •
+Nutrition: meals/snacks •; safe foods •; fear foods •; estimated cal/day •
+Compensatory: exercise •; binge/purge •; laxatives/diet pills •
+24 h recall: •
+Menstrual hx: menarche •, LMP •
+ROS malnutrition: <<syncope>><<palpitations>><<fatigue>><<orthostatic dizziness>><<constipation>><<disturbed sleep>><<nausea/pain after eating>>
+FHx autoimmune/ED: •
+O:
+Wt: •  Ht: •  BMI: •
+Orthostatic vitals: supine BP •, standing BP •
+Gen: NAD, A+Ox3
+CVS: NS1/2, no murmurs
+Resp: GAEB, normal WOB
+Abdo: SNTND
+A: <<Meets>><<does not meet>> criteria for eating disorder - •. Currently <<medically stable>><<medically unstable - ED referral>>
+P:
+- Education provided re EDs, malnutrition physiology, and risks; patient commended for openness
+- BW: CBC, lytes, extended lytes, renal function, liver enzymes, TSH, bHCG, glucose; ECG
+- Normalize feeding: 3 meals + 3 snacks; <<dietitian involvement>>; Ensure supplementation PRN
+- Target weight: •
+- <<Continue outpatient monitoring with monthly weight/orthostatics.>><<Referral to ED program (FBT/CBT-E).>><<Medically unstable - ED for assessment.>>
+- <<Therapy for underlying ED thoughts - resources provided.>>
+- f/u booked: •` },
+
+{ id:"gender-dysphoria", cat:"Mental health", title:"Gender dysphoria assessment",
+  aliases:"gender affirming trans dysphoria transition pronouns",
+  body:
+`S: Introduced self and pronouns; purpose of assessment explained - gender dysphoria as gateway diagnosis for accessing care. Patient agreed to proceed.
+Preferred name: •. Pronouns: •. Gender label: •
+Gender journey (HPI): •
+Time questioning: •. Dysphoria factors: •. Euphoria factors: •
+Out with: family <<Y>><<N>>; friends <<Y>><<N>>; employer <<Y>><<N>>; partner(s) <<Y>><<N>>
+Support/safety concerns: •
+PMHx: •. Mental health hx: •. SI: •. Meds: •
+Social: living •; work/school •; substances: •
+Goals for transition (social/medical/surgical): • - discussed that no particular path is required; shared decision-making
+DSM-5 criteria: marked incongruence 6+ months with 2+ manifestations <<met>><<not met>>; clinically significant distress/impairment <<met>><<not met>>
+A: <<Meets>><<does not meet>> criteria for gender dysphoria
+P:
+- Impression conveyed; questions answered
+- <<Options information provided: •.>>
+- <<Referral: •.>>
+- f/u: •` },
+
+{ id:"peds-insomnia", cat:"Mental health", title:"Pediatric insomnia",
+  aliases:"child sleep kids insomnia melatonin bedtime",
+  body:
+`S: Pediatric sleep concern. Screened: <<no>> OSA symptoms, <<no>> RLS symptoms. Daytime sleepiness: •. Attention/school performance: •. Impact on family: •.
+O:
+Gen: well, NAD
+A: Behavioural insomnia of childhood
+P:
+- Sleep hygiene and routine counselled
+- <<Trial melatonin 30 min before bed: preschool 1-2 mg; school-age 2-3 mg; adolescent 5 mg - low side effect profile discussed.>>
+- f/u <<4-6>> wks
+- RTC/RTED instructions reviewed` },
 
 // ---------- Neuro ----------
 { id:"migraine", cat:"Neuro", title:"Migraine",
   aliases:"headache HA aura triptan photophobia",
   body:
-`S: Recurrent unilateral throbbing headaches lasting <<4–72>> h with nausea and photophobia. <<No aura.>> <<Aura precedes headache.>> Frequency <<#>>/month. No thunderclap onset, fever, neuro deficits, or waking from sleep — no red flags. Triggers: <<triggers>>.
-O: Vitals normal. Neuro exam normal — cranial nerves, power, reflexes, gait. Fundi normal.
-A: Migraine <<without/with>> aura, no red flags.
-P: Acute: <<NSAID at onset.>> <<Triptan at onset.>> Limit acute treatment to under 10 days/month — medication-overuse headache discussed. Headache diary; trigger management. <<Prophylaxis discussed given frequency.>> F/U 6–8 weeks.` },
+`S: Recurrent unilateral throbbing headaches lasting <<4-72>> h with nausea, photophobia. <<No aura.>><<Aura precedes.>> Frequency <<#>>/month. Denies thunderclap onset, fever, neuro deficits, wake-from-sleep pattern. Triggers: •. Analgesic days/month: •.
+O:
+Gen: well, NAD
+Neuro: CNII-XII grossly normal, power 5/5, reflexes 2+, normal gait. Fundi normal
+A: Migraine <<without>><<with>> aura - no red flags
+P:
+- Acute: <<NSAID at onset.>><<Triptan at onset - max 200 mg/24 h sumatriptan equivalent.>> Limit acute treatment under 10 days/month - MOH discussed
+- Lifestyle: regular meals, hydration, limit caffeine, sleep schedule, exercise, stress management; headache diary
+- <<Supplements discussed: magnesium citrate, riboflavin, CoQ10.>>
+- <<Prophylaxis discussed given frequency.>>
+- Migraine with aura: no estrogen OCP - flagged
+- f/u <<6-8>> wks
+- RTC/RTED instructions reviewed, including red flags - thunderclap, focal deficits, fever` },
 
 { id:"bppv", cat:"Neuro", title:"BPPV / vertigo",
-  aliases:"dizzy dizziness spinning room epley dix hallpike",
+  aliases:"dizzy dizziness spinning room epley dix hallpike serc",
   body:
-`S: Brief spinning episodes with position changes (rolling over, looking up), lasting under 1 min. No hearing loss, tinnitus, headache, or focal neuro symptoms.
-O: Vitals normal. Neuro exam normal; gait steady. Dix-Hallpike positive <<R/L>> — geotropic torsional nystagmus.
-A: BPPV, <<R/L>> posterior canal.
-P: <<Epley maneuver performed in office.>> <<Epley maneuver taught for home use.>> Home repositioning exercises reviewed. Avoid driving during acute vertigo. Return if persistent beyond 2 weeks, hearing change, or neuro symptoms.` },
+`S: Brief spinning episodes with position changes (rolling over, looking up), under 1 min. Denies hearing loss, tinnitus, headache, focal neuro symptoms.
+O:
+Gen: well, NAD
+Neuro: grossly normal, gait steady
+Dix-Hallpike: positive <<R>><<L>> - geotropic torsional nystagmus
+A: BPPV, <<R>><<L>> posterior canal
+P:
+- <<Epley performed in office.>><<Epley taught for home use - video resources.>>
+- Counselled on getting up slowly - seated first, then stand
+- <<Serc 16 mg TID x 1-2 days PRN.>>
+- Avoid driving during acute vertigo
+- RTC/RTED instructions reviewed, including persistent beyond 2 wks, hearing change, syncope, neuro symptoms` },
+
+{ id:"tension-ha", cat:"Neuro", title:"Tension headache",
+  aliases:"headache band pressure stress neck HA",
+  body:
+`S: Bilateral band-like pressure headaches, <<#>>/month, not worse with activity. Denies nausea, aura. Stress/posture/screens: •. Analgesic days/month: •. No red flags.
+O:
+Gen: well, NAD
+Neuro: grossly normal. Fundi normal
+MSK: pericranial/trapezius tenderness
+A: Tension-type headache - <<episodic>><<frequent>>
+P:
+- Simple analgesia PRN - capped under 15 days/month (MOH warned)
+- Stress management, posture/ergonomics, hydration, sleep
+- <<Physio for neck.>>
+- <<Amitriptyline prophylaxis discussed if frequent.>>
+- Headache diary; f/u <<6-8>> wks` },
+
+{ id:"concussion", cat:"Neuro", title:"Concussion",
+  aliases:"head injury mTBI sport return to play headache",
+  body:
+`S: Head impact on • - mechanism: •. <<No LOC.>><<Brief LOC.>> Current: headache, <<fogginess>><<dizziness>>. Denies repeated vomiting, worsening headache, focal symptoms. CT rules assessed - not indicated.
+O:
+Gen: alert, oriented, NAD
+Neuro: PERLA, EOM full, power 5/5, coordination and gait normal. No focal deficits
+A: Concussion (mild TBI) - low-risk features
+P:
+- 24-48 h relative rest, then graduated return to school/work/activity - handout given
+- No sport until stepwise return-to-play completed
+- Screen moderation early
+- RTC/RTED instructions reviewed, including worsening headache, repeated vomiting, confusion, weakness - ED
+- f/u <<7-10>> days` },
+
+{ id:"bells-palsy", cat:"Neuro", title:"Bell's palsy",
+  aliases:"facial droop weakness face paralysis",
+  body:
+`S: <<R>><<L>> facial droop noticed • ago, involving forehead. <<Ear pain preceding.>> Denies limb weakness, dysphagia, diplopia, rash.
+O:
+Neuro: <<R>><<L>> facial weakness including forehead (LMN pattern). Other CN normal, power 5/5, gait normal
+HEENT: no vesicles in canal/palate. Eye closure <<complete>><<incomplete - noted>>
+A: Bell's palsy, <<R>><<L>> - onset within 72 h
+P:
+- <<Prednisone 60 mg daily x 5 days, then 5-day taper.>><<Antiviral added (severe).>>
+- Eye protection: lubricating drops daytime; ointment + taping at night
+- Reassured - most recover over wks to months
+- f/u <<2-4>> wks
+- RTC/RTED instructions reviewed, including new neuro deficits - ED` },
+
+{ id:"syncope", cat:"Neuro", title:"Syncope (vasovagal, low risk)",
+  aliases:"faint fainting passed out collapse vasovagal",
+  body:
+`S: Single faint on • with prodrome - lightheaded, warm, vision greying - in setting of <<prolonged standing>><<heat>><<pain>>. Rapid full recovery, no confusion. Denies exertional onset, chest pain, palpitations. No FHx sudden death.
+O:
+BP: • sitting, • standing  HR: •, regular
+CVS: NS1/2, no murmur
+Neuro: grossly normal
+ECG: <<normal>><<ordered>>
+A: Vasovagal (reflex) syncope - low-risk features
+P:
+- Trigger avoidance, hydration/salt liberalization, counter-pressure maneuvers taught; lie down at prodrome
+- Driving guidance discussed
+- RTC/RTED instructions reviewed, including exertional syncope, palpitations preceding, injury-causing recurrence` },
+
+{ id:"seizure", cat:"Neuro", title:"First seizure",
+  aliases:"seizure epilepsy convulsion postictal EEG",
+  body:
+`S: ?Seizure
+Triggers: <<trauma>><<EtOH or withdrawal>><<recreational drugs>><<sleep deprivation>><<fever>><<stress>><<flashing lights>><<aura>><<new meds>><<none identified>>
+Event description: •. Onset: •. Duration: •. Motor symptoms: •
+Postictal: <<confusion>><<lethargy>><<focal weakness>>; time to baseline: •
+<<No>> history of similar events. <<No>> neuro conditions. <<No>> FHx epilepsy
+O:
+Gen: appears well, non-toxic, alert and oriented, speaking clearly
+Neuro: grossly normal
+A: <<?First seizure>> - ddx syncope
+P:
+- BW: CBC, lytes, extended lytes, Cr, LFTs, glucose
+- Urinalysis; ECG
+- MRI head; EEG (or defer to neuro)
+- Referral to neurology
+- Advised to stop driving - reporting obligation discussed per provincial requirements
+- No AED after single seizure without recurrence risk factors - observe
+- RTC/RTED instructions reviewed, including recurrent events` },
+
+{ id:"neuropathic-pain", cat:"Neuro", title:"Neuropathic pain (titration options)",
+  aliases:"nerve pain gabapentin pregabalin duloxetine burning",
+  body:
+`A: Neuropathic pain
+P: agent selected and titration reviewed:
+<<Gabapentin: wk 1 100 mg TID, wk 2 200 mg TID, wk 3 300 mg TID. Younger pts may start 300 mg TID. Increase evening dose if night symptoms. Max 1200 mg/day. Discontinue by reverse titration.>>
+<<Pregabalin: wk 1 25 mg BID, wk 2 50 mg BID, wk 3 75 mg BID. May start 50-75 mg BID if less side-effect concern. Max 300 mg TID. Discontinue by reverse titration.>>
+<<Duloxetine: wk 1 30 mg OD, then 60 mg OD.>>
+<<Nortriptyline: 10 mg qHS, increase by 10 mg weekly up to 50 mg OD.>>
+- Counselled on drowsiness, dizziness; avoid driving until stable
+- f/u <<2-4>> wks to review response
+- RTC/RTED instructions reviewed` },
 
 // ---------- Skin ----------
 { id:"eczema", cat:"Skin", title:"Eczema / atopic dermatitis",
   aliases:"rash itchy dry skin dermatitis steroid cream",
   body:
-`S: Itchy, dry rash at <<flexures/hands>> x <<duration>>, chronic-relapsing pattern. Triggers: <<soaps/winter>>. <<Scratching disturbing sleep.>>
-O: Erythematous, dry, lichenified plaques with excoriations at <<site>>. No weeping, crusting, or pustules — no secondary infection.
-A: Atopic dermatitis — <<mild/moderate>> flare.
-P: Emollients liberally BID + soap substitute. <<Hydrocortisone 1% BID x 1–2 weeks (face/folds).>> <<Betamethasone valerate 0.1% BID x 1–2 weeks (body).>> Trigger avoidance. Return if infected or not settling.` },
+`S: Itchy dry rash at <<flexures>><<hands>> x •, chronic-relapsing. Triggers: <<soaps>><<winter>>. <<Scratching disturbing sleep.>>
+O:
+Derm: erythematous, dry, lichenified plaques with excoriations at •. No weeping/crusting/pustules - no secondary infection
+A: Atopic dermatitis - <<mild>><<moderate>> flare
+P:
+- Emollients liberally BID (aveeno/vaseline after lukewarm wash) + soap substitute
+- <<Hydrocortisone 1 percent BID x 1-2 wks (face/folds).>><<Betamethasone valerate 0.1 percent BID x 1-2 wks (body) - thin layer, use and side effects discussed.>>
+- Counselled on avoiding irritants: detergents, wool/synthetic fabrics, fragranced products
+- RTC/RTED instructions reviewed, including infection signs, worsening flare` },
 
 { id:"acne", cat:"Skin", title:"Acne",
-  aliases:"pimples zits comedones retinoid doxycycline",
+  aliases:"pimples zits comedones retinoid doxycycline tactupump",
   body:
-`S: Facial acne x <<duration>> — <<comedonal/inflammatory>>. <<Chest and back involved.>> Prior treatments: <<treatments>>. Impact on mood: <<detail>>.
-O: Face: open and closed comedones, inflammatory papules and pustules. No nodules or scarring.
-A: Acne vulgaris — <<mild/moderate>>.
-P: Started <<adapalene qHS.>> <<adapalene + benzoyl peroxide qHS.>> Counselled — irritation, photosensitivity, 8–12 weeks to effect. <<Added doxycycline 100 mg daily.>> F/U 3 months.` },
+`S: Facial acne x • - <<comedonal>><<inflammatory>>. <<Chest/back involved.>> Prior treatments: •. Impact on mood: •.
+O:
+Derm: open/closed comedones, inflammatory papules/pustules. <<No nodules or scarring.>>
+A: Acne vulgaris - <<mild>><<moderate>>
+P:
+- <<Rx Tactupump - thin layer to face qHS after washing.>><<Adapalene qHS.>> Counselled dryness, irritation, photosensitivity; 4-8 wks to effect
+- Skin hygiene counselled - wash after exercise
+- <<Added doxycycline 100 mg daily (moderate inflammatory).>>
+- f/u 3 months; RTC if worsening/persistent` },
 
 { id:"cellulitis", cat:"Skin", title:"Cellulitis",
   aliases:"skin infection red leg spreading erythema keflex",
   body:
-`S: <<R/L>> <<site>> redness, warmth, and pain x <<#>> days, gradually spreading. Portal of entry: <<bite/wound/tinea pedis>>. No fever or chills. No diabetes or immunosuppression.
-O: T <<temp>>, HR <<HR>>. <<Site>>: confluent erythema, warmth, tenderness — margins marked. No abscess, fluctuance, crepitus, or lymphangitic streaking.
-A: Cellulitis, <<R/L>> <<site>> — suitable for oral therapy.
-P: Cephalexin 500 mg PO QID x <<5–7>> days. Elevate limb. Margins marked to monitor spread. Return or ED if fever, rapid spread beyond margins, or systemic symptoms. F/U 48 h.` },
+`S: <<R>><<L>> <<site>> redness, warmth, pain x <<#>> days, gradually spreading. Portal: <<bite>><<wound>><<tinea pedis>>. Denies fever/chills. No DM/immunosuppression.
+O:
+T: •  HR: •
+Derm: <<site>> - confluent erythema, warmth, tenderness; margins marked. No abscess/fluctuance, no crepitus, no lymphangitic streaking
+A: Cellulitis - suitable for oral therapy
+P:
+- Cephalexin 500 mg QID x 5-7 days
+- Elevate limb; margins marked to monitor
+- f/u 48 h
+- RTC/RTED instructions reviewed, including fever, rapid spread beyond margins, systemic symptoms - ED` },
 
 { id:"skin-lesion", cat:"Skin", title:"Skin lesion assessment",
-  aliases:"mole nevus spot melanoma biopsy ABCDE derm",
+  aliases:"mole nevus spot melanoma ABCDE derm",
   body:
-`S: <<New/changing>> lesion on <<site>>, first noticed <<date>>. <<Change in size, colour, or border.>> <<Bleeding or itch.>> No personal or family history of skin cancer. Sun exposure history: <<detail>>.
-O: <<Site>>: <<#>> mm <<macule/papule/plaque>>, <<colour>>, border <<regular/irregular>>, <<symmetric/asymmetric>>. ABCDE: <<detail>>.
-A: <<Benign-appearing lesion.>> <<Suspicious lesion NYD.>>
-P: <<Reassurance; photo documented — return if changing.>> <<Biopsy arranged.>> <<Dermatology referral.>> Sun protection counselled.` },
+`S: <<New>><<changing>> lesion on •, noticed •. <<Change in size/colour/border.>> <<Bleeding or itch.>> <<no>> personal or family hx of skin cancer. Sun exposure: •.
+O:
+Derm: • - • mm <<macule>><<papule>><<plaque>>, <<colour>>, border <<regular>><<irregular>>, <<symmetric>><<asymmetric>>. ABCDE: •
+A: <<Benign-appearing lesion>><<Suspicious lesion NYD>>
+P:
+- <<Reassurance; photo documented - RTC if changing.>><<Biopsy arranged.>><<Derm referral.>>
+- Sun protection counselled` },
 
-// ---------- General / Preventive ----------
-{ id:"fatigue", cat:"General", title:"Fatigue workup",
-  aliases:"tired low energy exhausted TATT",
-  body:
-`S: Fatigue x <<duration>>, gradual onset. Sleep <<#>> h/night; no snoring. Mood screened — PHQ-2 negative. No weight loss, fevers, or night sweats. Medications and alcohol reviewed.
-O: Vitals normal. No pallor or lymphadenopathy. Thyroid normal. Cardiorespiratory and abdominal exams unremarkable.
-A: Fatigue NYD — no red flags on history or exam.
-P: Labs: CBC, TSH, ferritin, A1c, electrolytes, Cr. <<B12 and celiac screen added.>> Sleep hygiene reviewed. F/U 2–3 weeks with results.` },
-
-{ id:"phe", cat:"General", title:"Adult periodic health exam",
-  aliases:"checkup physical annual exam screening preventive",
-  body:
-`S: Routine health review; no current concerns. PMHx and medications reviewed. Lifestyle: smoking <<status>>, alcohol <<intake>>, activity <<detail>>, diet <<detail>>. Family history reviewed. Mood screened — fine.
-O: BP <<BP>>, HR <<HR>>, BMI <<BMI>>. Focused exam unremarkable.
-A: Periodic health exam — well.
-P: Screening per age and sex: <<lipids, A1c, FIT, cervical screening, mammogram, PSA discussion, bone density>>. Immunizations reviewed and up to date. Lifestyle counselling. Recall <<1–3>> years.` },
-
-{ id:"well-child", cat:"General", title:"Well child visit",
-  aliases:"baby peds pediatric immunization milestones growth",
-  body:
-`S: Well child visit at <<age>>. Feeding <<detail>>, sleep <<detail>>. Development age-appropriate — gross motor, fine motor, language, social. Parental concerns: none.
-O: Weight <<wt>> (<<%ile>>), height <<ht>> (<<%ile>>). <<HC # cm (%ile).>> Exam normal — heart, lungs, abdomen, skin, genitalia. <<Fontanelle, red reflex, and hips normal.>>
-A: Healthy child; growth and development on track.
-P: Immunizations per schedule: <<given today>>. Anticipatory guidance — safety, sleep, nutrition, screen time. Next visit at <<age>>.` },
-
-{ id:"med-renewal", cat:"General", title:"Medication renewal visit",
-  aliases:"refill prescription renew script rx repeat",
-  body:
-`S: Medication renewal: <<medications>>. Conditions stable; no new symptoms or side effects. Adherent to regimen.
-O: BP <<BP>>, HR <<HR>>. Focused exam unremarkable.
-A: Stable <<conditions>> — routine renewal.
-P: Renewed <<medications and duration>>. Monitoring labs <<up to date/ordered>>. F/U <<#>> months or sooner PRN.` },
-
-// ================= Tier 2 =================
-
-// ---------- ENT / Resp / Eye ----------
-{ id:"croup", cat:"ENT/Resp", title:"Croup (peds)",
-  aliases:"barky cough stridor seal peds child westley",
-  body:
-`S: Barky cough and hoarse voice x <<#>> days, worse at night, after URTI prodrome. <<Stridor with agitation only.>> <<No stridor at rest.>> Feeding well, no drooling.
-O: T <<temp>>, RR <<RR>>, SpO2 <<%>>. Alert, no stridor at rest, no retractions or tracheal tug. Barky cough noted in office. Chest clear. Non-toxic appearance.
-A: Croup — <<mild>> <<moderate>>.
-P: <<Dexamethasone 0.6 mg/kg PO x 1.>> Fluids, antipyretics PRN, cool night air. Red flags reviewed with parents — ED if stridor at rest, retractions, cyanosis, or drooling. Usually settles within 48 h.` },
-
-{ id:"peds-fever", cat:"ENT/Resp", title:"Pediatric fever (no focus)",
-  aliases:"fever child peds temperature febrile kid",
-  body:
-`S: Fever x <<#>> days, Tmax <<temp>> at home. Drinking well, urine output normal. <<Mild URTI symptoms.>> Playful between fevers — no lethargy, rash, or vomiting. Immunizations up to date.
-O: T <<temp>>, HR <<HR>>, RR <<RR>>. Alert and interactive. TMs, throat, chest, and abdomen unremarkable. No rash, no meningismus. Cap refill under 2 s.
-A: Fever without focus in a well child — likely viral.
-P: Antipyretics PRN, fluids, monitor at home. <<Urine dip and culture sent.>> Return if fever beyond 5 days, lethargy, poor intake, rash, or breathing difficulty — reviewed with parents.` },
-
-{ id:"ili", cat:"ENT/Resp", title:"Influenza-like illness",
-  aliases:"flu influenza covid myalgia viral aches",
-  body:
-`S: Abrupt fever, myalgias, headache, and dry cough x <<#>> days. No dyspnea or chest pain. Fluids adequate. <<Household contacts ill.>> No high-risk conditions.
-O: T <<temp>>, HR <<HR>>, SpO2 <<%>>. Tired but non-toxic. Throat mildly injected. Chest clear.
-A: Influenza-like illness / viral syndrome.
-P: Supportive — rest, fluids, antipyretics. <<COVID/influenza swab done.>> <<Antiviral discussed — started (high risk, within 48 h).>> Stay home while febrile. Return if dyspnea, chest pain, confusion, or not improving by day 5–7.` },
-
-{ id:"cap", cat:"ENT/Resp", title:"Pneumonia (outpatient CAP)",
-  aliases:"pneumonia lung infection crackles consolidation chest xray",
-  body:
-`S: Cough with purulent sputum and fever x <<#>> days. <<Pleuritic chest pain.>> Mild exertional dyspnea, none at rest. Eating and drinking. No immunosuppression.
-O: T <<temp>>, HR <<HR>>, RR <<RR>>, BP <<BP>>, SpO2 <<%>> RA. Focal crackles <<R/L>> <<zone>>. No respiratory distress.
-A: Community-acquired pneumonia — low severity, suitable for outpatient treatment.
-P: <<Amoxicillin 1 g PO TID x 5–7 days.>> <<Doxycycline 100 mg PO BID x 5–7 days.>> CXR <<done/ordered>>. Antipyretics, fluids. Reassess in 48–72 h; ED if worsening dyspnea, falling sats, or confusion.` },
-
-{ id:"epistaxis", cat:"ENT/Resp", title:"Epistaxis (nosebleeds)",
-  aliases:"nosebleed nose bleeding littles area cautery",
-  body:
-`S: Recurrent <<R/L>> nosebleeds x <<duration>>, settling with pressure in under <<#>> min. No anticoagulants. No easy bruising or family bleeding history. Dry air / nose picking suspected.
-O: BP <<BP>>. Anterior septum: prominent vessels and crusting at Little's area, no active bleeding. No posterior source suspected.
-A: Recurrent anterior epistaxis.
-P: First aid reviewed — lean forward, pinch soft part x 15 min. Saline gel or petroleum jelly BID to septum; humidifier; avoid picking. <<Cautery if recurrent — arranged.>> ED if prolonged or heavy posterior-type bleeding.` },
-
-{ id:"cerumen", cat:"ENT/Resp", title:"Cerumen impaction",
-  aliases:"ear wax blocked ear syringing lavage hearing",
-  body:
-`S: <<R/L>> blocked ear with reduced hearing x <<duration>>. No pain, discharge, or vertigo. <<Hearing aid user.>> <<Q-tip use.>>
-O: <<R/L>> canal occluded with cerumen. Contralateral canal and TM normal.
-A: Cerumen impaction, <<R/L>>.
-P: <<Lavage performed — canal cleared, TM intact, hearing restored.>> <<Softening drops BID x 5 days, then return for lavage.>> Avoid Q-tips. Return if pain or persistent hearing change.` },
-
-{ id:"mono", cat:"ENT/Resp", title:"Mononucleosis",
-  aliases:"mono EBV kissing disease glandular fever teen",
-  body:
-`S: Sore throat, marked fatigue, and fever x <<#>> days in a <<teen/young adult>>. Marked tonsillar swelling. No breathing difficulty.
-O: T <<temp>>. Exudative pharyngitis, posterior cervical lymphadenopathy. <<Spleen not palpable.>> <<Spleen tip palpable.>> No jaundice.
-A: Suspected infectious mononucleosis.
-P: <<Monospot/EBV serology + CBC sent.>> Supportive — fluids, analgesia. No contact sports or heavy lifting x 4 weeks minimum (splenic rupture risk). Avoid amoxicillin (rash). F/U with results; return if severe abdominal pain or airway concern.` },
-
-{ id:"laryngitis", cat:"ENT/Resp", title:"Hoarseness / laryngitis",
-  aliases:"hoarse voice lost voice laryngitis vocal",
-  body:
-`S: Hoarseness x <<duration>> after <<URTI/voice overuse>>. No dysphagia, neck lumps, weight loss, or hemoptysis. <<Non-smoker.>> <<Smoker — counselled.>>
-O: Afebrile. Voice hoarse, no stridor. Oropharynx unremarkable. Neck: no lymphadenopathy or masses.
-A: Acute laryngitis.
-P: Voice rest (avoid whispering), hydration, limit irritants/reflux triggers. Usually resolves in 1–2 weeks. Red flag reviewed: hoarseness beyond 4 weeks — especially in smokers — needs ENT/laryngoscopy referral.` },
-
-{ id:"osa", cat:"ENT/Resp", title:"Snoring / OSA workup",
-  aliases:"sleep apnea snoring tired epworth stopbang cpap",
-  body:
-`S: Loud snoring with <<witnessed apneas>>, unrefreshing sleep, and daytime sleepiness. Epworth <<score>>/24. <<Morning headaches.>> No sedatives at night.
-O: BP <<BP>>, BMI <<BMI>>, neck circumference <<#>> cm. Oropharynx crowded — Mallampati <<class>>.
-A: Suspected obstructive sleep apnea — STOP-BANG <<score>>/8.
-P: Sleep study <<ordered/referred>>. Weight management and evening alcohol reduction discussed. Drowsy-driving safety discussed. F/U with results.` },
-
-{ id:"tinnitus", cat:"ENT/Resp", title:"Tinnitus",
-  aliases:"ringing ears buzzing audiogram noise",
-  body:
-`S: <<Bilateral/R/L>> ringing x <<duration>>, <<constant/intermittent>>, non-pulsatile. No hearing loss, vertigo, otalgia, or discharge. Noise exposure: <<detail>>. No ototoxic medications.
-O: Canals and TMs normal. Weber/Rinne grossly normal. No carotid bruit.
-A: Subjective non-pulsatile tinnitus — no red flags.
-P: Audiology referral for baseline audiogram. Reassurance re: benign course; sound masking and sleep strategies discussed. Hearing protection for noise. Return if unilateral progression, pulsatile quality, or vertigo.` },
-
-{ id:"stye", cat:"ENT/Resp", title:"Stye / chalazion",
-  aliases:"eyelid lump hordeolum bump eye",
-  body:
-`S: <<R/L>> eyelid lump x <<duration>> — <<painful and red (stye)>> <<painless and firm (chalazion)>>. No vision change or spreading redness.
-O: <<R/L>> lid: <<tender pustule at the lash line>> <<firm non-tender nodule within the lid>>. Conjunctiva quiet, EOM full, VA normal.
-A: <<Hordeolum (stye)>> <<Chalazion>>, <<R/L>>.
-P: Warm compresses 10 min QID + lid hygiene. Most resolve in 1–2 weeks (chalazion may take longer). Refer if persistent beyond 6–8 weeks. Return if spreading redness, pain with eye movement, or vision change.` },
-
-{ id:"dry-eye", cat:"ENT/Resp", title:"Dry eyes",
-  aliases:"gritty burning eyes tears screens",
-  body:
-`S: Gritty, burning eyes x <<duration>>, worse with screens and wind. <<Reflex watering.>> No pain, photophobia, or vision loss. Screen time <<#>> h/day. Contributing meds reviewed.
-O: Conjunctivae mildly injected bilaterally, no discharge. Cornea clear, VA normal.
-A: Dry eye syndrome.
-P: Artificial tears QID PRN (preservative-free if frequent), warm compresses, screen breaks (20-20-20 rule). Optometry referral if persistent. Return if pain or vision change.` },
-
-// ---------- Cardio / Metabolic ----------
-{ id:"afib", cat:"Cardio/Metab", title:"Atrial fibrillation follow-up",
-  aliases:"afib AF irregular anticoagulation DOAC rate",
-  body:
-`S: AF review. <<Rate-controlled and asymptomatic.>> <<Occasional palpitations.>> No chest pain, syncope, or worsening dyspnea. Adherent to <<anticoagulant>>; no bleeding concerns.
-O: HR <<HR>>, irregularly irregular. BP <<BP>>. Chest clear, no edema — no signs of failure.
-A: Atrial fibrillation — rate-controlled. Stroke risk (CHADS-65): <<detail>>.
-P: Continue <<rate control agent>> and <<anticoagulant — indication reconfirmed>>. Annual labs: CBC, Cr. Return if syncope, chest pain, bleeding, or decompensation. F/U <<6–12>> months.` },
-
-{ id:"chf", cat:"Cardio/Metab", title:"Heart failure follow-up",
-  aliases:"CHF heart failure edema orthopnea diuretic weight",
-  body:
-`S: HF review. NYHA <<I/II>>. Home weights stable. No orthopnea, PND, or increasing edema. Adherent to medications; no dizziness.
-O: BP <<BP>>, HR <<HR>>, weight <<wt>> (<<change>>). JVP not elevated. Chest clear. <<No peripheral edema.>> <<Trace ankle edema.>>
-A: Heart failure (<<HFrEF/HFpEF>>, EF <<%>>) — compensated.
-P: Continue <<current HF regimen>>. Daily weights — report gain over 2 kg in 3 days. Labs: lytes, Cr <<due/ordered>>. Fluid/sodium guidance reviewed. F/U <<1–3>> months; sooner if weight gain or dyspnea.` },
-
-{ id:"anemia", cat:"Cardio/Metab", title:"Iron deficiency anemia",
-  aliases:"anemia low iron ferritin hemoglobin tired pale",
-  body:
-`S: <<Fatigue and exertional dyspnea.>> <<Found on screening bloodwork.>> <<Menorrhagia.>> No GI bleeding symptoms — stools normal. Diet reviewed. No NSAID overuse.
-O: <<No pallor.>> Vitals normal. Abdomen soft, no masses.
-A: Iron deficiency anemia — Hgb <<value>>, ferritin <<value>>. Presumed source: <<menstrual/dietary/under investigation>>.
-P: <<Oral iron once daily with vitamin C — GI effects counselled.>> Recheck CBC/ferritin in 8–12 weeks. <<Celiac screen sent.>> <<GI source must be excluded — FIT/scope referral arranged.>> F/U with results.` },
-
-{ id:"osteoporosis", cat:"Cardio/Metab", title:"Osteoporosis follow-up",
-  aliases:"bone density BMD fracture bisphosphonate calcium vitamin D frax",
-  body:
-`S: Osteoporosis review. No new fractures or falls. Adherent to <<bisphosphonate>> — taken correctly, no reflux symptoms. Calcium/vitamin D intake: <<detail>>. Exercise: <<detail>>.
-O: Height <<ht>> (<<change>>). No kyphosis progression or spinal tenderness.
-A: Osteoporosis — last BMD T-score <<value>> (<<date>>).
-P: Continue <<bisphosphonate>> — duration and drug-holiday timing reviewed. Calcium 1200 mg/day (diet first) + vitamin D 1000–2000 IU/day. Falls prevention and resistance exercise discussed. Repeat BMD <<date>>. F/U annually.` },
-
-{ id:"obesity", cat:"Cardio/Metab", title:"Weight management",
-  aliases:"obesity weight loss BMI diet bariatric",
-  body:
-`S: Weight management visit — patient-initiated goals: <<detail>>. Diet and activity patterns reviewed. Sleep <<detail>>; mood screened — normal. Prior attempts: <<detail>>.
-O: Weight <<wt>> (<<change>>), BMI <<BMI>>, BP <<BP>>, waist <<#>> cm.
-A: Obesity class <<I/II/III>> — <<with/without>> metabolic complications.
-P: Collaborative plan: <<dietary approach / activity target / dietitian referral>>. Labs: A1c, lipids, TSH, ALT <<up to date/ordered>>. <<Pharmacotherapy options discussed.>> Supportive, non-judgmental F/U q<<4–8>> weeks.` },
-
-{ id:"smoking", cat:"Cardio/Metab", title:"Smoking cessation",
-  aliases:"quit smoking nicotine NRT varenicline champix cigarettes",
-  body:
-`S: Smoking cessation visit. <<#>> cigarettes/day x <<#>> years. Readiness: <<ready — quit date set>> <<contemplating>>. Prior attempts and triggers reviewed.
-O: BP <<BP>>, HR <<HR>>. Chest clear.
-A: Nicotine dependence — <<preparation/action>> stage.
-P: <<NRT: patch 21 mg daily + short-acting gum/lozenge PRN.>> <<Varenicline started — nausea/vivid dreams counselled.>> <<Bupropion started.>> Quit date <<date>>; quitline and resources given. Relapse framed as part of the process. F/U 2–4 weeks after quit date.` },
-
-{ id:"prediabetes", cat:"Cardio/Metab", title:"Prediabetes",
-  aliases:"borderline sugar A1c prevention metformin lifestyle",
-  body:
-`S: Prediabetes review — A1c <<%>>. Diet and activity: <<detail>>. Weight trend: <<detail>>. Family history of diabetes: <<yes/no>>.
-O: Weight <<wt>>, BMI <<BMI>>, BP <<BP>>.
-A: Prediabetes (A1c 6.0–6.4%).
-P: Lifestyle counselling — 5–7% weight loss target, 150 min/week moderate activity. <<Dietitian/diabetes prevention program referral.>> <<Metformin discussed for high risk.>> Repeat A1c in <<6–12>> months with lipids.` },
-
-{ id:"ckd", cat:"Cardio/Metab", title:"CKD follow-up",
-  aliases:"kidney chronic renal eGFR creatinine ACR",
-  body:
-`S: CKD review. Asymptomatic — no edema or urinary changes. Adherent to meds. NSAIDs avoided — reviewed.
-O: BP <<BP>>. No edema.
-A: CKD G<<stage>> — eGFR <<value>> (<<stable/declining>>), ACR <<value>>.
-P: BP target under 130/80 — <<ACEi/ARB continued>>. <<SGLT2i continued/discussed.>> Labs q<<3–6>> months: Cr/eGFR, lytes, ACR. Sick-day medication list reviewed; nephrotoxins avoided. <<Nephrology referral if eGFR under 30 or rapid decline.>> F/U <<3–6>> months.` },
-
-// ---------- GI ----------
-{ id:"hemorrhoids", cat:"GI", title:"Hemorrhoids",
-  aliases:"rectal bleeding piles anal itch blood stool",
-  body:
-`S: Bright red blood <<on paper/coating stool>> x <<duration>>, with <<itch/discomfort>>. No dark stools, weight loss, or change in bowel habit. Straining/constipation history. Colon screening status: <<detail>>.
-O: Perianal exam: <<external hemorrhoids/skin tags>>. DRE: no mass. <<Anoscopy: internal hemorrhoids.>>
-A: Hemorrhoids — bleeding pattern benign.
-P: Fibre + fluids, avoid straining, sitz baths. <<Topical hemorrhoid preparation x 1–2 weeks.>> <<FIT up to date.>> <<Colonoscopy referral given age/risk.>> Return if dark stools, anemia symptoms, or persistent bleeding.` },
-
-{ id:"dyspepsia", cat:"GI", title:"Dyspepsia / H. pylori",
-  aliases:"indigestion epigastric stomach hpylori bloating",
-  body:
-`S: Epigastric discomfort and post-meal fullness x <<duration>>. No dysphagia, weight loss, vomiting, or GI bleeding — no alarm features. Age under 60. NSAIDs: none.
-O: Vitals normal. Mild epigastric tenderness, no masses or organomegaly.
-A: Uninvestigated dyspepsia without alarm features.
-P: <<H. pylori test ordered — eradication therapy if positive.>> <<PPI trial x 4–8 weeks.>> Alcohol/caffeine moderation, smaller meals. Scope if alarm features develop or refractory.` },
-
-{ id:"fissure", cat:"GI", title:"Anal fissure",
-  aliases:"anal pain tear bleeding defecation",
-  body:
-`S: Sharp anal pain with defecation x <<duration>>, bright blood on paper, pain lingering after BMs. Preceding constipation/hard stools.
-O: <<Posterior midline fissure visible on gentle traction.>> DRE deferred due to pain. No abscess or mass seen.
-A: Anal fissure, <<acute/chronic>>.
-P: Stool softening — PEG + fibre + fluids. Sitz baths after BMs. <<Topical nitroglycerin 0.2% BID — headache warned.>> <<Topical diltiazem 2% BID.>> Most acute fissures heal in 4–6 weeks; refer if chronic/refractory.` },
-
-{ id:"abdo-pain", cat:"GI", title:"Abdominal pain NYD (low risk)",
-  aliases:"stomach ache belly pain abdo workup",
-  body:
-`S: Abdominal pain x <<duration>>, <<location>>, <<character>>. <<Associated: nausea/bloating/bowel change.>> No fever, GI bleeding, weight loss, or nocturnal waking. Eating adequately.
-O: Vitals normal. Abdomen soft; <<location>> tenderness without guarding or rebound. No masses or organomegaly.
-A: Abdominal pain NYD — benign exam, no red flags.
-P: Labs: CBC, lytes, Cr, ALT, lipase, urinalysis <<ordered>>. <<Imaging pending labs.>> Symptom diary. Return precautions explicit: fever, localizing/worsening pain, vomiting, or GI bleeding — urgent review/ED. F/U <<1–2>> weeks.` },
-
-// ---------- GU / Repro ----------
-{ id:"renal-colic", cat:"GU/Repro", title:"Renal colic / kidney stone",
-  aliases:"kidney stone flank pain hematuria colic",
-  body:
-`S: Sudden <<R/L>> flank pain radiating to groin, colicky, with nausea. <<Visible hematuria.>> Prior stones: <<yes/no>>. Pain currently <<settling/controlled>>. No fever.
-O: T <<temp>>, HR <<HR>>, BP <<BP>>. <<R/L>> CVA tenderness. Abdomen soft, no peritonism.
-A: Suspected renal colic, <<R/L>> — no infection signs.
-P: NSAID first-line: <<naproxen 500 mg BID with food>>. Urinalysis: <<result>>. <<CT KUB/ultrasound ordered.>> Strain urine; fluids. ED if fever, uncontrolled pain, persistent vomiting, or anuria. F/U with imaging.` },
-
-{ id:"recurrent-uti", cat:"GU/Repro", title:"Recurrent UTIs",
-  aliases:"repeated bladder infections prophylaxis cystitis prevention",
-  body:
-`S: <<#>> culture-confirmed UTIs in past <<6/12>> months; currently asymptomatic — prevention visit. <<Post-coital pattern.>> <<Postmenopausal.>> Hydration and voiding habits reviewed.
-O: Abdomen soft, no CVA tenderness.
-A: Recurrent uncomplicated UTIs.
-P: Behavioural measures — hydration, post-coital voiding. <<Post-coital single-dose prophylaxis.>> <<Continuous low-dose prophylaxis x 3–6 months.>> <<Vaginal estrogen (postmenopausal).>> <<Self-start standby antibiotic with culture kits.>> Urology if hematuria or atypical features. F/U 3 months.` },
-
-{ id:"incontinence", cat:"GU/Repro", title:"Urinary incontinence",
-  aliases:"leaking bladder overactive urgency stress kegel pads",
-  body:
-`S: Urinary leakage x <<duration>> — <<with cough/sneeze/exertion (stress)>> <<with urgency (urge)>> <<mixed>>. Pads/day: <<#>>. Caffeine/fluids: <<detail>>. No dysuria or hematuria. Impact: <<detail>>.
-O: BMI <<BMI>>. No palpable bladder. <<Pelvic: atrophy/prolapse assessed — detail.>> Urine dip: <<result>>.
-A: <<Stress>> <<Urge>> <<Mixed>> urinary incontinence.
-P: Pelvic floor exercises — <<pelvic physio referral>>. Bladder training and caffeine reduction. <<Vaginal estrogen.>> <<Overactive-bladder medication discussed.>> Bladder diary for next visit. F/U <<6–8>> weeks.` },
-
-{ id:"aub", cat:"GU/Repro", title:"Heavy menstrual bleeding",
-  aliases:"heavy periods menorrhagia AUB flooding clots",
-  body:
-`S: Heavy menstrual bleeding x <<duration>> — soaking <<#>> pads/day, <<clots/flooding>>, cycles <<regular/irregular>>. Not pregnant — <<LMP/test>>. No intermenstrual or post-coital bleeding.
-O: BP <<BP>>, HR <<HR>>. No pallor. Abdomen soft. <<Pelvic: cervix normal, uterus normal size, no adnexal masses.>>
-A: Abnormal uterine bleeding — heavy menstrual bleeding pattern.
-P: Labs: CBC, ferritin, TSH. <<Pelvic ultrasound ordered.>> Options discussed: <<tranexamic acid with menses.>> <<NSAID with menses.>> <<Combined OCP.>> <<Hormonal IUD.>> <<Endometrial biopsy arranged (age over 40/risk factors).>> Pap up to date. F/U <<4–6>> weeks.` },
-
-{ id:"dysmenorrhea", cat:"GU/Repro", title:"Dysmenorrhea",
-  aliases:"period cramps painful periods menstrual pain",
-  body:
-`S: Painful periods since <<menarche/recent onset>> — cramping for first <<#>> days, <<missing school/work>>. No dyspareunia, heavy bleeding, or intermenstrual bleeding.
-O: Abdomen soft. <<Pelvic exam deferred — young, primary pattern.>> <<Pelvic exam normal.>>
-A: <<Primary dysmenorrhea.>> <<Possible secondary dysmenorrhea — endometriosis features present.>>
-P: <<Naproxen 500 mg BID starting the day before expected menses.>> Heat and exercise. <<Combined OCP or hormonal IUD discussed for suppression.>> <<Pelvic ultrasound + gyne referral if secondary features or refractory.>> F/U after 2–3 cycles.` },
-
-{ id:"early-pregnancy", cat:"GU/Repro", title:"Early pregnancy (first visit)",
-  aliases:"pregnant positive test dating folic acid new pregnancy",
-  body:
-`S: Positive home pregnancy test. LMP <<date>> — approx. <<#>> weeks. <<Pregnancy desired — continuing.>> <<Options counselling provided.>> Mild nausea; no bleeding or pain. Folic acid <<started>>.
-O: BP <<BP>>, weight <<wt>>.
-A: Early intrauterine pregnancy (presumed) at <<#>> weeks.
-P: Prenatal labs + urine culture ordered. <<Dating ultrasound requisitioned.>> Prenatal vitamin with folic acid. Reviewed: nausea management, food/alcohol/smoking guidance. <<Referral to OB/midwifery per preference.>> Ectopic precautions given — bleeding or pain prompts urgent review. Next visit <<#>> weeks.` },
-
-{ id:"breast-lump", cat:"GU/Repro", title:"Breast lump",
-  aliases:"breast mass lump mammogram ultrasound",
-  body:
-`S: Self-detected <<R/L>> breast lump noticed <<date>>. <<Tender.>> <<Non-tender.>> No nipple discharge or skin changes. Family history: <<detail>>. Last mammogram: <<date>>.
-O: <<R/L>> breast at <<location>>: <<#>> cm, <<smooth and mobile>> <<firm and irregular>>. No skin or nipple changes. Axilla: no lymphadenopathy. Contralateral breast normal.
-A: <<R/L>> breast mass — requires diagnostic workup.
-P: Diagnostic mammogram + ultrasound ordered. Will call with results; biopsy referral if indicated. Timeline and plan explained; concerns acknowledged. F/U within 1–2 weeks of imaging.` },
-
-{ id:"epididymitis", cat:"GU/Repro", title:"Testicular pain / epididymitis",
-  aliases:"scrotal pain testicle epididymis torsion",
-  body:
-`S: Gradual <<R/L>> testicular pain x <<#>> days. <<Dysuria.>> No sudden onset, no trauma. Sexually active: <<detail>>. NOTE: sudden severe pain = ED immediately (torsion).
-O: T <<temp>>. <<R/L>> epididymis tender and swollen; testicular lie normal, cremasteric reflex present. No hernia.
-A: Epididymitis, <<R/L>> — torsion features absent.
-P: <<Urine NAAT GC/CT + culture sent.>> <<Ceftriaxone 500 mg IM x 1 + doxycycline 100 mg BID x 10 days (STI risk).>> <<TMP-SMX DS BID x 10–14 days (low STI risk).>> Scrotal support, NSAIDs. ED if sudden severe pain or systemic illness. F/U <<3–7>> days.` },
-
-{ id:"ec", cat:"GU/Repro", title:"Emergency contraception",
-  aliases:"plan b morning after pill unprotected levonorgestrel ulipristal",
-  body:
-`S: Unprotected intercourse <<#>> h ago. LMP <<date>>. No contraindications. Ongoing contraception needs discussed.
-O: BP <<BP>>, weight <<wt>>.
-A: Emergency contraception request — within treatment window.
-P: <<Levonorgestrel 1.5 mg PO x 1 (within 72 h).>> <<Ulipristal 30 mg PO x 1 (within 120 h).>> <<Copper IUD discussed — most effective option.>> Pregnancy test if no menses within 3 weeks. STI screening offered. Ongoing contraception plan: <<detail>>.` },
-
-// ---------- MSK ----------
-{ id:"hip-pain", cat:"MSK", title:"Hip pain (OA / trochanteric)",
-  aliases:"hip groin trochanteric bursitis osteoarthritis",
-  body:
-`S: <<R/L>> hip pain x <<duration>> — <<groin pain worse with weight-bearing (OA pattern)>> <<lateral hip pain worse lying on that side (trochanteric)>>. No trauma, fever, or night pain. Function: <<detail>>.
-O: Gait <<normal/antalgic>>. <<Groin pain with internal rotation; ROM reduced.>> <<Tenderness over greater trochanter; pain with resisted abduction.>> Neurovascular intact.
-A: <<Hip osteoarthritis>> <<Greater trochanteric pain syndrome>>, <<R/L>>.
-P: Activity modification + hip strengthening — <<physio referral>>. <<Acetaminophen/NSAID PRN.>> <<X-ray ordered.>> Weight management if relevant. F/U <<6–8>> weeks; injection if refractory.` },
-
-{ id:"tennis-elbow", cat:"MSK", title:"Tennis elbow",
-  aliases:"lateral epicondylitis elbow pain gripping",
-  body:
-`S: <<R/L>> lateral elbow pain x <<duration>>, worse with gripping and lifting. Occupation/activity: <<detail>>. No trauma or neck symptoms.
-O: Tenderness at the lateral epicondyle; pain with resisted wrist extension. Full elbow ROM. Neuro intact.
-A: Lateral epicondylitis, <<R/L>>.
-P: Relative rest, eccentric strengthening program, counterforce brace. Topical or short-course oral NSAID PRN. Expectation set — often takes months, excellent prognosis. <<Physio referral.>> F/U 6–8 weeks.` },
-
-{ id:"carpal-tunnel", cat:"MSK", title:"Carpal tunnel syndrome",
-  aliases:"hand numbness tingling wrist median nerve night splint",
-  body:
-`S: <<R/L/bilateral>> numbness/tingling of thumb to middle fingers x <<duration>>, worse at night, relieved by shaking. <<Dropping objects.>> Occupation: <<detail>>.
-O: <<Positive Phalen/Tinel.>> Altered sensation in median distribution. <<No thenar wasting.>> <<Thenar wasting present.>> Neck exam normal.
-A: Carpal tunnel syndrome, <<R/L/bilateral>> — <<mild/moderate>>.
-P: Night wrist splints x 6 weeks; activity modification. <<TSH, A1c sent.>> <<Nerve conduction studies ordered.>> <<Steroid injection discussed.>> Surgical referral if thenar wasting or refractory. F/U 6–8 weeks.` },
-
-{ id:"knee-injury", cat:"MSK", title:"Acute knee injury",
-  aliases:"knee twist meniscus ACL sprain effusion sports",
-  body:
-`S: <<R/L>> knee injury on <<date>> — mechanism: <<twist/pivot/direct blow>>. <<Pop felt.>> <<Immediate swelling.>> <<Swelling next day.>> Weight-bearing: <<detail>>. <<Locking or giving way.>>
-O: <<Effusion present.>> Ottawa knee rules: <<negative — no X-ray needed>> <<positive — X-ray ordered>>. <<Lachman stable.>> <<McMurray negative.>> Joint-line tenderness: <<location>>. Neurovascular intact.
-A: <<R/L>> knee — <<ligament sprain, stable>> <<suspected meniscal injury>> <<suspected ACL injury>>.
-P: Relative rest, ice, compression; early ROM and quadriceps activation. NSAIDs PRN. <<Physio referral.>> <<MRI/ortho referral if instability, true locking, or not settling by 4–6 weeks.>> F/U 2 weeks.` },
-
-{ id:"fibromyalgia", cat:"MSK", title:"Fibromyalgia",
-  aliases:"widespread pain chronic fatigue fibro tender",
-  body:
-`S: Widespread pain (both sides, above and below waist) for over 3 months, with unrefreshing sleep, fatigue, and cognitive fog. Mood screened: <<detail>>. No joint swelling, fevers, or weight loss.
-O: Diffuse soft-tissue tenderness; joints without synovitis. Power and reflexes normal.
-A: Fibromyalgia. Inflammatory mimics: screen <<normal/pending>>.
-P: Education — chronic pain syndrome, not tissue damage; active treatment works best. Graded aerobic exercise is the cornerstone. Sleep strategy reviewed. <<CBT resources.>> <<Low-dose nortriptyline or duloxetine discussed.>> Labs to exclude mimics: CBC, TSH, CK <<done/ordered>>. Scheduled F/U <<4–6>> weeks.` },
-
-// ---------- Mental health ----------
-{ id:"panic", cat:"Mental health", title:"Panic disorder",
-  aliases:"panic attacks hyperventilate fear heart racing",
-  body:
-`S: Recurrent abrupt panic attacks — palpitations, dyspnea, fear of dying — peaking under 10 min, <<#>>/week. <<Avoidance developing.>> No substance triggers. Denies SI.
-O: HR <<HR>>, BP <<BP>>. Exam normal. <<ECG/TSH normal — reviewed together.>>
-A: Panic disorder <<with/without>> agoraphobic avoidance.
-P: Panic physiology explained; normal workup reviewed as evidence. CBT first-line — <<referral/resources>>. <<SSRI started — early activation warned.>> Breathing/grounding techniques taught. Regular PRN benzodiazepines avoided — discussed. F/U 2–4 weeks.` },
-
-{ id:"grief", cat:"Mental health", title:"Grief / bereavement",
-  aliases:"loss death bereaved mourning sad",
-  body:
-`S: Death of <<relation>> <<timeframe>> ago. Waves of sadness, sleep disruption. Maintaining basic function. Supports: <<detail>>. No SI; no pervasive worthlessness.
-O: Tearful at times; affect appropriate to loss. Engaged.
-A: Grief reaction — within expected range; not currently major depression.
-P: Grief course normalized; medication not indicated at this stage. <<Grief group/counselling resources given.>> Brief sleep support discussed. Open-door F/U <<4–6>> weeks — sooner if worsening, SI, or functional decline.` },
-
-{ id:"adjustment", cat:"Mental health", title:"Stress / burnout",
-  aliases:"overwhelmed work stress adjustment burnout coping",
-  body:
-`S: Feeling overwhelmed by <<stressor>> x <<duration>> — poor sleep, irritability, tension. PHQ-9 <<score>>, GAD-7 <<score>> — subthreshold. Alcohol screened: <<detail>>. No SI.
-O: Appears stressed; mental status otherwise unremarkable.
-A: Adjustment reaction / burnout — subthreshold for MDD/GAD.
-P: Problem-solving discussion; stressor-specific supports: <<EAP/counselling options>>. Sleep and exercise plan. <<Work accommodation/note provided.>> F/U <<3–4>> weeks to repeat screens.` },
-
-{ id:"postpartum", cat:"Mental health", title:"Postpartum mood check",
-  aliases:"baby blues postpartum depression EPDS newborn mom",
-  body:
-`S: Postpartum visit at <<#>> weeks. EPDS <<score>>. Mood <<detail>>; bonding going well; sleep broken but coping. Feeding: <<detail>>. Support at home: <<detail>>. No thoughts of harm to self or baby.
-O: Engaged, appropriate affect with baby.
-A: <<Postpartum adjustment — normal range.>> <<Postpartum depression — mild to moderate.>>
-P: <<Reassurance, supports, routine F/U.>> <<Counselling referral + SSRI discussed (breastfeeding-compatible).>> Sleep-sharing strategy with partner. Crisis contacts provided. F/U <<2–4>> weeks.` },
-
-{ id:"cognitive", cat:"Mental health", title:"Memory concern / cognitive workup",
-  aliases:"dementia memory loss MOCA forgetful alzheimer",
-  body:
-`S: <<Patient/family>> concerned about memory x <<duration>> — <<repeating questions, missed bills>>. ADLs independent; IADLs: <<detail>>. Mood screened. Anticholinergic meds reviewed. Driving: <<discussed>>.
-O: MoCA <<score>>/30. Neuro exam normal; gait normal.
-A: Cognitive concern — <<subjective only>> <<mild cognitive impairment>> <<probable early dementia>>; workup initiated.
-P: Labs: CBC, TSH, B12, lytes, Cr, A1c ordered. <<CT head ordered.>> Collateral history arranged with consent. Driving safety addressed per findings. <<Memory clinic/geriatrics referral.>> F/U <<4–6>> weeks with results.` },
-
-{ id:"alcohol", cat:"Mental health", title:"Alcohol use review",
-  aliases:"drinking alcohol AUDIT naltrexone cut down",
-  body:
-`S: Alcohol review — <<#>> drinks/week, pattern: <<detail>>. AUDIT-C <<score>>. Readiness to change: <<detail>>. No prior withdrawal seizures. Mood screened.
-O: BP <<BP>>. No stigmata of liver disease.
-A: Alcohol use above low-risk guidelines — <<at-risk use / mild AUD / moderate AUD>>.
-P: Brief intervention — guideline feedback; patient-set goal: <<goal>>. <<Naltrexone discussed/started.>> <<Acamprosate discussed.>> Labs: ALT/GGT, CBC ordered. Community supports offered. Heavy daily drinkers cautioned not to stop abruptly — taper plan. F/U <<2–4>> weeks.` },
-
-// ---------- Neuro ----------
-{ id:"tension-ha", cat:"Neuro", title:"Tension headache",
-  aliases:"headache band pressure stress neck HA",
-  body:
-`S: Bilateral band-like pressure headaches, <<#>>/month, not worsened by activity; no nausea or aura. Stress/posture/screen factors: <<detail>>. Analgesic days/month: <<#>>. No red flags.
-O: Vitals normal. Neuro exam normal. Pericranial and trapezius tenderness. Fundi normal.
-A: Tension-type headache — <<episodic/frequent>>.
-P: Simple analgesia PRN — capped under 15 days/month (overuse headache warned). Stress management, posture/ergonomics, hydration, sleep. <<Physio for neck.>> <<Amitriptyline prophylaxis discussed if frequent.>> Headache diary. F/U <<6–8>> weeks.` },
-
-{ id:"concussion", cat:"Neuro", title:"Concussion",
-  aliases:"head injury mTBI sport return to play headache",
-  body:
-`S: Head impact on <<date>> — mechanism: <<detail>>. <<No LOC.>> <<Brief LOC.>> Current: headache, <<fogginess/dizziness>>. No repeated vomiting, worsening headache, or focal symptoms. CT rules assessed — not indicated.
-O: Alert, oriented. Neuro exam normal — pupils, EOM, power, coordination, gait.
-A: Concussion (mild TBI) — low-risk features.
-P: 24–48 h relative rest, then graduated return to school/work/activity — handout given. No sport until stepwise return-to-play completed. Red flags reviewed: worsening headache, repeated vomiting, confusion, weakness — ED. F/U <<7–10>> days.` },
-
-{ id:"bells-palsy", cat:"Neuro", title:"Bell's palsy",
-  aliases:"facial droop weakness face paralysis",
-  body:
-`S: <<R/L>> facial droop noticed <<timeframe>> ago, involving forehead. <<Ear pain preceding.>> No limb weakness, dysphagia, diplopia, or rash.
-O: <<R/L>> facial weakness including forehead (LMN pattern). No vesicles in canal or palate. Other cranial nerves, power, and gait normal. Eye closure <<complete/incomplete>>.
-A: Bell's palsy, <<R/L>> — onset within 72 h.
-P: <<Prednisone 60 mg daily x 5 days, then 5-day taper.>> <<Antiviral added (severe).>> Eye protection: lubricating drops daytime; ointment and taping at night. Reassured — most recover over weeks to months. F/U <<2–4>> weeks; ED if new neurological deficits.` },
-
-{ id:"syncope", cat:"Neuro", title:"Syncope (vasovagal, low risk)",
-  aliases:"faint fainting passed out collapse vasovagal",
-  body:
-`S: Single faint on <<date>> with prodrome — lightheaded, warm, vision greying — in setting of <<prolonged standing/heat/pain>>. Rapid full recovery, no confusion. Not exertional; no chest pain or palpitations. No family history of sudden death.
-O: BP <<BP>> sitting, <<BP>> standing. HR <<HR>> regular. Cardiac exam normal. Neuro exam normal. ECG: <<normal/ordered>>.
-A: Vasovagal (reflex) syncope — low-risk features.
-P: Trigger avoidance, hydration and salt liberalization, counter-pressure maneuvers taught; lie down at prodrome. Driving guidance discussed. Return/ED if exertional syncope, palpitations preceding, or injury-causing recurrence.` },
-
-// ---------- Skin ----------
 { id:"psoriasis", cat:"Skin", title:"Psoriasis",
   aliases:"plaques scaly elbows knees scalp silver",
   body:
-`S: <<Stable plaques/flare>> at <<elbows/knees/scalp>> x <<duration>>. Itch <<detail>>. Joint pain and morning stiffness screened — none. Triggers: <<stress/strep/winter>>.
-O: Well-demarcated erythematous plaques with silvery scale at <<sites>>, approx. <<#>>% BSA. Nails <<normal/pitting>>. No dactylitis.
-A: Chronic plaque psoriasis — <<mild/moderate>>. No PsA features today.
-P: <<Potent topical steroid + vitamin D analogue daily x 4 weeks, then maintenance.>> <<Scalp preparation.>> Emollients. PsA symptoms to report reviewed. <<Derm referral if extensive/refractory.>> F/U <<6–8>> weeks.` },
+`S: <<Stable plaques>><<flare>> at <<elbows/knees/scalp>> x •. Itch: •. Joint pain/morning stiffness screened - none. Triggers: <<stress>><<strep>><<winter>>.
+O:
+Derm: well-demarcated erythematous plaques with silvery scale at •, approx • percent BSA. Nails <<normal>><<pitting>>. No dactylitis
+A: Chronic plaque psoriasis - <<mild>><<moderate>>. No PsA features today
+P:
+- <<Potent topical steroid + vitamin D analogue daily x 4 wks, then maintenance.>><<Scalp preparation.>>
+- Emollients
+- PsA symptoms to report reviewed
+- <<Derm referral if extensive/refractory.>>
+- f/u <<6-8>> wks` },
 
 { id:"urticaria", cat:"Skin", title:"Urticaria / hives",
   aliases:"hives wheals itchy welts allergic rash",
   body:
-`S: Itchy migrating wheals x <<duration>>; individual lesions resolve within 24 h without bruising. No lip/tongue swelling or breathing difficulty. Triggers reviewed: <<new meds/foods/recent infection — none clear>>.
-O: Scattered raised wheals on <<distribution>>. No angioedema. Chest clear, no stridor.
-A: <<Acute urticaria.>> <<Chronic urticaria (over 6 weeks).>> No anaphylaxis features.
-P: Non-sedating antihistamine daily — <<may up-titrate per guidance>>. Avoid NSAIDs and heat if aggravating. <<No investigations needed (acute).>> <<CBC, CRP, TSH (chronic).>> ED immediately if tongue/throat swelling or breathing symptoms. F/U <<2–4>> weeks.` },
+`S: Itchy migrating wheals x •; individual lesions resolve within 24 h without bruising. Denies lip/tongue swelling, breathing difficulty. Triggers reviewed: <<new meds>><<foods>><<recent infection>><<none clear>>.
+O:
+Derm: scattered raised wheals on •. No angioedema
+Resp: no stridor, GAEB
+A: <<Acute>><<Chronic (over 6 wks)>> urticaria - no anaphylaxis features
+P:
+- Non-sedating antihistamine daily - <<may up-titrate per guidance>>
+- Avoid NSAIDs/heat if aggravating
+- <<No investigations needed (acute).>><<CBC, CRP, TSH (chronic).>>
+- RTC/RTED instructions reviewed - ER immediately if tongue/throat swelling or breathing symptoms
+- f/u <<2-4>> wks` },
 
 { id:"tinea", cat:"Skin", title:"Tinea (athlete's foot / ringworm)",
   aliases:"fungal athletes foot ringworm jock itch rash",
   body:
-`S: Itchy rash at <<feet/groin/body>> x <<duration>> — spreading ring-like patches. <<Sweaty footwear/gym exposure.>> Immunocompetent.
-O: <<Annular scaly plaques with central clearing.>> <<Interdigital maceration and scale.>> Nails <<normal/thickened>>.
-A: Tinea <<pedis/cruris/corporis>>.
-P: <<Terbinafine 1% cream BID x 2–4 weeks — continue 1 week past clearing.>> Keep area dry; footwear and sock advice. <<KOH scraping if diagnosis uncertain.>> <<Oral therapy discussed for nail involvement.>> Return if not clearing by 4 weeks.` },
+`S: Itchy rash at <<feet>><<groin>><<body>> x • - spreading ring-like patches. <<Sweaty footwear/gym exposure.>> Immunocompetent.
+O:
+Derm: <<annular scaly plaques with central clearing>><<interdigital maceration and scale>>. Nails <<normal>><<thickened>>
+A: Tinea <<pedis>><<cruris>><<corporis>>
+P:
+- Terbinafine 1 percent cream BID x 2-4 wks - continue 1 wk past clearing
+- Keep area dry; footwear/sock advice
+- <<KOH scraping if uncertain.>><<Oral therapy discussed for nail involvement.>>
+- RTC if not clearing by 4 wks` },
 
 { id:"zoster", cat:"Skin", title:"Shingles (herpes zoster)",
   aliases:"shingles zoster dermatomal blisters painful rash",
   body:
-`S: Painful burning rash on <<side/dermatome>> x <<#>> days, preceded by tingling. No eye involvement or nose-tip lesions. Immunocompetent. Pain <<score>>/10.
-O: Grouped vesicles on erythematous base in a <<dermatome>> distribution, not crossing midline. Eyes not involved.
-A: Herpes zoster, <<dermatome>> — within antiviral window.
-P: <<Valacyclovir 1 g PO TID x 7 days (rash under 72 h old).>> Analgesia — <<acetaminophen/NSAID>> <<neuropathic agent added>>. Cover lesions; avoid pregnant, immunocompromised, and infant contacts until crusted. PHN risk discussed; zoster vaccine once resolved. Urgent ophthalmology if any eye involvement.` },
+`S: Painful burning rash on <<dermatome/side>> x <<#>> days, preceded by tingling. Denies eye involvement, nose-tip lesions. Immunocompetent. Pain •/10.
+O:
+Derm: grouped vesicles on erythematous base in <<dermatome>> distribution, not crossing midline. Eyes not involved
+A: Herpes zoster - within antiviral window
+P:
+- Valacyclovir 1000 mg TID x 7 days (rash under 72 h) - counselled on use
+- Analgesia: tylenol/advil; <<neuropathic agent if severe>>
+- Cover lesions; avoid pregnant/immunocompromised/infant contacts until crusted
+- PHN risk discussed; Shingrix once resolved
+- Urgent ophtho if any eye involvement
+- RTC/RTED instructions reviewed` },
 
-{ id:"warts", cat:"Skin", title:"Warts",
-  aliases:"verruca plantar wart hand freeze salicylic",
+{ id:"warts", cat:"Skin", title:"Plantar warts",
+  aliases:"verruca plantar wart hand freeze salicylic duct tape",
   body:
-`S: <<Plantar/hand>> warts x <<duration>>, <<#>> lesions. <<Painful with walking.>> Prior treatments: <<detail>>.
-O: <<#>> hyperkeratotic papules at <<site>> with punctate black dots; skin lines interrupted.
-A: Verruca <<plantaris/vulgaris>>.
-P: Options reviewed — many resolve spontaneously. <<Salicylic acid daily + weekly paring x 8–12 weeks.>> <<Liquid nitrogen q3–4 weeks, up to 4 cycles.>> Comfort padding for plantar lesions. Return if changing or diagnosis uncertain.` },
+`Assessment: Treatment with 70 percent salicylic acid is appropriate and effective but can take a long time, often several months. The current presentation is not unexpected.
+Counselling provided:
+- Warts can appear to worsen before they improve as they "fight back" against treatment
+- Treatment duration is variable and can take many months; difficult to provide a specific timeline
+- Advised to continue the salicylic acid cream
+- Application technique: pare down the lesion with a nail file first, then apply cream directly to the wart, avoiding surrounding healthy skin. Keep the file sterile
+- Discussed duct tape occlusion as an adjunctive measure
+- Discussed liquid nitrogen cryotherapy as an in-office option - also requires multiple sessions q2-3 wks
+- RTC if changing or diagnosis uncertain` },
 
 { id:"impetigo", cat:"Skin", title:"Impetigo (peds)",
   aliases:"honey crusted sores school child skin infection",
   body:
-`S: Facial/limb sores x <<#>> days — honey-crusted, mildly itchy, spreading. No fever; feeding and behaving normally. Attends <<school/daycare>>.
-O: Afebrile. <<Perioral/site>>: honey-crusted erosions over <<#>> cm area. No surrounding cellulitis or bullae.
-A: Non-bullous impetigo, localized.
-P: <<Mupirocin 2% TID x 5 days (localized).>> <<Cephalexin PO x 7 days (extensive).>> Hygiene: handwashing, short nails, no shared towels. Home from school/daycare until 24 h of treatment. Return if spreading, fever, or no improvement in 3 days.` },
+`S: Facial/limb sores x <<#>> days - honey-crusted, mildly itchy, spreading. Denies fever; feeding normally. Attends <<school>><<daycare>>.
+O:
+Gen: well, afebrile, NAD
+Derm: <<perioral>><<site>> honey-crusted erosions over • cm. No surrounding cellulitis, no bullae
+A: Non-bullous impetigo, localized
+P:
+- <<Mupirocin 2 percent TID x 5 days (localized).>><<Cephalexin PO x 7 days (extensive).>>
+- Hygiene: handwashing, short nails, no shared towels
+- Home from school/daycare until 24 h treated
+- RTC/RTED instructions reviewed, including spreading, fever, no improvement in 3 days` },
 
 { id:"rosacea", cat:"Skin", title:"Rosacea",
   aliases:"facial redness flushing red face telangiectasia",
   body:
-`S: Facial flushing and persistent central redness x <<duration>>. <<Papules and pustules.>> Triggers: <<heat/alcohol/spicy food/sun>>. Eye grittiness screened — none.
-O: Centrofacial erythema and telangiectasia. <<Inflammatory papules/pustules.>> No comedones. Eyes quiet.
-A: Rosacea — <<erythematotelangiectatic/papulopustular>>.
-P: Trigger diary and avoidance; daily SPF; gentle skincare. <<Metronidazole 0.75% BID.>> <<Ivermectin 1% cream daily.>> <<Doxycycline low-dose daily (moderate).>> F/U <<8–12>> weeks. Ophthalmology if ocular symptoms.` },
+`S: Facial flushing, persistent central redness x •. <<Papules/pustules.>> Triggers: <<heat>><<EtOH>><<spicy food>><<sun>>. Eye grittiness screened - none.
+O:
+Derm: centrofacial erythema and telangiectasia. <<Inflammatory papules/pustules.>> No comedones. Eyes quiet
+A: Rosacea - <<erythematotelangiectatic>><<papulopustular>>
+P:
+- Trigger diary/avoidance; daily SPF; gentle skincare
+- <<Metronidazole 0.75 percent BID.>><<Ivermectin 1 percent daily.>><<Doxycycline low-dose daily (moderate).>>
+- f/u <<8-12>> wks; ophtho if ocular symptoms` },
 
 { id:"abscess", cat:"Skin", title:"Skin abscess / boil",
   aliases:"boil abscess pus I&D furuncle lump drain",
   body:
-`S: Painful swelling at <<site>> x <<#>> days, enlarging. <<Draining spontaneously.>> No fever. No diabetes or immunosuppression.
-O: T <<temp>>. <<Site>>: <<#>> cm fluctuant tender collection, surrounding erythema under 2 cm. No lymphangitis.
-A: Cutaneous abscess, <<site>>.
-P: <<I&D performed — consent, local anesthetic, drained, aftercare reviewed.>> <<Too early to drain — warm compresses, review 48 h.>> Antibiotics not routine after I&D — reserved for spreading cellulitis or systemic features. <<Swab sent.>> Wound check 2–3 days.` },
+`S: Painful swelling at • x <<#>> days, enlarging. <<Draining spontaneously.>> Denies fever. No DM/immunosuppression.
+O:
+T: •
+Derm: • - • cm fluctuant tender collection, surrounding erythema under 2 cm. No lymphangitis
+A: Cutaneous abscess
+P:
+- <<I&D performed - consent, local anesthetic, drained, aftercare reviewed.>><<Too early to drain - warm compresses, review 48 h.>>
+- Abx not routine post-I&D - reserved for spreading cellulitis/systemic features
+- <<Swab sent.>>
+- Wound check 2-3 days
+- RTC/RTED instructions reviewed` },
 
 { id:"cold-sores", cat:"Skin", title:"Cold sores (herpes labialis)",
   aliases:"cold sore lip blister HSV fever blister",
   body:
-`S: Recurrent lip blisters <<#>> times/year, preceded by tingling. Current episode day <<#>>. Triggers: <<sun/stress/illness>>.
-O: Grouped vesicles/crusting at <<lip site>>. No eye involvement.
-A: Recurrent herpes labialis.
-P: <<Valacyclovir 2 g PO BID x 1 day at first tingle — prescription to keep on hand.>> Lip balm with SPF (sun trigger). Outbreak hygiene — avoid kissing/sharing items; caution around infants. <<Suppressive therapy discussed (6+ episodes/year).>>` },
+`S: Recurrent lip blisters <<#>>x/year, preceded by tingling. Current episode day <<#>>. Triggers: <<sun>><<stress>><<illness>>.
+O:
+Derm: grouped vesicles/crusting at <<lip site>>. No eye involvement
+A: Recurrent herpes labialis
+P:
+- <<Valacyclovir 2 g BID x 1 day at first tingle - Rx to keep on hand.>><<Topical antiviral PRN.>>
+- Lip balm with SPF (sun trigger)
+- Outbreak hygiene - avoid kissing/sharing; caution around infants
+- <<Suppressive therapy discussed (6+/year).>>` },
 
 { id:"ingrown-toenail", cat:"Skin", title:"Ingrown toenail",
   aliases:"toenail toe pain nail fold granulation",
   body:
-`S: <<R/L>> great toe pain along the <<medial/lateral>> nail fold x <<duration>>. <<Red and draining.>> Tight footwear/curved trimming reviewed. No diabetes or vascular disease.
-O: <<R/L>> hallux <<medial/lateral>> fold: erythema and edema. <<Granulation tissue.>> Distal pulses normal.
-A: Ingrown toenail, <<mild/moderate>>.
-P: <<Conservative: warm soaks, straight-across trimming, roomy footwear.>> <<Partial nail avulsion with phenol — performed/booked.>> <<Cephalexin if cellulitis develops.>> Return if spreading redness.` },
+`S: <<R>><<L>> great toe pain along <<medial>><<lateral>> nail fold x •. <<Red, draining.>> Footwear/trimming reviewed. No DM/vascular disease.
+O:
+Foot: <<R>><<L>> hallux <<medial>><<lateral>> fold - erythema, edema. <<Granulation tissue.>> Distal pulses normal
+A: Ingrown toenail - <<mild>><<moderate>>
+P:
+- <<Conservative: warm soaks, straight-across trimming, roomy footwear.>><<Partial nail avulsion with phenol - performed/booked.>>
+- <<Cephalexin if cellulitis develops.>>
+- RTC/RTED instructions reviewed, including spreading redness` },
+
+{ id:"bug-bite", cat:"Skin", title:"Bug bite reaction",
+  aliases:"insect bite sting itchy swelling local reaction",
+  body:
+`S: Bite at • on •, local <<itch>><<swelling>><<redness>>. Denies fever, spreading redness, systemic symptoms.
+O:
+Derm: localized erythema/edema at •, no tracking, no fluctuance
+A: Local bug bite reaction
+P:
+- HC 1 percent cream + calamine lotion; ice pack for itch
+- <<Non-sedating antihistamine PRN.>>
+- RTC/RTED instructions reviewed, including worsening swelling, spreading redness, heat, exudate, fever, myalgias` },
+
+{ id:"poison-ivy", cat:"Skin", title:"Poison ivy / contact dermatitis",
+  aliases:"poison ivy rhus contact dermatitis blisters itch",
+  body:
+`S: Itchy vesicular rash at • after <<yard work/outdoor exposure>>. <<Linear streaks.>> Denies facial/genital involvement, breathing symptoms.
+O:
+Derm: linear vesicular erythematous eruption at •. No secondary infection
+A: Allergic contact dermatitis (rhus)
+P:
+- <<Prednisone 50 mg x 5 days (extensive) - counselled use/side effects.>><<Topical steroid (localized).>>
+- Calamine, cool compresses; <<cetirizine>><<benadryl qHS>> for itch
+- Counselled on covering skin for future yard work; wash exposed clothing
+- RTC/RTED instructions reviewed, including worsening blistering, spreading, signs of infection` },
+
+{ id:"seb-derm", cat:"Skin", title:"Seborrheic dermatitis",
+  aliases:"dandruff scalp flaking seborrheic elocom selsun",
+  body:
+`S: Flaking, itch at <<scalp>><<nasolabial folds>><<eyebrows>> x •, waxing-waning.
+O:
+Derm: greasy scale on erythematous base at •
+A: Seborrheic dermatitis
+P:
+- Selenium sulfide or zinc pyrithione shampoo (leave on 5-10 min) 2-3x/wk
+- <<Topical steroid lotion for scalp flares.>><<Ketoconazole 2 percent cream for face.>>
+- Chronic-relapsing course counselled
+- RTC if not settling` },
+
+{ id:"thrush", cat:"Skin", title:"Oral thrush",
+  aliases:"candida mouth white tongue nystatin",
+  body:
+`S: White oral plaques, <<sore mouth>><<altered taste>> x •. Risk factors: <<recent abx>><<inhaled steroid without rinsing>><<dentures>>. Denies dysphagia.
+O:
+HEENT: white curd-like plaques on <<tongue>><<buccal mucosa>>, wipe off with erythematous base. No posterior extension
+A: Oropharyngeal candidiasis
+P:
+- Nystatin suspension 4-6 mL QID x 7 days, continue 2-3 days past resolution
+- Counselled on oral hygiene, rinsing after inhaled steroids, denture care
+- RTC/RTED instructions reviewed, including dysphagia, persistent symptoms` },
+
+// ---------- Exam blocks ----------
+{ id:"ncr", cat:"Exam", title:"Normal complete exam (NCR)",
+  aliases:"normal exam NCR complete physical negative findings",
+  body:
+`Gen: well, NAD
+CVS: NS1/2, no ehs/murmur
+Resp: Normal RR, normal WOB, GAEB, no wheeze/crackles
+Abdo: SNTND, no HSM
+HEENT: Oropharynx normal, Neck supple, no cervical LN
+- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness
+Neuro: PERLA, moving all 4 extremities, normal gait
+- CNII-XII grossly normal
+- Power 5/5 in all extremities
+- No sensory deficits
+- Patellar reflexes 2+ BL
+- No dysmetria/dysdiadochokinesia
+MSK: No SEADS to ankles x2
+- No focal palpable tenderness
+Remainder of systems normal` },
+
+{ id:"mse", cat:"Exam", title:"Mental status exam (MSE)",
+  aliases:"MSE mental status psych exam appearance affect",
+  body:
+`Appearance: appears stated age, <<normal grooming, casual attire>><<disheveled>>
+Speech: <<normal rate, rhythm, volume>><<tangential>><<pressured>><<limited, speaks when prompted>>
+Eye contact: <<normal>><<intense>><<avoidant>>
+Motor: <<normal>><<restless>><<slowed>>
+Mood: <<euthymic>><<anxious>><<depressed>><<euphoric>><<irritable>>
+Affect: <<full>><<constricted>><<flat>><<labile>>
+Thought process: <<linear, coherent, future oriented>><<tangential>>
+Thought content: no hallucinations, delusions, obsessions/compulsions, or phobias
+Cognition: <<grossly intact>><<not oriented/confused>>
+SI: none  HI: none
+Behaviour: <<cooperative>><<guarded>><<agitated>><<withdrawn>>
+Insight: <<intact>><<limited>>  Judgment: <<intact>><<limited>>` },
+
+{ id:"knee-exam", cat:"Exam", title:"Knee exam (full)",
+  aliases:"knee exam mcmurray drawer ligament",
+  body:
+`S: Knee pain. Trauma: <<Y>><<N>>. Aggravating: •. Alleviating: •. Affecting ADLs: •. Pain: •/10
+O: Bilateral knee exam:
+No swelling, erythema or deformity of the joint
+No swelling, bumps or lumps in popliteal fossa
+No tenderness to palpation, no patellar hypermobility
+ROM preserved (flexion, extension, internal/external rotation)
+Negative McMurray's
+Negative Apley's compression
+Negative medial and lateral collateral stress tests
+Negative anterior and posterior drawer
+No swelling/erythema/deformity in bilateral lower legs
+Knee strength 5/5 BL; foot strength 5/5 BL` },
+
+{ id:"shoulder-exam", cat:"Exam", title:"Shoulder exam (full)",
+  aliases:"shoulder exam rotator cuff hawkins empty can",
+  body:
+`S: Shoulder pain. Trauma: <<Y>><<N>>. Aggravating: •. Alleviating: •. Affecting ADLs/ROM: •. Pain: •/10
+Denies constitutional symptoms, night pain, chest pain, SOB
+O:
+Gen: alert, NAD
+BP: •  HR: •
+Bilateral shoulders:
+Inspection: no deformity, swelling, erythema, bruising, or wasting
+Palpation: no warmth, no tenderness
+ROM (R): flexion <<N>>, abduction <<N>>, external rotation <<N>>
+ROM (L): flexion <<N>>, abduction <<N>>, external rotation <<N>>
+Crepitus: none BL
+Strength: empty can <<N>>, drop arm <<neg>>, external rotation <<N>>, lift-off <<N>>, Speed's <<neg>>, Yergason's <<neg>>
+Provocative: Hawkins <<neg>>, crank <<neg>>, apprehension <<neg>>` },
+
+{ id:"wrist-exam", cat:"Exam", title:"Wrist / hand exam",
+  aliases:"wrist exam tinel phalen finkelstein snuffbox",
+  body:
+`O: Bilateral wrist exam
+No deformity, swelling, erythema
+No tenderness on palpation, no tenderness anterior/posterior forearm
+ROM: •  Strength: extension •, flexion •, adduction •, abduction •
+Testing:
+Pt able to write name legibly
+Tinel's: <<neg>>  Phalen's: <<neg>>
+Snuffbox tenderness: <<none>>
+Finkelstein: <<neg>>  Mill's: <<neg>>  Medial epicondylitis test: <<neg>>` },
+
+{ id:"newborn-exam", cat:"Exam", title:"Newborn exam",
+  aliases:"newborn baby exam fontanelle red reflex moro",
+  body:
+`<<Appears well, NAD. Alert and responsive to examination.>>
+Anterior fontanelle: <<soft, flat, no bulging or depression>>
+Mucous membranes: <<moist>>
+Central cap refill: <<under 2 s>>  Peripheral: <<under 2 s>>
+Femoral pulses: <<normal, 2+>><<weak>>
+Chest: <<GAEB, no adventitious breath sounds>>
+CVS: <<Normal S1/S2, no murmurs>>
+Abdomen: <<soft, non-distended, no HSM>>
+Umbilical stump: <<attached, clean, dry, intact>><<fallen off, umbilicus clean/dry/intact>>
+GU: <<normal, patent anus>><<testes descended bilaterally>>
+Jaundice: <<no dermal/scleral jaundice>><<clinically jaundiced: •>>
+Neuro: <<appropriate tone>>, <<moving x4 limbs spontaneously>>, <<normal Moro reflex>>, <<coordinated suck>>
+Red reflex: present BL
+Hips: <<no clunk/click - Ortolani/Barlow negative>>` },
+
+{ id:"teen-female", cat:"Exam", title:"Teen physical (female)",
+  aliases:"adolescent teen girl physical periodic school",
+  body:
+`PX    Age: •    Grade: •    Wt: •    Ht: •
+Health concerns: <<none>><<•>>
+School: <<below>><<at>><<above>> grade level
+Behaviour: <<no problems>><<•>>
+Diet: <<balanced>><<low in •>>
+Exercise: •
+Menarche: •    Menses: <<ir>>regular, <<no>> dysmenorrhea
+<<Smokes • cigs/day>><<Non-smoker>>   Drugs: <<none>>   Alcohol: <<none>>
+<<Sexually active>> <<discussed condoms>>
+Mood: <<good>>
+Eye exam: last •    Dental check: <<done>>
+O: <<no nodes>>  ENT <<N>>  Chest <<N>>  CVS <<N>>  BP: •  Abd <<N>>
+   Skin <<N>>  MSK <<N>>  Spine <<N>>  CNS <<N>>
+Assess:
+Plan:
+Immunizations: <<up to date>><<needed: •>>  <<gardasil>><<menactra>>` },
+
+{ id:"teen-male", cat:"Exam", title:"Teen physical (male)",
+  aliases:"adolescent teen boy physical periodic school",
+  body:
+`PX    Age: •    Grade: •    Wt: •    Ht: •
+Health concerns: <<none>><<•>>
+School: <<below>><<at>><<above>> grade level
+Behaviour: <<no problems>><<•>>
+Diet: <<balanced>><<low in •>>
+Exercise: •
+<<Smokes • cigs/day>><<Non-smoker>>   Drugs: <<none>>   Alcohol: <<none>>
+Mood: <<good>>
+<<Sexually active>> <<discussed condoms>>
+Eye exam: last •    Dental check: <<done>>
+O: <<no nodes>>  ENT <<N>>  Chest <<N>>  CVS <<N>>  BP: •  Abd <<N>>
+   Testes <<normal>>  Skin <<N>>  MSK <<N>>  Spine <<N>>  CNS <<N>>
+Assess:
+Plan:
+Immunizations: <<up to date>><<needed: •>>` },
+
+// ---------- Procedures ----------
+{ id:"tb-test", cat:"Procedure", title:"TB skin test",
+  aliases:"PPD mantoux tuberculin TST two step",
+  body:
+`Step •: Administered PPD 0.1 mL intradermal on <<L>><<R>> forearm on •
+<<Advised pt to return in 48-72 hours for read.>>
+<<Read: • mm induration noted on •.>>` },
+
+{ id:"skin-biopsy", cat:"Procedure", title:"Skin biopsy / excision",
+  aliases:"punch biopsy shave excision lesion procedure suture",
+  body:
+`S: Biopsy of skin lesion. Last assessed •. <<no>> hx of skin cancers. <<no>> family hx. <<no>> bleeding/ulceration/pruritus
+O: The lesion is <<colour>>, <<raised>><<flat>>, • mm diameter, <<well circumscribed>><<irregular borders>>, located on •
+Procedure:
+- Consent obtained - reviewed risks: infection, bleeding, pain, scarring, allergy to anesthetic, need for re-excision
+- Area cleaned x3 with <<betadine>><<chlorhexidine>>
+- • cc of <<1 percent>><<2 percent>> xylocaine <<with>><<without>> epinephrine injected intradermally
+- Lesion removed by <<punch biopsy (• mm)>><<shave biopsy>><<elliptical excision>>
+- <<Site closed with • x 4-0 sutures, edges well approximated.>>
+- Hemostasis achieved; polysporin and dressing applied
+- Patient tolerated procedure well, no complications
+A: <<Punch>><<shave>><<elliptical>> biopsy of • lesion
+P:
+- Pathology pending - will advise of results
+- Keep area clean, covered x few days; avoid heavy lifting x 48 h
+- <<RTC in 7-10 days for suture removal.>>
+- RTC/RTED instructions reviewed, including bleeding, discharge, signs of infection` },
+
+{ id:"iud-insertion", cat:"Procedure", title:"IUD insertion",
+  aliases:"IUD mirena kyleena copper insertion procedure",
+  body:
+`S: For IUD insertion. LMP: •. Sexually active since LMP: <<Y>><<N>>. Current contraception: •
+- Reviewed contraceptive benefit, common side effect of spotting up to 6 months, risks of infection, perforation, expulsion, ectopic. <<Copper IUD - heavier menses reviewed.>>
+- <<Agreeable to>><<declined>> STI screening today
+- Verbal and written consent obtained
+- <<Negative urine pregnancy test confirmed prior to procedure.>>
+Procedure:
+- External genitalia normal. Speculum: cervix visualized, normal, no lesions
+- <<Cervical swabs obtained.>><<Previous IUD removed.>>
+- Cleaned with betadine x3
+- <<Cervical block performed - well tolerated.>><<Tenaculum applied.>>
+- Uterus sounded to • cm
+- <<IUD type>> inserted without complication; strings trimmed to • cm
+- Minimal bleeding, no complications; pt tolerated well
+Lot: •  Exp: •
+A: <<IUD type>> insertion
+P:
+- Advised: minor cramping, spotting expected; nothing per vagina x 72 h
+- <<Hormonal IUD - backup contraception x 7 days.>><<Copper - effective immediately.>>
+- String check in 6 wks <<+ pelvic US req given for placement>>
+- Effective for • years - card given with removal date
+- RTC/RTED instructions reviewed, including severe pain, fever, abnormal discharge, expulsion` },
+
+{ id:"nexplanon", cat:"Procedure", title:"Nexplanon insertion",
+  aliases:"implant nexplanon subdermal arm contraceptive",
+  body:
+`S: Consultation re contraceptive implant. Current contraception: •. Alternatives reviewed (condoms, IUS, hormonal).
+Benefits discussed: highly effective, estrogen-free, avoids pelvic procedure, no daily dosing
+Risks discussed: irregular spotting (may persist), progestin effects, migration (radio-opaque), difficult removal, no STI protection
+LMP: •. <<No sexual activity since LMP.>><<Urine bHCG negative.>>
+Procedure:
+- Patient supine, non-dominant arm; landmarked 9 cm from medial epicondyle, 4 cm inferior to sulcus
+- Skin cleansed; 2 cc lidocaine with epi injected at insertion site
+- Device inserted subdermally per technique without complication
+- Device palpable by examiner and patient; hemostasis achieved, steri-strips + pressure dressing
+- Patient tolerated procedure well
+Lot: •  Exp: •
+A: Contraceptive implant insertion
+P:
+- Backup contraception x 7 days
+- RTC immediately if ever unable to palpate device
+- Remove pressure dressing after 24 h; steri-strips fall off naturally
+- Removal no later than 3 years - card given` },
+
+{ id:"endometrial-biopsy", cat:"Procedure", title:"Endometrial biopsy",
+  aliases:"pipelle endometrial sampling biopsy uterus",
+  body:
+`Procedure note:
+- Reviewed procedure and risks: infection, bleeding, perforation, failure to obtain sample - consent signed
+- Normal external genitalia
+- Cervix normal, no blood or discharge
+- Cleaned with betadine x3
+- <<Tenaculum applied.>>
+- Uterus sounded to • cm
+- Pipelle passed <<without resistance>>; <<#>> passes, endometrial sample obtained
+- Pt tolerated procedure well
+A: Endometrial biopsy
+P:
+- Sample sent; will f/u with results
+- Advised mild cramping/spotting expected
+- RTC/RTED instructions reviewed, including fever, malodorous discharge, abdominal pain, persistent/worsening bleeding` },
 
 // ---------- General ----------
+{ id:"fatigue", cat:"General", title:"Fatigue workup",
+  aliases:"tired low energy exhausted TATT",
+  body:
+`S: Fatigue x •, gradual onset. Sleep • h/night; denies snoring. Mood screened - PHQ-2 negative. Denies weight loss, fevers, night sweats. Meds and EtOH reviewed.
+O:
+Gen: well, NAD, no pallor
+HEENT: no LN, thyroid normal
+CVS: NS1/2  Resp: GAEB  Abdo: SNTND
+A: Fatigue NYD - no red flags
+P:
+- BW: CBC, TSH, ferritin, A1c, lytes, Cr<<, B12>><<, celiac screen>>
+- Sleep hygiene reviewed
+- f/u <<2-3>> wks with results
+- RTC/RTED instructions reviewed` },
+
+{ id:"phe", cat:"General", title:"Adult periodic health exam",
+  aliases:"checkup physical annual exam screening preventive",
+  body:
+`S: Periodic health review; no current concerns. PMHx/meds reviewed. FHx reviewed. Mood screened - fine.
+Preventative screening:
+1. <<Mammogram: UTD/overdue/N-A.>> <<Pap: UTD/overdue/N-A.>>
+2. Colon cancer screening: <<UTD>><<overdue>><<to start age 50>>
+3. <<BMD: UTD/overdue/N-A.>> <<PSA discussed: agrees/declines/deferred.>>
+4. DM/lipids/renal screening: <<UTD>><<overdue>><<to start age 40 or sooner with risk factors>>
+Immunizations: Td <<UTD>><<overdue>>; <<Shingrix offered (50+)>>; <<pneumococcal (65+)>>; influenza
+ROS: sleep <<no issues>>; diet <<no issues>>; exercise <<no issues>>; EtOH •; drugs •; mood <<no issues>>
+Smoking: ever <<yes>><<no>>; current <<yes>><<no>>; <<interested in quitting>>
+O:
+Ht: •  Wt: •  BMI: •  BP: •
+Focused exam: • - unremarkable
+A/P: Periodic health exam
+- Screening ordered/booked as above
+- Lifestyle counselling
+- Recall <<1-3>> yrs` },
+
+{ id:"well-child", cat:"General", title:"Well child visit",
+  aliases:"baby peds pediatric immunization milestones growth",
+  body:
+`S: Well child visit at <<age>>. Feeding: •. Sleep: •. Development age-appropriate - gross motor, fine motor, language, social. Parental concerns: <<none>>.
+O:
+Wt: • (<<percentile>>)  Ht: • (<<percentile>>)  <<HC: •>>
+Gen: well, NAD, alert
+<<Fontanelle soft/flat. Red reflex BL.>>
+CVS: NS1/2  Resp: GAEB  Abdo: SNTND
+<<Hips: no clunk/click.>> Skin: no rash
+A: Healthy child; growth and development on track
+P:
+- Immunizations per schedule: <<given today>>
+- Anticipatory guidance: safety, sleep, nutrition, screen time
+- Next visit: •` },
+
+{ id:"med-renewal", cat:"General", title:"Medication renewal",
+  aliases:"refill prescription renew script rx repeat",
+  body:
+`S: Medication renewal: •. Conditions stable; denies new symptoms or side effects. Adherent.
+O:
+BP: •  HR: •
+Focused exam: unremarkable
+A: Stable <<conditions>> - routine renewal
+P:
+- Renewed: • x •
+- Monitoring BW <<UTD>><<ordered>>
+- f/u • months or sooner PRN` },
+
 { id:"forms", cat:"General", title:"Forms / driver's medical",
   aliases:"paperwork insurance disability drivers license form",
   body:
-`S: Here for <<driver's medical/insurance/disability>> form. Relevant history reviewed: <<detail>>. No syncope, seizures, or visual concerns. Medications reviewed for impairment potential.
-O: BP <<BP>>, HR <<HR>>. Visual acuity <<value>> <<with correction>>. <<Focused exam per form: detail.>>
-A: <<Form type>> assessment — <<criteria met>> <<concerns noted: detail>>.
-P: Form completed and <<given to patient/submitted>>. <<Restrictions/recommendations: detail.>> <<Uninsured fee discussed.>> F/U PRN.` },
+`S: Here for <<driver's medical>><<insurance>><<disability>> form. Relevant history reviewed: •. Denies syncope, seizures, visual concerns. Meds reviewed for impairment potential.
+O:
+BP: •  HR: •
+VA: • <<with correction>>
+Focused exam per form: •
+A: <<Form type>> assessment - <<criteria met>><<concerns noted: •>>
+P:
+- Form completed and <<given to patient>><<submitted>>
+- <<Restrictions/recommendations: •.>>
+- <<Uninsured fee discussed per fee schedule.>>` },
 
 { id:"preop", cat:"General", title:"Pre-op assessment",
   aliases:"surgery preoperative clearance anesthesia",
   body:
-`S: Pre-op assessment for <<procedure>> on <<date>>. Functional capacity over 4 METs — climbs stairs without symptoms. No chest pain, syncope, or unexplained dyspnea. Medication hold instructions reviewed: <<detail>>. Anticoagulants: <<none/plan>>.
-O: BP <<BP>>, HR <<HR>>. Heart sounds normal, no murmur. Chest clear.
-A: Pre-operative assessment — low-risk profile; no further cardiac testing indicated.
-P: <<Labs/ECG per surgical program: done/ordered.>> Written medication instructions provided. Smoking cessation opportunity taken. Form completed for surgical/anesthesia team.` },
+`S: Pre-op assessment for • on •. Functional capacity over 4 METs - climbs stairs without symptoms. Denies chest pain, syncope, unexplained dyspnea. Medication hold instructions reviewed: •. Anticoagulants: <<none>><<plan: •>>.
+O:
+BP: •  HR: •
+CVS: NS1/2, no murmur
+Resp: GAEB, normal WOB
+A: Pre-operative assessment - low-risk profile; no further cardiac testing indicated
+P:
+- <<Labs/ECG per surgical program: done/ordered.>>
+- Written medication instructions provided
+- Smoking cessation opportunity taken
+- Form completed for surgical/anesthesia team` },
 
 { id:"travel", cat:"General", title:"Travel consult",
   aliases:"travel vaccines malaria typhoid trip abroad",
   body:
-`S: Travel to <<destination>> <<dates>>; itinerary <<urban/rural>>. Purpose: <<tourism/visiting family>>. Immunization record reviewed. Health conditions and meds: <<detail>>.
-O: Well today.
-A: Pre-travel consultation — destination-specific risks reviewed.
-P: <<Hep A vaccine given.>> <<Typhoid given.>> <<Routine boosters updated.>> <<Malaria prophylaxis prescribed per region.>> Food/water and insect precautions reviewed; travellers' diarrhea standby plan given. Travel insurance advised. <<Travel clinic referral for yellow fever/specialized needs.>>` },
+`S: Travel to • on •; itinerary <<urban>><<rural>>. Purpose: <<tourism>><<visiting family>>. Immunization record reviewed. Health conditions/meds: •.
+O: Well today
+A: Pre-travel consultation - destination risks reviewed
+P:
+- <<Hep A given.>><<Typhoid given.>><<Routine boosters updated.>>
+- <<Malaria prophylaxis prescribed per region.>>
+- Food/water and insect precautions reviewed; travellers' diarrhea standby plan given
+- Travel insurance advised
+- <<Travel clinic referral for yellow fever/specialized needs.>>` },
 
 { id:"imms", cat:"General", title:"Immunization visit",
   aliases:"vaccine shot flu shot booster injection",
   body:
-`S: Here for <<vaccine>>. No prior severe reactions or anaphylaxis to components. Not acutely unwell. Consent obtained.
-O: Afebrile, well.
-A: Immunization visit.
-P: <<Vaccine>> given <<site>> — lot documented per record. Observed 15 min, no immediate reaction. Common side effects reviewed. <<Next dose due: date.>> Record updated.` },
+`S: Here for <<vaccine>>. Screened: no severe reaction to prior vaccines, no anaphylaxis to components, not acutely unwell, no fever. Consent obtained.
+O: Afebrile, well
+A: Immunization visit
+P:
+- <<Vaccine>> given <<site>> - lot documented per record
+- Observed 15 min - well tolerated, no immediate reaction
+- Counselled on expected local soreness, possible low-grade fever/myalgia day 1-2
+- ER immediately if anaphylactic reaction - lip swelling, throat tightness
+- <<Next dose due: •.>>` },
 
 { id:"lab-review", cat:"General", title:"Lab review (normal results)",
   aliases:"results bloodwork normal review labs",
   body:
 `S: Reviewing recent bloodwork. Feeling well; no new symptoms.
-O: <<BP if measured.>>
-A: Lab review — <<all results within normal limits>> <<minor finding discussed: detail — not clinically significant>>.
-P: Results explained; copy offered. <<No management change.>> <<Change: detail.>> Next routine labs <<date>>. Return sooner PRN.` },
+O: <<BP: •>>
+A: Lab review - <<all results within normal limits>><<minor finding discussed: • - not clinically significant>>
+P:
+- Results explained; copy offered
+- <<No management change.>><<Change: •.>>
+- Next routine labs: •
+- RTC sooner PRN` },
 
-{ id:"sick-note", cat:"General", title:"Sick note / work absence",
+{ id:"new-patient", cat:"General", title:"New patient intake",
+  aliases:"meet and greet intake new patient roster",
+  body:
+`S: Intake appointment. Patient aware this visit is for meet-and-greet; medical issues to be booked separately.
+Previously receiving care: •
+PMHx: •  MedHx: •  SurgHx: •
+Allergies: <<NKDA>>
+FHx: •
+Social: occupation •; relationship status •; smoking •; EtOH • drinks/wk; recreational drugs •
+Sexual/OB hx: •. STI screening: <<UTD>><<due>><<not indicated>>
+Preventive: last pap <<•>><<N/A>>; mammo <<•>><<N/A>>; colon screening <<•>><<N/A>>; Td •
+O:
+BP: •  Wt: •  Ht: •
+Gen: NAD, well-appearing
+HEENT: N TMs, throat normal, no LN
+CVS: NS1/2, no murmurs  Resp: GAEB, normal WOB  <<Abdo: SNTND.>>
+A: New patient intake - EMR record filled
+P:
+- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy
+- Discussed rostering expectations and after-hours access
+- <<Screening/BW plan: •.>>` },
+
+{ id:"virtual", cat:"General", title:"Virtual visit consent + note",
+  aliases:"telemedicine phone video virtual consent",
+  body:
+`Informed verbal consent obtained to communicate and provide care using virtual/telecommunication tools. Risks of unauthorized disclosure/interception of personal health information explained, along with steps to protect information. Discussed that virtual care cannot replace physical examination or in-person assessment for some conditions, and the need to seek urgent care in an Emergency Department as necessary. Patient understood and agreed.
+Time: •
+History:
+•
+A/P:
+•` },
+
+// ---------- Letters ----------
+{ id:"sick-note", cat:"Letter", title:"Sick note / work absence",
   aliases:"work note doctors note absence school letter",
   body:
-`S: <<Illness — brief detail>> since <<date>>; unable to attend <<work/school>>. Symptoms: <<detail>>. Improving.
-O: <<Focused findings consistent with history.>>
-A: <<Illness episode>>.
-P: Note provided covering <<dates>> <<with expected return date>>. Diagnosis withheld from note per patient preference. Modified duties: <<none needed/detail>>. Return if not improving.` },
+`To whom it may concern,
+This letter is to inform you that • was seen in my office on •.
+• will be away from <<work>><<school>><<daycare>> from • until • due to medical reasons.
+Please feel free to contact the office if you have any questions or concerns.
+Sincerely,` },
 
+{ id:"work-letter", cat:"Letter", title:"Work modification letter",
+  aliases:"modified duties work injury letter accommodation",
+  body:
+`This patient was assessed in clinic on • for an injury to •. Based on this assessment, it is my recommendation that they avoid <<repetitive activities>><<heavy lifting>><<prolonged standing>> which may further exacerbate this injury. They would benefit from modified activities, and if this is not possible then they would benefit from time off work to allow for recovery until •.
+Sincerely,` },
+
+{ id:"specialist-request", cat:"Letter", title:"Specialist test-ordering response",
+  aliases:"specialist request decline ordering tests letter consultant",
+  body:
+`Dear colleague,
+I received the request from your office for this practice to order • on your behalf.
+To ensure patient safety and appropriate follow-up, investigations are best ordered, tracked, and actioned by the clinician who requires them for their care plan. I am not able to assume responsibility for ordering and monitoring tests on behalf of consulting services.
+I trust you will order the investigations you deem appropriate for the care you are providing and follow up as necessary.
+Thank you for your understanding.` },
+
+// ---------- Email ----------
+{ id:"email-fit", cat:"Email", title:"Email - FIT screening",
+  aliases:"FIT colon cancer screening kit email recall",
+  body:
+`This email is to notify you that you are due for your FIT test - the colorectal cancer screening test you last completed in •. This screening is typically repeated every 2 years in asymptomatic people (no blood in the stool, no family history of colorectal cancer, otherwise feeling well). I have ordered the test kit to be mailed to you with instructions.
+Please return the kit within 6 months of receiving it, otherwise the lab cannot process the sample. Please book a follow-up appointment if you have any questions or concerns.
+<<Note: a previous kit expired without completion - you remain unscreened for colon cancer. Please complete the new kit promptly, or book in to discuss colonoscopy instead.>>` },
+
+{ id:"email-pap", cat:"Email", title:"Email - Pap reminder / results",
+  aliases:"pap reminder results normal email cervical",
+  body:
+`<<Reminder: this email is to notify you that you are due for your pap test. Please call to schedule at a time convenient for you.>>
+<<Results: your cervical cancer screening came back normal (negative for HPV). You will be due for your next routine screening in 5 years. You should also receive a letter in the mail confirming the same.>>` },
+
+{ id:"email-shingles", cat:"Email", title:"Email - shingles vaccine",
+  aliases:"shingrix zoster vaccine email",
+  body:
+`The shingles vaccine (Shingrix) is recommended for everyone over 50 and is a 2-dose series. It is publicly covered in Ontario for ages 65-70; many private plans cover it otherwise.
+Most common side effects are redness and soreness at the injection site; occasionally flu-like symptoms for a day or two (more common with the second dose).
+The benefit is a reduced risk of developing shingles and - importantly - reduced risk of complications such as persistent nerve pain (post-herpetic neuralgia).
+If you would like to proceed, let me know which pharmacy to fax your prescription to; the second dose is given 2-6 months after the first. If you have questions, please book an appointment to review.` },
+
+{ id:"email-lipids", cat:"Email", title:"Email - elevated cholesterol",
+  aliases:"cholesterol lipids email results diet statin",
+  body:
+`I received your blood work and want to let you know your cholesterol was higher than expected.
+<<At this point I recommend lifestyle changes to optimize cholesterol - the Mediterranean Diet or Portfolio Diet are the two best-studied approaches, emphasizing vegetables, fruits, nuts, and unsaturated fats while reducing animal fats and processed foods, along with regular cardio exercise.>>
+<<Given your overall risk category, it is reasonable to either attempt lifestyle changes alone or combine them with a cholesterol medication (statin) to decrease risk - happy to discuss if you would like.>>
+If you would like dietitian support, let me know and I can refer you.
+We should recheck blood work in 6 months. Please book an appointment if you have questions.` },
+
+{ id:"email-egfr", cat:"Email", title:"Email - reduced kidney function",
+  aliases:"eGFR kidney function email recheck",
+  body:
+`Your blood work looked good aside from a reduced kidney function result. There are many reasons kidney function can dip on a single test - dehydration, recent illness, lab variation - but we need to know whether it persists.
+Please complete the attached blood work requisition in 2 weeks. If there are any ongoing concerns I will call you.` },
+
+{ id:"email-prediabetes", cat:"Email", title:"Email - prediabetes result",
+  aliases:"prediabetes A1c sugar email result",
+  body:
+`I received your blood work and want to let you know your blood sugar is in the pre-diabetes range.
+For reference: under 6.0 = normal; 6.0-6.4 = pre-diabetes; 6.5+ on two tests = diabetes. Your result was •.
+My main suggestion is lifestyle change - decreasing refined carbohydrates such as pop, desserts, and "white carbs" (white bread, white rice, potatoes).
+If you would like dietitian support, please call the front desk to book in. We should recheck your blood sugar in 6 months. Book an appointment if you have any questions.` },
+
+{ id:"email-missed-appt", cat:"Email", title:"Email - missed appointment",
+  aliases:"no show missed appointment fee email policy",
+  body:
+`You were scheduled for an appointment today. To keep wait times low for everyone, please set reminders for your appointments and call to cancel as soon as possible if you cannot attend.
+<<As per clinic policy, missed appointments without notice are subject to a fee of •, payable before rebooking. Please contact the office regarding payment.>>
+<<If there were exceptional circumstances leading to the missed appointment, please let us know.>>
+Thank you for your understanding.` },
+
+{ id:"email-mammogram", cat:"Email", title:"Email - mammogram booking",
+  aliases:"mammogram booking email breast screening",
+  body:
+`You are due for a mammogram this •. There are two options for booking:
+1. Call the phone number on the attached requisition.
+2. Book online through the diagnostic imaging department's website.
+Please book a follow-up appointment if you have any questions or concerns.
+Sincerely,` }
 ];
 
 /* ================= App ================= */

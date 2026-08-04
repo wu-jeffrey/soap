@@ -1,7 +1,8 @@
 # SOAP Quick Paste
 
-A single-file template picker for family medicine charting. 114 common presentations
-as brief SOAP notes — type a couple of letters, press Enter, and the note is on your
+A single-file template picker for family medicine charting. 158 templates — common presentations
+as brief SOAP notes, exam blocks, procedure notes, letters, and patient emails —
+type a couple of letters, press Enter, and the note is on your
 clipboard, ready to paste into PSS with tabbable `<<fields>>` for the blanks.
 
 **Use it here: https://tinyurl.com/soapqp** (easy to remember and dictate)
