@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>SOAP Quick Paste — Family Medicine Templates</title>
+<title>FM Guidelines</title>
 <style>
   :root {
     --mint: #a9d6ca;
@@ -338,7 +338,7 @@
 <body>
 <header>
   <div class="brand">
-    <h1>SOAP Quick Paste</h1>
+    <h1>FM Guidelines</h1>
     <span id="count"></span>
   </div>
   <div class="actions">
@@ -3141,20 +3141,29 @@ searchEl.addEventListener("input", () => {
   render();
 });
 
-searchEl.addEventListener("keydown", e => {
+function navKeys(e) {
   const res = results();
   const idx = res.findIndex(t => t.id === selId);
   if (e.key === "ArrowDown") {
     e.preventDefault();
     if (res.length) { selId = res[Math.min(idx + 1, res.length - 1)].id; render(); }
+    return true;
   } else if (e.key === "ArrowUp") {
     e.preventDefault();
     if (res.length) { selId = res[Math.max(idx - 1, 0)].id; render(); }
+    return true;
   } else if (e.key === "Enter") {
     e.preventDefault();
     const t = res.find(x => x.id === selId) || res[0];
     if (t) copyTemplate(t);
-  } else if (e.key === "Escape") {
+    return true;
+  }
+  return false;
+}
+
+searchEl.addEventListener("keydown", e => {
+  if (navKeys(e)) return;
+  if (e.key === "Escape") {
     searchEl.value = ""; query = ""; selId = null; render();
   }
 });
@@ -3166,6 +3175,9 @@ window.addEventListener("keydown", e => {
   }
   const tag = (e.target.tagName || "").toLowerCase();
   if (tag === "input" || tag === "textarea") return;
+  // Enter/arrows keep working after a row click moves focus off the search box;
+  // buttons keep native Enter so a focused copy button can't double-fire
+  if (tag !== "button" && navKeys(e)) return;
   if (e.key === "/" ) { e.preventDefault(); searchEl.focus(); return; }
   // any printable character focuses search so he can just start typing
   if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) searchEl.focus();
