@@ -1,9 +1,9 @@
-# SOAP Quick Paste
+# FM Guidelines (template quick-paste)
 
-A single-file template picker for family medicine charting. 158 templates — common presentations
-as brief SOAP notes, exam blocks, procedure notes, letters, and patient emails —
-type a couple of letters, press Enter, and the note is on your
-clipboard, ready to paste into PSS with tabbable `<<fields>>` for the blanks.
+A single-page template picker for family medicine charting. ~158 templates — common
+presentations as brief SOAP notes, exam blocks, procedure notes, letters, and patient
+emails — type a couple of letters, press Enter, and the note is on your clipboard,
+ready to paste into PSS with tabbable `<<fields>>` for the blanks.
 
 **Use it here: https://tinyurl.com/soapqp** (easy to remember and dictate)
 
@@ -16,17 +16,14 @@ clinic filters, the permanent one always works.
 1. Open the link above on each exam-room computer.
 2. Bookmark it (or set it as a pinned tab) so it sits next to the EMR tab all day.
 
-No install, no account, no login. The page is static — after it loads it makes
-no further network requests, so it keeps working even if the connection drops
-mid-clinic. Offline fallback: `File → Save Page As…` gives you a local copy
-([index.html](index.html)) that works with no internet at all.
+No install, no account, no login needed to read and copy.
 
 ## Daily use
 
-1. Click the Quick Paste tab (or `Cmd/Ctrl+Tab` to it).
+1. Click the tab (or `Cmd/Ctrl+Tab` to it).
 2. Just start typing — the search box is always live: `uti`, `knee`, `pap`, `cold`…
    Lay terms and abbreviations work too ("pink eye", "strep", "BP").
-3. Press **Enter** — the top match is copied.
+3. Press **Enter** — the selected (or top) match is copied.
 4. Switch to PSS and paste. Everything in brackets (guillemets `« »` by default —
    PSS's native field markers) is a fill-in field — press **Tab** in PSS to jump
    through them: **type** to fill in a blank, or **delete** an option you're not
@@ -36,29 +33,46 @@ mid-clinic. Offline fallback: `File → Save Page As…` gives you a local copy
 Keyboard: type anywhere to search · `↑`/`↓` select · `Enter` copy · `Esc` clear.
 Templates you use most float to the top of the list.
 
-Top-right buttons: **bracket style** (guillemets `« »` default, or `<< >>`,
-`[ ]`, `( )`, or any custom pair — match whatever your PSS actually accepts) and
-a **light/dark theme** toggle. Both choices are remembered per browser.
+Top-right buttons: **✎ edit mode** (see below), **bracket style** (guillemets `« »`
+default, or `<< >>`, `[ ]`, `( )`, or any custom pair) and a **light/dark theme**
+toggle. Bracket and theme choices are remembered per browser.
 
-## Customizing
+## Editing templates (passphrase required)
 
-Templates live in [index.html](index.html) — one deployed source of truth, so a
-change shows up in every exam room within minutes of a push. To reword a
-template, add one, or turn a tabbable field into your standard plain text
-(your go-to drug, your usual follow-up), tell the maintainer what you want and
-it gets baked in for everyone. Conventions: wrap anything tabbable in
-`<<...>>`; give either/or options their own self-contained `<<field>>` (with
-punctuation inside) so deleting one leaves a clean sentence.
+Click the **pencil** button (top right) and enter the edit passphrase — once per
+browser. While unlocked:
+
+- **Edit** / **Delete** buttons appear on the previewed template.
+- **+ New** (top right) adds a template: title, category, search keywords, body.
+- Saves go live on **every computer within seconds** (other computers pick the
+  change up next time the page loads).
+
+Conventions: wrap anything tabbable in `<<...>>` (shown as `« »` etc. per the
+bracket setting); give either/or options their own self-contained `<<field>>`
+(punctuation inside) so deleting one leaves a clean sentence. Fields must never
+nest. Deletes are soft — every change is kept in history and can be restored by
+the maintainer.
 
 ## Privacy
 
-- The page makes **no network requests** — nothing is sent anywhere, ever.
-  You can verify: it works with Wi-Fi turned off.
-- It stores **no patient data**. The only thing it touches is your clipboard,
-  and only when you press copy.
-- Keep it that way: never put patient identifiers into a template.
-- The file itself contains only generic templates, so emailing it to yourself
-  or carrying it on a USB stick is fine.
+- **Nothing you type or copy is ever sent anywhere.** The page's only network
+  request is *downloading* the shared template list when it opens.
+- It stores **no patient data** — never put patient identifiers into a template.
+- If the connection drops, the page keeps working from its last-synced copy of
+  the templates.
+
+## How it works (maintainer notes)
+
+- `index.html` — the whole app, served by GitHub Pages. Templates baked into the
+  file are only a fallback snapshot; the live list comes from the API.
+- `worker/` — a Cloudflare Worker (`fm-templates-api`) with a D1 (SQLite)
+  database: public `GET /templates`, passphrase-gated create/update/delete, an
+  append-only `revisions` history, and soft deletes with `/restore`. Editors are
+  rows in an `editors` table (hashed passphrases), so adding a second editor is
+  one INSERT. Deploy with `npx wrangler deploy` from `worker/`.
+- `templates.json` — nightly snapshot of the library committed by the
+  [backup workflow](.github/workflows/backup.yml), so the data stays versioned
+  in git even though edits happen in the database.
 
 ## Disclaimer
 

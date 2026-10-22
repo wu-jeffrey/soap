@@ -271,7 +271,7 @@
   #themeBtn .sun { display: none; }
   :root[data-theme="dark"] #themeBtn .sun { display: block; }
   :root[data-theme="dark"] #themeBtn .moon { display: none; }
-  #overlay {
+  .overlay {
     position: fixed;
     inset: 0;
     background: rgba(10, 22, 19, .45);
@@ -281,16 +281,16 @@
     padding: 20px;
     z-index: 20;
   }
-  #overlay.hidden { display: none; }
-  #modal {
+  .overlay.hidden { display: none; }
+  .modal {
     background: var(--card);
     border-radius: 20px;
     box-shadow: var(--shadow);
     padding: 20px 22px;
     width: min(430px, 100%);
   }
-  #modal h3 { margin: 0 0 4px; font-size: 16px; }
-  #modal .hint { margin: 0 0 10px; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
+  .modal h3 { margin: 0 0 4px; font-size: 16px; }
+  .modal .hint { margin: 0 0 10px; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
   .opt {
     display: flex;
     align-items: center;
@@ -326,7 +326,54 @@
     outline: none;
   }
   #customRow input:focus { border-color: var(--teal); }
-  .modalbtns { display: flex; justify-content: flex-end; margin-top: 8px; }
+  .modalbtns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+  .modal label.f { display: block; margin: 10px 0 0; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .modal input.txt, .modal textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 13.5px;
+    margin-top: 4px;
+    padding: 9px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--inset);
+    color: var(--ink);
+    outline: none;
+  }
+  .modal input.txt:focus, .modal textarea:focus { border-color: var(--teal); }
+  .modal textarea {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 260px;
+    resize: vertical;
+  }
+  #editModal { width: min(680px, 100%); max-height: 92vh; overflow-y: auto; }
+  button.ghost {
+    background: var(--inset);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: color .15s ease;
+  }
+  button.ghost:hover { color: var(--teal-deep); }
+  button.danger {
+    background: transparent;
+    border: 1px solid rgba(220, 80, 80, .5);
+    color: #d05050;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  button.danger:hover { background: rgba(220, 80, 80, .12); }
+  .iconbtn.on { background: var(--teal); color: #fff; }
+  .iconbtn.on:hover { background: var(--teal-deep); color: #fff; }
+  #newBtn { font-size: 12.5px; }
+  #newBtn.hidden { display: none; }
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }
@@ -342,6 +389,10 @@
     <span id="count"></span>
   </div>
   <div class="actions">
+    <button id="newBtn" class="iconbtn hidden" title="Add a new template">+ New</button>
+    <button id="editBtn" class="iconbtn" title="Edit templates">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+    </button>
     <button id="brkBtn" class="iconbtn" title="Field bracket style"></button>
     <button id="themeBtn" class="iconbtn" title="Light / dark theme">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -370,14 +421,15 @@
     option). Bracket style and light/dark theme: top-right buttons.
   </div>
   <div>
-    100% local: this page makes no network requests and stores no patient data. Templates are starting
-    points — verify all clinical content, doses, and follow-ups yourself. Never type patient identifiers
+    No patient data: nothing you type or copy ever leaves this page. Templates sync from the shared
+    template library, so an edit made on one computer shows up on all of them. Templates are starting
+    points — verify all clinical content, doses, and follow-ups yourself. Never put patient identifiers
     into templates.
   </div>
 </footer>
 
-<div id="overlay" class="hidden">
-  <div id="modal">
+<div id="overlay" class="overlay hidden">
+  <div class="modal">
     <h3>Field brackets</h3>
     <p class="hint">How fill-in fields are wrapped when a note is copied. Guillemets are PSS-native —
     Tab jumps field to field, and accepting a default strips the brackets from the note.</p>
@@ -391,6 +443,41 @@
       <input id="cClose" maxlength="4" placeholder="close" autocomplete="off">
     </div>
     <div class="modalbtns"><button id="doneBtn" class="primary">Done</button></div>
+  </div>
+</div>
+
+<div id="unlockOverlay" class="overlay hidden">
+  <div class="modal">
+    <h3>Edit templates</h3>
+    <p class="hint">Enter the edit passphrase. Changes you save go live on every computer that uses this page.</p>
+    <input id="passInput" class="txt" type="password" placeholder="Passphrase" autocomplete="off">
+    <div class="modalbtns">
+      <button id="unlockCancel" class="ghost">Cancel</button>
+      <button id="unlockBtn" class="primary">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<div id="editOverlay" class="overlay hidden">
+  <div class="modal" id="editModal">
+    <h3 id="editHeading">Edit template</h3>
+    <label class="f">Title
+      <input id="eTitle" class="txt" autocomplete="off">
+    </label>
+    <label class="f">Category
+      <input id="eCat" class="txt" list="catList" autocomplete="off">
+    </label>
+    <datalist id="catList"></datalist>
+    <label class="f">Search keywords (what you'd type to find it)
+      <input id="eAliases" class="txt" autocomplete="off">
+    </label>
+    <label class="f">Note — wrap fill-in fields as &lt;&lt;field&gt;&gt;
+      <textarea id="eBody" spellcheck="false"></textarea>
+    </label>
+    <div class="modalbtns">
+      <button id="editCancel" class="ghost">Cancel</button>
+      <button id="editSave" class="primary">Save</button>
+    </div>
   </div>
 </div>
 
@@ -2901,8 +2988,27 @@ let selId = null;
 const $ = id => document.getElementById(id);
 const searchEl = $("search"), listEl = $("list"), previewEl = $("preview");
 
+/* Templates come from the shared library API; the last synced copy is cached
+   per browser, and the baked-in DEFAULTS below are the fallback of last resort. */
+const API = "https://fm-templates-api.jeff-jiang-wu.workers.dev";
+
+let templates = LS.get("sqp_templates", null) || DEFAULTS;
+
 function allTemplates() {
-  return DEFAULTS;
+  return templates;
+}
+
+async function syncTemplates() {
+  try {
+    const r = await fetch(API + "/templates", { cache: "no-store" });
+    if (!r.ok) return;
+    const data = await r.json();
+    if (Array.isArray(data) && data.length) {
+      templates = data;
+      LS.set("sqp_templates", data);
+      render();
+    }
+  } catch (e) { /* offline — keep the cached/baked templates */ }
 }
 
 function matchScore(t, tokens) {
@@ -3001,6 +3107,18 @@ function renderPreview() {
   copyBtn.textContent = "Copy (Enter)";
   copyBtn.addEventListener("click", () => copyTemplate(t));
 
+  if (editor) {
+    const editB = document.createElement("button");
+    editB.className = "ghost";
+    editB.textContent = "Edit";
+    editB.addEventListener("click", () => openEditModal(t));
+    const delB = document.createElement("button");
+    delB.className = "danger";
+    delB.textContent = "Delete";
+    delB.addEventListener("click", () => deleteTemplate(t));
+    btns.appendChild(editB);
+    btns.appendChild(delB);
+  }
   btns.appendChild(copyBtn);
 
   head.appendChild(h2);
@@ -3133,6 +3251,145 @@ $("brkBtn").addEventListener("click", openModal);
 $("doneBtn").addEventListener("click", closeModal);
 $("overlay").addEventListener("click", e => { if (e.target === $("overlay")) closeModal(); });
 
+/* ---------- editing (passphrase-gated, synced through the template API) ---------- */
+
+let editor = LS.get("sqp_editor", null);   // {token, name} once unlocked
+let editingId = null;                      // id being edited, or null for a new template
+
+function applyEditChrome() {
+  $("newBtn").classList.toggle("hidden", !editor);
+  $("editBtn").classList.toggle("on", !!editor);
+  $("editBtn").title = editor ? "Lock editing (" + editor.name + ")" : "Edit templates";
+  render();
+}
+
+async function api(method, path, body) {
+  const headers = { "Content-Type": "application/json" };
+  if (editor) headers.Authorization = "Bearer " + editor.token;
+  const r = await fetch(API + path, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if (r.status === 401) {
+    editor = null;
+    LS.set("sqp_editor", null);
+    applyEditChrome();
+    throw new Error("Passphrase no longer valid — unlock again");
+  }
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.error || "Request failed (" + r.status + ")");
+  return data;
+}
+
+$("editBtn").addEventListener("click", () => {
+  if (editor) {
+    editor = null;
+    LS.set("sqp_editor", null);
+    applyEditChrome();
+    toast("Editing locked");
+  } else {
+    $("passInput").value = "";
+    $("unlockOverlay").classList.remove("hidden");
+    $("passInput").focus();
+  }
+});
+
+async function tryUnlock() {
+  const pass = $("passInput").value;
+  if (!pass) return;
+  try {
+    const r = await fetch(API + "/auth", { method: "POST", headers: { Authorization: "Bearer " + pass } });
+    if (!r.ok) { toast("Wrong passphrase"); return; }
+    const data = await r.json();
+    editor = { token: pass, name: data.editor.name };
+    LS.set("sqp_editor", editor);
+    $("unlockOverlay").classList.add("hidden");
+    applyEditChrome();
+    searchEl.focus();
+    toast("Editing unlocked — changes go live everywhere");
+  } catch (e) {
+    toast("Can't reach the template server");
+  }
+}
+$("unlockBtn").addEventListener("click", tryUnlock);
+$("unlockCancel").addEventListener("click", () => { $("unlockOverlay").classList.add("hidden"); searchEl.focus(); });
+$("unlockOverlay").addEventListener("click", e => { if (e.target === $("unlockOverlay")) $("unlockOverlay").classList.add("hidden"); });
+$("passInput").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); tryUnlock(); } });
+
+function openEditModal(t) {
+  editingId = t ? t.id : null;
+  $("editHeading").textContent = t ? "Edit template" : "New template";
+  $("eTitle").value = t ? t.title : "";
+  $("eCat").value = t ? (t.cat || "") : "";
+  $("eAliases").value = t ? (t.aliases || "") : "";
+  $("eBody").value = t ? t.body : "";
+  const cats = [...new Set(allTemplates().map(x => x.cat).filter(Boolean))].sort();
+  $("catList").textContent = "";
+  for (const c of cats) {
+    const o = document.createElement("option");
+    o.value = c;
+    $("catList").appendChild(o);
+  }
+  $("editOverlay").classList.remove("hidden");
+  $("eTitle").focus();
+}
+
+function editDirty() {
+  const t = editingId ? allTemplates().find(x => x.id === editingId) : null;
+  return $("eTitle").value !== (t ? t.title : "") ||
+         $("eCat").value !== (t ? (t.cat || "") : "") ||
+         $("eAliases").value !== (t ? (t.aliases || "") : "") ||
+         $("eBody").value !== (t ? t.body : "");
+}
+
+function closeEditModal(force) {
+  if (!force && editDirty() && !confirm("Discard unsaved changes?")) return;
+  $("editOverlay").classList.add("hidden");
+  searchEl.focus();
+}
+
+async function saveEdit() {
+  const body = {
+    title: $("eTitle").value.trim(),
+    cat: $("eCat").value.trim(),
+    aliases: $("eAliases").value.trim(),
+    body: $("eBody").value
+  };
+  if (!body.title) { toast("Title is required"); return; }
+  if (!body.body.trim()) { toast("The note body is required"); return; }
+  $("editSave").disabled = true;
+  try {
+    const saved = editingId
+      ? await api("PUT", "/templates/" + encodeURIComponent(editingId), body)
+      : await api("POST", "/templates", body);
+    await syncTemplates();
+    selId = saved.id;
+    render();
+    closeEditModal(true);
+    toast("Saved — live on every computer");
+  } catch (e) {
+    toast(e.message);
+  } finally {
+    $("editSave").disabled = false;
+  }
+}
+$("editSave").addEventListener("click", saveEdit);
+$("editCancel").addEventListener("click", () => closeEditModal(false));
+$("editOverlay").addEventListener("click", e => { if (e.target === $("editOverlay")) closeEditModal(false); });
+$("newBtn").addEventListener("click", () => openEditModal(null));
+
+async function deleteTemplate(t) {
+  if (!confirm('Delete "' + t.title + '"? It disappears everywhere, but can be restored.')) return;
+  try {
+    await api("DELETE", "/templates/" + encodeURIComponent(t.id));
+    await syncTemplates();
+    toast("Deleted");
+  } catch (e) {
+    toast(e.message);
+  }
+}
+
 /* ---------- keyboard ---------- */
 
 searchEl.addEventListener("input", () => {
@@ -3169,6 +3426,14 @@ searchEl.addEventListener("keydown", e => {
 });
 
 window.addEventListener("keydown", e => {
+  if (!$("unlockOverlay").classList.contains("hidden")) {
+    if (e.key === "Escape") { $("unlockOverlay").classList.add("hidden"); searchEl.focus(); }
+    return;
+  }
+  if (!$("editOverlay").classList.contains("hidden")) {
+    if (e.key === "Escape") closeEditModal(false);
+    return;
+  }
   if (!$("overlay").classList.contains("hidden")) {
     if (e.key === "Escape") closeModal();
     return;
@@ -3185,7 +3450,8 @@ window.addEventListener("keydown", e => {
 
 /* ---------- init ---------- */
 applySettings();
-render();
+applyEditChrome();
+syncTemplates();
 searchEl.focus();
 </script>
 </body>

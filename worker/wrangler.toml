@@ -1,0 +1,11 @@
+name = "fm-templates-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fm_templates"
+database_id = "fc6d69cb-34be-4684-8e85-9e4b36bdc149"
+
+[observability]
+enabled = true
