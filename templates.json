@@ -103,9 +103,9 @@
         "title": "Pediatric fever (no focus)",
         "cat": "ENT/Resp",
         "aliases": "fever child peds temperature febrile kid",
-        "body": "S: Fever x <<#>> days, Tmax \u2022 at home. Drinking well, urine output normal. Playful between fevers. Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Cap refill under 2 s\nHEENT: TMs normal x2, oropharynx normal, neck supple\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2\nAbdo: SNTND\nDerm: no rash, no petechiae\nA: Fever without focus - well child, likely viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Fever x <<#>> days, Tmax \u2022 at home. Drinking well, urine output normal. Playful between fevers. Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Nontoxic appearing. Cap refill < 2 s\nHEENT: TMs normal x2, oropharynx normal, neck supple\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur\nAbdo: SNTND\nDerm: no rash, no petechiae\n\nA: Fever without focus - well child, likely viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress",
+        "updated_at": "2026-10-26T20:10:59Z",
+        "updated_by": "James"
     },
     {
         "id": "ili",
@@ -1420,5 +1420,23 @@
         "body": "You are due for a mammogram this \u2022. There are two options for booking:\n1. Call the phone number on the attached requisition.\n2. Book online through the diagnostic imaging department's website.\nPlease book a follow-up appointment if you have any questions or concerns.\nSincerely,",
         "updated_at": "2026-10-22T07:27:38Z",
         "updated_by": "migration"
+    },
+    {
+        "id": "incision-drainage",
+        "title": "Incision & Drainage",
+        "cat": "Procedure",
+        "aliases": "I&D, incision",
+        "body": "Procedure note I&D\nsharps: 1x 25G needle\n- 1x Scalpel blade\n\n- Area prepped & sterilized\n- Local anesthesia w 0.5cc 1% xylocaine w epi\n\n- Incision made with \n- +++purulent drainage from abscess,\n- Well tolerated w immediate relief\n- no complications\n- Counts correct\n\nJHuynh\n(Z101)",
+        "updated_at": "2026-10-26T20:24:36Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "bloodwork-counselling",
+        "title": "Bloodwork counselling",
+        "cat": "",
+        "aliases": "bloodwork, BW",
+        "body": "- long discussion re: evidence-based indications for bw and the limitations/potential risks of broad screening for vitamin/mineral deficiencies in the absence of any symptoms or risk factors. Explained the possibility of potentially clinically insignificant abnormalities that can lead to unnecessary investigations/stress/anxiety etc.\n- Advised that if he wishes to pursue additional testing recommended by another physician, he should do so through that provider or through private pay",
+        "updated_at": "2026-10-26T20:47:48Z",
+        "updated_by": "James"
     }
 ]
