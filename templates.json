@@ -4,72 +4,72 @@
         "title": "Viral URTI (common cold)",
         "cat": "ENT/Resp",
         "aliases": "cold flu congestion runny nose rhinorrhea virus upper respiratory",
-        "body": "S: Nasal congestion, rhinorrhea, sore throat, mild cough x <<#>> days. Denies SOB, chest pain, hemoptysis. <<No fever.>><<Low-grade fever at home.>> Fluids well.\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx mildly injected, no exudate. TMs normal x2. Neck supple, no cervical LN\nA: Viral URTI, day <<#>> of symptoms\nP:\n- Discussed symptoms may take 10-14 days to fully resolve\n- Supportive care: hydration, rest, tylenol/advil, saline nasal spray, humidifier\n- Antibiotics not indicated - rationale discussed\n- RTC/RTED instructions reviewed, including no improvement or worsening symptoms, decreased oral intake or urine output, SOB, resp distress, new fever or fever beyond 5 days",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: URTI\nmild cough x <<#>> days, nasal congestion, rhinorrhea, sore throat\nDenies SOB, chest pain, hemoptysis. \n<<No fever.>><<Low-grade fever at home.>> \n<<General fatigue, but otherwise systemically well>><<Myalgias, malaise, lethargy>>\nTolerating fluids & PO well\n\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: well, NAD, full sentences\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx mildly injected, no exudate. TMs normal x2. Neck supple, no cervical LN\n\nA: Viral URTI, day <<#>> of symptoms\nP:\n- Reassurance on conservative management counselled - Discussed symptoms may take 14 days to fully resolve\n- Supportive care discussed: hydration, honey, rest, tylenol/advil PRN, saline nasal spray, humidifier\n- Imaging & Antibiotics not indicated - rationale discussed\n- RTC/RTED instructions reviewed, including new/worsening fever, SOB, lethargy, resp distress, etc.\n\n",
+        "updated_at": "2026-10-27T16:25:33Z",
+        "updated_by": "James"
     },
     {
         "id": "pharyngitis",
         "title": "Pharyngitis / strep throat",
         "cat": "ENT/Resp",
         "aliases": "strep throat tonsillitis odynophagia centor swab sore",
-        "body": "S: Sore throat x <<#>> days with odynophagia. Denies drooling, stridor, trismus, neck stiffness.\nCentor: Temp over 38 <<yes (1)>><<no (0)>>; absent cough <<yes (1)>><<no (0)>>; tender anterior LN <<yes (1)>><<no (0)>>; tonsillar swelling/exudate <<yes (1)>><<no (0)>>; age 3-14 (+1), 15-44 (0), 45+ (-1)\nScore: \u2022 (0-1 no swab/abx; 2-3 swab, treat if positive; 4+ swab, consider empiric)\nO:\nT: \u2022  HR: \u2022\nGen: well, NAD\nHEENT: Oropharynx erythematous<<, tonsillar exudate>>. <<Tender anterior cervical LN.>> No peritonsillar swelling, uvula midline. Neck supple\nResp: Normal WOB, GAEB\nA: <<Viral pharyngitis>><<Suspected strep pharyngitis - swab sent>>\nP:\n- Supportive care: salt water gargles, analgesia PRN, hydration\n- <<If swab positive: penicillin V 300 mg TID x 10 days.>><<Amoxicillin 500 mg BID x 10 days.>>\n- RTC/RTED instructions reviewed, including unable to swallow, drooling, worsening despite treatment",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Sore throat \n- x <<#>> days with odynophagia. \n- Denies drooling, stridor, trismus, neck stiffness\n- <<No cough or other URTI symptoms>><<Other URTI symptoms present, including cough, congestion, coryza>>\n- <<No fever>><<Fever, Tmax at home ***>>\n- Has <<not>> noticed tonsillar exudate\n- No recent travel or sick contacts\n- Otherwise systemically well\n\nO:\nT: \u2022  HR: \u2022  SpO2: <<***>>+ on RA\nGen: well, NAD\nHEENT: Oropharynx erythematous, <<No>> tonsillar exudate present. \n- <<No cervical lymphadenopathy>><<Tender anterior cervical LN.>> \n- No peritonsillar swelling, uvula midline. Neck supple\nResp: Normal RR/WOB, GAEB, no wheeze/crackles\n\nA: <<Viral pharyngitis>><<Suspected strep pharyngitis - swab sent>>\n- Centor: Temp over 38 <<Y (1)>><<N (0)>>; absent cough <<Y (1)>><<N (0)>>; tender anterior LN <<Y (1)>><<N (0)>>; tonsillar swelling/exudate <<Y (1)>><<N (0)>>; age 3-14 (+1), 15-44 (0), 45+ (-1)\nScore: \u2022 (0-1 no swab/abx; 2-3 swab, treat if positive; 4+ swab, consider empiric)\n\nP:\n- Supportive care: salt water gargles, analgesia PRN, hydration\n- <<If swab positive: penicillin V 300 mg TID x 10 days.>><<Amoxicillin 500 mg BID x 10 days.>>\n- RTC/RTED instructions reviewed, including unable to swallow, drooling, worsening despite treatment",
+        "updated_at": "2026-10-27T17:36:58Z",
+        "updated_by": "James"
     },
     {
         "id": "aom",
         "title": "Acute otitis media",
         "cat": "ENT/Resp",
         "aliases": "ear infection earache otalgia tympanic peds child AOM",
-        "body": "S: <<R>><<L>> ear pain x <<#>> days, post-URTI. <<Fever.>> Denies otorrhea, hearing loss, vertigo. Immunizations UTD.\nO:\nT: \u2022\nGen: well, NAD\nHEENT: <<R>><<L>> TM erythematous and bulging, reduced mobility; contralateral TM normal. No mastoid tenderness. Oropharynx normal, neck supple\nResp: GAEB, no wheeze/crackles\nA: Acute otitis media, <<R>><<L>>\nP:\n- <<Watchful waiting 48 h with analgesia; abx if not settling.>><<Amoxicillin 90 mg/kg/day divided BID x 5-10 days (peds).>><<Amoxicillin 500 mg TID x 5-7 days (adult).>>\n- Analgesia PRN - tylenol/advil\n- RTC/RTED instructions reviewed, including persistent fever beyond 48 h on abx, otorrhea, mastoid pain, worsening",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: <<R>><<L>> ear pain x <<#>> days\n- <<post-URTI>>>\n- <<No>> Fever\n- Denies otorrhea, hearing loss, vertigo, tinnitus. Immunizations UTD.\n\nO:\nT: \u2022\nGen: well, NAD\nHEENT: <<R>><<L>> TM erythematous and bulging; contralateral TM normal. \n- No mastoid tenderness. Oropharynx normal, neck supple\nResp: GAEB, no wheeze/crackles, normal RR/WOB\n\nA: Acute otitis media, <<R>><<L>>\nP:\n- <<Watchful waiting 48 h with analgesia; abx if not settling.>><<Amoxicillin 90 mg/kg/day divided BID x 5-10 days (peds).>><<Amoxicillin 500 mg TID x 5-7 days (adult).>>\n- Analgesia PRN - tylenol/advil\n- RTC/RTED instructions reviewed, including persistent fever beyond 48 h on abx, otorrhea, mastoid pain, worsening",
+        "updated_at": "2026-10-27T17:38:13Z",
+        "updated_by": "James"
     },
     {
         "id": "otitis-externa",
         "title": "Otitis externa",
         "cat": "ENT/Resp",
         "aliases": "swimmers ear canal discharge tragal drops",
-        "body": "S: <<R>><<L>> ear pain and itch x <<#>> days after <<swimming/water exposure>><<Q-tip use>>. <<Discharge.>> Denies fever, hearing loss, vertigo.\nO:\nGen: well, NAD, afebrile\nHEENT: <<R>><<L>> canal edematous, erythematous with debris; pain on tragal pressure. TM <<visualized, intact>><<obscured by debris>>. No cellulitis of pinna, no mastoid tenderness\nA: Otitis externa, <<R>><<L>>\nP:\n- Ciprodex 4 gtts BID x 7 days\n- Keep ear dry; analgesia PRN\n- RTC/RTED instructions reviewed, including fever, spreading redness, no improvement in 48-72 h",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Otitis Externa\n- <<R>><<L>> ear pain and itch x <<#>> days \n- Risk factors: <<swimming/water exposure>><<Q-tip use>>\n- <<No>> discharge/otorrhea present\n- Denies fever, hearing loss, vertigo, tinnitus\n- Otherwise systemically well\n\nO:\nGen: well, NAD, afebrile\nHEENT: <<R>><<L>> canal edematous, erythematous with debris; pain on tragal pressure. TM <<visualized, intact>><<obscured by debris>>. No cellulitis of pinna, no mastoid tenderness\n\nA: Otitis externa, <<R>><<L>>\nP:\n- Ciprodex 4 gtts BID x 7 days\n- Counselled re: conservative treatment: Keep ear dry, analgesia PRN\n- RTC/RTED instructions reviewed, including fever, spreading redness, no improvement in 48-72 h",
+        "updated_at": "2026-10-27T17:40:09Z",
+        "updated_by": "James"
     },
     {
         "id": "sinusitis",
         "title": "Acute sinusitis",
         "cat": "ENT/Resp",
         "aliases": "sinus facial pressure rhinosinusitis purulent PODS",
-        "body": "S: Facial pressure and congestion x <<#>> days. Denies periorbital swelling, vision changes, severe headache, neck stiffness, altered LOC.\nPODS (symptoms over 7 days or worsening after 5-7): Pain/pressure/fullness <<Y>><<N>>; Obstruction <<Y>><<N>>; Discharge - purulent/discoloured <<Y>><<N>>; Smell disorder <<Y>><<N>>\n<<Worsened after initial improvement.>>\nO:\nT: \u2022  HR: \u2022\nGen: well, NAD\nHEENT: Tenderness over <<maxillary>><<frontal>> sinuses. Nasal mucosa edematous, <<purulent>> discharge. No periorbital swelling/erythema. Oropharynx normal\nNeuro: grossly normal\nA: <<Viral rhinosinusitis>><<Bacterial sinusitis - meets PODS criteria>>\nP:\n- Supportive care: hydration, rest, tylenol/advil, saline rinses, humidifier\n- <<Amoxicillin 500 mg TID x 10 days Rx sent.>>\n- <<Trial INCS - intranasal corticosteroid Rx sent, side effects discussed.>>\n- RTC/RTED instructions reviewed, including periorbital swelling, vision changes, severe headache, worsening after 5-7 days",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Sinusitis\n- Facial pressure and congestion x <<#>> days. \n- Denies periorbital swelling, vision changes, severe headache, neck stiffness, altered LOC.\n- PODS (symptoms over 7 days or worsening after 5-7): Pain/pressure/fullness <<Y>><<N>>; Obstruction <<Y>><<N>>; Discharge - purulent/discoloured <<Y>><<N>>; Smell disorder <<Y>><<N>>\n<<- Double worsening (Worsened after initial improvement.>>\n\nO:\nT: \u2022  HR: \u2022\nGen: well, NAD\nHEENT: Tenderness over <<maxillary>><<frontal>> sinuses. \n- Nasal mucosa edematous, <<purulent>> discharge. \n- No periorbital swelling/erythema. Oropharynx normal. Neck supple\nNeuro: PERLA, EOMs full and painless, VA normal, no diplopia. CN exam grossly normal. Moving all 4 extremities. \n\nA: <<Viral rhinosinusitis>><<Bacterial sinusitis - meets PODS criteria>>\nP:\n- Supportive care: hydration, rest, tylenol/advil, saline rinses, humidifier\n- <<Amoxicillin 500 mg TID x 10 days Rx sent.>>\n- <<Trial INCS - intranasal corticosteroid Rx sent, side effects discussed.>>\n- RTC/RTED instructions reviewed, including periorbital swelling, vision changes, severe headache, worsening after 5-7 days",
+        "updated_at": "2026-10-27T17:42:07Z",
+        "updated_by": "James"
     },
     {
         "id": "bronchitis",
         "title": "Cough / acute bronchitis",
         "cat": "ENT/Resp",
         "aliases": "cough chest cold sputum post viral bronchitis",
-        "body": "S: Cough x <<#>> days<<, post-URTI>>. Denies fever, SOB, hemoptysis, chest pain. <<Non-smoker.>><<Smoker, # pack-years.>>\nO:\nBP: \u2022  HR: \u2022  SpO2: \u2022\nGen: alert, NAD, full sentences\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx normal, no erythema/exudates, uvula midline, no tonsillar hypertrophy\n- Neck supple, no cervical LN\nA: <<Viral URTI with cough>><<Acute bronchitis>>\nP:\n- Reassurance and continue conservative management - recommended rest, frequent hydration, honey, warm humidified air\n- <<Trial bronchodilator for wheeze - SABA/Symbicort Rx sent.>>\n- <<Trial INCS - Omnaris Rx sent.>>\n- RTC/RTED instructions reviewed, including new/worsening fever, SOB, hemoptysis, lethargy",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Cough\n- Cough x <<#>> days<<, post-URTI>>. \n- Denies fever, SOB, hemoptysis, chest pain. \n- <<Non-smoker.>><<Smoker, # pack-years.>>\n\nO:\nBP: \u2022  HR: \u2022  SpO2: \u2022\nGen: alert, NAD, full sentences\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx normal, no erythema/exudates, uvula midline, no tonsillar hypertrophy\n- Neck supple, no cervical LN\n\nA: <<Viral URTI with cough>><<Acute bronchitis>>\nP:\n- Reassurance and continue conservative management - recommended rest, frequent hydration, honey, warm humidified air\n- <<Trial bronchodilator for wheeze - SABA/Symbicort Rx sent.>>\n- <<Trial INCS - Omnaris Rx sent.>>\n- RTC/RTED instructions reviewed, including new/worsening fever, SOB, hemoptysis, lethargy",
+        "updated_at": "2026-10-27T17:45:42Z",
+        "updated_by": "James"
     },
     {
         "id": "allergic-rhinitis",
         "title": "Allergic rhinitis",
         "cat": "ENT/Resp",
         "aliases": "hay fever allergies seasonal sneezing itchy eyes antihistamine",
-        "body": "S: Sneezing, itchy/watery eyes, clear rhinorrhea, congestion - <<seasonal>><<perennial>>. Triggers: \u2022. Denies fever, purulent discharge.\nO:\nGen: well, NAD\nHEENT: Pale boggy turbinates, clear discharge. Posterior pharyngeal cobblestoning. Conjunctivae mildly injected, no purulence. Neck supple, no cervical LN\nResp: GAEB, no wheeze\nA: Allergic rhinitis\nP:\n- INCS daily (technique reviewed) + non-sedating antihistamine PRN\n- Counselled on allergen avoidance\n- f/u if poor control - consider allergy testing\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Allergic rhinitis\n- Sneezing, itchy/watery eyes, clear rhinorrhea, congestion - <<seasonal>><<perennial>>. \n- Triggers: \u2022. Denies fever, purulent discharge.\n- <<Has tried OTC antihistamine / nasal sprays>>\n\nO:\nGen: well, NAD\nHEENT: Pale boggy turbinates, clear discharge. Posterior pharyngeal cobblestoning. Conjunctivae mildly injected, no purulence. Neck supple, no cervical LN\nResp: GAEB, no wheeze\n\nA: Allergic rhinitis\nP:\n- INCS daily (technique reviewed) + non-sedating antihistamine PRN\n- Counselled on allergen/trigger avoidance\n- f/u 4 -8 wks if poor control - consider allergy testing\n- RTC/RTED instructions reviewed\n\n",
+        "updated_at": "2026-10-27T17:47:03Z",
+        "updated_by": "James"
     },
     {
         "id": "asthma",
         "title": "Asthma follow-up",
         "cat": "ENT/Resp",
         "aliases": "wheeze inhaler puffer ventolin controller SABA ICS control",
-        "body": "S: Asthma review.\nDaytime symptoms over 2x/week <<yes (1)>><<no (0)>>\nNight symptoms <<yes (1)>><<no (0)>>\nReliever needed over 2x/week <<yes (1)>><<no (0)>>\nActivity limitation <<yes (1)>><<no (0)>>\nFEV1/peak flow under 80% personal best <<yes (1)>><<no (0)>>\nScore: \u2022 (0 = well controlled; 1-2 = partly controlled; 3+ = uncontrolled)\nAerochamber: <<yes>><<no>>. Smoker in home: <<yes>><<no>>. Triggers: \u2022\nO:\nHR: \u2022  SpO2: \u2022\nGen: well, NAD, speaking full sentences\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nA: Asthma - <<well>><<partly>><<un>>controlled\nP:\n- <<Continue current regimen.>><<Stepped up: \u2022.>>\n- Inhaler technique and written action plan reviewed\n- Influenza vaccine advised\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including increased reliever use, night symptoms, SOB",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Asthma review.\nDaytime symptoms over 2x/week <<yes (1)>><<no (0)>>\nNight symptoms <<yes (1)>><<no (0)>>\nReliever needed over 2x/week <<yes (1)>><<no (0)>>\nActivity limitation <<yes (1)>><<no (0)>>\nFEV1/peak flow under 80% personal best <<yes (1)>><<no (0)>>\nScore: \u2022 (0 = well controlled; 1-2 = partly controlled; 3+ = uncontrolled)\nAerochamber: <<yes>><<no>>. Smoker in home: <<yes>><<no>>. Triggers: \u2022\nO:\nHR: \u2022  SpO2: \u2022\nGen: well, NAD, speaking full sentences\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nA: Asthma - <<well>><<partly>><<un>>controlled\nP:\n- <<Continue current regimen.>><<Stepped up: \u2022.>>\n- Inhaler technique and written action plan reviewed\n- Influenza vaccine advised\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including increased reliever use, night symptoms, SOB\n\n",
+        "updated_at": "2026-10-27T17:47:10Z",
+        "updated_by": "James"
     },
     {
         "id": "copd",
@@ -94,17 +94,17 @@
         "title": "Croup (peds)",
         "cat": "ENT/Resp",
         "aliases": "barky cough stridor seal peds child westley",
-        "body": "S: Barky cough, hoarse voice x <<#>> days, worse at night, post-URTI. <<Stridor with agitation only.>><<No stridor at rest.>> Feeding well. Denies drooling, lethargy.\nO:\nT: \u2022  RR: \u2022  SpO2: \u2022\nGen: alert, NAD, non-toxic\nResp: No stridor at rest, no retractions or tracheal tug, GAEB. Barky cough noted\nA: Croup - <<mild>><<moderate>>\nP:\n- <<Dexamethasone 0.6 mg/kg PO x 1.>>\n- Fluids, antipyretics PRN, cool night air\n- RTC/RTED instructions reviewed with parents, including stridor at rest, retractions, cyanosis, drooling",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Cough\n- Barky cough, hoarse voice x <<#>> days, worse at night, post-URTI. \n- <<Stridor with agitation only.>><<No stridor at rest.>>\n- Feeding well. Denies drooling, lethargy. No fever\n\nO:\nT: \u2022  RR: \u2022  SpO2: \u2022\nGen: alert, NAD, non-toxic\nResp: No stridor at rest, no retractions or tracheal tug, GAEB. Barky cough noted\n\nA: Croup - <<mild>><<moderate>>\nP:\n- <<Dexamethasone 0.6 mg/kg PO x 1.>>\n- Fluids, antipyretics PRN, cool night air\n- RTC/RTED instructions reviewed with parents, including stridor at rest, retractions, cyanosis, drooling\n\n",
+        "updated_at": "2026-10-27T17:47:50Z",
+        "updated_by": "James"
     },
     {
         "id": "peds-fever",
         "title": "Pediatric fever (no focus)",
         "cat": "ENT/Resp",
         "aliases": "fever child peds temperature febrile kid",
-        "body": "S: Fever x <<#>> days, Tmax \u2022 at home. Drinking well, urine output normal. Playful between fevers. Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Nontoxic appearing. Cap refill < 2 s\nHEENT: TMs normal x2, oropharynx normal, neck supple\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur\nAbdo: SNTND\nDerm: no rash, no petechiae\n\nA: Fever without focus - well child, likely viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress",
-        "updated_at": "2026-10-26T20:10:59Z",
+        "body": "S: Fever x <<#>> days\n- Tmax \u2022 at home. \n- <<No other focus of infection, including cough/congestion/coryza, abdo pain, vomiting, diarrhea, LUTS, GI/GU bleeding, rash>>\n- Drinking well, urine output normal. \n- Playful between fevers. \n- Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Nontoxic appearing. Cap refill < 2 s\nHEENT: TMs normal x2, oropharynx normal, neck supple\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur\nAbdo: SNTND\nDerm: no rash, no petechiae\n\nA: Fever NYD - well child, no red flag signs/symptoms, suspect viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress\n\n",
+        "updated_at": "2026-10-27T17:49:15Z",
         "updated_by": "James"
     },
     {
@@ -166,9 +166,9 @@
         "title": "Snoring / OSA workup",
         "cat": "ENT/Resp",
         "aliases": "sleep apnea snoring tired epworth stopbang cpap",
-        "body": "S: Loud snoring with <<witnessed apneas>>, unrefreshing sleep, daytime sleepiness. Epworth \u2022/24. <<Morning headaches.>> No sedatives at night.\nO:\nBP: \u2022  BMI: \u2022\nNeck circumference: \u2022 cm\nHEENT: Oropharynx crowded - Mallampati \u2022\nA: Suspected OSA - STOP-BANG \u2022/8\nP:\n- Sleep study <<ordered>><<referral sent>>\n- Counselled on weight management, evening EtOH reduction\n- Drowsy-driving safety discussed\n- f/u with results",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: OSA\nLoud snoring with <<witnessed apneas>>, unrefreshing sleep, daytime sonnolence. Epworth \u2022/24. <<Morning headaches.>> \nNo sedatives at night.\n<<Symptoms while driving>>\n<<No>> Smoking/EtOH/substances\n\nO:\nBP: \u2022  HR: \u2022  BMI: \u2022\nNeck circumference: \u2022 cm\nHEENT: Oropharynx grossly normal; <<Crowding noted>>\n- <<No>> Tonsillar hypertrophy\n- <<Mallampati \u2022>>\nA: Suspected OSA - STOP-BANG <<\u2022>>/8\nP:\n- Sleep study <<ordered>>\n- Counselled on weight management, evening EtOH reduction, avoid sedatives, BP monitoring\n- Drowsy-driving safety discussed\n- f/u with results",
+        "updated_at": "2026-10-27T17:27:06Z",
+        "updated_by": "James"
     },
     {
         "id": "tinnitus",
@@ -238,9 +238,9 @@
         "title": "Chest pain",
         "cat": "Cardio/Metab",
         "aliases": "chest wall musculoskeletal costochondritis atypical ACS OPQRST",
-        "body": "S: Chest pain x <<#>> days\nOnset: <<at rest>><<w/ exertion>><<eating>><<stress>>\nCharacter: <<sharp>><<dull>><<pressure>>; Radiation: \u2022; Severity: \u2022/10\nAggravated: <<pleuritic>><<exertional>><<eating>><<stress>>; Alleviated: <<rest>><<antacid>><<analgesia>>\nAssociated: <<N/V>><<diaphoresis>><<SOB>><<orthopnea>><<PND>><<pedal edema>><<palpitations>><<presyncope>><<syncope>>\nHx of: <<CAD>><<CVD>><<DLP>><<HTN>><<DM>><<GERD>><<MSK>>. Smoking: \u2022 pack-years. FHx: \u2022\nPE risk: <<travel>><<immobility>><<cancer hx>><<recent surgery>><<hx PE/DVT>><<none>>\nO:\nBP: \u2022  HR: \u2022  Wt: \u2022\nGen: NAD, A+Ox3\nVolume: JVP not elevated, no crackles, no pedal edema\nCVS: NS1/2, no murmurs, no S3/S4\nResp: GAEB, no adventitious sounds, normal WOB\nChest wall: <<tenderness reproducing pain>>\nA: Chest pain - ddx: <<MSK>><<GERD>><<low risk for ACS/PE>>\nP:\n- <<BW>><<ECG>><<CXR>><<holter>><<echo>><<stress test>>\n- <<NSAIDs PRN (MSK).>>\n- RTC or ED if worsening pain, SOB, presyncope, syncope, diaphoresis",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Chest pain \nx <<#>> days\nOnset: <<at rest>><<w/ exertion>><<eating>><<stress>>\nCharacter: <<sharp>><<dull>><<pressure>>; \nRadiation: \u2022; \nSeverity: \u2022/10\nAggravated by: <<pleuritic>><<exertional>><<eating>><<stress>>; Alleviated: <<rest>><<antacid>><<analgesia>>\nAssociated: <<N/V>><<diaphoresis>><<SOB>><<orthopnea>><<PND>><<pedal edema>><<palpitations>><<presyncope>><<syncope>>\nHx of: <<CAD>><<CVD>><<DLP>><<HTN>><<DM>><<GERD>><<MSK>>. \nSmoking: \u2022 pack-years. \nFHx: \u2022\nPE risk factors: <<travel>><<immobility>><<cancer hx>><<recent surgery>><<hx PE/DVT>><<none>>\n<<OTCs tried>>>\n<<Not>> Reproducible on palpation\n\nO:\nBP: \u2022  HR: \u2022 \nGen: NAD, A+Ox3, No diaphoresis, speaking full sentences\nVolume: Grossly appears euvolemic: JVP not elevated, no crackles, no pedal edema, cap refill <2s\nCVS: NS1/2, no ehs/murmur\nResp: GAEB, no wheeze/crackles, normal RR & WOB\nChest wall: No SEADS, <<tenderness reproducing pain>>\n\nA: Chest pain - ddx: <<MSK>><<GERD>><<low risk for ACS/PE>>\nP:\n- <<BW>><<ECG>><<CXR>><<holter>><<echo>><<stress test>>\n- <<NSAIDs PRN (MSK).>>\n- RTC or ED if worsening pain, SOB, presyncope, syncope, diaphoresis",
+        "updated_at": "2026-10-27T17:29:16Z",
+        "updated_by": "James"
     },
     {
         "id": "palpitations",
@@ -301,9 +301,9 @@
         "title": "Smoking cessation",
         "cat": "Cardio/Metab",
         "aliases": "quit smoking nicotine NRT varenicline champix zyban cigarettes",
-        "body": "S: Here for smoking cessation. Smoking since \u2022. Current habits: \u2022 cig/day, first cigarette \u2022. Pack-years: \u2022\nReasons to quit: \u2022. Past attempts: \u2022. Confidence: \u2022. Triggers: \u2022\nEdu provided re methods - NRT, varenicline, bupropion; reduce-to-quit vs total cessation\nRules of 2-3 reviewed: withdrawal onset 2-3 h, peak 2-3 days, improvement 2-3 wks, highest relapse 2-3 months\nO:\nBP: \u2022  HR: \u2022\nResp: GAEB, no wheeze\nA: Nicotine dependence - <<contemplation>><<preparation>><<action>> stage\nP:\n- Quit date set: \u2022\n- <<NRT: patch 21 mg daily + gum/lozenge PRN.>><<Varenicline: 0.5 mg daily d1-3, 0.5 mg BID d4-7, then 1 mg BID x 11 wks - counselled nausea, vivid dreams, mood changes.>><<Bupropion: 150 mg daily x 3 days then 150 mg BID x 3 months - CI seizure/eating disorder hx.>>\n- Quitline/resources given; relapse framed as part of the process\n- f/u <<1-2>> wks after quit date",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Here for smoking cessation. Smoking since \u2022. Current habits: \u2022 cig/day, first cigarette \u2022. Pack-years: \u2022\nReasons to quit: \u2022. Past attempts: \u2022. Confidence: \u2022. Triggers: \u2022\nEdu provided re methods - NRT, varenicline, bupropion; reduce-to-quit vs total cessation\nRules of 2-3 reviewed: withdrawal onset 2-3 h, peak 2-3 days, improvement 2-3 wks, highest relapse 2-3 months\nO:\nBP: \u2022  HR: \u2022\nResp: GAEB, no wheeze\nA: Nicotine dependence - <<contemplation>><<preparation>><<action>> stage\nP:\n- Quit date set: \u2022\n- <<NRT: patch 21 mg daily + gum/lozenge PRN.>><<Varenicline: 0.5 mg daily d1-3, 0.5 mg BID d4-7, then 1 mg BID x 11 wks - counselled nausea, vivid dreams, mood changes.>><<Bupropion: 150 mg daily x 3 days then 150 mg BID x 3 months - CI seizure/eating disorder hx.>>\n- Quitline/resources given; relapse framed as part of the process\n- f/u <<1-2>> wks after quit date\n\n(E079/K039)",
+        "updated_at": "2026-10-27T16:10:57Z",
+        "updated_by": "James"
     },
     {
         "id": "prediabetes",
@@ -391,9 +391,9 @@
         "title": "Abdominal pain NYD (low risk)",
         "cat": "GI",
         "aliases": "stomach ache belly pain abdo workup",
-        "body": "S: Abdominal pain x \u2022, <<location>>, <<character>>. <<Nausea/bloating/bowel change.>> Denies fever, GI bleeding, weight loss, nocturnal waking. Eating adequately.\nO:\nT: \u2022  HR: \u2022  BP: \u2022\nGen: well, NAD\nAbdo: soft, <<location>> tenderness, no guarding/rebound, no masses/organomegaly. Bowel sounds normal\nA: Abdominal pain NYD - benign exam, no red flags\nP:\n- BW: CBC, lytes, Cr, ALT, lipase; urinalysis\n- <<Imaging pending labs.>>\n- Symptom diary\n- f/u <<1-2>> wks\n- RTC/RTED instructions reviewed, including fever, localizing/worsening pain, vomiting, GI bleeding - urgent review/ED",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Abdominal pain \n- Onset x \u2022, \n- <<location>>, <<character>>. \n- <<Nausea/bloating/bowel change.>> \n- <<No NVD>>\n- Denies GI bleeding, including melena stools, BRBPR, or hematemesis\n- Denies fever, weight loss, fatigue, night sweats\n- Eating adequately\n- No recent travel or sick contacts\n- <<LMP: ***, denies new sexual partners/practices, denies concern for pregnancy/STI>>\n- No LUTS or hematuria\n\nO:\nT: \u2022  HR: \u2022  BP: \u2022\nGen: well, NAD\nAbdo: soft, <<location>> tenderness, no guarding/rebound, no masses/organomegaly. Bowel sounds normal\n\nA: Abdominal pain NYD - benign exam, no red flags\nP:\n- BW: CBC, lytes, Cr, ALT, lipase; urinalysis\n- <<Imaging pending labs.>>\n- Symptom diary\n- f/u <<1-2>> wks\n- RTC/RTED instructions reviewed, including fever, localizing/worsening pain, vomiting, GI bleeding - urgent review/ED",
+        "updated_at": "2026-10-27T17:31:38Z",
+        "updated_by": "James"
     },
     {
         "id": "uti",
@@ -643,9 +643,9 @@
         "title": "Shoulder pain / rotator cuff",
         "cat": "MSK",
         "aliases": "shoulder impingement rotator cuff overhead tendinopathy",
-        "body": "S: <<R>><<L>> shoulder pain x \u2022, worse with overhead activity, lying on affected side. Denies trauma, neck symptoms, night sweats, weight loss.\nO:\nGen: well, NAD\nShoulder: no SEADS, no deformity/wasting. Painful arc 60-120. Positive <<Hawkins>><<empty can>>. Full passive ROM. Power otherwise 5/5\nA: Rotator cuff tendinopathy / subacromial impingement, <<R>><<L>>\nP:\n- Relative rest from aggravating activity; physio-directed strengthening\n- NSAIDs PRN\n- <<Subacromial injection if no improvement at 6 wks.>>\n- f/u 6 wks\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: <<R>><<L>> shoulder pain \nx \u2022, worse with <<overhead activity>>, <<lying on affected side>>. \n<<Recent trauma/injury: >><<Denies trauma>/injury/strain>>\nOtherwise well, denies neck symptoms, night sweats, weight loss\n\nO:\nGen: well, NAD\nShoulder: no SEADS, no deformity/wasting. Painful arc 60-120. \nFull passive ROM. Power otherwise 5/5\nSpecial testing:\nPositive <<Hawkins>>, <<empty can>>, <<crank>>\n\nA: Rotator cuff tendinopathy / subacromial impingement, <<R>><<L>>\nP:\n- Relative rest from aggravating activity; physio-directed stretching/strengthening\n- Reassurance and conservative management counselled- trial OTC anelgesia including tylenol/voltaren PRN, short NSAID course, trial of muscle relaxants\n- f/u 6 wks if worsening/not improving\n- RTC/RTED instructions reviewed",
+        "updated_at": "2026-10-27T16:52:54Z",
+        "updated_by": "James"
     },
     {
         "id": "ankle-sprain",
@@ -670,9 +670,9 @@
         "title": "Gout flare",
         "cat": "MSK",
         "aliases": "podagra big toe uric acid crystal arthritis allopurinol",
-        "body": "S: Acute onset <<R>><<L>> <<1st MTP>><<joint>> pain, redness, swelling since \u2022. <<First episode.>><<Prior episodes: #.>> Triggers: <<EtOH>><<red meat>><<diuretic>>. Denies fever, trauma.\nO:\nGen: well, NAD, afebrile\nJoint: <<R>><<L>> <<1st MTP>> - erythema, warmth, swelling, exquisitely tender. No tracking cellulitis, skin intact\nA: Acute gout flare - low suspicion for septic joint\nP:\n- <<Naproxen 500 mg BID x 5-7 days with food.>><<Colchicine 1.2 mg PO then 0.6 mg 1 h later.>><<Prednisone 30 mg daily x 5 days.>>\n- Counselled on avoidance of EtOH, sugar-sweetened drinks, purine-rich meat/seafood; dairy, vitamin C, coffee protective; weight loss\n- <<Discuss urate-lowering therapy once settled if recurrent.>>\n- RTC/RTED instructions reviewed, including fever, spreading redness",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Gout Flare\n- Acute onset <<R>><<L>> <<1st MTP>><<joint>> pain, redness, swelling since \u2022. \n- <<First episode.>><<Prior episodes: #.>> \n- Triggers: <<EtOH>><<red meat>><<diuretic>>. \n- Denies fever, trauma, lethargy/malaise\n- Able to weightbear, although pain exacerbated by activity & touch\n\nO:\nGen: well, NAD, afebrile\nJoint: <<R>><<L>> <<1st MTP>> - erythema, warmth, swelling, exquisitely tender. No tracking cellulitis, skin intact\n\nA: Acute gout flare - low suspicion for septic joint\nP:\n- <<Naproxen 500 mg BID x 5-7 days with food.>><<Colchicine 1.2 mg PO then 0.6 mg 1 h later.>><<Prednisone 30 mg daily x 5 days.>>\n- Counselled on avoidance of EtOH, sugar-sweetened drinks, purine-rich meat/seafood; dairy, vitamin C, coffee protective; weight loss\n- <<Discuss urate-lowering therapy once settled if recurrent.>>\n- RTC/RTED instructions reviewed, including fever, spreading redness",
+        "updated_at": "2026-10-27T17:32:38Z",
+        "updated_by": "James"
     },
     {
         "id": "hip-pain",
@@ -1111,9 +1111,9 @@
         "title": "Normal complete exam (NCR)",
         "cat": "Exam",
         "aliases": "normal exam NCR complete physical negative findings",
-        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- Power 5/5 in all extremities\n- No sensory deficits\n- Patellar reflexes 2+ BL\n- No dysmetria/dysdiadochokinesia\nMSK: No SEADS to ankles x2\n- No focal palpable tenderness\nRemainder of systems normal",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nRemainder of systems grossly normal",
+        "updated_at": "2026-10-27T16:30:01Z",
+        "updated_by": "James"
     },
     {
         "id": "mse",
@@ -1309,8 +1309,8 @@
         "title": "New patient intake",
         "cat": "General",
         "aliases": "meet and greet intake new patient roster",
-        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: \u2022  \nSurgHx: \u2022\nAllergies: <<NKDA>>\nFHx: \u2022\nSocial: \nBorn\noccupation \u2022\nRelationship status \u2022\nsmoking \u2022\nEtOH \u2022 drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022. \nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK:\nNeuro:\nGU[/Gyne]: Deferred\n\nA: New patient - \nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
-        "updated_at": "2026-10-22T13:08:34Z",
+        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n- \n\nSocial: \nBorn \nEducation: \nOccupation: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<heatlhy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
+        "updated_at": "2026-10-27T18:10:00Z",
         "updated_by": "James"
     },
     {
