@@ -436,9 +436,9 @@
         "title": "Pap / cervical screening",
         "cat": "GU/Repro",
         "aliases": "pap smear cervix HPV screening cytology",
-        "body": "S: PAP\n<<Last pap \u2022, results \u2022.>><<No history of abn paps.>>\n<<Periods regular, LMP \u2022>><<peri-menopausal>><<post-menopausal>>. <<No abn PV bleeding>><<spotting>><<discharge>><<dyspareunia>>\n<<Sexually active>><<not sexually active>>, <<monogamous>><<multiple partners>>\n<<No hormonal birth control>><<takes OCP>><<has IUS>>\nO: Well appearing, NAD\nReviewed pap procedure; verbal consent granted for pap <<and swabs>>\n<<Patient declined chaperone.>><<Chaperone present.>>\nNormal external genitalia\nGrossly normal appearing cervix<<, pink, smooth, no visible lesions>>\nPap <<and swabs>> done without complication\nPt tolerated procedure well, no concerns voiced\nA: Cervical cancer screening\nP:\n- Offered STI testing - <<pt agreed>><<pt declined>>\n- PAP <<, GC>><<, VC>> swab(s) sent\n- <<Will f/u with abn results only.>><<Will advise of results either way.>>\n- Recall per guideline; RTC as needed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: PAP\n<<Last pap \u2022, results \u2022.>><<No history of abn paps.>>\n<<Periods regular, LMP \u2022>><<peri-menopausal>><<post-menopausal>>. <<No abn PV bleeding>><<spotting>><<discharge>><<dyspareunia>>\n<<Sexually active>><<not sexually active>>, <<monogamous>><<multiple partners>>\n<<No hormonal birth control>><<takes OCP>><<has IUS>>\n\nO: Well appearing, NAD\nReviewed pap procedure; verbal consent granted for pap <<and swabs>>\n<<Patient declined chaperone.>><<Chaperone present.>>\nNormal external genitalia\nGrossly normal appearing cervix<<, pink, smooth, no visible lesions>>\nPap <<and swabs>> done without complication\nPt tolerated procedure well, no concerns voiced\n\nA: Cervical cancer screening\nP:\n- Offered STI testing - <<pt agreed>><<pt declined>>\n- PAP <<, GC>><<, VC>> swab(s) sent\n- <<Will f/u with abn results only.>><<Will advise of results either way.>>\n- Recall per guideline; RTC as needed",
+        "updated_at": "2026-10-28T23:51:57Z",
+        "updated_by": "James"
     },
     {
         "id": "sti",
@@ -634,9 +634,9 @@
         "title": "Knee osteoarthritis",
         "cat": "MSK",
         "aliases": "knee pain arthritis OA degenerative stairs",
-        "body": "S: <<R>><<L>> knee pain x \u2022, worse with stairs/activity; morning stiffness under 30 min. Denies locking, instability, trauma.\nO:\nGen: well, normal gait\nKnee: no effusion, no SEADS. Crepitus present. <<Medial>><<lateral>> joint-line tenderness. ROM full, ligaments stable\nA: Knee osteoarthritis, <<R>><<L>>\nP:\n- Exercise and quadriceps strengthening; <<physio referral>>\n- Weight management discussed\n- <<Topical NSAID PRN.>><<Oral NSAID PRN.>><<Tylenol PRN.>>\n- <<XR ordered.>>\n- f/u PRN; discuss injection if refractory\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: <<R>><<L>> knee pain x \u2022, worse with stairs/activity; morning stiffness under 30 min. Denies locking, instability, trauma.\nO:\nGen: well, normal gait\nKnee: no effusion, no SEADS. Crepitus present. <<Medial>><<lateral>> joint-line tenderness. ROM full, ligaments stable\nA: Knee osteoarthritis, <<R>><<L>>\nP:\n- Exercise and quadriceps strengthening; <<physio referral>>\n- Weight management discussed\n- <<Topical NSAID PRN.>><<Oral NSAID PRN.>><<Tylenol PRN.>>\n- <<XR ordered.>>\n- f/u PRN; discuss injection if refractory\n- RTC/RTED instructions reviewed - if worsening/not improving despite above, inability to wtbear, systemic symptoms, etc.",
+        "updated_at": "2026-10-28T19:53:06Z",
+        "updated_by": "James"
     },
     {
         "id": "shoulder",
@@ -1309,8 +1309,8 @@
         "title": "New patient intake",
         "cat": "General",
         "aliases": "meet and greet intake new patient roster",
-        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n- \n\nSocial: \nBorn \nEducation: \nOccupation: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<heatlhy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
-        "updated_at": "2026-10-27T18:10:00Z",
+        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n<<- No Fhx of other autoimmune/hereditary disease, malignancy, or other significant CVD>>\n\nSocial: \nBorn \nEducation: \nOccupation: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<heatlhy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
+        "updated_at": "2026-10-29T13:46:04Z",
         "updated_by": "James"
     },
     {
@@ -1437,6 +1437,15 @@
         "aliases": "bloodwork, BW",
         "body": "- long discussion re: evidence-based indications for bw and the limitations/potential risks of broad screening for vitamin/mineral deficiencies in the absence of any symptoms or risk factors. Explained the possibility of potentially clinically insignificant abnormalities that can lead to unnecessary investigations/stress/anxiety etc.\n- Advised that if he wishes to pursue additional testing recommended by another physician, he should do so through that provider or through private pay",
         "updated_at": "2026-10-26T20:47:48Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "keratosis-pilaris",
+        "title": "Keratosis Pilaris",
+        "cat": "Derm",
+        "aliases": "KP, Keratosis Pilaris, chicken",
+        "body": "S \u2013 Subjective\n\nCC: Rough, bumpy skin on [upper arms/thighs/cheeks].\nHPI: Chronic, asymptomatic or mildly pruritic follicular bumps; gradual onset; worse with dry/cold weather. No pain, drainage, or systemic symptoms.\nAssociated symptoms: Denies significant erythema, swelling, or signs of infection.\nPMHx: Atopic dermatitis, xerosis, or other skin conditions [if applicable].\nTreatments tried: Moisturizers/topical products [response].\nPatient concerns: Cosmetic appearance, skin texture, or itch.\nO \u2013 Objective\n\nSkin: Multiple small, rough, follicular keratotic papules over [bilateral upper arms/anterior thighs/cheeks], with or without mild perifollicular erythema.\nSkin may be dry; no pustules, drainage, or significant tenderness.\nNo evidence of secondary infection.\nDistribution and morphology consistent with keratosis pilaris.\nA \u2013 Assessment\n\nKeratosis pilaris \u2013 benign, chronic follicular keratinization disorder.\nTypical clinical presentation; no investigations indicated.\nDifferential diagnosis if atypical: folliculitis, eczema, or other follicular eruptions.\nP \u2013 Plan\n\nEducation/reassurance: Benign, non-contagious condition; common and often improves with age. May fluctuate with season and skin dryness.\nSkin care:\nApply fragrance-free emollient regularly, especially after bathing.\nUse gentle cleansers and lukewarm water; avoid harsh scrubbing and picking.\nTopical treatment if desired for persistent roughness:\nUrea 10\u201320% cream, lactic acid 10\u201312%, or salicylic acid 1\u20132%; start gradually as tolerated.\nCounsel regarding irritation, dryness, and discontinuation if significant irritation occurs.\nAvoid keratolytics on broken or inflamed skin; use caution on the face and in children.\nFollow-up: Reassess in 6\u20138 weeks if symptoms persist or treatment is desired; consider dermatology referral for diagnostic uncertainty or refractory, bothersome disease.\nReturn precautions: Seek reassessment for new pain, pustules, drainage, marked redness, or rapidly changing lesions.",
+        "updated_at": "2026-10-28T17:29:50Z",
         "updated_by": "James"
     }
 ]
