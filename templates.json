@@ -202,9 +202,9 @@
         "title": "Hypertension follow-up",
         "cat": "Cardio/Metab",
         "aliases": "blood pressure BP high hypertensive",
-        "body": "S: HTN f/u. Home BP checks: <<none>><<avg \u2022>>. Denies headache, vision changes, chest pain, dyspnea, unilateral weakness, sensory deficits.\nSalt intake: <<good control, targeting under 2 g daily>>. Diet: <<balanced, mainly homemade>>. EtOH: <<occ/rare>>. Smoking: <<non-smoker>><<active smoker>><<quit>>. NSAIDs: <<occ/rare>>. Exercise: <<adequate>>. Stress: <<well-managed>>.\nO:\nBP: \u2022  HR: \u2022\nGen: well, NAD, non-toxic\nCVS: NS1/2, no ehs/murmur. No peripheral edema\nResp: Normal WOB, GAEB, no adventitious sounds\nAbdo: SNTND, no masses\nA: HTN - <<well-controlled>><<sub-optimally controlled>>\nP:\n- BW: <<lytes, Cr>><<lipids>><<A1c + fasting glucose>><<ECG>>\n- Lifestyle optimization counselled: <<moderate intensity exercise 150 min/week>><<Mediterranean diet, limited salt>><<limit EtOH>><<stress management>><<weight reduction>><<smoking cessation>>\n- <<Medications reviewed - continue current therapy.>><<Changes made: \u2022.>>\n- RTC in 3 months; sooner if chest pain, severe headache, vomiting, vision changes, weakness/numbness",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: HTN f/u. Home BP checks: <<none>><<avg \u2022>>. \n\nDenies headache, vision changes, chest pain, dyspnea, unilateral weakness, sensory deficits.\nDenies symptoms of hypotension, including fatigue, dizziness, weakness, presyncope\n\nSalt intake: <<good control, targeting under 2 g daily>>. \nDiet: <<balanced, mainly homemade>>. \nEtOH: <<occ/rare>>. \nSmoking: <<non-smoker>><<active smoker>><<quit>>. \nNSAIDs: <<occ/rare>>. Exercise: <<adequate>>. Stress: <<well-managed>>.\n\nO:\nBP: \u2022  HR: \u2022\nGen: well, NAD, non-toxic\nCVS: NS1/2, no ehs/murmur. No peripheral edema\nResp: Normal WOB, GAEB, no adventitious sounds\nAbdo: SNTND, no masses\n\nA: HTN - <<well-controlled>><<sub-optimally controlled>>\nP:\n- BW: <<lytes, Cr>><<lipids>><<A1c + fasting glucose>><<ECG>>\n- Lifestyle optimization counselled: <<moderate intensity exercise 150 min/week>><<Mediterranean diet, limited salt>><<limit EtOH>><<stress management>><<weight reduction>><<smoking cessation>>\n- <<Medications reviewed - continue current therapy.>><<Changes made: \u2022.>>\n- RTC in 3 months; sooner if chest pain, severe headache, vomiting, vision changes, weakness/numbness",
+        "updated_at": "2026-10-29T17:45:09Z",
+        "updated_by": "James"
     },
     {
         "id": "t2dm",
@@ -337,9 +337,9 @@
         "title": "Gastroenteritis",
         "cat": "GI",
         "aliases": "vomiting diarrhea stomach flu food poisoning dehydration",
-        "body": "S: <<Vomiting>><<and diarrhea>> x <<#>> days. Denies blood in stool, high fever. Tolerating sips; urine output maintained. <<Sick contact.>>\nO:\nT: \u2022  HR: \u2022  BP: \u2022\nGen: well, alert, NAD\nCVS: NS1/2, no ehs/murmur\nResp: GAEB, no wheeze/crackles\nAbdo: SNTND\nA: Viral gastroenteritis\nP:\n- Reassurance and continue supportive management\n- Counselled to continue with frequent hydration and gentle diet, gradually advance diet as tolerated - reviewed BRAT diet\n- <<Ondansetron PRN.>>\n- RTC/RTED instructions reviewed, including blood in stool, persistent fever, unable to keep fluids down, decreased urine output",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: <<Vomiting>><<and diarrhea>> \nx <<#>> days. \nDenies blood in stool, high fever. \nTolerating sips; urine output maintained. <<Sick contact.>>\n\nO:\nT: \u2022  HR: \u2022  BP: \u2022\nGen: well, alert, NAD\nCVS: NS1/2, no ehs/murmur\nResp: GAEB, no wheeze/crackles\nAbdo: SNTND\n\nA: Viral gastroenteritis\nP:\n- Reassurance and continue supportive management\n- Counselled to continue with frequent hydration and gentle diet, gradually advance diet as tolerated - reviewed BRAT diet\n- <<Ondansetron PRN.>>\n- RTC/RTED instructions reviewed, including blood in stool, persistent fever, unable to keep fluids down, decreased urine output",
+        "updated_at": "2026-10-29T15:29:56Z",
+        "updated_by": "James"
     },
     {
         "id": "constipation",
@@ -400,9 +400,9 @@
         "title": "Uncomplicated UTI (cystitis)",
         "cat": "GU/Repro",
         "aliases": "bladder infection dysuria burning pee urine frequency",
-        "body": "S: Dysuria, frequency, urgency x <<#>> days. Denies fever, flank pain, vaginal discharge/irritation. Not pregnant - LMP \u2022.\nO:\nT: \u2022\nGen: well, NAD\nAbdo: SNTND, mild suprapubic tenderness. No CVA tenderness\nA: Uncomplicated cystitis\nP:\n- UA and urine culture sent\n- <<Macrobid 100 mg BID x 5 days - counselled on side effects.>><<TMP-SMX DS BID x 3 days.>>\n- Counselled ++ fluids; tylenol PRN\n- f/u for culture results\n- RTC/RTED instructions reviewed, including fever, flank pain, no improvement in 48 h",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Dysuria, frequency, urgency x <<#>> days. \nDenies fever, flank pain, vaginal discharge/irritation. \nNot pregnant - LMP \u2022.\nNo hematuria, no GI bleeding\n<<No changes in sexual partners/practices; denies STI concern>><<Not sexually active>>\n\nO:\nT: \u2022\nGen: well, NAD\nAbdo: SNTND, mild suprapubic tenderness. No CVA tenderness\n\nA: Uncomplicated cystitis\nP:\n- UA and urine culture sent\n- <<Macrobid 100 mg BID x 5 days - counselled on side effects.>><<TMP-SMX DS BID x 3 days.>>\n- Counselled ++ fluids; tylenol PRN\n- f/u for culture results\n- RTC/RTED instructions reviewed, including fever, flank pain, no improvement in 48 h",
+        "updated_at": "2026-10-29T18:25:19Z",
+        "updated_by": "James"
     },
     {
         "id": "vaginitis",
@@ -733,18 +733,18 @@
         "title": "Depression follow-up",
         "cat": "Mental health",
         "aliases": "mood MDD PHQ9 antidepressant SSRI low",
-        "body": "S: Mood review. PHQ-9 \u2022 (prev \u2022). Sleep: \u2022. Appetite: \u2022. Energy: \u2022. Concentration: \u2022. Denies SI/HI - no plan or intent. Med adherence good, no side effects.\nO: MSE:\nAppearance: appears stated age, normal grooming, casual attire\nSpeech: normal rate, rhythm, volume\nMood: <<better>><<low>>\nAffect: <<euthymic, full range>><<constricted>>\nThought process: linear, coherent, future oriented\nThought content: no hallucinations, delusions, obsessions, phobias\nSI: none  HI: none\nInsight: intact  Judgment: intact\nA: MDD - <<improving>><<stable>> on <<medication>>\nP:\n- <<Continue current dose.>><<Titrated: \u2022.>>\n- Counselling/CBT <<referred>><<ongoing>>\n- Safety plan reviewed; crisis resources provided\n- f/u 4 wks\n- RTC or ER if active SI/HI",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Mood review. PHQ-9 \u2022 (prev \u2022). Sleep: \u2022. Appetite: \u2022. Energy: \u2022. Concentration: \u2022. Denies SI/HI - no plan or intent. Med adherence good, no side effects.\n\nO: MSE:\nAppearance: appears stated age, normal grooming, casual attire\nSpeech: normal rate, rhythm, volume\nMood: <<better>><<low>>\nAffect: <<euthymic, full range>><<constricted>>\nThought process: linear, coherent, future oriented\nThought content: no hallucinations, delusions, obsessions, phobias\nSI: none  HI: none\nInsight: intact  Judgment: intact\n\nA: MDD - <<improving>><<stable>> on <<medication>>. No acute safety concerns\nP:\n- <<Continue current dose.>><<Titrated: \u2022.>>\n- Counselling/CBT <<referred>><<ongoing>>\n- Safety plan reviewed; crisis resources provided\n- f/u 4 wks\n- RTC or ER if active SI/HI\n\nTime: ",
+        "updated_at": "2026-10-29T18:45:57Z",
+        "updated_by": "James"
     },
     {
         "id": "anxiety",
         "title": "Anxiety (GAD)",
         "cat": "Mental health",
         "aliases": "worry panic GAD7 anxious stress",
-        "body": "S: Anxiety review. GAD-7 \u2022. Worry, restlessness, sleep disturbance: \u2022. Functioning: \u2022. <<No panic attacks.>><<Panic attacks # per wk.>> Denies SI. Caffeine: \u2022.\nO: MSE:\nAppearance: appears stated age, normal grooming\nSpeech: normal rate, rhythm, volume\nMood: <<anxious>><<better>>\nAffect: <<full range>><<constricted>>\nThought process: linear, coherent\nSI: none  HI: none\nInsight: intact  Judgment: intact\nA: GAD - <<improving>><<stable>>\nP:\n- <<Continue current SSRI.>><<Started: \u2022.>>\n- CBT resources/referral discussed\n- Sleep hygiene, caffeine reduction\n- f/u 4-6 wks\n- RTC/RTED instructions reviewed, including worsening, SI",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Anxiety review. GAD-7 \u2022. Worry, restlessness, sleep disturbance: \u2022. Functioning: \u2022. <<No panic attacks.>><<Panic attacks # per wk.>> Denies SI. Caffeine: \u2022.\n\nO: MSE:\nAppearance: appears stated age, normal grooming, casual attire\nSpeech: normal rate, rhythm, volume\nMood: [better][low][stable, good]\nAffect: [euthymic, full range][constricted]\nThought process: linear, coherent, future oriented\nThought content: no hallucinations, delusions, obsessions, phobias\nSI: none  HI: none\nInsight: intact  Judgment: intact\n\nA: GAD - <<improving>><<stable>>. No acute safety concerns\nP:\n- <<Continue current SSRI.>><<Started: \u2022.>>\n- CBT resources/referral discussed\n- Sleep hygiene, caffeine reduction\n- Safety plan reviewed; crisis resources provided\n- f/u 4-6 wks\n- RTC/RTED instructions reviewed, including worsening, SI\n\nTime: ",
+        "updated_at": "2026-10-29T18:52:07Z",
+        "updated_by": "James"
     },
     {
         "id": "insomnia",
@@ -796,9 +796,9 @@
         "title": "Stress / burnout",
         "cat": "Mental health",
         "aliases": "overwhelmed work stress adjustment burnout coping",
-        "body": "S: Overwhelmed by <<stressor>> x \u2022 - poor sleep, irritability, tension. PHQ-9 \u2022, GAD-7 \u2022 - subthreshold. EtOH screened: \u2022. Denies SI.\nO: Appears stressed; MSE otherwise unremarkable\nA: Adjustment reaction / burnout - subthreshold for MDD/GAD\nP:\n- Problem-solving discussion; stressor-specific supports: <<EAP>><<counselling options>>\n- Sleep and exercise plan\n- <<Work accommodation/note provided.>>\n- f/u <<3-4>> wks to repeat screens",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: \n- Feeling overwhelmed by <<stressor>> x \u2022\n- Acute worsening of mental health (mood/anxiety) symptoms\n- poor sleep, irritability, tension. PHQ-9 \u2022, GAD-7 \u2022 - subthreshold. \nEtOH screened: \u2022. \nDenies SI/HI.\n\nO: Appears stressed;\nAppearance: appears stated age, normal grooming, casual attire\nSpeech: normal rate, rhythm, volume\nMood: [better][low]\nAffect: [euthymic, full range][constricted]\nThought process: linear, coherent, future oriented\nThought content: no hallucinations, delusions, obsessions, phobias\nSI: none  HI: none\nInsight: intact  Judgment: intact\n\nA: Adjustment reaction / burnout / Acute stress disorder - subthreshold for MDD/GAD\nP:\n- Problem-solving discussion; stressor-specific supports: <<EAP>><<counselling options>>\n- Sleep and exercise plan\n- <<Work accommodation/note provided.>>\n- f/u <<3-4>> wks to repeat screens\n\nTime: ",
+        "updated_at": "2026-10-29T18:48:08Z",
+        "updated_by": "James"
     },
     {
         "id": "cognitive",
@@ -1228,9 +1228,9 @@
         "title": "Fatigue workup",
         "cat": "General",
         "aliases": "tired low energy exhausted TATT",
-        "body": "S: Fatigue x \u2022, gradual onset. Sleep \u2022 h/night; denies snoring. Mood screened - PHQ-2 negative. Denies weight loss, fevers, night sweats. Meds and EtOH reviewed.\nO:\nGen: well, NAD, no pallor\nHEENT: no LN, thyroid normal\nCVS: NS1/2  Resp: GAEB  Abdo: SNTND\nA: Fatigue NYD - no red flags\nP:\n- BW: CBC, TSH, ferritin, A1c, lytes, Cr<<, B12>><<, celiac screen>>\n- Sleep hygiene reviewed\n- f/u <<2-3>> wks with results\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Fatigue x \u2022, gradual onset. Sleep \u2022 h/night; denies snoring. Mood screened - PHQ-2 negative. Denies weight loss, fevers, night sweats. Meds and EtOH reviewed.\nO:\nGen: well, NAD, no pallor\nHEENT: no LN, thyroid normal\nCVS: NS1/2 no ehs/murmur\nResp: GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM, no masses\n\nA: Fatigue NYD - no red flags\nP:\n- BW: CBC, TSH, ferritin, A1c, lytes, Cr<<, B12>><<, celiac screen>>\n- Sleep hygiene reviewed\n- f/u <<2-3>> wks with results\n- RTC/RTED instructions reviewed",
+        "updated_at": "2026-10-29T19:46:03Z",
+        "updated_by": "James"
     },
     {
         "id": "phe",
@@ -1291,9 +1291,9 @@
         "title": "Immunization visit",
         "cat": "General",
         "aliases": "vaccine shot flu shot booster injection",
-        "body": "S: Here for <<vaccine>>. Screened: no severe reaction to prior vaccines, no anaphylaxis to components, not acutely unwell, no fever. Consent obtained.\nO: Afebrile, well\nA: Immunization visit\nP:\n- <<Vaccine>> given <<site>> - lot documented per record\n- Observed 15 min - well tolerated, no immediate reaction\n- Counselled on expected local soreness, possible low-grade fever/myalgia day 1-2\n- ER immediately if anaphylactic reaction - lip swelling, throat tightness\n- <<Next dose due: \u2022.>>",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Here for <<flu vaccine>>. \nScreened: no severe reaction to prior vaccines, no anaphylaxis to components, not acutely unwell, no fever. Consent obtained.\n\nO: Afebrile, well\n\nA: Immunization - <<Flu shot>>\nP:\n- <<Vaccine>> given @ <<site>> - LOT <<***>>; EXP <<***>>\n- Observed 15 min - well tolerated, no immediate reaction\n- Counselled on expected local soreness, possible low-grade fever/myalgia day 1-2\n- ER immediately if anaphylactic reaction - lip swelling, throat tightness\n- <<Next dose due: \u2022.>>\n\n",
+        "updated_at": "2026-10-29T20:29:20Z",
+        "updated_by": "James"
     },
     {
         "id": "lab-review",
@@ -1309,8 +1309,8 @@
         "title": "New patient intake",
         "cat": "General",
         "aliases": "meet and greet intake new patient roster",
-        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n<<- No Fhx of other autoimmune/hereditary disease, malignancy, or other significant CVD>>\n\nSocial: \nBorn \nEducation: \nOccupation: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<heatlhy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
-        "updated_at": "2026-10-29T13:46:04Z",
+        "body": "S: Intake appointment and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n<<- No Fhx of other autoimmune/hereditary disease, malignancy, or other significant CVD>>\n\nSocial: \nBorn \nEducation: \nOccupation: \nLiving: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<healthy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
+        "updated_at": "2026-10-29T15:10:51Z",
         "updated_by": "James"
     },
     {
@@ -1446,6 +1446,24 @@
         "aliases": "KP, Keratosis Pilaris, chicken",
         "body": "S \u2013 Subjective\n\nCC: Rough, bumpy skin on [upper arms/thighs/cheeks].\nHPI: Chronic, asymptomatic or mildly pruritic follicular bumps; gradual onset; worse with dry/cold weather. No pain, drainage, or systemic symptoms.\nAssociated symptoms: Denies significant erythema, swelling, or signs of infection.\nPMHx: Atopic dermatitis, xerosis, or other skin conditions [if applicable].\nTreatments tried: Moisturizers/topical products [response].\nPatient concerns: Cosmetic appearance, skin texture, or itch.\nO \u2013 Objective\n\nSkin: Multiple small, rough, follicular keratotic papules over [bilateral upper arms/anterior thighs/cheeks], with or without mild perifollicular erythema.\nSkin may be dry; no pustules, drainage, or significant tenderness.\nNo evidence of secondary infection.\nDistribution and morphology consistent with keratosis pilaris.\nA \u2013 Assessment\n\nKeratosis pilaris \u2013 benign, chronic follicular keratinization disorder.\nTypical clinical presentation; no investigations indicated.\nDifferential diagnosis if atypical: folliculitis, eczema, or other follicular eruptions.\nP \u2013 Plan\n\nEducation/reassurance: Benign, non-contagious condition; common and often improves with age. May fluctuate with season and skin dryness.\nSkin care:\nApply fragrance-free emollient regularly, especially after bathing.\nUse gentle cleansers and lukewarm water; avoid harsh scrubbing and picking.\nTopical treatment if desired for persistent roughness:\nUrea 10\u201320% cream, lactic acid 10\u201312%, or salicylic acid 1\u20132%; start gradually as tolerated.\nCounsel regarding irritation, dryness, and discontinuation if significant irritation occurs.\nAvoid keratolytics on broken or inflamed skin; use caution on the face and in children.\nFollow-up: Reassess in 6\u20138 weeks if symptoms persist or treatment is desired; consider dermatology referral for diagnostic uncertainty or refractory, bothersome disease.\nReturn precautions: Seek reassessment for new pain, pustules, drainage, marked redness, or rapidly changing lesions.",
         "updated_at": "2026-10-28T17:29:50Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "shin-splints",
+        "title": "Shin Splints",
+        "cat": "MSK",
+        "aliases": "Shin splints",
+        "body": "S: \nprev did distance running , took some time off, but recently started again\nAfter running, sharp pain in R shin\nDenies trauma/injury/fall\nWtbearing, however pain is worse w exertion & wtbearing. \nSharp, moderate-severe, localized to R anterior shin, no radiation\nNo red hot swollen joint\n\nO:\nGen well NAD, normal gait\nMSK: No SEADS to RLE, no focal bony tenderness, full ROM and power\n- achilles & babinski reflexes nL\n- \n\nA: Mechanical RLE pain, suspected Shin splints\nP:\nCounselled re conservative measures, including RICE, rest & activity modification, \n- Pain control with OTC analgesia PRN (tylenol, voltaren, short courses of advil)\n- f/u if recurrence consider footwear adjustment, PT course, or further investiigations\n\n",
+        "updated_at": "2026-10-29T17:15:01Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "lump-cyst-lipoma",
+        "title": "Lump / Cyst / Lipoma",
+        "cat": "Derm",
+        "aliases": "lump, cyst, lipoma",
+        "body": "S: Lump/Bump\n- New lump noticed <<LOCATION>>\n- First noticed x<<1d>> ago\n- <<Not>> tender to palpation\n- Mobile\n- No overlying skin changes - including erythema, ulceration, rash, dimpling, etc.\n- No bleeding/pus/purulence\n- Afebrile and systemically well, denies other constitutional symptoms (Wt loss, fatigue, night sweats)\n- No recent illness/infection\n- No recent travel, no sick contacts\n\nO: \nGen well NAD\nDerm: Focal subcutaneous nodule at <<LOCATION>>. <<1>>cm, round, well demarcated borders, <<non>>tender to palpation, mobile, firm and uniform in texture. \n- No fluctuance\n- No overlying/surrounding erythema, ulceration, rash\n\nA: Lump; Suspect benign ganglion cyst vs lipoma\nP:\nUS to confirm vs r/o other soft tissue pathology\nCounselled on RTC/RTED instructions\n\n",
+        "updated_at": "2026-10-29T18:43:10Z",
         "updated_by": "James"
     }
 ]
