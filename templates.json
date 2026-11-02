@@ -22,8 +22,8 @@
         "title": "Acute otitis media",
         "cat": "ENT/Resp",
         "aliases": "ear infection earache otalgia tympanic peds child AOM",
-        "body": "S: <<R>><<L>> ear pain x <<#>> days\n- <<post-URTI>>>\n- <<No>> Fever\n- Denies otorrhea, hearing loss, vertigo, tinnitus. Immunizations UTD.\n\nO:\nT: \u2022\nGen: well, NAD\nHEENT: <<R>><<L>> TM erythematous and bulging; contralateral TM normal. \n- No mastoid tenderness. Oropharynx normal, neck supple\nResp: GAEB, no wheeze/crackles, normal RR/WOB\n\nA: Acute otitis media, <<R>><<L>>\nP:\n- <<Watchful waiting 48 h with analgesia; abx if not settling.>><<Amoxicillin 90 mg/kg/day divided BID x 5-10 days (peds).>><<Amoxicillin 500 mg TID x 5-7 days (adult).>>\n- Analgesia PRN - tylenol/advil\n- RTC/RTED instructions reviewed, including persistent fever beyond 48 h on abx, otorrhea, mastoid pain, worsening",
-        "updated_at": "2026-10-27T17:38:13Z",
+        "body": "S: AOM\n- <<R>><<L>> ear pain x <<#>> days\n- <<post-URTI>>>\n- <<No>> Fever\n- Denies otorrhea, hearing loss, vertigo, tinnitus. Immunizations UTD.\n\nO:\nT: \u2022\nGen: well, NAD\nHEENT: <<R>><<L>> TM erythematous and bulging; contralateral TM normal. \n- PERLA. No mastoid tenderness. Oropharynx normal, no exudate, neck supple\nResp: GAEB, no wheeze/crackles, normal RR/WOB\n\nA: <<R>><<L>> Acute otitis media, in <<<6mo pediatric>><<<6mo pediatric>><<adult>>\nP:\n- <<Watchful waiting 48 h with analgesia; abx if not settling.>>\n- <<Amoxicillin 90 mg/kg/day divided BID x 5-10 days (pediatric dosing).>><<Empiric treatment given age <6mo>><<Amoxicillin 500 mg TID x 5-7 days (adult)>>\n- Counselled re: Analgesia PRN - tylenol/advil\n- RTC/RTED instructions reviewed, including persistent fever beyond 48 h on abx, otorrhea, mastoid pain, worsening\n\n",
+        "updated_at": "2026-11-01T23:46:17Z",
         "updated_by": "James"
     },
     {
@@ -31,8 +31,8 @@
         "title": "Otitis externa",
         "cat": "ENT/Resp",
         "aliases": "swimmers ear canal discharge tragal drops",
-        "body": "S: Otitis Externa\n- <<R>><<L>> ear pain and itch x <<#>> days \n- Risk factors: <<swimming/water exposure>><<Q-tip use>>\n- <<No>> discharge/otorrhea present\n- Denies fever, hearing loss, vertigo, tinnitus\n- Otherwise systemically well\n\nO:\nGen: well, NAD, afebrile\nHEENT: <<R>><<L>> canal edematous, erythematous with debris; pain on tragal pressure. TM <<visualized, intact>><<obscured by debris>>. No cellulitis of pinna, no mastoid tenderness\n\nA: Otitis externa, <<R>><<L>>\nP:\n- Ciprodex 4 gtts BID x 7 days\n- Counselled re: conservative treatment: Keep ear dry, analgesia PRN\n- RTC/RTED instructions reviewed, including fever, spreading redness, no improvement in 48-72 h",
-        "updated_at": "2026-10-27T17:40:09Z",
+        "body": "S: Otitis Externa\n- <<R>><<L>> ear pain and itch x <<#>> days \n- Risk factors: <<swimming/water exposure>><<Q-tip use>>\n- <<No>> discharge/otorrhea present\n- Denies fever, hearing loss, vertigo, tinnitus\n- Otherwise systemically well\n\nO:\nGen: well, NAD, afebrile\nHEENT: <<R>><<L>> canal edematous, erythematous with debris; pain on tragal pressure. TM <<visualized, intact>><<obscured by debris>>. No cellulitis of pinna, no mastoid tenderness\n\nA: <<R>><<L>><<BL>> Otitis externa\nP:\n- Ciprodex 4 gtts BID x 7 days\n- Counselled re: conservative treatment: Keep ear dry, analgesia PRN\n- RTC/RTED instructions reviewed, including fever, spreading redness, no improvement in 48-72 h\n\n",
+        "updated_at": "2026-11-01T23:46:39Z",
         "updated_by": "James"
     },
     {
@@ -40,8 +40,8 @@
         "title": "Acute sinusitis",
         "cat": "ENT/Resp",
         "aliases": "sinus facial pressure rhinosinusitis purulent PODS",
-        "body": "S: Sinusitis\n- Facial pressure and congestion x <<#>> days. \n- Denies periorbital swelling, vision changes, severe headache, neck stiffness, altered LOC.\n- PODS (symptoms over 7 days or worsening after 5-7): Pain/pressure/fullness <<Y>><<N>>; Obstruction <<Y>><<N>>; Discharge - purulent/discoloured <<Y>><<N>>; Smell disorder <<Y>><<N>>\n<<- Double worsening (Worsened after initial improvement.>>\n\nO:\nT: \u2022  HR: \u2022\nGen: well, NAD\nHEENT: Tenderness over <<maxillary>><<frontal>> sinuses. \n- Nasal mucosa edematous, <<purulent>> discharge. \n- No periorbital swelling/erythema. Oropharynx normal. Neck supple\nNeuro: PERLA, EOMs full and painless, VA normal, no diplopia. CN exam grossly normal. Moving all 4 extremities. \n\nA: <<Viral rhinosinusitis>><<Bacterial sinusitis - meets PODS criteria>>\nP:\n- Supportive care: hydration, rest, tylenol/advil, saline rinses, humidifier\n- <<Amoxicillin 500 mg TID x 10 days Rx sent.>>\n- <<Trial INCS - intranasal corticosteroid Rx sent, side effects discussed.>>\n- RTC/RTED instructions reviewed, including periorbital swelling, vision changes, severe headache, worsening after 5-7 days",
-        "updated_at": "2026-10-27T17:42:07Z",
+        "body": "S: Acute Sinusitis\n- Facial pressure and congestion x <<#>> days. \n- Denies periorbital swelling, vision changes, severe headache, neck stiffness, altered LOC.\n- PODS (symptoms over 7 days or worsening after 5-7): Pain/pressure/fullness <<Y>><<N>>; Obstruction <<Y>><<N>>; Discharge - purulent/discoloured <<Y>><<N>>; Smell disorder <<Y>><<N>>\n<<- Double worsening (Worsened after initial improvement.>>\n\nO:\nT: \u2022  HR: \u2022\nGen: well, NAD\nHEENT: Tenderness over <<maxillary>><<frontal>> sinuses. \n- Nasal mucosa edematous, <<purulent>> discharge. \n- No periorbital swelling/erythema. Oropharynx normal. Neck supple\nNeuro: PERLA, EOMs full and painless, VA normal, no diplopia. CN exam grossly normal. Moving all 4 extremities. \n\nA: <<Viral rhinosinusitis>><<Bacterial sinusitis - meets PODS criteria>>\nP:\n- Supportive care: hydration, rest, tylenol/advil, saline rinses, humidifier\n- <<Amoxicillin 500 mg TID x 10 days Rx sent.>>\n- <<Trial INCS - intranasal corticosteroid Rx sent, side effects discussed.>>\n- RTC/RTED instructions reviewed, including periorbital swelling, vision changes, severe headache, worsening after 5-7 days\n\n",
+        "updated_at": "2026-11-01T23:46:56Z",
         "updated_by": "James"
     },
     {
@@ -1464,6 +1464,15 @@
         "aliases": "lump, cyst, lipoma",
         "body": "S: Lump/Bump\n- New lump noticed <<LOCATION>>\n- First noticed x<<1d>> ago\n- <<Not>> tender to palpation\n- Mobile\n- No overlying skin changes - including erythema, ulceration, rash, dimpling, etc.\n- No bleeding/pus/purulence\n- Afebrile and systemically well, denies other constitutional symptoms (Wt loss, fatigue, night sweats)\n- No recent illness/infection\n- No recent travel, no sick contacts\n\nO: \nGen well NAD\nDerm: Focal subcutaneous nodule at <<LOCATION>>. <<1>>cm, round, well demarcated borders, <<non>>tender to palpation, mobile, firm and uniform in texture. \n- No fluctuance\n- No overlying/surrounding erythema, ulceration, rash\n\nA: Lump; Suspect benign ganglion cyst vs lipoma\nP:\nUS to confirm vs r/o other soft tissue pathology\nCounselled on RTC/RTED instructions\n\n",
         "updated_at": "2026-10-29T18:43:10Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "tick-bite",
+        "title": "Tick Bite",
+        "cat": "Infectious Disease",
+        "aliases": "Tick, Lyme",
+        "body": "tick bite\nTravelled to cottage in <<LOCATION>> this weekend\n<<identified a tick had bitten his LOCATION>>\n<<Tick was alive and feeding, with mild red rash surrounding bite site>>\nPatient removed tick and placed it in a plastic bag\nWent to pharmacy, given Rx for Doxycline 200mg x1, which he took <<DATE&TIME>>\nPatient suspects bite may have occurred anytime between <<DATES>>\nConcerned about lyme disease due to rash around the tick bite\nDenied fever, chills, chest pain, SOB, joint pain, palpitations, and worsening headaches\nPatient brought tick today in plastic bag\n\nO: \nGen: Well appearing, NAD\nCVS: RRR, S1 and S2\nResp: Clear breath sounds B/L\nSkin of Left Lower Leg: Posterior calf has red bite with faint erythema migrans surrounding bite site\n\nA/P: \nTick Bite\n- given HPI of tick bite and physical exam remarkable for erythema migrans, high suspicion for Lyme disease\n<<- Doxycyline 100mg BID for 14 days>><<- Doxycycline 200 mg x1 Prophylactically>>\n<<-patient sent for lyme disease testing/serology today, and will start doxycyline this evening>>\n- additionally, patient uploaded photos of tick to etick.ca and will send tick in plastic bag to PHO for tick surveillance\n- will follow up on results of Lyme serology and contact patient regarding next steps\n- RTC/RTED reviewed\n\n",
+        "updated_at": "2026-11-01T19:02:47Z",
         "updated_by": "James"
     }
 ]
