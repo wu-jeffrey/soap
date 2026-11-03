@@ -65,28 +65,28 @@
     {
         "id": "asthma",
         "title": "Asthma follow-up",
-        "cat": "ENT/Resp",
-        "aliases": "wheeze inhaler puffer ventolin controller SABA ICS control",
-        "body": "S: Asthma review.\nDaytime symptoms over 2x/week <<yes (1)>><<no (0)>>\nNight symptoms <<yes (1)>><<no (0)>>\nReliever needed over 2x/week <<yes (1)>><<no (0)>>\nActivity limitation <<yes (1)>><<no (0)>>\nFEV1/peak flow under 80% personal best <<yes (1)>><<no (0)>>\nScore: \u2022 (0 = well controlled; 1-2 = partly controlled; 3+ = uncontrolled)\nAerochamber: <<yes>><<no>>. Smoker in home: <<yes>><<no>>. Triggers: \u2022\nO:\nHR: \u2022  SpO2: \u2022\nGen: well, NAD, speaking full sentences\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nA: Asthma - <<well>><<partly>><<un>>controlled\nP:\n- <<Continue current regimen.>><<Stepped up: \u2022.>>\n- Inhaler technique and written action plan reviewed\n- Influenza vaccine advised\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including increased reliever use, night symptoms, SOB\n\n",
-        "updated_at": "2026-10-27T17:47:10Z",
+        "cat": "Resp",
+        "aliases": "wheeze inhaler puffer ventolin controller SABA ICS control asthma symbicort",
+        "body": "S: Asthma review <<f/u>>\n\n- Daytime symptoms over 2x/week <<yes (1)>><<no (0)>>\n- Night symptoms <<yes (1)>><<no (0)>>\n- Reliever needed over 2x/week <<yes (1)>><<no (0)>>\n- Activity limitation <<yes (1)>><<no (0)>>\n\n- FEV1/peak flow under 80% personal best <<yes (1)>><<no (0)>>\n- Score: \u2022 (0 = well controlled; 1-2 = partly controlled; 3+ = uncontrolled)\n- Aerochamber: <<yes>><<no>>. Smoker in home: <<yes>><<no>>. Triggers: \u2022\n\nO:\nHR: \u2022  SpO2: \u2022\nGen: well, NAD, speaking full sentences\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\n\nA: Asthma - <<well >><<partly >><<un>>controlled on <<X>>\nP:\n- <<Continue current regimen: >><<Stepped up: \u2022.>>\n- Inhaler technique and written action plan reviewed\n- Influenza vaccine advised\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including increased reliever use, night symptoms, SOB\n\n",
+        "updated_at": "2026-11-02T18:34:39Z",
         "updated_by": "James"
     },
     {
         "id": "copd",
         "title": "COPD follow-up",
-        "cat": "ENT/Resp",
+        "cat": "Resp",
         "aliases": "emphysema chronic bronchitis smoker dyspnea LAMA LABA",
-        "body": "S: COPD review. Baseline dyspnea mMRC \u2022. <<#>> exacerbations past year. Cough/sputum stable. <<Current smoker, # pack-years.>><<Ex-smoker.>>\nO:\nSpO2: \u2022\nGen: well, NAD\nResp: Normal WOB at rest, <<reduced air entry>>, no wheeze/crackles\nCVS: NS1/2, no peripheral edema\nA: COPD - stable\nP:\n- Continue <<current inhalers>>\n- <<Smoking cessation discussed - plan: \u2022.>>\n- Vaccinations UTD - influenza, pneumococcal\n- Pulmonary rehab and action plan reviewed\n- f/u <<#>> months\n- RTC/RTED instructions reviewed, including increased dyspnea, sputum change, fever",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: COPD review <<f/u>>\n- Baseline dyspnea mMRC \u2022\n- <<#>> exacerbations past year. \n- Cough/sputum stable. \n- <<Current smoker, # pack-years.>><<Ex-smoker.>>\n\nO:\nSpO2: \u2022\nBP: <<X>>.    HR: <<X>>\nGen: well, NAD\nResp: Normal WOB at rest, <<reduced air entry>>, no wheeze/crackles\nCVS: NS1/2, no peripheral edema\n\nA: COPD - stable\nP:\n- Continue <<current inhalers>>\n- <<Smoking cessation discussed - plan: \u2022.>>\n- Vaccinations UTD - influenza, pneumococcal\n- Pulmonary rehab and action plan reviewed\n- f/u <<#>> months\n- RTC/RTED instructions reviewed, including increased dyspnea, sputum change, fever, hemoptysis, etc.\n\n",
+        "updated_at": "2026-11-02T18:35:58Z",
+        "updated_by": "James"
     },
     {
         "id": "conjunctivitis",
         "title": "Conjunctivitis",
-        "cat": "ENT/Resp",
+        "cat": "ENT",
         "aliases": "pink eye red eye discharge itchy",
-        "body": "S: <<R>><<L>><<Bilateral>> red eye x <<#>> days, <<watery>><<purulent>> discharge, gritty sensation. Denies pain, photophobia, vision change. No contact lens use.\nO:\nGen: well, NAD\nEyes: Conjunctival injection <<R>><<L>>, <<watery>><<purulent>> discharge. Cornea clear, PERLA, VA grossly normal. No ciliary flush, no periorbital swelling\nA: <<Viral>><<Bacterial>><<Allergic>> conjunctivitis\nP:\n- Warm compress QID, lid hygiene, hand hygiene; discard eye makeup\n- <<Topical antibiotic drops QID x 5-7 days Rx sent.>><<Antihistamine drops BID. Alomide 1-2 drops QID x7d>>\n- RTC/RTED instructions reviewed, including pain with eye movement, photophobia, vision change, eyelid swelling, spreading",
-        "updated_at": "2026-10-22T18:31:03Z",
+        "body": "S: Conjunctivitis\n- <<R>><<L>><<Bilateral>> red eye x <<#>> days\n <<watery>><<purulent>> discharge, gritty sensation. \n- Denies pain, photophobia, vision change. No contact lens use.\n- <<recent URTI>>\n- Afebrile and otherwise systemically well\n- No recent travel, no sick contacts\n<<- No recent changes to sexual partners/practices>>\n\nO:\nGen: well, NAD\nEyes: Conjunctival injection <<R>><<L>>, <<watery>><<purulent>> discharge. Cornea clear, PERLA, VA grossly normal. No ciliary flush, no periorbital swelling\n\nA: <<R>><<L>><<Bilateral>> conjunctivitis, favour <<Viral>><<Bacterial>><<Allergic>> \nP:\n- Counselled re: conservative measures: Warm compress QID, lid hygiene, hand hygiene, discard eye makeup\n- <<Topical antibiotic drops (erythromycin ophthalmic ointment 0.5%) QID x 5-7 days Rx sent.>><<Antihistamine drops BID. Alomide 1-2 drops QID x7d vs Pataday/olopatadine 0.1% BID or 0.2% OD x7d>>\n- RTC/RTED instructions reviewed, including pain with eye movement, photophobia, vision change, eyelid swelling, spreading\n\n",
+        "updated_at": "2026-11-02T18:41:28Z",
         "updated_by": "James"
     },
     {
@@ -94,8 +94,8 @@
         "title": "Croup (peds)",
         "cat": "ENT/Resp",
         "aliases": "barky cough stridor seal peds child westley",
-        "body": "S: Cough\n- Barky cough, hoarse voice x <<#>> days, worse at night, post-URTI. \n- <<Stridor with agitation only.>><<No stridor at rest.>>\n- Feeding well. Denies drooling, lethargy. No fever\n\nO:\nT: \u2022  RR: \u2022  SpO2: \u2022\nGen: alert, NAD, non-toxic\nResp: No stridor at rest, no retractions or tracheal tug, GAEB. Barky cough noted\n\nA: Croup - <<mild>><<moderate>>\nP:\n- <<Dexamethasone 0.6 mg/kg PO x 1.>>\n- Fluids, antipyretics PRN, cool night air\n- RTC/RTED instructions reviewed with parents, including stridor at rest, retractions, cyanosis, drooling\n\n",
-        "updated_at": "2026-10-27T17:47:50Z",
+        "body": "S: Cough\n- Barky cough, hoarse voice x <<#>> days, worse at night, worse supine, post-URTI. \n- <<Stridor with agitation only.>><<No stridor at rest.>>\n- Feeding well. Denies drooling. \n- No fever, no lethargy\n- Wet Diapers: Urine output and BMs <<at usual baseline>><<slightly reduced>>\n- OTCs: Tylenol/Advil \n\nO:\nT: \u2022  RR: \u2022  SpO2: \u2022\nGen: alert, NAD, non-toxic\nResp: No stridor at rest, no retractions or tracheal tug, GAEB. Barky cough noted\n\nA: Croup - <<mild>><<moderate>>\nP:\n- <<Dexamethasone 0.6 mg/kg PO x 1>>\n- Fluids, antipyretics PRN, cool night air\n- RTC/RTED instructions reviewed with parents, including stridor at rest, retractions, cyanosis, drooling\n\n",
+        "updated_at": "2026-11-02T18:43:12Z",
         "updated_by": "James"
     },
     {
@@ -111,63 +111,63 @@
         "id": "ili",
         "title": "Influenza-like illness",
         "cat": "ENT/Resp",
-        "aliases": "flu influenza covid myalgia viral aches",
-        "body": "S: Abrupt fever, myalgias, headache, dry cough x <<#>> days. Denies SOB, chest pain. Fluids adequate. <<Household contacts ill.>> No high-risk conditions.\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: tired but non-toxic, NAD\nHEENT: Throat mildly injected, neck supple\nResp: Normal WOB, GAEB, no crackles\nA: Influenza-like illness / viral syndrome\nP:\n- Supportive care: rest, fluids, antipyretics\n- <<COVID/influenza swab done.>>\n- <<Antiviral started - high risk, within 48 h.>>\n- Stay home while febrile\n- RTC/RTED instructions reviewed, including SOB, chest pain, confusion, not improving by day 5-7",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "aliases": "flu influenza covid myalgia viral aches cold&flu urti",
+        "body": "S: Cold & Flu\nAbrupt fever, myalgias, headache, dry cough x <<#>> days. Denies SOB, chest pain. Fluids adequate. <<Household contacts ill.>> No high-risk conditions.\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: tired but non-toxic, NAD\nHEENT: Throat mildly injected, neck supple\nResp: Normal WOB, GAEB, no crackles\n\nA: Acute viral illness. No red flag symptoms\nP:\n- Counselled re: continued supportive care: rest, fluids, antipyretics, stay home while febrile\n- <<COVID/influenza swab done.>>\n- <<Antiviral started - high risk, within 48 h.>>\n- RTC/RTED instructions reviewed, including SOB, chest pain, confusion, not improving by day 5-7\n\n",
+        "updated_at": "2026-11-02T18:46:40Z",
+        "updated_by": "James"
     },
     {
         "id": "cap",
         "title": "Pneumonia (outpatient CAP)",
         "cat": "ENT/Resp",
         "aliases": "pneumonia lung infection crackles consolidation chest xray",
-        "body": "S: Cough with purulent sputum, fever x <<#>> days. <<Pleuritic chest pain.>> Mild exertional dyspnea, none at rest. Eating and drinking. No immunosuppression.\nO:\nT: \u2022  HR: \u2022  RR: \u2022  BP: \u2022  SpO2: \u2022\nGen: non-toxic, NAD, full sentences\nResp: Focal crackles <<R>><<L>> <<zone>>, normal WOB otherwise\nCVS: NS1/2\nA: Community-acquired pneumonia - low severity, suitable for outpatient treatment\nP:\n- <<Amoxicillin 1 g TID x 5-7 days.>><<Doxycycline 100 mg BID x 5-7 days.>>\n- CXR <<done>><<ordered>>\n- Antipyretics, fluids; reassess 48-72 h\n- RTC/RTED instructions reviewed, including worsening SOB, falling sats, confusion, persistent fever",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Cough with purulent sputum, \n- fever x <<#>> days. \n- <<Pleuritic chest pain.>> \n- Mild exertional dyspnea, none at rest. \n- Eating and drinking well. No immunosuppression.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022  BP: \u2022  SpO2: \u2022\nGen: non-toxic, NAD, full sentences\nResp: Focal crackles <<R>><<L>> <<zone>>, normal WOB otherwise\nCVS: NS1/2\n\nA: Community-acquired pneumonia - low severity, suitable for outpatient treatment\nP:\n- <<Amoxicillin 1 g TID x 5-7 days.>><<Doxycycline 100 mg BID x 5-7 days.>>\n- CXR <<done>><<ordered>>\n- Antipyretics, fluids; reassess 48-72 h\n- RTC/RTED instructions reviewed, including worsening SOB, falling sats, confusion, persistent fever\n\n",
+        "updated_at": "2026-11-02T18:44:21Z",
+        "updated_by": "James"
     },
     {
         "id": "epistaxis",
         "title": "Epistaxis (nosebleeds)",
-        "cat": "ENT/Resp",
-        "aliases": "nosebleed nose bleeding littles area cautery",
-        "body": "S: Recurrent <<R>><<L>> nosebleeds x \u2022, settling with pressure in under <<#>> min. Denies easy bruising, family bleeding history. No anticoagulants. Dry air / nose picking suspected.\nO:\nBP: \u2022\nGen: well, NAD\nHEENT: Anterior septum - prominent vessels and crusting at Little's area, no active bleeding. No posterior source suspected\nA: Recurrent anterior epistaxis\nP:\n- First aid reviewed - lean forward, pinch soft part x 10-15 min; ER if not stopping after 10 min\n- Saline gel / vaseline BID to septum, humidifier, avoid picking\n- <<Cautery if recurrent - arranged.>>\n- RTC/RTED instructions reviewed, including prolonged or heavy posterior-type bleeding",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "cat": "ENT",
+        "aliases": "nosebleed nose bleeding littles area cautery epistaxis",
+        "body": "S: Epistaxis\n- <<R>><<L>> nosebleeds x \u2022, <<recurrent>>\n- settling with pressure in under <<#>> min. \n- Denies easy bruising, family bleeding history. No anticoagulants. \n- Triggers: Dry air / nose picking suspected\n- Denies trauma/injury\n- Afebrile and otherwise systemically well\n\nO:\nBP: \u2022    HR: \u2022\nGen: well, NAD\nHEENT: Anterior septum - prominent vessels/erythema and crusting at Little's area, no active bleeding. No posterior source suspected\n\nA: <<Recurrent>> anterior epistaxis\nP:\n- Counselled re: First aid measures - lean forward, pinch soft part x 10-15 min; ER if not stopping after 10 min\n- Saline gel / vaseline BID to septum, humidifier, avoid picking\n- <<Cautery advised if recurrent - arranged.>>\n- RTC/RTED instructions reviewed, including prolonged or heavy posterior-type bleeding\n\n",
+        "updated_at": "2026-11-02T18:49:42Z",
+        "updated_by": "James"
     },
     {
         "id": "cerumen",
         "title": "Cerumen impaction",
-        "cat": "ENT/Resp",
+        "cat": "ENT",
         "aliases": "ear wax blocked ear syringing lavage hearing",
-        "body": "S: <<#>> wk history of ear discomfort. Denies hearing loss, otalgia, tinnitus, otorrhea/bleeding, vertigo, aural fullness. Afebrile and well. No trauma/injury. No foreign body.\nO:\nHEENT:\n- TMs: cerumen <<bilaterally>><<R>><<L>>, unable to visualize TM<<s>>. No erythema of external aud canal, no bleeding/purulence/discharge\n- No mastoid tenderness\nA: <<Bilateral>><<R>><<L>> cerumen impaction\nP:\n- Mineral/olive oil drops to ears BID x 5-7 days\n- f/u 1 wk if not improving for syringing\n- RTC/RTED instructions reviewed - new/worsening fever, otalgia, vertigo, bleeding/otorrhea, hearing loss\n<<Syringing: syringed and curetted ears - post-procedure otoscopy clear>>",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Cerumen impaction\n- <<#>> wk history of ear discomfort. \n- Denies hearing loss, otalgia, tinnitus, otorrhea/bleeding, vertigo, aural fullness. \n- Afebrile and well. \n- No trauma/injury. No foreign body.\n\nO:\nHEENT:\n- TMs: cerumen <<bilaterally>><<R>><<L>>, unable to visualize TM<<s>>. No erythema of external aud canal, no bleeding/purulence/discharge\n- No mastoid tenderness\n\nA: <<Bilateral>><<R>><<L>> cerumen impaction\nP:\n- Mineral/olive oil drops to ears BID x 5-7 days\n- f/u 1 wk if not improving for syringing\n- RTC/RTED instructions reviewed - new/worsening fever, otalgia, vertigo, bleeding/otorrhea, hearing loss\n<<Syringing: syringed and curetted ears - post-procedure otoscopy clear>>\n\n",
+        "updated_at": "2026-11-02T18:50:48Z",
+        "updated_by": "James"
     },
     {
         "id": "mono",
         "title": "Mononucleosis",
         "cat": "ENT/Resp",
         "aliases": "mono EBV kissing disease glandular fever teen",
-        "body": "S: Sore throat, marked fatigue, fever x <<#>> days in <<teen>><<young adult>>. Marked tonsillar swelling. Denies breathing difficulty, severe abdominal pain.\nO:\nT: \u2022\nGen: tired, non-toxic, NAD\nHEENT: Exudative pharyngitis, posterior cervical LN. No airway compromise\nAbdo: SNTND, <<no HSM>><<spleen tip palpable>>\nDerm: no jaundice, no rash\nA: Suspected infectious mononucleosis\nP:\n- Monospot/EBV serology + CBC sent\n- Supportive care: fluids, analgesia\n- No contact sports or heavy lifting x 4 wks minimum - splenic rupture risk discussed\n- Avoid amoxicillin (rash)\n- f/u with results\n- RTC/RTED instructions reviewed, including severe abdominal pain, airway concern",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Sore throat, marked fatigue, fever x <<#>> days in <<teen>><<young adult>>. \n- Marked tonsillar swelling. \n- Denies dyspnea, chest pain, abdo pain\n- Afebrile\n- Denies <<sick contacts, >><<recent travel, >><<new sexual partners/practices>>\n\nO:\nT: \u2022\nGen: tired, non-toxic, NAD\nHEENT: Exudative pharyngitis, posterior cervical LN. No airway compromise\nAbdo: SNTND, <<no HSM>><<spleen tip palpable>>\nDerm: no jaundice, no rash\n\nA: Suspected infectious mononucleosis\nP:\n- Monospot/EBV serology + CBC sent\n- Supportive care: fluids, analgesia\n- No contact sports or heavy lifting x 4 wks minimum - splenic rupture risk discussed\n- Avoid amoxicillin (rash)\n- f/u with results\n- RTC/RTED instructions reviewed, including severe abdominal pain, airway concern\n\n",
+        "updated_at": "2026-11-02T18:52:49Z",
+        "updated_by": "James"
     },
     {
         "id": "laryngitis",
         "title": "Hoarseness / laryngitis",
-        "cat": "ENT/Resp",
+        "cat": "ENT",
         "aliases": "hoarse voice lost voice laryngitis vocal",
-        "body": "S: Hoarseness x \u2022 after <<URTI>><<voice overuse>>. Denies dysphagia, neck lumps, weight loss, hemoptysis. <<Non-smoker.>><<Smoker - counselled.>>\nO:\nGen: well, NAD, afebrile. Voice hoarse, no stridor\nHEENT: Oropharynx normal. Neck supple, no LN or masses\nA: Acute laryngitis\nP:\n- Voice rest (avoid whispering), hydration, limit irritants/reflux triggers\n- Usually resolves in 1-2 wks\n- Red flag reviewed: hoarseness beyond 4 wks (esp smokers) - ENT/laryngoscopy referral\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Laryngitis\n- Hoarseness x \u2022 after <<URTI>><<voice overuse>>. \n- Denies dysphagia, neck lumps, weight loss, hemoptysis. \n- <<Non-smoker.>><<Smoker - counselled.>>\n- Afebrile, otherwise systemically well; denies chest pain, dyspnea, hemoptysis, pleurisy\n\nO:\nGen: well, NAD, afebrile. Voice hoarse, no stridor\nHEENT: Oropharynx normal. Neck supple, no LN or masses\n\nA: Acute laryngitis\nP:\n- Voice rest (avoid whispering), hydration, limit irritants/reflux triggers\n- Discussed expected recovery- Usually resolves in 1-2 wks\n- Red flag reviewed: hoarseness beyond 4 wks (esp smokers) - to consider ENT/laryngoscopy referral\n- RTC/RTED instructions reviewed\n\n",
+        "updated_at": "2026-11-02T18:54:25Z",
+        "updated_by": "James"
     },
     {
         "id": "osa",
         "title": "Snoring / OSA workup",
         "cat": "ENT/Resp",
         "aliases": "sleep apnea snoring tired epworth stopbang cpap",
-        "body": "S: OSA\nLoud snoring with <<witnessed apneas>>, unrefreshing sleep, daytime sonnolence. Epworth \u2022/24. <<Morning headaches.>> \nNo sedatives at night.\n<<Symptoms while driving>>\n<<No>> Smoking/EtOH/substances\n\nO:\nBP: \u2022  HR: \u2022  BMI: \u2022\nNeck circumference: \u2022 cm\nHEENT: Oropharynx grossly normal; <<Crowding noted>>\n- <<No>> Tonsillar hypertrophy\n- <<Mallampati \u2022>>\nA: Suspected OSA - STOP-BANG <<\u2022>>/8\nP:\n- Sleep study <<ordered>>\n- Counselled on weight management, evening EtOH reduction, avoid sedatives, BP monitoring\n- Drowsy-driving safety discussed\n- f/u with results",
-        "updated_at": "2026-10-27T17:27:06Z",
+        "body": "S: OSA\nLoud snoring with <<witnessed apneas>>, unrefreshing sleep, daytime sonnolence. Epworth \u2022/24. <<Morning headaches.>> \nNo sedatives at night.\n<<Symptoms while driving>>\n<<No>> Smoking/EtOH/substances\n\nO:\nBP: \u2022  HR: \u2022  BMI: \u2022\nNeck circumference: \u2022 cm\nHEENT: Oropharynx grossly normal; <<Crowding noted>>\n- <<No>> Tonsillar hypertrophy\n- <<Mallampati \u2022>>\n\nA: Suspected OSA - STOP-BANG <<\u2022>>/8\nP:\n- Sleep study <<ordered>>\n- Counselled on weight management, evening EtOH reduction, avoid sedatives, BP monitoring\n- Drowsy-driving safety discussed\n- f/u with results",
+        "updated_at": "2026-11-02T18:54:43Z",
         "updated_by": "James"
     },
     {
@@ -175,27 +175,27 @@
         "title": "Tinnitus",
         "cat": "ENT/Resp",
         "aliases": "ringing ears buzzing audiogram noise",
-        "body": "S: <<Bilateral>><<R>><<L>> ringing x \u2022, <<constant>><<intermittent>>, non-pulsatile. Denies hearing loss, vertigo, otalgia, discharge. Noise exposure: \u2022. No ototoxic meds.\nO:\nHEENT: Canals and TMs normal x2. Weber/Rinne grossly normal. No carotid bruit\nA: Subjective non-pulsatile tinnitus - no red flags\nP:\n- Audiology referral for baseline audiogram\n- Reassurance re benign course; sound masking and sleep strategies discussed\n- Hearing protection for noise\n- RTC/RTED instructions reviewed, including unilateral progression, pulsatile quality, vertigo",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Tinnitus\n<<Bilateral>><<R>><<L>> ringing x \u2022, <<constant>><<intermittent>>, non-pulsatile. Denies hearing loss, vertigo, otalgia, discharge. Noise exposure: \u2022. No ototoxic meds.\n\nO:\nGen well NAD\nHEENT: Canals and TMs normal x2. Weber/Rinne grossly normal. No carotid bruit\n\nA: <<Unilateral>><<Bilateral>> non-pulsatile tinnitus - no red flags\nP:\n- Audiology referral for baseline audiogram\n- Reassurance re benign course; sound masking and sleep strategies discussed\n- Hearing protection for noise\n- RTC/RTED instructions reviewed, including unilateral progression, pulsatile quality, vertigo\n<<- MRI & MR Angiography of Head & IAC to r/o pulsatile tinnitus 2/2 IIH or other structural pathology>>\n\n",
+        "updated_at": "2026-11-02T19:00:37Z",
+        "updated_by": "James"
     },
     {
         "id": "stye",
         "title": "Stye / chalazion",
         "cat": "ENT/Resp",
         "aliases": "eyelid lump hordeolum bump eye",
-        "body": "S: <<R>><<L>> eyelid lump x \u2022 - <<painful, red (stye)>><<painless, firm (chalazion)>>. Denies vision change, spreading redness.\nO:\nEyes: <<R>><<L>> lid - <<tender pustule at lash line>><<firm non-tender nodule within lid>>. Conjunctiva quiet, EOM full, VA normal\nA: <<Hordeolum (stye)>><<Chalazion>>, <<R>><<L>>\nP:\n- Warm compress 10 min QID + lid hygiene\n- Most resolve in 1-2 wks (chalazion may take longer); refer if persistent beyond 6-8 wks\n- RTC/RTED instructions reviewed, including spreading redness, pain with eye movement, vision change",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: ?Stye\n<<R>><<L>> eyelid lump x \u2022 - <<painful, red (stye)>><<painless, firm (chalazion)>>. Denies vision change, spreading redness.\n\nO:\nGen well NAD\nHEENT: PERLA, oropharynx normal\nEyes: <<R>><<L>> lid - <<tender pustule at lash line>><<firm non-tender nodule within lid>>. Conjunctiva grossly normal, EOM full, VA normal\n\nA: <<R>><<L>> <<Hordeolum (stye)>><<Chalazion>>\nP:\n- Warm compress 10 min QID + lid hygiene\n- Most resolve in 1-2 wks (chalazion may take longer); refer if persistent beyond 6-8 wks\n- RTC/RTED instructions reviewed, including spreading redness, pain with eye movement, vision change\n\n",
+        "updated_at": "2026-11-02T19:03:08Z",
+        "updated_by": "James"
     },
     {
         "id": "dry-eye",
         "title": "Dry eyes",
         "cat": "ENT/Resp",
         "aliases": "gritty burning eyes tears screens",
-        "body": "S: Gritty, burning eyes x \u2022, worse with screens/wind. <<Reflex watering.>> Denies pain, photophobia, vision loss. Screen time \u2022 h/day. Contributing meds reviewed.\nO:\nEyes: Conjunctivae mildly injected x2, no discharge. Cornea clear, VA normal\nA: Dry eye syndrome\nP:\n- Artificial tears QID PRN (preservative-free if frequent), warm compresses\n- Screen breaks - 20-20-20 rule\n- Optometry referral if persistent\n- RTC/RTED instructions reviewed, including pain, vision change",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Dry eyes\n- Gritty, burning eyes x \u2022, worse with screens/wind. <<Reflex watering.>> \n- Denies pain, photophobia, vision loss. \n- Screen time \u2022 h/day. \n- Contributing meds reviewed- <<No anticholinergics or other contributing meds>>\n\nO:\nEyes: Conjunctivae mildly injected x2, no discharge. Cornea clear, VA normal\n\nA: Dry eye syndrome\nP:\n- Artificial tears QID PRN (preservative-free if frequent), warm compresses\n- Screen breaks - 20-20-20 rule\n- Optometry referral if persistent\n- RTC/RTED instructions reviewed, including pain, vision change\n\n",
+        "updated_at": "2026-11-02T19:04:03Z",
+        "updated_by": "James"
     },
     {
         "id": "htn",
@@ -211,27 +211,27 @@
         "title": "Type 2 diabetes follow-up",
         "cat": "Cardio/Metab",
         "aliases": "diabetes sugar A1c metformin glucose DM",
-        "body": "S: DM f/u. Adherent to meds, no hypoglycemia. Home BG: \u2022. Denies polyuria/polydipsia, foot concerns, visual change. Last eye exam: \u2022.\nO:\nBP: \u2022  Wt: \u2022\nGen: well, NAD\nFoot exam: pulses palpable, monofilament intact, no ulcers/deformity\nA: T2DM - A1c \u2022, <<at>><<above>> target 7.0\nP:\n- <<Continue current regimen.>><<Adjusted: \u2022.>>\n- Counselled on home BG targets: fasting 4-7, 2 h post-meal 5-10\n- BW: A1c q3-6 months; annual ACR, Cr, lipids <<UTD>><<ordered>>\n- Retinal screening <<UTD>><<booked>>; optometry q1-2 yrs\n- Vascular protection (statin/ACEi) reviewed\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including hypoglycemia, foot wounds",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: DM f/u. Most recent A1C: <<X>>\n- Adherent to meds, no hypoglycemia. \n- Home BG: \u2022. \n- Denies polyuria/polydipsia, foot concerns, visual change. \n- Last eye exam: \u2022.\n\nO:\nBP: \u2022  Wt: \u2022\nGen: well, NAD\nFoot exam: pulses palpable, monofilament intact, no ulcers/deformity\n\nA: T2DM - A1c \u2022, <<at>><<above>> target 7.0\nP:\n- <<Continue current regimen.>><<Adjusted: \u2022.>>\n- Counselled on home BG targets: fasting 4-7, 2 h post-meal 5-10\n- BW: A1c q3-6 months; annual ACR, Cr, lipids <<UTD>><<ordered>>\n- Retinal screening <<UTD>><<booked>>; optometry q1-2 yrs\n- Vascular protection (statin/ACEi) reviewed\n- f/u <<3-6>> months\n- RTC/RTED instructions reviewed, including hypoglycemia, foot wounds\n\n",
+        "updated_at": "2026-11-02T19:09:33Z",
+        "updated_by": "James"
     },
     {
         "id": "lipids",
         "title": "Dyslipidemia",
         "cat": "Cardio/Metab",
         "aliases": "cholesterol LDL statin lipids framingham crestor",
-        "body": "S: Lipid review - <<primary>><<secondary>> prevention. <<No statin side effects.>> Diet and exercise reviewed.\nO:\nBP: \u2022  BMI: \u2022\nCVS: NS1/2, no murmur\nA: Dyslipidemia - LDL \u2022 (target \u2022); FRS \u2022\nP:\n- <<Continue current statin.>><<Rx rosuvastatin 5 mg x 1 wk, then 10 mg x 1 wk, then 20 mg daily.>>\n- Discussed benefits and common side effects: transaminase elevation, myalgia, myopathy, rarely rhabdomyolysis\n- Continue lifestyle changes - Mediterranean/Portfolio diet, cardio exercise\n- Recheck lipids in 6 months to assess response\n- RTC/RTED instructions reviewed, including muscle pain/weakness",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: DLD review \n- <<primary>><<secondary>> prevention. \n- <<No statin side effects.>> \n- Diet and exercise reviewed.\n- Denies significant cardiovascular/peripheral vascular symptoms including exertional chest pain, dyspnea, claudication, orthopnea/PND, palpitations, etc. \n\nO:\nBP: \u2022  <<Wt: X BMI: X>>\nCVS: NS1/2, no murmur\n\nA: Dyslipidemia - LDL \u2022 (target \u2022); FRS \u2022\nP:\n- <<Continue current statin.>><<Rx rosuvastatin 5 mg x 1 wk, then 10 mg x 1 wk, then 20 mg daily.>>\n- Discussed benefits and common side effects: transaminase elevation, myalgia, myopathy, rarely rhabdomyolysis\n- Continue lifestyle changes - Mediterranean/Portfolio diet, cardio exercise\n- Recheck lipids in 6 months to assess response\n- RTC/RTED instructions reviewed, including muscle pain/weakness\n\n",
+        "updated_at": "2026-11-02T19:10:47Z",
+        "updated_by": "James"
     },
     {
         "id": "hypothyroid",
         "title": "Hypothyroidism follow-up",
         "cat": "Cardio/Metab",
         "aliases": "thyroid TSH levothyroxine synthroid",
-        "body": "S: Hypothyroid review on levothyroxine \u2022 mcg daily, on empty stomach. Denies fatigue, weight change, cold intolerance, palpitations, tremor.\nO:\nHR: \u2022, regular\nNeck: no goiter or nodules. No tremor\nA: Hypothyroidism - TSH \u2022, in range\nP:\n- Continue levothyroxine \u2022 mcg daily\n- <<Repeat TSH in 12 months.>><<Repeat TSH 6 wks after dose change.>>\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Hypothyroidism f/u and review\n- on levothyroxine \u2022 mcg daily, on empty stomach. \n- Denies new/worsening stigmata of thyroid disease, including fatigue, weight change, cold intolerance, palpitations, tremor\n\nO:\nHR: \u2022, regular\nNeck: no goiter or nodules. No tremor\n\nA: Hypothyroidism - TSH \u2022, in range\nP:\n- <<Continue>><<Titrate>><<Taper>> levothyroxine: <<X>> mcg daily\n- <<Repeat TSH in 12 months.>><<Repeat TSH 6 wks after dose change.>>\n- RTC/RTED instructions reviewed\n\n",
+        "updated_at": "2026-11-02T19:12:47Z",
+        "updated_by": "James"
     },
     {
         "id": "chest-pain",
@@ -247,27 +247,27 @@
         "title": "Palpitations",
         "cat": "Cardio/Metab",
         "aliases": "heart racing skipped beats fluttering holter ectopy",
-        "body": "S: Intermittent palpitations x \u2022 - <<description>>, lasting \u2022. Denies syncope, chest pain, exertional symptoms. Caffeine/EtOH/stimulants: \u2022. No FHx sudden cardiac death.\nO:\nHR: \u2022, regular  BP: \u2022\nCVS: NS1/2, no murmur\nNeck: thyroid normal\nA: Palpitations - likely benign ectopy; no high-risk features\nP:\n- <<ECG done - normal.>><<ECG ordered.>><<Holter ordered.>>\n- BW: CBC, TSH, lytes\n- Counselled to reduce caffeine/EtOH\n- RTC/RTED instructions reviewed, including syncope, chest pain, sustained episodes",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Palpitations\nIntermittent palpitations x \u2022 - <<description>>, lasting \u2022. Denies syncope, chest pain, exertional symptoms. Caffeine/EtOH/stimulants: \u2022. No FHx sudden cardiac death.\n\nO:\nHR: \u2022, regular  BP: \u2022\nCVS: NS1/2, no murmur\nNeck: thyroid normal\n\nA: Palpitations - likely benign ectopy; no high-risk features\nP:\n- <<ECG done - normal.>><<ECG ordered.>><<Holter ordered.>>\n- BW: CBC, TSH, lytes\n- Counselled to reduce caffeine/EtOH\n- Agreed on short f/u <<1-2 wks>> to r/a and review results\n- RTC/RTED instructions reviewed, including syncope, chest pain, sustained episodes\n\n",
+        "updated_at": "2026-11-02T19:13:45Z",
+        "updated_by": "James"
     },
     {
         "id": "afib",
         "title": "Atrial fibrillation follow-up",
-        "cat": "Cardio/Metab",
+        "cat": "Cardio",
         "aliases": "afib AF irregular anticoagulation DOAC rate",
-        "body": "S: AF review. <<Rate-controlled, asymptomatic.>><<Occasional palpitations.>> Denies chest pain, syncope, worsening dyspnea. Adherent to <<anticoagulant>>; no bleeding concerns.\nO:\nHR: \u2022, irregularly irregular  BP: \u2022\nCVS: NS1/2. No signs of failure - chest clear, no edema\nA: Atrial fibrillation - rate-controlled. Stroke risk reviewed (CHADS-65)\nP:\n- Continue <<rate control agent>> and <<anticoagulant - indication reconfirmed>>\n- Annual BW: CBC, Cr\n- f/u <<6-12>> months\n- RTC/RTED instructions reviewed, including syncope, chest pain, bleeding, decompensation",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: AF review. \n- <<Rate-controlled, asymptomatic.>><<Occasional palpitations.>> \n- Denies chest pain, syncope, worsening dyspnea. \n- Adherent to <<anticoagulant>>; no bleeding concerns.\n\nO:\nHR: \u2022, irregularly irregular  BP: \u2022\nCVS: NS1/2. No signs of failure - chest clear, no edema\n\nA: Atrial fibrillation - rate-controlled. Stroke risk reviewed (CHADS-65)\nP:\n- Continue <<rate control agent>> and <<anticoagulant - indication reconfirmed>>\n- Annual BW: CBC, Cr\n- f/u <<6-12>> months\n- RTC/RTED instructions reviewed, including syncope, chest pain, bleeding, decompensation\n\n",
+        "updated_at": "2026-11-02T19:14:49Z",
+        "updated_by": "James"
     },
     {
         "id": "chf",
         "title": "Heart failure follow-up",
         "cat": "Cardio/Metab",
         "aliases": "CHF heart failure edema orthopnea diuretic weight",
-        "body": "S: HF review. NYHA <<I>><<II>>. Home weights stable. Denies orthopnea, PND, increasing edema, dizziness. Adherent to meds.\nO:\nBP: \u2022  HR: \u2022  Wt: \u2022 (<<change>>)\nVolume: JVP not elevated\nResp: GAEB, no crackles\nCVS: NS1/2. <<No peripheral edema.>><<Trace ankle edema.>>\nA: Heart failure (<<HFrEF>><<HFpEF>>, EF \u2022) - compensated\nP:\n- Continue <<current HF regimen>>\n- Daily weights - report gain over 2 kg in 3 days\n- BW: lytes, Cr <<due>><<ordered>>\n- Fluid/sodium guidance reviewed\n- f/u <<1-3>> months\n- RTC/RTED instructions reviewed, including weight gain, worsening dyspnea, orthopnea",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: HF review. \n- NYHA <<I>><<II>>. \n- Home weights stable. \n- Denies orthopnea, PND, increasing edema, dizziness. \n- Adherent to meds, on GDMT: <<ACE/ARB/ARNI: X>>, <<BBlocker: X>>, <<MRA: X>>, <<SGLT2i: X>>\n\nO:\nBP: \u2022  HR: \u2022  Wt: \u2022 (<<change>>)\nVolume: JVP not elevated\nResp: GAEB, no crackles\nCVS: NS1/2. <<No peripheral edema.>><<Trace ankle edema.>>\n\nA: Heart failure (<<HFrEF>><<HFpEF>>, EF \u2022) - compensated\nP:\n- Continue <<current HF regimen>>\n- Daily weights - report gain over 2 kg in 3 days\n- BW: lytes, Cr <<due>><<ordered>>\n- Fluid/sodium guidance reviewed\n- f/u <<1-3>> months\n- RTC/RTED instructions reviewed, including weight gain, worsening dyspnea, orthopnea\n\n",
+        "updated_at": "2026-11-02T19:16:44Z",
+        "updated_by": "James"
     },
     {
         "id": "anemia",
@@ -454,9 +454,9 @@
         "title": "Erectile dysfunction",
         "cat": "GU/Repro",
         "aliases": "impotence viagra sildenafil cialis erection",
-        "body": "S: Erectile difficulties x \u2022, gradual onset. <<Morning erections preserved.>> Libido normal. PMHx: <<DM>><<HTN>><<smoking>>. Meds reviewed. Mood normal.\nO:\nBP: \u2022\nGen: well, NAD. Genital exam normal. Peripheral pulses normal\nA: Erectile dysfunction - likely vasculogenic; treat as CV risk marker\nP:\n- BW: A1c, lipids<<, AM testosterone>>\n- CV risk assessment\n- Rx: <<sildenafil 50 mg PRN.>><<tadalafil 10 mg PRN.>> Counselled - contraindicated with nitrates\n- Counselled on lifestyle: exercise, smoking, EtOH\n- f/u <<4-8>> wks",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Erectile/Sexual Dysfunction\n- Erectile difficulties x \u2022, gradual onset. \n- <<Morning erections preserved.>> \n- Libido normal. \n- PMHx: <<DM>><<HTN>><<smoking>>. Meds reviewed. \n- Mood screened: grossly normal. Denies new/acute psychosocial stressors\n\nO:\nBP: \u2022\nGen: well, NAD. Genital exam normal. Peripheral pulses normal\n\nA: Erectile dysfunction - <<suspected vasculogenic; treat as CV risk marker>>\nP:\n- BW: A1c, lipids<<, AM testosterone>>\n- CV risk assessment\n- Rx: <<sildenafil 50 mg PRN.>><<tadalafil 10 mg PRN.>> Counselled - contraindicated with nitrates, discussed SERBs and RTED instruction including priapism, chest pain, etc.\n- Counselled on lifestyle optimization: exercise, smoking, EtOH\n- f/u <<4-8>> wks, or sooner prn\n\n",
+        "updated_at": "2026-11-02T19:06:23Z",
+        "updated_by": "James"
     },
     {
         "id": "bph",
