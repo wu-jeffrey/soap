@@ -202,8 +202,8 @@
         "title": "Hypertension follow-up",
         "cat": "Cardio/Metab",
         "aliases": "blood pressure BP high hypertensive",
-        "body": "S: HTN f/u. Home BP checks: <<none>><<avg \u2022>>. \n\nDenies headache, vision changes, chest pain, dyspnea, unilateral weakness, sensory deficits.\nDenies symptoms of hypotension, including fatigue, dizziness, weakness, presyncope\n\nSalt intake: <<good control, targeting under 2 g daily>>. \nDiet: <<balanced, mainly homemade>>. \nEtOH: <<occ/rare>>. \nSmoking: <<non-smoker>><<active smoker>><<quit>>. \nNSAIDs: <<occ/rare>>. Exercise: <<adequate>>. Stress: <<well-managed>>.\n\nO:\nBP: \u2022  HR: \u2022\nGen: well, NAD, non-toxic\nCVS: NS1/2, no ehs/murmur. No peripheral edema\nResp: Normal WOB, GAEB, no adventitious sounds\nAbdo: SNTND, no masses\n\nA: HTN - <<well-controlled>><<sub-optimally controlled>>\nP:\n- BW: <<lytes, Cr>><<lipids>><<A1c + fasting glucose>><<ECG>>\n- Lifestyle optimization counselled: <<moderate intensity exercise 150 min/week>><<Mediterranean diet, limited salt>><<limit EtOH>><<stress management>><<weight reduction>><<smoking cessation>>\n- <<Medications reviewed - continue current therapy.>><<Changes made: \u2022.>>\n- RTC in 3 months; sooner if chest pain, severe headache, vomiting, vision changes, weakness/numbness",
-        "updated_at": "2026-10-29T17:45:09Z",
+        "body": "S: HTN f/u. Home BP checks: <<none>><<avg \u2022>>. \n\nAdherent to medication, tolerating well & denies side effects\nDenies headache, vision changes, chest pain, dyspnea, unilateral weakness, sensory deficits.\nDenies symptoms of hypotension, including fatigue, dizziness, weakness, presyncope\n\nSalt intake: <<good control, targeting under 2 g daily>>. \nDiet: <<balanced, mainly homemade>>. \nEtOH: <<occ/rare>>. \nSmoking: <<non-smoker>><<active smoker>><<quit>>. \nNSAIDs: <<occ/rare>>. Exercise: <<adequate>>. Stress: <<well-managed>>.\n\nO:\nBP: \u2022  HR: \u2022\nGen: well, NAD, non-toxic\nCVS: NS1/2, no ehs/murmur. No peripheral edema\nResp: Normal WOB, GAEB, no adventitious sounds\nAbdo: SNTND, no masses\n\nA: HTN - <<well-controlled>><<sub-optimally controlled>>\nP:\n- BW: <<lytes, Cr>><<lipids>><<A1c + fasting glucose>><<ECG>>\n- Lifestyle optimization counselled: <<moderate intensity exercise 150 min/week>><<Mediterranean diet, limited salt>><<limit EtOH>><<stress management>><<weight reduction>><<smoking cessation>>\n- <<Medications reviewed - continue current therapy.>><<Changes made: \u2022.>>\n- RTC in 3 months; sooner if chest pain, severe headache, vomiting, vision changes, weakness/numbness",
+        "updated_at": "2026-11-05T14:37:01Z",
         "updated_by": "James"
     },
     {
@@ -400,8 +400,8 @@
         "title": "Uncomplicated UTI (cystitis)",
         "cat": "GU/Repro",
         "aliases": "bladder infection dysuria burning pee urine frequency",
-        "body": "S: Dysuria, frequency, urgency x <<#>> days. \nDenies fever, flank pain, vaginal discharge/irritation. \nNot pregnant - LMP \u2022.\nNo hematuria, no GI bleeding\n<<No changes in sexual partners/practices; denies STI concern>><<Not sexually active>>\n\nO:\nT: \u2022\nGen: well, NAD\nAbdo: SNTND, mild suprapubic tenderness. No CVA tenderness\n\nA: Uncomplicated cystitis\nP:\n- UA and urine culture sent\n- <<Macrobid 100 mg BID x 5 days - counselled on side effects.>><<TMP-SMX DS BID x 3 days.>>\n- Counselled ++ fluids; tylenol PRN\n- f/u for culture results\n- RTC/RTED instructions reviewed, including fever, flank pain, no improvement in 48 h",
-        "updated_at": "2026-10-29T18:25:19Z",
+        "body": "S: UTI\n- Dysuria, frequency, urgency x <<#>> days. \n- Denies fever, flank pain, vaginal discharge/irritation. \n- Not pregnant - LMP \u2022.\n- No hematuria, no GI bleeding\n- <<No changes in sexual partners/practices; denies STI concern>><<Not sexually active>>\n\nO:\nT: \u2022\nGen: well, NAD\nAbdo: SNTND, mild suprapubic tenderness. No CVA tenderness\n\nA: Uncomplicated cystitis\nP:\n- UA and urine culture sent\n- <<Nitrofurantoin 100 mg BID x 5 days - counselled on side effects>><<TMP-SMX DS BID x 3 days>>\n- Counselled ++ fluids; tylenol PRN\n- f/u for culture results\n- RTC/RTED instructions reviewed, including fever, flank pain, no improvement in 48 h\n\n",
+        "updated_at": "2026-11-04T18:29:18Z",
         "updated_by": "James"
     },
     {
@@ -490,9 +490,9 @@
         "title": "Recurrent UTIs",
         "cat": "GU/Repro",
         "aliases": "repeated bladder infections prophylaxis cystitis prevention",
-        "body": "S: <<#>> culture-confirmed UTIs past <<6>><<12>> months; currently asymptomatic - prevention visit. <<Post-coital pattern.>><<Postmenopausal.>> Hydration/voiding habits reviewed.\nO:\nAbdo: SNTND, no CVA tenderness\nA: Recurrent uncomplicated UTIs\nP:\n- Behavioural: hydration, post-coital voiding\n- <<Post-coital single-dose prophylaxis.>><<Continuous low-dose prophylaxis x 3-6 months.>><<Vaginal estrogen (postmenopausal).>><<Self-start standby abx with culture kits.>>\n- Urology if hematuria or atypical features\n- f/u 3 months",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Recurrent UTI\n- <<#>> culture-confirmed UTIs past <<6>><<12>> months; currently asymptomatic - prevention visit. <<Post-coital pattern.>><<Postmenopausal.>> Hydration/voiding habits reviewed.\n\nO:\nGen well NAD\nAbdo: SNTND, no CVA tenderness\n\nA: Recurrent uncomplicated UTIs\nP:\n- Behavioural: hydration, post-coital voiding\n- <<Post-coital single-dose prophylaxis.>><<Continuous low-dose prophylaxis x 3-6 months.>><<Vaginal estrogen (postmenopausal).>><<Self-start standby abx with culture kits.>>\n- Urology if hematuria or atypical features\n- f/u 3 months\n\n",
+        "updated_at": "2026-11-04T18:29:52Z",
+        "updated_by": "James"
     },
     {
         "id": "incontinence",
@@ -724,9 +724,9 @@
         "title": "Head trauma (minor facial)",
         "cat": "MSK",
         "aliases": "head injury facial trauma blunt fall hit",
-        "body": "S: No headache, NV, confusion/aLOC, vision changes/diplopia, focal neuro deficits, epistaxis\nO:\nGen: well, alert, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nNeuro: GCS 15, PERLA, CNII-XII grossly normal, moving all limbs spontaneously. No focal deficits\nHEENT: No deformity, lacerations, hematoma\n- Eyes: <<No>><<mild>><<moderate>> periorbital swelling and erythema with <<no>><<mild>> localized tenderness, no crepitus or fluctuance. No ecchymosis\n- Nose: No nasal bleeding/discharge\n- Mouth: No trismus or malocclusion\n- Neck: Full painless ROM. No midline cervical tenderness\nA: Head trauma - minor blunt facial trauma. No red flags of facial/orbital fracture, intracranial bleeding, or c-spine fracture\n- No imaging indicated as per NEXUS/CT head rules\nP:\n- Conservative management and watchful waiting\n- Pain control with OTC analgesia PRN\n- Local wound care - ice packs/cool compress\n- Rest and activity modification\n- RTC/RTED instructions reviewed",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: No headache, NV, confusion/aLOC, vision changes/diplopia, focal neuro deficits, epistaxis\nO:\nGen: well, alert, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nNeuro: GCS 15, PERLA, CNII-XII grossly normal, moving all limbs spontaneously. No focal deficits\nHEENT: No deformity, lacerations, hematoma\n- Eyes: <<No>><<mild>><<moderate>> periorbital swelling and erythema with <<no>><<mild>> localized tenderness, no crepitus or fluctuance. No ecchymosis\n- Nose: No nasal bleeding/discharge\n- Mouth: No trismus or malocclusion\n- Neck: Full painless ROM. No midline cervical tenderness\nA: Head trauma - minor blunt facial trauma. No red flags of facial/orbital/basal skull fracture, intracranial bleeding, or c-spine fracture\n- No imaging indicated as per NEXUS/CT head rules\nP:\n- Conservative management and watchful waiting\n- Pain control with OTC analgesia PRN\n- Local wound care - ice packs/cool compress\n- Rest and activity modification\n- RTC/RTED instructions reviewed",
+        "updated_at": "2026-11-04T22:10:47Z",
+        "updated_by": "James"
     },
     {
         "id": "depression",
@@ -1482,6 +1482,15 @@
         "aliases": "bridging addictions",
         "body": "- Counselled that only able to provide a short bridging Rx as a harm-reduction measure to mitigate withdrawal symptoms, pending timely reassessment and establishment of ongoing care. Rationale, limited duration, and boundaries of bridging prescription were discussed with patient.\n- Encouraged prompt follow-up with RAC Addictions Clinics for comprehensive assessment, ongoing management, and consideration of longer-term treatment options. Strongly encouraged patient to arrange follow-up without delay. Pt voiced agreement\n- Counselled extensively on SERBs, including sedation, dizziness, impaired cognition, constipation, tolerance, dependence, overdose risk. Advised against co-ingesting other substances, including alcohol, benzodiazepines, or other sedating substances unless specifically medically directed. Reviewed safe storage and avoidance of sharing medication.\n- Discussed risks of dose escalation, obtaining medications from multiple prescribers, and abrupt discontinuation.\n- Patient understood that bridging prescription is temporary and does not guarantee future refills.\n- RTC/RTED precautions reviewed, including worsening withdrawal symptoms, uncontrolled pain, inability to maintain hydration, altered level of consciousness, respiratory depression, or other acute concerns. Advised to seek emergency assessment for severe symptoms.",
         "updated_at": "2026-11-03T22:19:41Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "delayed-rx",
+        "title": "Delayed Rx",
+        "cat": "",
+        "aliases": "Delated Rx",
+        "body": "Delayed Rx given. Counselled on anticipatory guidance, recommend starting if worsening/not improving over next <<72h>>, or if clinical picture evolves to suggest possible bacterial conjunctivitis. Advised reassessment if symptoms are worsening or not improving rather than relying solely on the delayed prescription.",
+        "updated_at": "2026-11-05T00:05:06Z",
         "updated_by": "James"
     }
 ]
