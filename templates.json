@@ -85,8 +85,8 @@
         "title": "Conjunctivitis",
         "cat": "ENT",
         "aliases": "pink eye red eye discharge itchy",
-        "body": "S: Conjunctivitis\n- <<R>><<L>><<Bilateral>> red eye x <<#>> days\n <<watery>><<purulent>> discharge, gritty sensation. \n- Denies pain, photophobia, vision change. No contact lens use.\n- <<recent URTI>>\n- Afebrile and otherwise systemically well\n- No recent travel, no sick contacts\n<<- No recent changes to sexual partners/practices>>\n\nO:\nGen: well, NAD\nEyes: Conjunctival injection <<R>><<L>>, <<watery>><<purulent>> discharge. Cornea clear, PERLA, VA grossly normal. No ciliary flush, no periorbital swelling\n\nA: <<R>><<L>><<Bilateral>> conjunctivitis, favour <<Viral>><<Bacterial>><<Allergic>> \nP:\n- Counselled re: conservative measures: Warm compress QID, lid hygiene, hand hygiene, discard eye makeup\n- <<Topical antibiotic drops (erythromycin ophthalmic ointment 0.5%) QID x 5-7 days Rx sent.>><<Antihistamine drops BID. Alomide 1-2 drops QID x7d vs Pataday/olopatadine 0.1% BID or 0.2% OD x7d>>\n- RTC/RTED instructions reviewed, including pain with eye movement, photophobia, vision change, eyelid swelling, spreading\n\n",
-        "updated_at": "2026-11-02T18:41:28Z",
+        "body": "S: Conjunctivitis\n- <<R>><<L>><<Bilateral>> red eye x <<#>> days\n <<watery>><<purulent>> discharge, gritty sensation. \n- Denies pain, photophobia, vision change. No contact lens use.\n- <<recent URTI>>\n- Afebrile and otherwise systemically well\n- No recent travel, no sick contacts\n<<- No recent changes to sexual partners/practices>>\n\nO:\nGen: well, NAD\nEyes: Conjunctival injection <<R>><<L>>, <<watery>><<purulent>> discharge. Cornea clear, PERLA, VA grossly normal. No ciliary flush, no periorbital swelling\n\nA: <<R>><<L>><<Bilateral>> conjunctivitis, favour <<Viral>><<Bacterial>><<Allergic>> \nP:\n- Counselled re: conservative measures: Warm compress QID, lid hygiene, hand hygiene, discard eye makeup\n- <<Topical antibiotic drops (erythromycin ophthalmic ointment 0.5%, tobrex 0.3% ointment) QID x 5-7 days Rx sent.>><<Antihistamine drops BID. Alomide 1-2 drops QID x7d vs Pataday/olopatadine 0.1% BID or 0.2% OD x7d>>\n- RTC/RTED instructions reviewed, including pain with eye movement, photophobia, vision change, eyelid swelling, spreading\n\n",
+        "updated_at": "2026-11-05T17:54:10Z",
         "updated_by": "James"
     },
     {
@@ -1111,8 +1111,8 @@
         "title": "Normal complete exam (NCR)",
         "cat": "Exam",
         "aliases": "normal exam NCR complete physical negative findings",
-        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nRemainder of systems grossly normal",
-        "updated_at": "2026-10-27T16:30:01Z",
+        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nDerm: No rashes/petechiae\nRemainder of systems grossly normal",
+        "updated_at": "2026-11-05T19:09:34Z",
         "updated_by": "James"
     },
     {
