@@ -958,9 +958,9 @@
         "title": "Acne",
         "cat": "Skin",
         "aliases": "pimples zits comedones retinoid doxycycline tactupump",
-        "body": "S: Facial acne x \u2022 - <<comedonal>><<inflammatory>>. <<Chest/back involved.>> Prior treatments: \u2022. Impact on mood: \u2022.\nO:\nDerm: open/closed comedones, inflammatory papules/pustules. <<No nodules or scarring.>>\nA: Acne vulgaris - <<mild>><<moderate>>\nP:\n- <<Rx Tactupump - thin layer to face qHS after washing.>><<Adapalene qHS.>> Counselled dryness, irritation, photosensitivity; 4-8 wks to effect\n- Skin hygiene counselled - wash after exercise\n- <<Added doxycycline 100 mg daily (moderate inflammatory).>>\n- f/u 3 months; RTC if worsening/persistent",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Facial acne x \u2022 - <<comedonal>><<inflammatory>>. <<Chest/back involved.>> Prior treatments: \u2022. Impact on mood: \u2022.\n\nO:\nDerm: open/closed comedones, inflammatory papules/pustules. <<No nodules or scarring.>>\n\nA: Acne vulgaris - <<mild>><<moderate>>\nP:\n<<Counselled topical treatment involves various combinations of: Retinoid (adapalene), antibacterial (Clinda), Benzoyl peroxide (topical abx)>>\n<<- Rx Tactupump (adapelene + BPO) - thin layer to face qHS after washing.>><<Adapalene qHS.>> Counselled dryness, irritation, photosensitivity; 4-8 wks to effect\n<<- Retin-A vs Arazlo (Tarazotene; topical retinoid) for mild intermittent acne>>\n<<- cllindoxyl (BPO + clinda) if unable to tolerate retinoid pea-sized amt and sandwiching w moisturizer>>\n<<- Biacna (clinda + tretinoin) for mild but persistent>>\n<<- Topical + doxycyclin 40 mg daily (ie. subantimicrobial) x6-12 weeks if moderate>> <<OR>><<Added doxycycline 100 mg daily (moderate inflammatory).>>\n<<- Cabtreo (adapalene, BPO, clinda) if moderate+ or scarring and don't want oral accutane>>\n<<- Accutane if scarring to prevent further scarring>>\n<<- hormonal acne: OCP +/- spironolactone 100-200 mg daily>>\n- Skin hygiene counselled - wash after exercise\n- f/u 3 months; RTC if worsening/persistent\n\n",
+        "updated_at": "2026-11-11T01:08:27Z",
+        "updated_by": "James"
     },
     {
         "id": "cellulitis",
@@ -1030,9 +1030,9 @@
         "title": "Impetigo (peds)",
         "cat": "Skin",
         "aliases": "honey crusted sores school child skin infection",
-        "body": "S: Facial/limb sores x <<#>> days - honey-crusted, mildly itchy, spreading. Denies fever; feeding normally. Attends <<school>><<daycare>>.\nO:\nGen: well, afebrile, NAD\nDerm: <<perioral>><<site>> honey-crusted erosions over \u2022 cm. No surrounding cellulitis, no bullae\nA: Non-bullous impetigo, localized\nP:\n- <<Mupirocin 2 percent TID x 5 days (localized).>><<Cephalexin PO x 7 days (extensive).>>\n- Hygiene: handwashing, short nails, no shared towels\n- Home from school/daycare until 24 h treated\n- RTC/RTED instructions reviewed, including spreading, fever, no improvement in 3 days",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Facial/limb sores x <<#>> days - honey-crusted, mildly itchy, spreading. Denies fever; feeding normally. Attends <<school>><<daycare>>.\nO:\nGen: well, afebrile, NAD\nDerm: <<perioral>><<site>> honey-crusted erosions over \u2022 cm. No surrounding cellulitis, no bullae\nA: Non-bullous impetigo, localized\nP:\n- <<Mupirocin 2 percent TID x 5 days (localized).>><<Cephalexin PO x 7 days (extensive).>>\n- Hygiene: handwashing, short nails, no shared towels\n- Home from school/daycare until 24 h treated\n- General wound care counselled - gentle cleanser, scent-free moisturizer, mupirocin +/- OTC hydrocortisone, barrier ointment (eg. Vaseline) overtop, TID\n- RTC/RTED instructions reviewed, including spreading, fever, no improvement in 3 days",
+        "updated_at": "2026-11-10T19:48:40Z",
+        "updated_by": "James"
     },
     {
         "id": "rosacea",
@@ -1108,11 +1108,11 @@
     },
     {
         "id": "ncr",
-        "title": "Normal complete exam (NCR)",
+        "title": "Normal complete exam (NCR)/(A003)",
         "cat": "Exam",
-        "aliases": "normal exam NCR complete physical negative findings",
+        "aliases": "normal exam NCR complete physical negative findings A003",
         "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nDerm: No rashes/petechiae\nRemainder of systems grossly normal",
-        "updated_at": "2026-11-05T19:09:34Z",
+        "updated_at": "2026-11-11T01:31:34Z",
         "updated_by": "James"
     },
     {
@@ -1491,6 +1491,24 @@
         "aliases": "Delated Rx",
         "body": "Delayed Rx given. Counselled on anticipatory guidance, recommend starting if worsening/not improving over next <<72h>>, or if clinical picture evolves to suggest possible bacterial conjunctivitis. Advised reassessment if symptoms are worsening or not improving rather than relying solely on the delayed prescription.",
         "updated_at": "2026-11-05T00:05:06Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "balanitis",
+        "title": "Balanitis",
+        "cat": "ID, Derm",
+        "aliases": "balanitis, candida, penis",
+        "body": "S: Penile rash\n- <<5>>d hx of penile rash; erythematous, itchy\n- No recent changes to sexual partners/practices\n- increased smegma/discharge\n- No tight restrictive clothing, regular hygiene\n\nO: \nGU: balanitis - erythema to penis head, white thrush. No bleeding/discharge\n- Testes normalx2, no tenderness\n\nA: Balanitis\nP:\nClotrimazole 1% cream BID + HC 1% cream\nf/u 2wks if worsening/not improving, rtc/rted otherwise reviewed",
+        "updated_at": "2026-11-10T19:17:07Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "canker-sore-aphthous-ulcers",
+        "title": "Canker Sore / Aphthous Ulcers",
+        "cat": "Derm",
+        "aliases": "Canker sore aphthous ulcer",
+        "body": "S: Canker Sores\n- Painful oral ulcers/sores x2d\n- Pain exacerbated by eating, particularly acidic/spicy foods\n- Denies fever, malaise, sore throat, dysphagia, odynophagia or difficulty tolerating PO\n- No bleeding/purulence\n- Denies recent changes to sexual partners/practices\n- No recent travel, no sick contacts\n- Denies preceding trauma, recent dental procedures or new oral products.\n\nO:\nGen well NAD\nOral mucosa: 2x Small <5mm, shallow, round ulcerations with erythematous halo and central whitish/yellow base.\n- No vesicles, bleeding, purulence, or surrounding significant swelling\n\nA: Aphthous ulcers canker sores\n\nP:\n- Reassurance re: typically self-limiting course (7\u201314 days)\n- Counselled re: conservative measures; Avoid acidic, spicy or irritating foods; Maintain oral hygiene; consider saltwater rinses\n- Trial Oracort: topical triamcinolone 0.1% dental paste BID\u2013TID to affected areas PRN \n- Otherwise, Acetaminophen/ibuprofen PRN for pain\n- RTC reviewed: if persistent beyond 2 weeks, worsening, recurrent/frequent episodes, or associated systemic symptoms",
+        "updated_at": "2026-11-11T01:28:18Z",
         "updated_by": "James"
     }
 ]
