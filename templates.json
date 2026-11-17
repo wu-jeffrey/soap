@@ -4,8 +4,8 @@
         "title": "Viral URTI (common cold)",
         "cat": "ENT/Resp",
         "aliases": "cold flu congestion runny nose rhinorrhea virus upper respiratory",
-        "body": "S: URTI\nmild cough x <<#>> days, nasal congestion, rhinorrhea, sore throat\nDenies SOB, chest pain, hemoptysis. \n<<No fever.>><<Low-grade fever at home.>> \n<<General fatigue, but otherwise systemically well>><<Myalgias, malaise, lethargy>>\nTolerating fluids & PO well\n\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: well, NAD, full sentences\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx mildly injected, no exudate. TMs normal x2. Neck supple, no cervical LN\n\nA: Viral URTI, day <<#>> of symptoms\nP:\n- Reassurance on conservative management counselled - Discussed symptoms may take 14 days to fully resolve\n- Supportive care discussed: hydration, honey, rest, tylenol/advil PRN, saline nasal spray, humidifier\n- Imaging & Antibiotics not indicated - rationale discussed\n- RTC/RTED instructions reviewed, including new/worsening fever, SOB, lethargy, resp distress, etc.\n\n",
-        "updated_at": "2026-10-27T16:25:33Z",
+        "body": "S: URTI\nmild cough x <<#>> days, nasal congestion, rhinorrhea, sore throat\nDenies SOB, chest pain, hemoptysis. \n<<No fever.>><<Low-grade fever at home.>> \n<<General fatigue, but otherwise systemically well>><<Myalgias, malaise, lethargy>>\nTolerating fluids & PO well\n\nO:\nT: \u2022  HR: \u2022  SpO2: \u2022\nGen: well, NAD, full sentences\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nHEENT: Oropharynx mildly injected, no exudate. TMs normal x2. Neck supple, no cervical LN\n\nA: Viral URTI, day <<#>> of symptoms\nP:\n- Reassurance on conservative management counselled - Discussed symptoms may take 14 days to fully resolve\n- Supportive care discussed: hydration, honey, rest, tylenol/advil PRN, saline nasal spray, humidifier\n- Imaging & Antibiotics not indicated - rationale discussed\n<<- Trial Benzydamine mouthwash for sore throat - counselled on SERBs>>\n- RTC/RTED instructions reviewed, including new/worsening fever, SOB, lethargy, resp distress, etc.\n\n",
+        "updated_at": "2026-11-17T14:17:54Z",
         "updated_by": "James"
     },
     {
@@ -13,8 +13,8 @@
         "title": "Pharyngitis / strep throat",
         "cat": "ENT/Resp",
         "aliases": "strep throat tonsillitis odynophagia centor swab sore",
-        "body": "S: Sore throat \n- x <<#>> days with odynophagia. \n- Denies drooling, stridor, trismus, neck stiffness\n- <<No cough or other URTI symptoms>><<Other URTI symptoms present, including cough, congestion, coryza>>\n- <<No fever>><<Fever, Tmax at home ***>>\n- Has <<not>> noticed tonsillar exudate\n- No recent travel or sick contacts\n- Otherwise systemically well\n\nO:\nT: \u2022  HR: \u2022  SpO2: <<***>>+ on RA\nGen: well, NAD\nHEENT: Oropharynx erythematous, <<No>> tonsillar exudate present. \n- <<No cervical lymphadenopathy>><<Tender anterior cervical LN.>> \n- No peritonsillar swelling, uvula midline. Neck supple\nResp: Normal RR/WOB, GAEB, no wheeze/crackles\n\nA: <<Viral pharyngitis>><<Suspected strep pharyngitis - swab sent>>\n- Centor: Temp over 38 <<Y (1)>><<N (0)>>; absent cough <<Y (1)>><<N (0)>>; tender anterior LN <<Y (1)>><<N (0)>>; tonsillar swelling/exudate <<Y (1)>><<N (0)>>; age 3-14 (+1), 15-44 (0), 45+ (-1)\nScore: \u2022 (0-1 no swab/abx; 2-3 swab, treat if positive; 4+ swab, consider empiric)\n\nP:\n- Supportive care: salt water gargles, analgesia PRN, hydration\n- <<If swab positive: penicillin V 300 mg TID x 10 days.>><<Amoxicillin 500 mg BID x 10 days.>><<Amoxicillin 25 mg/kg 2 times daily x 10 days>>\n- RTC/RTED instructions reviewed, including unable to swallow, drooling, worsening despite treatment\n\n",
-        "updated_at": "2026-11-03T19:38:33Z",
+        "body": "S: Sore throat \n- x <<#>> days with odynophagia. \n- Denies drooling, stridor, trismus, neck stiffness\n- <<No cough or other URTI symptoms>><<Other URTI symptoms present, including cough, congestion, coryza>>\n- <<No fever>><<Fever, Tmax at home ***>>\n- Has <<not>> noticed tonsillar exudate\n- No recent travel or sick contacts\n- Otherwise systemically well\n\nO:\nT: \u2022  HR: \u2022  SpO2: <<***>>+ on RA\nGen: well, NAD\nHEENT: Oropharynx erythematous, <<No>> tonsillar exudate present. \n- <<No cervical lymphadenopathy>><<Tender anterior cervical LN.>> \n- No peritonsillar swelling, uvula midline. Neck supple\nResp: Normal RR/WOB, GAEB, no wheeze/crackles\n\nA: <<Viral pharyngitis>><<Suspected strep pharyngitis - swab sent>>\n- Centor: Temp over 38 <<Y (1)>><<N (0)>>; absent cough <<Y (1)>><<N (0)>>; tender anterior LN <<Y (1)>><<N (0)>>; tonsillar swelling/exudate <<Y (1)>><<N (0)>>; age 3-14 (+1), 15-44 (0), 45+ (-1)\nScore: \u2022 (0-1 no swab/abx; 2-3 swab, treat if positive; 4+ swab, consider empiric)\n\nP:\n- Supportive care: salt water gargles, analgesia PRN, hydration\n- <<If swab positive: penicillin V 300 mg TID x 10 days.>><<Amoxicillin 500 mg BID x 10 days.>><<Amoxicillin 25 mg/kg 2 times daily x 10 days>>\n<<- Trial Benzydamine mouthwash for sore throat - counselled on SERBs>>\n- RTC/RTED instructions reviewed, including unable to swallow, drooling, worsening despite treatment\n\n",
+        "updated_at": "2026-11-17T14:18:05Z",
         "updated_by": "James"
     },
     {
@@ -886,9 +886,9 @@
         "title": "BPPV / vertigo",
         "cat": "Neuro",
         "aliases": "dizzy dizziness spinning room epley dix hallpike serc",
-        "body": "S: Brief spinning episodes with position changes (rolling over, looking up), under 1 min. Denies hearing loss, tinnitus, headache, focal neuro symptoms.\nO:\nGen: well, NAD\nNeuro: grossly normal, gait steady\nDix-Hallpike: positive <<R>><<L>> - geotropic torsional nystagmus\nA: BPPV, <<R>><<L>> posterior canal\nP:\n- <<Epley performed in office.>><<Epley taught for home use - video resources.>>\n- Counselled on getting up slowly - seated first, then stand\n- <<Serc 16 mg TID x 1-2 days PRN.>>\n- Avoid driving during acute vertigo\n- RTC/RTED instructions reviewed, including persistent beyond 2 wks, hearing change, syncope, neuro symptoms",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Brief spinning episodes with position changes (rolling over, looking up), under 1 min. Denies hearing loss, tinnitus, headache, focal neuro symptoms.\nO:\nGen: well, NAD\nNeuro: grossly normal, gait steady\nDix-Hallpike: positive <<R>><<L>> - geotropic torsional nystagmus\nA: BPPV, <<R>><<L>> posterior canal\nP:\n- <<Epley performed in office.>><<Epley taught for home use - video resources.>>\n- Counselled on getting up slowly - seated first, then stand\n- <<Serc 16 mg TID x 1-2 days PRN.>>\n- Avoid driving during acute vertigo\n- RTC/RTED instructions reviewed, including persistent beyond 2 wks, hearing change, syncope, neuro symptoms\n\n<<G403>>",
+        "updated_at": "2026-11-16T18:28:08Z",
+        "updated_by": "James"
     },
     {
         "id": "tension-ha",
@@ -1111,8 +1111,8 @@
         "title": "Normal complete exam (NCR)/(A003)",
         "cat": "Exam",
         "aliases": "normal exam NCR complete physical negative findings A003",
-        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nDerm: No rashes/petechiae\nRemainder of systems grossly normal",
-        "updated_at": "2026-11-11T01:31:34Z",
+        "body": "Gen: well, NAD\nCVS: NS1/2, no ehs/murmur\nPVS: No peripheral edema, cap refill <2s, grossly, appears euvolemic\n<<- No unilateral calf swelling/erythema/tenderness>>\nResp: Normal RR, normal WOB, GAEB, no wheeze/crackles\nAbdo: SNTND, no HSM\nHEENT: Oropharynx normal, Neck supple, no cervical LN\n- TMs normal x2 - no erythema, no perforation or bulging, no blood/pus, no tenderness\nNeuro: PERLA, moving all 4 extremities, normal gait\n- CNII-XII grossly normal\n- No sensory deficits\n- Patellar reflexes 2+ BL\n<<- No dysmetria/dysdiadochokinesia>>\nMSK: Normal gait & station. No SEADS. Power 5/5 in all extremities\nGU: Deferred\nDerm: No rashes/petechiae\nRemainder of systems grossly normal",
+        "updated_at": "2026-11-17T01:07:31Z",
         "updated_by": "James"
     },
     {
