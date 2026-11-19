@@ -103,8 +103,8 @@
         "title": "Pediatric fever (no focus)",
         "cat": "ENT/Resp",
         "aliases": "fever child peds temperature febrile kid",
-        "body": "S: Fever x <<#>> days\n- Tmax \u2022 at home. \n- <<No other focus of infection, including cough/congestion/coryza, abdo pain, vomiting, diarrhea, LUTS, GI/GU bleeding, rash>>\n- Drinking well, urine output normal. \n- Playful between fevers. \n- Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Nontoxic appearing. Cap refill < 2 s\nHEENT: TMs normal x2, oropharynx normal, neck supple\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur\nAbdo: SNTND\nDerm: no rash, no petechiae\n\nA: Fever NYD - well child, no red flag signs/symptoms, suspect viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress\n\n",
-        "updated_at": "2026-10-27T17:49:15Z",
+        "body": "S: Fever x <<#>> days\n- Tmax \u2022 at home. \n- <<No other focus of infection, including cough/congestion/coryza, abdo pain, vomiting, diarrhea, LUTS, GI/GU bleeding, rash>>\n- Drinking well, urine output normal. \n- Playful between fevers. \n- Denies rash, vomiting, lethargy, irritability. Immunizations UTD.\n\nO:\nT: \u2022  HR: \u2022  RR: \u2022\nGen: alert, interactive, NAD. Nontoxic appearing. \nHEENT: TMs normal x2, oropharynx normal, neck supple\n- No tongue swelling/erythema, no cervical lymphadenopathy\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur. Cap refill < 2 s\nAbdo: SNTND\nDerm: no rash, no petechiae. \n- No palmar/plantar rash, erythema, or swelling\n\nA: Fever NYD - well child, no red flag signs/symptoms, suspect viral\nP:\n- Antipyretics PRN, fluids, monitor at home\n- <<Urine dip and culture sent.>>\n- RTC/RTED instructions reviewed with parents, including fever beyond 5 days, lethargy, poor intake, rash, resp distress\n\n",
+        "updated_at": "2026-11-18T23:44:18Z",
         "updated_by": "James"
     },
     {
@@ -1500,6 +1500,24 @@
         "aliases": "Canker sore aphthous ulcer",
         "body": "S: Canker Sores\n- Painful oral ulcers/sores x2d\n- Pain exacerbated by eating, particularly acidic/spicy foods\n- Denies fever, malaise, sore throat, dysphagia, odynophagia or difficulty tolerating PO\n- No bleeding/purulence\n- Denies recent changes to sexual partners/practices\n- No recent travel, no sick contacts\n- Denies preceding trauma, recent dental procedures or new oral products.\n\nO:\nGen well NAD\nOral mucosa: 2x Small <5mm, shallow, round ulcerations with erythematous halo and central whitish/yellow base.\n- No vesicles, bleeding, purulence, or surrounding significant swelling\n\nA: Aphthous ulcers canker sores\n\nP:\n- Reassurance re: typically self-limiting course (7\u201314 days)\n- Counselled re: conservative measures; Avoid acidic, spicy or irritating foods; Maintain oral hygiene; consider saltwater rinses\n- Trial Oracort: topical triamcinolone 0.1% dental paste BID\u2013TID to affected areas PRN \n- Otherwise, Acetaminophen/ibuprofen PRN for pain\n- RTC reviewed: if persistent beyond 2 weeks, worsening, recurrent/frequent episodes, or associated systemic symptoms",
         "updated_at": "2026-11-11T01:28:18Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "roseola",
+        "title": "Roseola",
+        "cat": "Peds",
+        "aliases": "Roseola, viral exanthem",
+        "body": "S: Fever, rash\n- Fever onset X<<3>> days ago, TMax <<3#>>\n- w/ assocaited URTI: cough, congestion, coryza. No gi symptoms\n- Fever persisted over 3 days, responded well to tylenol throughout\n- This AM: <<3#>>\n- Last tylenol: ~<<24h>> ago\n- Improvement in fever accompanied w acute onset diffuse rash on face and trunk today, worsening throughout day\n- Does not seem painful or itchy\n- Pink/red colour, no open wounds, no bleeding/purulence\n- Energy is good & improving\n- PO intake remained adequate, near baseline today\n- wet diapers down ~20%, but improving in last 24h. multiple regular BMs daily, nonbloody\n- Took last few days off daycare, no other confirmed illnesses in daycare\n- No recent travel\n\nO: \nT 37.3 (axillary)\nGen: alert, interactive, well child, NAD. Interactive, vigorous cry, nontoxic appearing\nHEENT: TMs normal x2, oropharynx mildly erythematous, no lesions/exudates, neck supple. \n- No tongue swelling/erythema, no cervical lymphadenopathy\nResp: Normal WOB, GAEB, no wheeze/crackles\nCVS: NS1/2 no ehs/murmur. Cap refill <2 s\nAbdo: SNTND\nDerm: Diffuse pink/erythematous maculopapular rash over trunk and proximal upper extremities\n- Blanchable, nontender, nonfluctuant, no bleeding/purulence\n- No petechiae, purpura, vesicles, or mucosal involvement.\n- No palmar/plantar rash, erythema, or swelling\nNeuro: PERLA, moving all 4 extremities, normal gait\nMSK: Grossly normal, no SEADS\nGU: deferred\n\nA: Roseola. Well child, no red flags\nP: \n- Reassurance re: benign, self-limiting illness course, expected spontaneous rash resolution\n- Counselled continue conservative management: Antipyretics PRN, + fluids, rest + monitor at home\n- Discussed - may return to daycare once afebrile for >24 hours w/o antipyretics and feeling well, according to daycare policy\n- RTC/RTED instructions reviewed reviewed w parents, including fever beyond 5 days, lethargy, poor intake, nonblanching rash, resp distress, or other symptoms of concern.\n\n",
+        "updated_at": "2026-11-18T23:50:42Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "hearing-aids-rx",
+        "title": "Hearing Aids Rx",
+        "cat": "",
+        "aliases": "",
+        "body": "PRESCRIPTION\n\nRx: Bilateral hearing aids\n\nIndication: Bilateral hearing impairment (hearing loss)\n\nPlease assess and fit appropriate hearing aids based on audiological evaluation\n\nRefills: As required.",
+        "updated_at": "2026-11-19T14:18:51Z",
         "updated_by": "James"
     }
 ]
