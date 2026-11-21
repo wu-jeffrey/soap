@@ -220,8 +220,8 @@
         "title": "Hypothyroidism follow-up",
         "cat": "Cardio/Metab",
         "aliases": "thyroid TSH levothyroxine synthroid",
-        "body": "S: Hypothyroidism f/u and review\n- on levothyroxine \u2022 mcg daily, on empty stomach. \n- Denies new/worsening stigmata of thyroid disease, including fatigue, weight change, cold intolerance, palpitations, tremor\n\nO:\nHR: \u2022, regular\nNeck: no goiter or nodules. No tremor\n\nA: Hypothyroidism - TSH \u2022, in range\nP:\n- <<Continue>><<Titrate>><<Taper>> levothyroxine: <<X>> mcg daily\n- <<Repeat TSH in 12 months.>><<Repeat TSH 6 wks after dose change.>>\n- RTC/RTED instructions reviewed\n\n",
-        "updated_at": "2026-11-02T19:12:47Z",
+        "body": "S: Hypothyroidism f/u and review\n- on levothyroxine \u2022 mcg daily, on empty stomach. \n- Denies new/worsening stigmata of thyroid disease, including fatigue, weight change, cold intolerance, palpitations, tremor\n\nO:\nHR: \u2022, regular\nNeck: no goiter or nodules. No tremor\n\nA: Hypothyroidism - TSH \u2022, in range\nP:\n- <<Continue>><<Titrate>><<Taper>> levothyroxine: <<X>> mcg daily\n- <<Repeat TSH in 12 months.>><<Repeat TSH 6 wks after dose change.>>\n- RTC/RTED instructions reviewed\n\n\nTARGET TSH:\nTehmina Ahmad (endo) says below 65: lab reference. Above 65 - tsh up to 6-6.5 can be normal",
+        "updated_at": "2026-11-20T17:36:27Z",
         "updated_by": "James"
     },
     {
@@ -1518,6 +1518,24 @@
         "aliases": "",
         "body": "PRESCRIPTION\n\nRx: Bilateral hearing aids\n\nIndication: Bilateral hearing impairment (hearing loss)\n\nPlease assess and fit appropriate hearing aids based on audiological evaluation\n\nRefills: As required.",
         "updated_at": "2026-11-19T14:18:51Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "paronychia",
+        "title": "Paronychia",
+        "cat": "Derm",
+        "aliases": "Paronychia, toenail infection",
+        "body": "S: Toe nail infection / Paronychia\n- <<#>> days hx, <<medial>><<lateral>> nailbed of <<R>><<L>>D<<#>>\n- No blood or pus\n- No red hot swollen joint\n- Denies trauma/injury\n\nO: \n<<LD1>> Paronychia - erythema to lateral nailbed, no spreading erythema/warmth/fluctuance. No blood/pus, no red hot swollen joints. \n\nA: LD1 toe paronychia\n- Extensively counselled re conservative measures - sitz bath & warm compress TID/QID, skincare & hygiene, nail care - avoid trimming short for now\n- Counselled no indication for abx at this time given no sign of secondary infxn\n- rtc reviewed if worsening/not improving x2 wks\n\n",
+        "updated_at": "2026-11-20T18:32:28Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "vasectomy",
+        "title": "Vasectomy",
+        "cat": "Urology",
+        "aliases": "Vasectomy, Family planning",
+        "body": "S: TC: Vasectomy\n- Presents requesting consultation for elective vasectomy, desires permanent sterilization, has been considering this for long time\n- No current children. Confident in decision to not have future children.\n- Understands vasectomy is intended to be permanent.\n- Denies dysuria, hematuria, testicular pain, or scrotal swelling\n- Overall systemically well\n- Many questions about procedure that he wishes to discuss\n\nO: \nGen: Well, NAD\nGU: <<deferred>>\n\nA: Elective vasectomy counselling\nP:\n- Discussed procedure, benefits, risks, and complications, including bleeding, infection, hematoma, chronic scrotal pain, and potential failure.\n- Discussed permanence and limitations of vasectomy reversal\n- Reviewed that vasectomy is not immediately effective.\n- Advised continued contraception until post-vasectomy semen analysis confirms clearance.\n- Discussed need for follow-up semen analysis to confirm successful procedure\n- Patient understands and wishes to proceed. All questions answered.\n- Referral to urology for vasectomy consultation/procedure. Pt happy w plan\n\n",
+        "updated_at": "2026-11-20T19:11:41Z",
         "updated_by": "James"
     }
 ]
