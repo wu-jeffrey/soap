@@ -1282,8 +1282,8 @@
         "title": "Immunization visit",
         "cat": "General",
         "aliases": "vaccine shot flu shot booster injection",
-        "body": "S: Here for <<flu vaccine>>. \nScreened: no severe reaction to prior vaccines, no anaphylaxis to components, not acutely unwell, no fever. Consent obtained.\n\nO: Afebrile, well\n\nA: Immunization - <<Flu shot>>\nP:\n- <<Vaccine>> given @ <<site>> - LOT <<***>>; EXP <<***>>\n- Observed 15 min - well tolerated, no immediate reaction\n- Counselled on expected local soreness, possible low-grade fever/myalgia day 1-2\n- ER immediately if anaphylactic reaction - lip swelling, throat tightness\n- <<Next dose due: \u2022.>>\n\n",
-        "updated_at": "2026-10-29T20:29:20Z",
+        "body": "S: Here for <<flu vaccine>>. \nScreened: no severe reaction to prior vaccines, no anaphylaxis to components, not acutely unwell, no fever. Consent obtained.\n\nO: Afebrile, well\n\nA: Immunization - <<Flu shot>>\nP:\n- <<Vaccine>> given @ <<site>> - LOT <<***>>; EXP <<***>>\n- Observed 15 min - well tolerated, no immediate reaction\n- Counselled on expected local soreness, possible low-grade fever/myalgia day 1-2\n- ER immediately if anaphylactic reaction - lip swelling, throat tightness\n- <<Next dose due: \u2022.>>\n\n<<ADACEL-G847, INFLUENZA-G590, OTHER-G538>>\n",
+        "updated_at": "2026-11-24T14:32:17Z",
         "updated_by": "James"
     },
     {
@@ -1536,6 +1536,24 @@
         "aliases": "Vasectomy, Family planning",
         "body": "S: TC: Vasectomy\n- Presents requesting consultation for elective vasectomy, desires permanent sterilization, has been considering this for long time\n- No current children. Confident in decision to not have future children.\n- Understands vasectomy is intended to be permanent.\n- Denies dysuria, hematuria, testicular pain, or scrotal swelling\n- Overall systemically well\n- Many questions about procedure that he wishes to discuss\n\nO: \nGen: Well, NAD\nGU: <<deferred>>\n\nA: Elective vasectomy counselling\nP:\n- Discussed procedure, benefits, risks, and complications, including bleeding, infection, hematoma, chronic scrotal pain, and potential failure.\n- Discussed permanence and limitations of vasectomy reversal\n- Reviewed that vasectomy is not immediately effective.\n- Advised continued contraception until post-vasectomy semen analysis confirms clearance.\n- Discussed need for follow-up semen analysis to confirm successful procedure\n- Patient understands and wishes to proceed. All questions answered.\n- Referral to urology for vasectomy consultation/procedure. Pt happy w plan\n\n",
         "updated_at": "2026-11-20T19:11:41Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "volar-plate-fraacture",
+        "title": "Volar Plate Fraacture",
+        "cat": "",
+        "aliases": "",
+        "body": "https://www.ruh.nhs.uk/patients/patient_information/ORT_058_Advice_after_a_volar_plate_injury.pdf",
+        "updated_at": "2026-11-24T01:55:10Z",
+        "updated_by": "James"
+    },
+    {
+        "id": "adhd-assessment-2",
+        "title": "ADHD Assessment",
+        "cat": "Psych",
+        "aliases": "ADHD",
+        "body": "S: Initial assessment for suspected ADHD. Chief concerns: <<inattention / hyperactivity / impulsivity>> affecting <<work / school / home>>.\n- Core symptoms: <<difficulty sustaining focus, distractibility, forgetfulness, disorganization, procrastination, fidgeting, restlessness, interrupting>>.\n- Childhood onset (prior to age 12): <<yes - describe / unclear / no>>.\n- Impact/Impairment: present across >=2 settings (<<home / work / school / social>>).\n- Sleep: \u2022 hrs/night, <<restorative / snoring / insomnia>>.\n- Substances: caffeine \u2022, EtOH \u2022, cannabis \u2022, other \u2022.\n\n- Screening: ASRS Part A \u2022/6 (total \u2022/18).\n- Mood/Anxiety screen: PHQ-9 \u2022, GAD-7 \u2022. Denies SI/HI.\n\nPMHx/FHx: <<no cardiac hx / palpitations / syncope / HTN>>; FHx of ADHD/mood/cardiac: <<none / \u2022>>.\n\nO: Vitals: BP \u2022/\u2022, HR \u2022, Wt \u2022 kg.\nMSE:\nAppearance: appears stated age, normal grooming, casual attire\nBehaviour: <<calm, cooperative>><<fidgety, restless, easily distracted>>\nSpeech: <<normal rate, rhythm, volume>><<pressured, tangential>>\nMood: <<euthymic>><<anxious>><<low>>\nAffect: <<euthymic, full range>><<constricted>>\nThought process: <<linear, goal-directed>><<circumstantial, tangential>>\nThought content: no hallucinations, delusions\nSI: none  HI: none\nInsight: intact  Judgment: intact\n\nA: Suspected ADHD - <<predominantly inattentive / predominantly hyperactive-impulsive / combined>> presentation. Differential includes <<anxiety / depression / sleep disorder / substance use / thyroid>>. No acute safety concerns.\n\nP:\n- Provided ASRS / Weiss Functional Impairment Rating Scale (WFIRS) & collateral rating scales (partner/parent) to complete prior to next visit\n- Requested old school report cards / educational assessments if available\n- Baseline workup: <<CBC, TSH, ferritin, B12, HbA1c, LFTs>><<ECG if cardiac risk factors>>\n- Discussed non-pharmacologic strategies (pomodoro, external reminders, sleep hygiene, exercise)\n- Reviewed stimulant vs. non-stimulant medication options, risks, benefits, and monitoring requirements (no Rx initiated today)\n- f/u 2-4 wks with completed scales/collateral to confirm diagnosis and discuss treatment plan\n- RTC or ER if acute mood worsening or SI/HI\n\nTime:",
+        "updated_at": "2026-11-24T15:00:17Z",
         "updated_by": "James"
     }
 ]
