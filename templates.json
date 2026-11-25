@@ -553,9 +553,9 @@
         "title": "Fertility workup",
         "cat": "GU/Repro",
         "aliases": "infertility trying to conceive TTC preconception",
-        "body": "S:\n- Duration of trying to conceive: \u2022\n- OBHx: \u2022\n- LMP: \u2022\nO: Generally well, NAD\nA: Fertility\nP:\n- BW: PRL, TSH, AMH, day 3 FSH/estradiol\n- Pelvic US\n- Fertility clinic referral\n- Consider semen analysis\n- Preconception counselling - folate/PNV",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S:\n- Duration of trying to conceive: \u2022\n- OBHx: \u2022\n- LMP: \u2022\nO: Generally well, NAD\nA: Fertility\nP:\n- BW: PRL, TSH, AMH, day 3 FSH/estradiol\n- Pelvic US\n- Fertility clinic referral\n- Consider semen analysis\n- Preconception counselling - folate/PNV\n<<- Fertility clinic referral: MSH, Twig>>",
+        "updated_at": "2026-11-25T14:30:41Z",
+        "updated_by": "James"
     },
     {
         "id": "pmb",
