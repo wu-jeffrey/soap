@@ -607,9 +607,9 @@
         "title": "Back pain (mechanical)",
         "cat": "MSK",
         "aliases": "back pain lumbar sciatica strain lifting",
-        "body": "S:\n<<no>> bowel or bladder incontinence or retention\n<<no>> saddle paraesthesia\n<<no>> severe worsening pain (e.g. night pain)\n<<no>> trauma\n<<no>> weight loss, history of cancer, fever\n<<no>> steroid use, <<no>> IV drug use\n<<no>> first episode of severe pain at age 50+\n<<no>> focal neurological deficits\nO:\nGen: well, NAD, normal gait\nBACK:\nNo SEADS, no midline tenderness, no paraspinous tenderness\nForward flexion, lateral flexion, extension <<full and painless>><<limited>>\nPower 5/5, sensation 2/2, reflexes 2+ bilat lower limbs\nNegative SLR\nA: <<Mechanical back pain>><<with radicular symptoms>><<muscle spasm>>\nP:\n- Education: back pain typically self-resolves\n- Supportive care: alternating hot/cold, activities as tolerated\n- Physical activity and exercise as tolerated; physio referral\n- Pain management: tylenol, NSAIDs, topical voltaren\n- <<Trial short-course NSAID: naproxen 500 mg BID x 2 wks with food.>><<Trial muscle relaxant - drowsiness counselled.>>\n- Imaging not indicated - discussed\n- RTC/RTED instructions reviewed, including red flags above, not improving 4-6 wks",
-        "updated_at": "2026-10-22T07:27:38Z",
-        "updated_by": "migration"
+        "body": "S: Low back pain\n- <<Lumbar>> back pain, x <<##>><<days>><<weeks>><<months>>\n- <<No>> radiation\n- <<No neuropathic qualities; electric, shooting, burning, numbness, tingling>>\n- Denies recent trauma/injury\n- No focal neurological deficits - weakness/numbness/paresthesias\n- No red flag symptoms of LBP\n<<bowel or bladder incontinence or retention>> <<saddle paraesthesia>>\n- <<No constitutional symptoms: fever, unintentional weight loss, night sweats, fatigue, no history of cancer>>\n<<no steroid use, IV drug use>>\n\nO:\nGen: well, NAD, normal gait\nBACK:\nNo SEADS, no midline tenderness, no paraspinous tenderness\nForward flexion, lateral flexion, extension <<full and painless>><<limited>>\nPower 5/5, sensation 2/2, reflexes 2+ bilat lower limbs\nNegative SLR bilaterally; LE sensation intact\n\nA: <<Mechanical back pain>> <<with radicular symptoms>><<muscle spasm>>\nP:\n- Education: back pain typically self-resolves\n- Supportive care: alternating hot/cold, activities as tolerated\n- Physical activity and exercise as tolerated; physio referral\n- Pain management: tylenol, NSAIDs, topical voltaren\n- <<Trial short-course NSAID: naproxen 500 mg BID x 2 wks with food.>><<Trial muscle relaxant - drowsiness counselled.>>\n- Imaging not indicated - discussed\n- RTC/RTED instructions reviewed, including red flags above, not improving 4-6 wks\n\n",
+        "updated_at": "2026-11-25T18:56:47Z",
+        "updated_by": "James"
     },
     {
         "id": "neck-pain",
@@ -1299,9 +1299,9 @@
         "id": "new-patient",
         "title": "New patient intake",
         "cat": "General",
-        "aliases": "meet and greet intake new patient roster",
+        "aliases": "meet and greet intake new patient roster, new pt, intake",
         "body": "S: Here for meet & greet and complete physical. \nPatient aware this visit is for meet-and-greet; medical issues to be booked separately.\n\nPreviously PCP: \u2022\nPMHx: \u2022  \nMedHx: <<None>>\nSurgHx: <<None>>\nAllergies: <<NKDA>>\nFHx: \n- M: \n- F:\n<<- No Fhx of other autoimmune/hereditary disease, malignancy, or other significant CVD>>\n\nSocial: \nBorn \nEducation: \nOccupation: \nLiving: \nRelationship status \u2022\nSmoking: <<None>>\nEtOH: <<0>> drinks/wk\nrecreational substances: None\nSexual/OB hx: \u2022\nSTI screening: <<UTD>><<due>><<not indicated>>\n\nPreventive: last pap <<\u2022>><<N/A>>; \nmammo <<\u2022>><<N/A>>; \ncolon screening <<\u2022>><<N/A>>; \nTd \u2022\n\nO:\nBP: \u2022  HR: \u2022    \nWt: \u2022  Ht: \u2022\nGen: NAD, well-appearing\nHEENT: PERLA, N TMs, oropharynx normal, no LN\nCVS: NS1/2, no murmurs  \nResp: GAEB, normal WOB\nAbdo: SNTND, no HSM\nMSK: Normal station & gait. No SEADS. 5/5 power to all UE/LEs\nNeuro: CNII-XII grossly normal. Moving all limbs spontaneously. \nGU[/Gyne]: Deferred\n\nA: New patient - <<healthy ***>><<M>><<F>>\nP:\n- Discussed clinic practices and expectations: renewals, follow-up, forms and uninsured services, late/no-show policy\n- Discussed rostering expectations and after-hours access\n- <<Screening/BW plan: \u2022.>>\n\nJHuynh",
-        "updated_at": "2026-11-23T14:04:13Z",
+        "updated_at": "2026-11-26T14:05:56Z",
         "updated_by": "James"
     },
     {
